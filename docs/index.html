@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The IT Crowd, l'encyclopédie des fans (non officielle)</title>
+<meta name="description" content="Base de connaissances de fans sur la sitcom britannique The IT Crowd : dix fiches sourcées, 25 épisodes, une discipline de preuve. Projet non officiel.">
+<meta name="color-scheme" content="dark light">
+<style>
+:root{
+  --ink:#0d0f2b; --deep:#070818; --ink2:#1b1f52; --line:#2c3172;
+  --paper:#ece6d0; --dim:#9aa0c8;
+  --red:#e4252d; --cyan:#2ee6e6; --yel:#f5d90a; --mag:#e23be0; --grn:#35d46a; --blue:#2a39ff; --org:#ff8a1e; --vio:#a98bff;
+  --bg:var(--ink); --fg:var(--paper); --panel:var(--deep); --rule:var(--line); --link:var(--cyan);
+  --mono:ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,"DejaVu Sans Mono","Liberation Mono",monospace;
+  --rail:212px;
+}
+html[data-theme="light"]{
+  --bg:#ece6d0; --fg:#0d0f2b; --panel:#fbf8ea; --rule:#b9b39c; --dim:#4b4f7c; --link:#1a27c9; --ink2:#d9d2b6;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--mono);-webkit-text-size-adjust:100%}
+a{color:var(--link);text-underline-offset:3px}
+a:hover{color:var(--yel)} html[data-theme="light"] a:hover{color:var(--red)}
+:focus-visible{outline:3px solid var(--yel);outline-offset:3px}
+html[data-theme="light"] :focus-visible{outline-color:var(--red)}
+button{font:inherit;color:inherit;cursor:pointer}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+svg.px{display:block;max-width:100%;height:auto;shape-rendering:crispEdges}
+code,kbd{font:inherit}
+kbd{border:2px solid var(--rule);padding:0 .4em;background:var(--panel)}
+
+/* ---------- l'ascenseur (navigation) ---------- */
+.rail{position:fixed;inset:0 auto 0 0;width:var(--rail);background:var(--panel);border-right:4px solid var(--rule);
+  display:flex;flex-direction:column;gap:18px;padding:20px 16px;z-index:20;overflow-y:auto}
+.lift{border:4px solid var(--rule);background:#000;padding:10px 10px 8px;text-align:center}
+.lift small{display:block;color:#9aa0c8;font-size:12px;margin-top:6px}
+#floor{height:56px;display:flex;justify-content:center;align-items:center}
+#floor svg{height:100%;width:auto}
+.cols > *,.two > *,.eps > *{min-width:0}
+.rail nav ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.rail nav a{display:grid;grid-template-columns:2.4em 1fr;gap:6px;padding:6px 6px;text-decoration:none;color:var(--fg);font-size:14px;line-height:1.3;border-left:4px solid transparent}
+.rail nav a b{color:var(--dim);font-weight:400;text-align:right}
+.rail nav a[aria-current="true"]{border-left-color:var(--red);background:var(--ink2)}
+.rail nav a:hover{background:var(--ink2);color:var(--fg)}
+.gauge{font-size:13px;color:var(--dim);border-top:4px solid var(--rule);padding-top:12px}
+.gauge output{display:block;font-size:30px;line-height:1.1;color:var(--yel)}
+html[data-theme="light"] .gauge output{color:var(--red)}
+.switches{margin-top:auto;display:grid;gap:10px}
+.sw{display:flex;align-items:center;gap:10px;background:none;border:4px solid var(--rule);padding:8px 10px;text-align:left;font-size:13px;line-height:1.25}
+.sw i{flex:none;width:18px;height:18px;background:var(--grn)}
+.sw[aria-pressed="false"] i{background:var(--red)}
+.sw:hover{border-color:var(--fg)}
+main{margin-left:var(--rail)}
+section{padding:72px clamp(16px,5vw,64px);border-bottom:4px solid var(--rule);position:relative}
+.wrap{max-width:980px;margin:0 auto}
+h2{margin:0 0 6px;font-size:28px;line-height:1.2;font-weight:700}
+h2 svg{color:var(--fg)}
+.lede{color:var(--dim);max-width:62ch;margin:10px 0 28px}
+p{max-width:68ch}
+
+/* ---------- le moniteur ---------- */
+#accueil{padding-top:40px}
+.crt{background:var(--ink2);padding:clamp(10px,2.4vw,26px);border-radius:14px;position:relative;overflow:hidden}
+.crt.loading{background:repeating-linear-gradient(0deg,var(--cyan) 0 14px,var(--red) 14px 28px);animation:tape .32s steps(4) infinite}
+.crt.data{background:repeating-linear-gradient(0deg,var(--yel) 0 5px,var(--blue) 5px 13px,var(--yel) 13px 16px,var(--blue) 16px 30px);animation:tape .2s steps(3) infinite}
+.crt.alarm{background:var(--red)}
+@keyframes tape{to{background-position:0 28px}}
+.screen{background:var(--deep);color:var(--paper);min-height:clamp(300px,44vw,470px);padding:clamp(14px,3vw,34px);position:relative;display:grid;align-content:center;overflow:hidden;transform-origin:50% 50%}
+.screen::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(0,0,0,.28) 3px 4px);pointer-events:none}
+#boot{margin:0;font:inherit;font-size:clamp(11px,1.55vw,17px);white-space:pre-wrap;align-self:start;line-height:1.75}
+#boot .c{color:var(--cyan)} #boot .r{color:var(--red)} #boot .y{color:var(--yel)} #boot .g{color:var(--grn)}
+#title{display:grid;gap:clamp(10px,2vw,22px);justify-items:center;text-align:center}
+#title h1{margin:0;width:min(100%,860px)}
+#title .sub{color:var(--cyan);font-size:clamp(13px,2vw,21px);margin:0}
+#title .meta{color:#9aa0c8;font-size:clamp(11px,1.4vw,14px);margin:0;max-width:none}
+#title .prompt{color:var(--yel);font-size:clamp(12px,1.7vw,18px);margin:0;min-height:1.6em}
+.cursor{display:inline-block;width:.6em;height:1.05em;background:currentColor;vertical-align:-.15em;animation:blink .9s steps(1) infinite}
+@keyframes blink{55%{opacity:0}}
+.bezel{display:flex;justify-content:space-between;align-items:center;color:#c9cdf0;font-size:13px;padding:12px 4px 0;gap:12px}
+html[data-theme="light"] .bezel{color:#0d0f2b}
+.crt.loading .bezel,.crt.data .bezel{color:#000;font-weight:700}
+#power{display:flex;align-items:center;gap:10px;background:var(--deep);border:4px solid var(--paper);color:var(--paper);padding:8px 14px;font-size:14px}
+#power i{width:14px;height:14px;background:var(--grn)}
+#power[aria-pressed="false"] i{background:var(--red)}
+#power:hover{background:var(--paper);color:var(--deep)}
+.screen.off{animation:poweroff .5s forwards}
+.screen.on{animation:poweron .35s}
+@keyframes poweroff{50%{transform:scale(1,.006);filter:brightness(3)}100%{transform:scale(0,.006);filter:brightness(3)}}
+@keyframes poweron{0%{transform:scale(1,.006);filter:brightness(3)}100%{transform:scale(1,1)}}
+html.off main > section:not(#accueil), html.off .rail nav, html.off .gauge{filter:brightness(.12) grayscale(1);pointer-events:none}
+html.off main > section,html.off .rail nav,html.off .gauge{transition:filter .5s}
+.pitch{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:34px 0 0;padding:0;list-style:none;border:4px solid var(--rule)}
+.pitch li{padding:18px 20px;border-right:4px solid var(--rule)}
+.pitch li:last-child{border-right:0}
+.pitch strong{display:block;color:var(--yel);font-size:17px;margin-bottom:4px}
+html[data-theme="light"] .pitch strong{color:var(--red)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.btn{display:inline-block;border:4px solid var(--fg);background:var(--fg);color:var(--bg);padding:10px 18px;text-decoration:none;font-weight:700}
+.btn:hover{background:var(--yel);border-color:var(--yel);color:#0d0f2b}
+.btn.ghost{background:none;color:var(--fg)}
+.btn.ghost:hover{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+
+/* ---------- le terminal ---------- */
+.term{background:#000;border:4px solid var(--rule);color:#d7f7df;font-size:15px}
+.term-bar{background:var(--ink2);color:var(--fg);padding:6px 12px;font-size:13px;display:flex;justify-content:space-between;gap:10px}
+#log{height:min(52vh,400px);overflow-y:auto;padding:14px 16px 4px;white-space:pre-wrap;word-break:break-word}
+#log .in{color:var(--yel)} #log .err{color:#ff8087} #log .hi{color:var(--cyan)} #log .dimm{color:#9aa0c8}
+.term form{display:flex;gap:8px;padding:6px 16px 14px;align-items:center}
+.term label{color:var(--grn);white-space:nowrap}
+#cmd{flex:1;min-width:0;background:none;border:0;color:#fff;font:inherit;padding:4px 0;caret-color:var(--yel)}
+#cmd:focus{outline:none}
+.term:focus-within{border-color:var(--yel)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:none;border:2px solid var(--rule);padding:3px 10px;font-size:14px}
+.chip:hover{border-color:var(--fg)}
+
+/* ---------- le couloir ---------- */
+#couloir{--hole:.62;padding:0;height:190px;overflow:hidden;background:#12143a;border-bottom:0}
+#couloir .floor{position:absolute;left:0;right:0;bottom:0;height:44px;background:#1b1f52;border-top:4px solid #8e93b8}
+#couloir .hole{position:absolute;bottom:14px;left:calc(var(--hole)*100%);width:92px;height:30px;background:#000;border-inline:4px solid #8e93b8}
+#couloir .front{position:absolute;left:0;right:0;bottom:0;height:14px;background:#1b1f52;z-index:3}
+#couloir .sign{position:absolute;left:calc(var(--hole)*100% + 4px);bottom:110px;background:var(--yel);color:#0d0f2b;font-size:12px;padding:2px 8px;font-weight:700}
+#couloir .sign::after{content:"";position:absolute;left:50%;top:100%;width:4px;height:44px;background:#8e93b8}
+#couloir .w{position:absolute;bottom:44px;left:0;width:60px;height:90px;will-change:transform;z-index:2}
+#couloir .w svg{position:absolute;left:0;top:0}
+#couloir .w .b{display:none}
+#couloir .w.alt .a{display:none} #couloir .w.alt .b{display:block}
+#couloir .w.fallen{transition:transform .5s cubic-bezier(.6,0,1,.6)}
+#couloir .door{position:absolute;right:6%;bottom:44px;width:78px;height:128px;background:#020208;border:6px solid #3a3d6e;border-bottom:0}
+#couloir .door .leaf{position:absolute;inset:0;background:var(--red);transform-origin:0 50%;transition:transform .5s;box-shadow:inset 0 0 0 8px #b81a21}
+#couloir .door.open .leaf{transform:scaleX(.38)}
+#couloir .door svg{position:absolute;left:22px;bottom:0}
+#couloir .cap{position:absolute;left:16px;top:10px;color:#9aa0c8;font-size:12px}
+
+/* ---------- les fiches ---------- */
+.tapes{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;list-style:none;padding:0;margin:0}
+.tape{display:grid;width:100%;height:100%;text-align:left;background:var(--panel);border:4px solid var(--rule);padding:0;grid-template-rows:auto 1fr auto}
+.tape:hover,.tape:focus-visible{border-color:var(--fg)}
+.tape .lab{background:var(--paper);color:#0d0f2b;padding:10px 14px 12px;border-bottom:8px solid var(--c,var(--red));display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:baseline}
+.tape .num{font-size:30px;font-weight:700;line-height:1}
+.tape .ttl{font-weight:700;line-height:1.3}
+.tape .joke{grid-column:1/-1;font-size:13.5px;color:#3a3d6e;line-height:1.4}
+.tape .reels{display:flex;justify-content:center;gap:46px;margin:16px auto 12px;padding:8px 18px;border:4px solid var(--rule);width:max-content;background:#000}
+.tape .reels i{width:36px;height:36px;border-radius:50%;border:4px solid var(--paper);background:radial-gradient(circle,var(--paper) 0 4px,transparent 5px),conic-gradient(#6b4a2a 0 12%,transparent 0 33%,#6b4a2a 0 45%,transparent 0 66%,#6b4a2a 0 78%,transparent 0)}
+.tape:hover .reels i,.tape:focus-visible .reels i{animation:spin 1.6s steps(12) infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tape .foot{padding:0 14px 12px;font-size:12.5px;color:var(--dim)}
+.proof{display:flex;height:10px;margin-bottom:6px;background:var(--rule)}
+.proof i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 22px;padding:0;list-style:none;font-size:13.5px}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+.t-ver{background:var(--grn)} .t-pro{background:var(--yel)} .t-ave{background:var(--org)} .t-ana{background:var(--vio)} .t-vu{background:var(--cyan)}
+
+dialog{width:min(1000px,96vw);height:min(92vh,1000px);padding:0;border:4px solid var(--fg);background:var(--bg);color:var(--fg);overflow:hidden}
+dialog[open]{display:grid;grid-template-rows:auto 1fr}
+dialog::backdrop{background:rgba(3,4,16,.82)}
+.dlg-bar{display:flex;gap:10px;align-items:center;justify-content:space-between;background:var(--ink2);padding:8px 12px;font-size:14px}
+.dlg-bar strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dlg-bar div{display:flex;gap:8px;flex:none}
+.dlg-bar a,.dlg-bar button{border:2px solid var(--fg);background:none;color:var(--fg);padding:2px 10px;text-decoration:none;font-size:13px}
+#reader{overflow:auto;padding:20px clamp(14px,3vw,36px) 60px;font-size:14.5px;line-height:1.65;overscroll-behavior:contain}
+#reader h1{font-size:24px;line-height:1.25} #reader h2{font-size:20px;margin-top:2em;border-top:4px solid var(--rule);padding-top:.8em} #reader h3{font-size:17px;margin-top:1.6em} #reader h4{font-size:15px}
+#reader p,#reader li{max-width:78ch}
+#reader .tbl{overflow-x:auto;margin:1em 0;border:2px solid var(--rule)}
+#reader table{border-collapse:collapse;font-size:13px;min-width:100%}
+#reader th,#reader td{border:1px solid var(--rule);padding:5px 8px;vertical-align:top;text-align:left;min-width:7em}
+#reader th{background:var(--ink2);position:sticky;top:0}
+#reader code{background:var(--ink2);padding:0 .3em}
+#reader pre{background:var(--panel);padding:10px;overflow:auto;border:2px solid var(--rule)}
+.tag{padding:0 .3em;color:#0d0f2b;font-weight:700;white-space:nowrap}
+
+/* ---------- les épisodes ---------- */
+.grid25{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;max-width:520px}
+.grid25 .sea{grid-column:1/-1;font-size:13px;color:var(--dim);margin-top:8px}
+.grid25 button{aspect-ratio:1;background:var(--panel);border:4px solid var(--rule);font-size:14px;padding:0}
+.grid25 button:hover{border-color:var(--fg)}
+.grid25 button[aria-pressed="true"]{background:var(--yel);color:#0d0f2b;border-color:var(--yel)}
+.grid25 button.sp{aspect-ratio:auto;grid-column:1/-1;padding:8px}
+.eps{display:grid;grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:28px;align-items:start}
+#epcard{border:4px solid var(--rule);background:var(--panel);padding:18px 20px;min-height:250px}
+#epcard h3{margin:0 0 4px;font-size:24px;line-height:1.2}
+#epcard dl{margin:14px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14.5px}
+#epcard dt{color:var(--dim)} #epcard dd{margin:0}
+
+/* ---------- les incidents ---------- */
+#incidents{overflow:hidden}
+.num-track{margin:30px calc(-1*clamp(16px,5vw,64px)) 8px;background:#000;padding:22px 0;overflow:hidden;border-block:4px solid var(--rule)}
+#bignum{white-space:nowrap;will-change:transform;display:flex;width:max-content}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px}
+.card.spot{background:radial-gradient(ellipse 60% 70% at 50% 100%,rgba(236,230,208,.16),transparent 70%),var(--panel)}
+.card{border:4px solid var(--rule);background:var(--panel);padding:20px;position:relative;overflow:hidden;min-height:330px}
+.card h3{margin:0 0 6px;font-size:19px}
+.card p{font-size:14.5px;color:var(--dim);margin:0 0 12px}
+#firecv{position:absolute;left:0;right:0;bottom:0;width:100%;height:230px;image-rendering:pixelated;pointer-events:none}
+.mail{position:relative;z-index:1;background:var(--paper);color:#0d0f2b;padding:10px 12px;font-size:13.5px;max-width:330px;border:4px solid #0d0f2b}
+.mail b{display:block}
+.plinth{position:absolute;left:50%;bottom:0;width:190px;height:86px;margin-left:-95px;background:#b9b39c;border-top:12px solid var(--paper)}
+#box{position:absolute;left:50%;bottom:98px;width:124px;height:76px;margin-left:-62px;background:#05050c;border:0;border-top:10px solid #3a3d6e;border-right:10px solid #23254a;box-shadow:inset 0 0 0 2px #1d1f38;z-index:2;padding:0;transition:transform .5s cubic-bezier(.5,0,1,.5)}
+#box i{position:absolute;right:14px;top:12px;width:12px;height:12px;background:var(--red);box-shadow:0 0 0 10px rgba(228,37,45,.22);animation:led 5.2s steps(1) infinite}
+@keyframes led{0%,18%,25%,43%,50%,68%,75%,80%,85%,88%,93%,100%{opacity:1}19%,24%,44%,49%,69%,74%,81%,84%,89%,92%{opacity:0}}
+#box:hover{transform:translate(3px,-2px) rotate(2deg)}
+html.offline #box{transform:translate(120px,150px) rotate(84deg)}
+html.offline #box i{animation:none;opacity:.15;box-shadow:none}
+html.offline main, html.offline .rail nav{filter:grayscale(1) contrast(.9)}
+#offline{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:50;background:var(--red);color:#fff;border:4px solid #fff;padding:12px 16px;max-width:min(92vw,560px);display:none;gap:12px;align-items:center;flex-wrap:wrap}
+html.offline #offline{display:flex}
+#offline button{background:#fff;color:#0d0f2b;border:0;padding:6px 12px;font-weight:700}
+
+/* ---------- derrière la porte rouge ---------- */
+#porte{background:var(--panel)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.cols h3{font-size:19px;margin:0 0 8px;color:var(--yel)}
+html[data-theme="light"] .cols h3{color:var(--red)}
+ol.steps{padding-left:1.4em;margin:0} ol.steps li{margin-bottom:12px;max-width:60ch}
+pre.sh{background:#000;color:#d7f7df;padding:10px 12px;margin:6px 0 0;overflow-x:auto;border:2px solid var(--rule);font-size:14px;position:relative}
+table.labels{border-collapse:collapse;font-size:14px;width:100%}
+table.labels td{border-top:2px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+footer{padding:36px clamp(16px,5vw,64px) 90px;margin-left:var(--rail);font-size:13.5px;color:var(--dim)}
+footer p{max-width:86ch}
+#toast{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--paper);color:#0d0f2b;border:4px solid #0d0f2b;padding:10px 14px;max-width:min(90vw,420px);font-size:14px;transform:translateY(160%);transition:transform .25s}
+#toast.show{transform:none}
+#blaze{position:fixed;left:0;right:0;bottom:0;width:100%;height:46vh;image-rendering:pixelated;pointer-events:none;z-index:40;display:none}
+html.onfire #blaze{display:block}
+
+/* ---------- kernel panic ---------- */
+#panic{position:fixed;inset:0;z-index:100;background:#000;color:#ddd;padding:clamp(14px,4vw,48px);font-size:clamp(11px,1.5vw,16px);display:none;overflow:hidden;white-space:pre-wrap;border:clamp(8px,2vw,24px) solid var(--red)}
+html.panic #panic{display:block}
+#panic .box{background:var(--red);color:#fff;padding:14px 18px;margin-top:22px;display:inline-block;white-space:normal;max-width:60ch}
+#panic button{background:#fff;color:#000;border:0;padding:8px 14px;margin-top:14px;font-weight:700}
+
+/* ---------- mobile ---------- */
+@media (max-width:900px){
+  :root{--rail:0px}
+  .rail{position:sticky;top:0;inset:auto;width:auto;flex-direction:row;align-items:center;gap:10px;padding:8px 10px;border-right:0;border-bottom:4px solid var(--rule);overflow:visible}
+  .lift{padding:4px 8px;border-width:2px;flex:none} .lift small{display:none} #floor{height:28px;width:54px}
+  .rail nav{flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+  .rail nav ol{display:flex;gap:2px}
+  .rail nav a{display:block;white-space:nowrap;border-left:0;border-bottom:4px solid transparent;padding:6px 8px}
+  .rail nav a b{display:none}
+  .rail nav a[aria-current="true"]{border-bottom-color:var(--red)}
+  .gauge{display:none}
+  .switches{margin:0;display:flex;gap:6px;flex:none}
+  .sw{padding:6px;border-width:2px} .sw span{display:none}
+  section{padding-block:52px}
+  .pitch{grid-template-columns:1fr} .pitch li{border-right:0;border-bottom:4px solid var(--rule)} .pitch li:last-child{border-bottom:0}
+  .eps,.two,.cols{grid-template-columns:1fr}
+  .grid25{max-width:none}
+  #couloir{height:170px;--hole:.42}
+  #couloir .door{right:3%}
+  #couloir .cap{font-size:11px;left:8px;top:6px}
+  .card{min-height:400px}
+  footer{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="rail" aria-label="Ascenseur">
+  <div class="lift" aria-hidden="true"><div id="floor"></div><small>étage</small></div>
+  <nav aria-label="Étages">
+    <ol>
+      <li><a href="#accueil"><b>0</b>Accueil</a></li>
+      <li><a href="#service"><b>-1</b>Le service</a></li>
+      <li><a href="#fiches"><b>-2</b>Les archives</a></li>
+      <li><a href="#episodes"><b>-3</b>La régie</a></li>
+      <li><a href="#incidents"><b>-4</b>Les incidents</a></li>
+      <li><a href="#porte"><b>-5</b>La porte rouge</a></li>
+    </ol>
+  </nav>
+  <div class="gauge">Secondes sans incident<output id="calm" aria-live="off">0</output><span id="record">Record : 0</span></div>
+  <div class="switches">
+    <button class="sw" id="light" aria-pressed="false" title="Allumer la lumière du sous-sol"><i></i><span>Lumière du sous-sol</span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<section id="accueil" aria-labelledby="h-accueil">
+  <div class="wrap">
+    <div class="crt" id="crt">
+      <div class="screen" id="screen">
+        <pre id="boot" aria-hidden="true"></pre>
+        <div id="title">
+          <h1 id="h-accueil" data-px="THE IT CROWD" data-scale="12" data-shadow="1">The IT Crowd, l'encyclopédie des fans</h1>
+          <p class="sub">L'encyclopédie des fans, rangée au sous-sol</p>
+          <p class="meta">10 fiches / 25 épisodes / 0 épisode visionné / projet non officiel</p>
+          <p class="prompt" aria-hidden="true">&gt; <span id="typed"></span><span class="cursor"></span></p>
+        </div>
+      </div>
+      <div class="bezel">
+        <span>Reynholm 48K</span>
+        <button id="power" aria-pressed="true"><i></i><span id="power-label">Éteindre</span></button>
+      </div>
+    </div>
+
+    <ul class="pitch">
+      <li><strong>Onze fiches, 730 Ko</strong>Production, personnages, 25 épisodes, répliques, décors, références, accents, postérité.</li>
+      <li><strong>Chaque fait porte son étiquette</strong>Vérifié, probable, à vérifier, analyse. On sait toujours d'où ça sort.</li>
+      <li><strong>Zéro image de la série</strong>Du texte, des liens, du pixel art maison. Les captures restent chez vous.</li>
+    </ul>
+    <div class="cta">
+      <a class="btn" href="#fiches">Lire les fiches</a>
+      <a class="btn ghost" href="#porte">Installer chez soi</a>
+      <button class="btn ghost" id="share">Partager la page</button>
+    </div>
+  </div>
+</section>
+
+<section id="service" aria-labelledby="h-service">
+  <div class="wrap">
+    <h2 id="h-service" data-px="HELLO, IT.">Le service informatique</h2>
+    <p class="lede">Le standard du sous-sol. Posez votre question, le service fera de son mieux pour ne pas y répondre. Tapez <kbd>help</kbd> pour commencer.</p>
+    <div class="term" id="term">
+      <div class="term-bar"><span>reynholm@sous-sol : ~</span><span>tty-1</span></div>
+      <div id="log" role="log" aria-live="polite" tabindex="0" aria-label="Sortie du terminal"></div>
+      <form id="termform" autocomplete="off">
+        <label for="cmd">it&gt;</label>
+        <input id="cmd" type="text" spellcheck="false" autocapitalize="off" aria-describedby="h-service" placeholder="help">
+      </form>
+    </div>
+    <div class="chips" aria-label="Commandes à essayer">
+      <button class="chip" data-cmd="help">help</button>
+      <button class="chip" data-cmd="ls">ls</button>
+      <button class="chip" data-cmd="cat 05">cat 05</button>
+      <button class="chip" data-cmd="ep S2E1">ep S2E1</button>
+      <button class="chip" data-cmd="call 999">call 999</button>
+      <button class="chip" data-cmd="google google">google google</button>
+      <button class="chip" data-cmd="reboot">reboot</button>
+    </div>
+  </div>
+</section>
+
+<section id="couloir" aria-hidden="true">
+  <span class="cap">Faites défiler : ils avancent. Remontez : ils reculent.</span>
+  <div class="floor"></div><div class="hole"></div><span class="sign">ÉTAGE 404</span>
+  <div class="door" id="cdoor"><div class="leaf"></div></div>
+  <div class="front"></div>
+</section>
+
+<section id="fiches" aria-labelledby="h-fiches">
+  <div class="wrap">
+    <h2 id="h-fiches" data-px="LES ARCHIVES">Les archives : dix fiches</h2>
+    <p class="lede">Onze cassettes, à charger dans l'ordre que vous voulez. La barre de couleur de chaque cassette donne la répartition de ses étiquettes de preuve, comptées dans le texte.</p>
+    <ul class="legend" aria-label="Légende des étiquettes">
+      <li><i class="t-ver"></i>[VÉRIFIÉ] lu dans la source citée</li>
+      <li><i class="t-pro"></i>[PROBABLE] déduit, pas lu tel quel</li>
+      <li><i class="t-ave"></i>[À VÉRIFIER] fragile ou contradictoire</li>
+      <li><i class="t-ana"></i>[ANALYSE] avis du rédacteur</li>
+      <li><i class="t-vu"></i>[VU À L'IMAGE] constaté au visionnage</li>
+    </ul>
+    <ul class="tapes" id="tapes"></ul>
+  </div>
+</section>
+
+<section id="episodes" aria-labelledby="h-episodes">
+  <div class="wrap">
+    <h2 id="h-episodes" data-px="LA RÉGIE">La régie : 25 épisodes</h2>
+    <p class="lede">Quatre saisons de six épisodes, un spécial. Les titres originaux et les dates sont recoupés dans trois sources. Aucun titre français n'est confirmé par un diffuseur.</p>
+    <div class="eps">
+      <div class="grid25" id="grid25" role="group" aria-label="Choisir un épisode"></div>
+      <div id="epcard" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section id="incidents" aria-labelledby="h-incidents">
+  <div class="wrap">
+    <h2 id="h-incidents" data-px="LES INCIDENTS">La salle des incidents</h2>
+    <p class="lede">En cas d'urgence, composez le nouveau numéro. Il est plus long, donc plus sûr. Continuez de défiler pour l'avoir en entier.</p>
+    <div class="num-track" aria-label="0118 999 881 999 119 725 … 3"><div id="bignum" aria-hidden="true"></div></div>
+    <div class="two">
+      <div class="card" id="firecard">
+        <h3>Un feu</h3>
+        <p>Il grandit quand vous descendez. La procédure est en cours.</p>
+        <div class="mail"><b>À : pompiers</b><b>Objet : feu</b><span id="mailbody">Dear Sir/Madam,</span></div>
+        <canvas id="firecv" width="80" height="46" aria-hidden="true"></canvas>
+      </div>
+      <div class="card spot">
+        <h3>The Internet</h3>
+        <p>Prêté par les Anciens. Ne pèse rien : c'est du sans-fil. Merci de ne pas y toucher.</p>
+        <div class="plinth"></div>
+        <button id="box" aria-label="La boîte noire qui contient Internet. Ne pas faire tomber."><i></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="porte" aria-labelledby="h-porte">
+  <div class="wrap">
+    <h2 id="h-porte" data-px="NE PAS OUVRIR">Derrière la porte rouge : installer et contribuer</h2>
+    <p class="lede">Vous avez ouvert. Tant pis. Voici comment emporter l'encyclopédie chez vous, et comment la corriger sans vous fâcher avec la preuve.</p>
+    <div class="cols">
+      <div>
+        <h3>Installer chez soi</h3>
+        <ol class="steps">
+          <li>Clonez le dépôt.<pre class="sh" id="clone">git clone https://github.com/agencekoeki/the-it-crowd.git</pre></li>
+          <li>Servez le dossier, puis ouvrez la page. Un serveur local permet à la page de charger les fiches.<pre class="sh">cd it-crowd &amp;&amp; python3 -m http.server 8118
+# puis http://localhost:8118/docs/</pre></li>
+          <li>Pour votre propre vitrine : fourchez le dépôt, puis activez GitHub Pages sur le dossier <code>/docs</code> de la branche principale.</li>
+          <li>Si rien ne marche : éteignez, rallumez.</li>
+        </ol>
+      </div>
+      <div>
+        <h3>Contribuer</h3>
+        <p>Une correction vaut par sa source. Chaque fait ajouté porte une étiquette et la clé de la source lue.</p>
+        <table class="labels">
+          <tr><td><span class="tag t-ver">[VÉRIFIÉ]</span></td><td>Lu dans la source citée. Pas « vu à l'écran ».</td></tr>
+          <tr><td><span class="tag t-pro">[PROBABLE]</span></td><td>Déduit de faits vérifiés. À ne pas citer comme établi.</td></tr>
+          <tr><td><span class="tag t-ave">[À VÉRIFIER]</span></td><td>Sources en désaccord, source unique fragile, ou souvenir.</td></tr>
+          <tr><td><span class="tag t-ana">[ANALYSE]</span></td><td>Interprétation du rédacteur. Pas une information.</td></tr>
+          <tr><td><span class="tag t-vu">[VU À L'IMAGE]</span></td><td>Constaté au visionnage, avec épisode et minutage.</td></tr>
+        </table>
+        <p>Les répliques se citent en VO, une ligne au plus. Aucune capture, aucun extrait : voir <code>LICENSE-NOTES.md</code>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>Projet de fans, non officiel.</strong> Ce site n'a aucun lien avec Channel 4, Talkback Thames, Graham Linehan ni aucun ayant droit de <i>The IT Crowd</i>. Il ne contient aucune image, aucun logo, aucun son ni aucun extrait de la série. Les personnages en pixels sont des créations originales, les répliques sont citées en une ligne, en version originale, à titre de référence.</p>
+  <p>Fabriqué par Kōeki, au sous-sol. Clavier : <kbd>Échap</kbd> appelle un taxi, et le reste se découvre en tapant.</p>
+</footer>
+
+<div id="panic" role="alertdialog" aria-labelledby="panic-t" aria-describedby="panic-d"></div>
+<div id="offline" role="status"><span>Vous avez cassé Internet. Le monde entier vous regarde.</span><button id="fixnet">Demander une autre boîte aux Anciens</button></div>
+<canvas id="blaze" width="120" height="50" aria-hidden="true"></canvas>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="dlg" aria-labelledby="dlg-t">
+  <div class="dlg-bar"><strong id="dlg-t"></strong><div><a id="dlg-src" href="#" target="_blank" rel="noopener">Fichier .md</a><button id="dlg-x">Fermer</button></div></div>
+  <div id="reader" tabindex="0"></div>
+</dialog>
+
+<script id="pixel-data" type="application/json">{"font":{" ":"...../...../...../...../...../...../.....","A":".###./#...#/#...#/#####/#...#/#...#/#...#","B":"####./#...#/#...#/####./#...#/#...#/####.","C":".###./#...#/#..../#..../#..../#...#/.###.","D":"####./#...#/#...#/#...#/#...#/#...#/####.","E":"#####/#..../#..../####./#..../#..../#####","F":"#####/#..../#..../####./#..../#..../#....","G":".###./#...#/#..../#.###/#...#/#...#/.###.","H":"#...#/#...#/#...#/#####/#...#/#...#/#...#","I":"#####/..#../..#../..#../..#../..#../#####","J":"..###/...#./...#./...#./...#./#..#./.##..","K":"#...#/#..#./#.#../##.../#.#../#..#./#...#","L":"#..../#..../#..../#..../#..../#..../#####","M":"#...#/##.##/#.#.#/#.#.#/#...#/#...#/#...#","N":"#...#/##..#/#.#.#/#..##/#...#/#...#/#...#","O":".###./#...#/#...#/#...#/#...#/#...#/.###.","P":"####./#...#/#...#/####./#..../#..../#....","Q":".###./#...#/#...#/#...#/#.#.#/#..#./.##.#","R":"####./#...#/#...#/####./#.#../#..#./#...#","S":".####/#..../#..../.###./....#/....#/####.","T":"#####/..#../..#../..#../..#../..#../..#..","U":"#...#/#...#/#...#/#...#/#...#/#...#/.###.","V":"#...#/#...#/#...#/#...#/#...#/.#.#./..#..","W":"#...#/#...#/#...#/#.#.#/#.#.#/##.##/#...#","X":"#...#/#...#/.#.#./..#../.#.#./#...#/#...#","Y":"#...#/#...#/.#.#./..#../..#../..#../..#..","Z":"#####/....#/...#./..#../.#.../#..../#####","0":".###./#...#/#..##/#.#.#/##..#/#...#/.###.","1":"..#../.##../..#../..#../..#../..#../.###.","2":".###./#...#/....#/...#./..#../.#.../#####","3":"####./....#/....#/.###./....#/....#/####.","4":"...#./..##./.#.#./#..#./#####/...#./...#.","5":"#####/#..../####./....#/....#/#...#/.###.","6":".###./#..../#..../####./#...#/#...#/.###.","7":"#####/....#/...#./..#../..#../..#../..#..","8":".###./#...#/#...#/.###./#...#/#...#/.###.","9":".###./#...#/#...#/.####/....#/....#/.###.",".":"...../...../...../...../...../.##../.##..",",":"...../...../...../...../.##../..#../.#...",":":"...../.##../.##../...../.##../.##../.....","!":"..#../..#../..#../..#../..#../...../..#..","?":".###./#...#/....#/...#./..#../...../..#..","'":"..#../..#../.#.../...../...../...../.....","\"":".#.#./.#.#./...../...../...../...../.....","-":"...../...../...../.###./...../...../.....","+":"...../..#../..#../#####/..#../..#../.....","/":"....#/....#/...#./..#../.#.../#..../#....","(":"...#./..#../.#.../.#.../.#.../..#../...#.",")":".#.../..#../...#./...#./...#./..#../.#...","[":".###./.#.../.#.../.#.../.#.../.#.../.###.","]":".###./...#./...#./...#./...#./...#./.###.","_":"...../...../...../...../...../...../#####","=":"...../...../#####/...../#####/...../.....","%":"##..#/##..#/...#./..#../.#.../#..##/#..##","<":"...#./..#../.#.../#..../.#.../..#../...#.",">":".#.../..#../...#./....#/...#./..#../.#...","*":"...../#.#.#/.###./#####/.###./#.#.#/.....","#":".#.#./.#.#./#####/.#.#./#####/.#.#./.#.#.","@":".###./#...#/#.###/#.#.#/#.###/#..../.###.","&":".##../#..#./#.#../.#.../#.#.#/#..#./.##.#","°":".##../#..#./#..#./.##../...../...../.....","|":"..#../..#../..#../..#../..#../..#../..#..","█":"#####/#####/#####/#####/#####/#####/#####","…":"...../...../...../...../...../...../#.#.#","·":"...../...../...../..#../...../...../.....","«":"...../..#.#/.#.#./#.#../.#.#./..#.#/.....","»":"...../#.#../.#.#./..#.#/.#.#./#.#../.....","→":"...../..#../...#./#####/...#./..#../.....","←":"...../..#../.#.../#####/.#.../..#../....."},"accents":{"acute":["...#.","..#.."],"grave":[".#...","..#.."],"circ":["..#..",".#.#."]},"composed":{"É":["E","acute"],"È":["E","grave"],"Ê":["E","circ"],"À":["A","grave"],"Â":["A","circ"],"Ô":["O","circ"],"Û":["U","circ"],"Ù":["U","grave"],"Î":["I","circ"],"Ç":["C","cedilla"]},"sprites":{"tech":{"label":"Le technicien blasé","color":"#2ee6e6","accent":"#f5d90a","body":["..#.#.##....","..#######...","..#######...","..#oo#oo#...","..#######...","..###oo##...","...#####....","....###.....","..#######...",".#########..",".#.##o##.#..",".#.#ooo#.#aa",".#.#####.##a","...#####...."]},"genius":{"label":"Le génie à lunettes","color":"#f5d90a","accent":"#e4252d","body":["...#####....","..#######...",".#########..",".#########..",".#ooo#ooo#..",".#o#o#o#o#..","..ooo#ooo...","...##o##....","....#a#.....","..###a###...",".####a####..",".#.ooooo.#..",".#.#####.#..","...#####...."]},"boss_lady":{"label":"La cheffe qui n'y connaît rien","color":"#e23be0","accent":"#e4252d","body":["...#####....","..#######...",".##ooooo##..",".#o#####o#..",".#o#o#o#o#..",".#o#####o#..",".##o###o##..",".##.###.##..","..#######...",".#########..",".#.#####.#..",".#.#####.#..","..#######...",".#########.."],"legsA":["...#...#....","..#.....#...","..#.....#...",".aa.....aa.."],"legsB":["....#.#.....","....#.#.....","....#.#.....","...aa.aa...."]},"mogul":{"label":"Le patron mégalo","color":"#ece6d0","accent":"#f5d90a","body":["..a.a.a.a...","..aaaaaaa...","..#######...","..#o###o#...","..#######...","..#ooooo#...","...#####....","....###.....",".####a####..","#####a######","#.###a###.##","#.###a###...","#.#######...","..#######..."]},"goth":{"label":"Le gothique derrière la porte rouge","color":"#a98bff","accent":"#ece6d0","body":["...#####....","..#######...",".#########..",".##o###o##..",".##oo#oo##..",".#########..",".###ooo###..",".##.###.##..",".##..a..##..",".#.#####.#..",".#.#####.#..","...#####....","...#####....","...#####...."]},"_legsA":["...##.##....","..##...##...",".##.....##..",".###....###."],"_legsB":["...##.##....","...##.##....","...##.##....","...###.###.."],"bug":{"label":"Un bug","color":"#35d46a","accent":"#e4252d","body":["#.......#",".#.###.#.","..#####..",".##a#a##.","#########","#.#####.#","#.#...#.#","...#.#..."]}}}</script>
+<script id="kb-data" type="application/json">{"fiches":[{"n":"00","file":"00-CONTRADICTIONS-ET-LACUNES.md","title":"Contradictions entre fiches et lacunes de la base (relecture croisée)","scope":"Tableau consolidé des contradictions relevées entre les fiches 01 à 09 (versions en présence, sources, décision, fiches corrigées) ; recoupement des titres français ; liste dédoublonnée et priorisée des lacunes restantes avec le moyen le plus direct de les combler. Ne couvre pas la fiche 10 (générique), en cours d'écriture à la date de la relecture.","bytes":49765,"lines":275,"sections":["Mode d'emploi","Bilan chiffré","Tableau consolidé des contradictions","Recoupement des titres français","Lacunes restantes, dédoublonnées et priorisées","Sources consultées pendant la relecture croisée"],"tags":{"VÉRIFIÉ":18,"PROBABLE":13,"À VÉRIFIER":19,"ANALYSE":1,"VU À L'IMAGE":1}},{"n":"01","file":"01-production-diffusion.md","title":"Production et diffusion","scope":"Genèse, production, tournage, générique, diffusion Channel 4, audiences, saison 5 annulée, éditions vidéo, streaming, remakes, diffusion internationale et française","bytes":56225,"lines":562,"sections":["Mode d'emploi de la fiche","Carte d'identité","Genèse du projet","Sociétés de production et équipe","Tournage","Générique et musique","Diffusion originale sur Channel 4","Audiences","Saison 5 annulée et épisode spécial","Sorties vidéo (DVD / Blu-ray)","Streaming et vidéo à la demande","Remakes, adaptations et diffusion internationale","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":265,"PROBABLE":8,"À VÉRIFIER":19,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"02","file":"02-personnages-casting.md","title":"Personnages et distribution","scope":"Personnages principaux, récurrents et secondaires ; guest stars et caméos épisode par épisode ; biographies et prix des acteurs ; changements de casting. Série Channel 4, 2006-2013, créée par Graham Linehan.","bytes":86030,"lines":1126,"sections":["Mode d'emploi et discipline de preuve","Vue d'ensemble de la distribution","Personnages principaux","Personnages récurrents et secondaires","Guest stars et caméos, épisode par épisode","Les acteurs principaux","Changements de casting","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":565,"PROBABLE":15,"À VÉRIFIER":70,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"03","file":"03-episodes-saisons-1-2.md","title":"Guide des épisodes, saisons 1 et 2 (épisodes 1 à 12)","scope":"Fiche épisode par épisode des 12 premiers épisodes (Channel 4, 3 février 2006 – 28 septembre 2007) : générique, synopsis, décors, distribution, gags, répliques, références, production et réception. Hors périmètre : saisons 3-4, spécial 2013, biographies, remakes.","bytes":71795,"lines":864,"sections":["Mode d'emploi","Tableau récapitulatif","Faits communs aux deux saisons","Saison 1 (2006)","Saison 2 (2007)","Contradictions entre sources","Synthèse des arcs","Lacunes","Sources"],"tags":{"VÉRIFIÉ":381,"PROBABLE":11,"À VÉRIFIER":24,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"04","file":"04-episodes-saisons-3-4-special.md","title":"Guide des épisodes : saisons 3 et 4 + spécial final « The Internet Is Coming »","scope":"13 épisodes (n° globaux 13 à 25) : saison 3 (2008, 6 ép.), saison 4 (2010, 6 ép.), épisode spécial final (2013). Diffusion d'origine Channel 4. Fiche n° 04 de la base de connaissances.","bytes":85630,"lines":1057,"sections":["Mode d'emploi et discipline de preuve","Tableau récapitulatif","Saison 3 (2008)","Saison 4 (2010)","Épisode spécial final (2013)","Contradictions entre sources","Synthèse des arcs","Lacunes","Sources"],"tags":{"VÉRIFIÉ":481,"PROBABLE":27,"À VÉRIFIER":20,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"05","file":"05-repliques-gimmicks-running-gags.md","title":"Répliques cultes, catchphrases, gimmicks et running gags","scope":"Catalogue des répliques récurrentes et cultes (VO courte + traduction), des gags récurrents, des faux produits / fausses pubs / fausses émissions, des chansons et jingles, et des mots inventés ou détournés de la série The IT Crowd (Channel 4, 2006-2013, 4 saisons + 1 épisode spécial). Hors périmètre : résumés détaillés d'épisodes, biographies de personnages, production.","bytes":85720,"lines":554,"sections":["Mode d'emploi","Catalogue des catchphrases et répliques cultes","Running gags et gimmicks","Faux produits, fausses pubs, fausses émissions et parodies internes","Chansons, jingles et musiques propres à la série","Mots inventés ou détournés","Synthèse des répliques passées dans l'usage courant","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":242,"PROBABLE":22,"À VÉRIFIER":42,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"06","file":"06-decors-lieux-accessoires.md","title":"Décors, lieux, accessoires et univers visuel","scope":"Reynholm Industries, sous-sol du service informatique, set dressing, autres intérieurs, extérieurs et lieux de tournage, studios, costumes, matériel informatique à l'écran, générique","bytes":52270,"lines":597,"sections":["Mode d'emploi de la fiche","Reynholm Industries","Le sous-sol du service informatique","Inventaire du set dressing","Les autres intérieurs","Les extérieurs et lieux de tournage réels","Studios de tournage par saison","Costumes","Matériel informatique et systèmes à l'écran","Le générique et l'habillage","Synthèse visuelle (pour ingestion rapide)","Annexe A — correspondance des épisodes","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":190,"PROBABLE":10,"À VÉRIFIER":28,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"07","file":"07-references-geek-tech-pop-culture.md","title":"Références geek, techniques et pop culture","scope":"Références informatiques, culture hacker/libre, jeux, science-fiction, comics, cinéma, musique, parodies d'émissions britanniques, easter eggs (décor, générique, DVD, sites), tableau épisode par épisode, sujets de société et épisodes controversés. Série Channel 4, 2006-2013, créée par Graham Linehan.","bytes":80011,"lines":647,"sections":["Mode d'emploi","Références informatiques et techniques","Culture hacker et logiciel libre","Jeux vidéo, jeux de rôle, jeux de société, rétro-informatique","Science-fiction, comics, cinéma et séries","Musique et sous-cultures","Parodies d'émissions réelles et culture britannique à expliquer","Easter eggs","Tableau épisode par épisode","Sujets de société et épisodes controversés","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":256,"PROBABLE":28,"À VÉRIFIER":33,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"08","file":"08-accents-langue-humour.md","title":"Accents, langue, écriture comique et style","scope":"Voix et accents des personnages et des interprètes ; registre, argot, jurons et glossaire pour francophones ; mécanique de farce de Graham Linehan ; jeu d'acteur et comique physique ; place dans l'humour britannique (sitcom de studio vs. single-camera) ; VF, titres français et pertes à la traduction.","bytes":64602,"lines":629,"sections":["Mode d'emploi de la fiche","Accents et voix : personnages principaux","Personnages secondaires, accents étrangers et gags de langue","Registre de langue et vocabulaire","Mécanique comique : l'écriture de Graham Linehan","Jeu d'acteur et comique physique","Place dans l'humour britannique","Traduction et doublage français","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":228,"PROBABLE":7,"À VÉRIFIER":15,"ANALYSE":20,"VU À L'IMAGE":0}},{"n":"09","file":"09-reception-memes-heritage.md","title":"Réception, héritage culturel, mèmes et discours","scope":"Réception critique et publique, audiences, prix, statut culte, mèmes, YouTube, communautés, postérité des acteurs, projets de suite, controverses (épisode « The Speech », Graham Linehan) — état au 2026-10-10","bytes":64469,"lines":554,"sections":["Mode d'emploi de la fiche","Repères rapides","Réception critique","Audiences Channel 4 et visionnage en ligne","Prix et nominations","Communauté tech, statut culte et classements","Mèmes et formats viraux","Présence sur YouTube","Communautés, produits dérivés, citations et usages","Postérité des acteurs, retrouvailles et projets de suite","Controverses","Lacunes","Contradictions et écarts entre sources","Sources"],"tags":{"VÉRIFIÉ":235,"PROBABLE":12,"À VÉRIFIER":26,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"10","file":"10-generique.md","title":"Le générique d'ouverture, image par image","scope":"Découpage minuté du générique (Shynola / Neil Hannon), comparaison des versions saisons 1 à 4 et spécial 2013, grammaire d'animation pour le motion design","bytes":15290,"lines":150,"sections":["Méthode et limites","Fiche d'identité","Découpage plan par plan (version saison 1)","L'écran de plantage","La chute dans le « trou noir »","Comparaison des versions","Pour le motion design","Lacunes","Index des fichiers"],"tags":{"VÉRIFIÉ":3,"PROBABLE":0,"À VÉRIFIER":6,"ANALYSE":0,"VU À L'IMAGE":15}}],"episodes":[{"n":1,"code":"S1E1","title":"Yesterday's Jam","date":"2006-02-03","fr":"Les givrés du sous-sol","alt":"Les chaussettes d'hier (Wikipédia FR seule)"},{"n":2,"code":"S1E2","title":"Calamity Jen","date":"2006-02-03","fr":"Aïe mes pieds !","alt":"Calamity Jen ! (Wikipédia FR seule)"},{"n":3,"code":"S1E3","title":"Fifty-Fifty","date":"2006-02-10","fr":"Le millionnaire","alt":"50-50 (Wikipédia FR seule)"},{"n":4,"code":"S1E4","title":"The Red Door","date":"2006-02-17","fr":"La Porte rouge","alt":"—"},{"n":5,"code":"S1E5","title":"The Haunting of Bill Crouse","date":"2006-02-24","fr":"Jen est morte","alt":"—"},{"n":6,"code":"S1E6","title":"Aunt Irma Visits","date":"2006-03-03","fr":"Tante Irma est arrivée","alt":"—"},{"n":7,"code":"S2E1","title":"The Work Outing","date":"2007-08-24","fr":"La Soirée gay","alt":"—"},{"n":8,"code":"S2E2","title":"Return of the Golden Child","date":"2007-08-31","fr":"Le patron saute","alt":"—"},{"n":9,"code":"S2E3","title":"Moss and the German","date":"2007-09-07","fr":"Cuisine à l'allemande","alt":"—"},{"n":10,"code":"S2E4","title":"The Dinner Party","date":"2007-09-14","fr":"Le Dîner de Jen","alt":"—"},{"n":11,"code":"S2E5","title":"Smoke and Mirrors","date":"2007-09-21","fr":"Écran de fumée","alt":"—"},{"n":12,"code":"S2E6","title":"Men Without Women","date":"2007-09-28","fr":"La Potion magique","alt":"—"},{"n":13,"code":"S3E1","title":"From Hell","date":"2008-11-21","fr":"Le maçon","alt":"—"},{"n":14,"code":"S3E2","title":"Are We Not Men?","date":"2008-11-28","fr":"Les vrais mecs","alt":"Ne sommes-nous pas des hommes ? (Wikipédia FR seule)"},{"n":15,"code":"S3E3","title":"Tramps Like Us","date":"2008-12-05","fr":"Ceinture de chasteté","alt":"—"},{"n":16,"code":"S3E4","title":"The Speech","date":"2008-12-12","fr":"Le Discours","alt":"—"},{"n":17,"code":"S3E5","title":"Friendface","date":"2008-12-19","fr":"Friendface","alt":"—"},{"n":18,"code":"S3E6","title":"Calendar Geeks","date":"2008-12-26","fr":"À poil les scientifiques !","alt":"Le Calendrier des geeks (Wikipédia FR seule)"},{"n":19,"code":"S4E1","title":"Jen the Fredo","date":"2010-06-25","fr":"Jen et les féministes","alt":"—"},{"n":20,"code":"S4E2","title":"The Final Countdown","date":"2010-07-02","fr":"Finale sanglante","alt":"—"},{"n":21,"code":"S4E3","title":"Something Happened","date":"2010-07-09","fr":"La Spaciologie","alt":"—"},{"n":22,"code":"S4E4","title":"Italian for Beginners","date":"2010-07-16","fr":"Traduction très spéciale","alt":"AlloCiné garde le titre original"},{"n":23,"code":"S4E5","title":"Bad Boys","date":"2010-07-23","fr":"Les taulards","alt":"AlloCiné garde le titre original"},{"n":24,"code":"S4E6","title":"Reynholm vs Reynholm","date":"2010-07-30","fr":"Douglas devant les tribunaux","alt":"AlloCiné et une notice INA gardent le titre original"},{"n":25,"code":"SP","title":"The Internet Is Coming","date":"2013-09-27","fr":"L'ultime épisode","alt":"The Last Byte (AlloCiné, titre erroné)"}]}</script>
+<script>
+(() => {
+"use strict";
+/* Réglage facultatif : "compte/depot". Laisser vide : déduit de l'adresse sur *.github.io. */
+const CONFIG = { repo: "" };
+
+const PX = JSON.parse(document.getElementById("pixel-data").textContent);
+const KB = JSON.parse(document.getElementById("kb-data").textContent);
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const calmMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const html = document.documentElement;
+const sleep = ms => new Promise(r => setTimeout(r, calmMotion ? 0 : ms));
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+const gh = (() => {
+  const m = location.hostname.match(/^(.+)\.github\.io$/), seg = location.pathname.split("/")[1];
+  const repo = CONFIG.repo || (m && seg ? `${m[1]}/${seg}` : "");
+  return {
+    repo,
+    raw: f => repo ? `https://raw.githubusercontent.com/${repo}/HEAD/kb/${f}` : `../kb/${f}`,
+    blob: f => repo ? `https://github.com/${repo}/blob/HEAD/kb/${f}` : `../kb/${f}`,
+  };
+})();
+if (gh.repo) $("#clone").textContent = `git clone https://github.com/${gh.repo}.git`;
+
+/* ------------------------------------------------ pixels */
+function rowsOf(c) {
+  const comp = PX.composed[c];
+  if (comp) {
+    const rows = PX.font[comp[0]].split("/");
+    return comp[1] === "cedilla" ? { rows: rows.concat(["..#..", ".#..."]), y0: 0 }
+      : { rows: PX.accents[comp[1]].concat(["....."], rows), y0: -3 };
+  }
+  return { rows: (PX.font[c] || PX.font["?"]).split("/"), y0: 0 };
+}
+function runs(rows, ch, ox = 0, oy = 0) {
+  let d = "";
+  rows.forEach((row, y) => {
+    for (let x = 0; x < row.length; x++) {
+      if (row[x] !== ch) continue;
+      let w = 1; while (row[x + w] === ch) w++;
+      d += `M${x + ox} ${y + oy}h${w}v1h-${w}z`; x += w - 1;
+    }
+  });
+  return d;
+}
+function pixelText(str, { scale = 4, shadow = false, color = "currentColor" } = {}) {
+  str = str.toUpperCase();
+  let d = "";
+  [...str].forEach((c, i) => { if (c !== " ") { const g = rowsOf(c); d += runs(g.rows, "#", i * 6, g.y0); } });
+  const w = str.length * 6 - 1, pad = shadow ? 1 : 0;
+  return `<svg class="px" aria-hidden="true" viewBox="0 -3 ${w + pad} ${10 + pad + 2}" width="${(w + pad) * scale}" height="${(12 + pad) * scale}">`
+    + (shadow ? `<path transform="translate(.7 .7)" fill="var(--red)" d="${d}"/>` : "")
+    + `<path fill="${color}" d="${d}"/></svg>`;
+}
+function sprite(key, scale, legs) {
+  const s = PX.sprites[key];
+  let rows = s.body.slice();
+  if (legs) rows = rows.concat(s["legs" + legs] || PX.sprites["_legs" + legs]);
+  const w = rows[0].length, h = rows.length, cls = legs ? (legs === "A" ? "a" : "b") : "";
+  return `<svg class="${cls}" viewBox="0 0 ${w} ${h}" width="${w * scale}" height="${h * scale}" shape-rendering="crispEdges">`
+    + `<path fill="${s.color}" d="${runs(rows, "#")}"/><path fill="#0d0f2b" d="${runs(rows, "o")}"/><path fill="${s.accent}" d="${runs(rows, "a")}"/></svg>`;
+}
+$$("[data-px]").forEach(el => {
+  const label = el.textContent;
+  el.innerHTML = `<span class="sr">${esc(label)}</span>` + pixelText(el.dataset.px, { scale: +el.dataset.scale || 5, shadow: !!el.dataset.shadow });
+});
+
+/* ------------------------------------------------ incidents */
+let calm = 0, record = 0;
+const calmEl = $("#calm"), recEl = $("#record");
+function incident(msg) {
+  record = Math.max(record, calm); calm = 0;
+  calmEl.textContent = "0"; recEl.textContent = `Record : ${record}`;
+  if (msg) toast(msg);
+}
+setInterval(() => { if (!html.classList.contains("off")) calmEl.textContent = String(++calm); }, 1000);
+let toastT;
+function toast(msg, ms = 4200) {
+  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("show"), ms);
+}
+
+/* ------------------------------------------------ moniteur : boot, extinction, panique */
+const crt = $("#crt"), screen = $("#screen"), bootEl = $("#boot"), titleEl = $("#title"), power = $("#power");
+const BOOT = [
+  ["", "REYNHOLM INDUSTRIES BASEMENT BIOS v0.118"], ["", ""],
+  ["c", "Memory check ............ memory is RAM"],
+  ["c", "Power cable ............. definitely plugged in"],
+  ["c", "The Internet ............ 1 box, blinking"],
+  ["r", "Red door ................ do not open"],
+  ["y", "Fire extinguisher ....... on fire"],
+  ["g", "Loading 10 fiches, 25 episodes .......... OK"],
+];
+const PROMPT = "Have you tried turning it off and on again?";
+let bootRun = 0;
+async function boot(fast) {
+  const run = ++bootRun;
+  titleEl.hidden = true; bootEl.hidden = false; bootEl.textContent = ""; $("#typed").textContent = "";
+  crt.className = "crt loading";
+  if (!fast && !calmMotion) {
+    for (const [cls, line] of BOOT) {
+      if (run !== bootRun) return;
+      const span = document.createElement("span"); span.className = cls; span.textContent = line + "\n";
+      bootEl.append(span); await sleep(line ? 330 : 120);
+    }
+    crt.className = "crt data"; await sleep(650);
+    if (run !== bootRun) return;
+  }
+  crt.className = "crt"; bootEl.hidden = true; titleEl.hidden = false;
+  for (let i = 1; i <= PROMPT.length; i++) {
+    if (run !== bootRun) return;
+    $("#typed").textContent = PROMPT.slice(0, i); await sleep(42);
+  }
+}
+function setPower(on) {
+  power.setAttribute("aria-pressed", String(on));
+  $("#power-label").textContent = on ? "Éteindre" : "Rallumer";
+  html.classList.toggle("off", !on);
+  if (on) {
+    html.classList.remove("panic");
+    screen.classList.remove("off"); screen.classList.add("on");
+    setTimeout(() => screen.classList.remove("on"), 400);
+    boot(false);
+    toast("Et voilà. Ça remarche. Ça remarche toujours.");
+  } else {
+    bootRun++; screen.classList.add("off"); crt.className = "crt"; html.classList.remove("onfire");
+    incident();
+  }
+}
+power.addEventListener("click", () => setPower(power.getAttribute("aria-pressed") !== "true"));
+
+const panicEl = $("#panic");
+function panic(reason) {
+  incident();
+  const hex = () => Math.floor(Math.random() * 0xffffffff).toString(16).padStart(8, "0");
+  panicEl.innerHTML =
+`<span id="panic-t">Kernel panic - not syncing: ${esc(reason || "tossed away like yesterday's jam")}</span>
+CPU 0: stress machine reading off the scale (made in Britain)
+Call trace:
+ [&lt;0118999&gt;] new_emergency_number+0x881/0x999
+ [&lt;0119725&gt;] ...+0x3
+ [&lt;c0ffee00&gt;] tea_break+0x04/0x20
+ [&lt;00000404&gt;] floor_not_found+0x1/0x1
+ [&lt;${hex()}&gt;] dear_sir_madam+0xf1/0xf1
+ [&lt;${hex()}&gt;] the_elders_of_the_internet+0x0/0x0
+<div class="box"><span id="panic-d">Tout est planté. La procédure est connue : éteindre, puis rallumer.</span><br><button id="panic-b">Éteindre et rallumer</button></div>`;
+  html.classList.add("panic"); crt.className = "crt alarm";
+  $("#panic-b").focus();
+  $("#panic-b").onclick = async () => {
+    html.classList.remove("panic"); setPower(false); $("#accueil").scrollIntoView();
+    await sleep(900); setPower(true); power.focus();
+  };
+}
+
+/* ------------------------------------------------ terminal */
+const log = $("#log"), cmd = $("#cmd");
+const hist = []; let hi = 0, unknown = 0;
+function out(text, cls) {
+  const d = document.createElement("div"); if (cls) d.className = cls; d.textContent = text; log.append(d); log.scrollTop = log.scrollHeight;
+}
+const fiche = a => KB.fiches.find(f => f.n === String(a || "").padStart(2, "0"));
+const kb = n => `${(n / 1024).toFixed(0)} Ko`;
+const frDate = iso => new Date(iso + "T12:00:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+function epText(e) {
+  return `${e.code}  n° ${e.n}/25\n  Titre original   ${e.title}   [VÉRIFIÉ, 3 sources]\n  Channel 4        ${frDate(e.date)}\n  Titre français   ${e.fr}   [À VÉRIFIER]` + (e.alt && e.alt !== "—" ? `\n  Variante         ${e.alt}` : "");
+}
+const COMMANDS = {
+  help: () => out(
+`Commandes disponibles :
+  ls                 lister les fiches
+  cat <n>            résumé d'une fiche (ex. cat 05)
+  open <n>           ouvrir la fiche dans le lecteur
+  episodes           les 25 épisodes
+  ep <code>          un épisode (ex. ep S2E1, ep SP)
+  call <numéro>      appeler les urgences
+  whoami, date, ping, tea, clear
+  reboot             éteindre et rallumer
+  exit               partir dignement
+Le reste n'est pas documenté. C'est volontaire.`),
+  ls: () => { out(KB.fiches.map(f => `${f.n}  ${f.title.slice(0, 58).padEnd(58)}  ${kb(f.bytes).padStart(6)}`).join("\n")); out("10 fiches. Aucune n'a été rangée par ordre de taille.", "dimm"); },
+  cat: a => { const f = fiche(a); if (!f) return out("cat : il faut un numéro de fiche entre 00 et 09.", "err");
+    out(`${f.file}  (${kb(f.bytes)}, ${f.lines} lignes)`, "hi"); out(f.scope);
+    out("Sections :\n" + f.sections.map(s => "  - " + s).join("\n"));
+    out(`Étiquettes : ${f.tags["VÉRIFIÉ"]} vérifié, ${f.tags["PROBABLE"]} probable, ${f.tags["À VÉRIFIER"]} à vérifier. Tapez « open ${f.n} » pour lire.`, "dimm"); },
+  open: a => { const f = fiche(a); if (!f) return out("open : il faut un numéro de fiche entre 00 et 09.", "err"); out(`Chargement de la cassette ${f.n}…`); openFiche(f); },
+  episodes: () => out(KB.episodes.map(e => `${e.code.padEnd(5)} ${e.date}  ${e.title}`).join("\n")),
+  ep: a => { const e = KB.episodes.find(e => e.code === String(a || "").toUpperCase()); e ? out(epText(e)) : out("ep : code inconnu. Essayez S1E1 à S4E6, ou SP.", "err"); },
+  call: a => { const n = String(a || "").replace(/\D/g, "");
+    if (!n) return out("call : quel numéro ?", "err");
+    if (n === "999") return out("Ce numéro n'est plus attribué. Composez le nouveau : 0118 999 881 999 119 725… 3", "err");
+    if (n === "911") return out("That's the American one, you berk!", "err");
+    if (n === "01189998819991197253") { out("Bonjour, ici les urgences. Quelle est la nature de votre…"); out("Trop tard, vous avez préféré envoyer un courriel.", "dimm"); return; }
+    out(`${n} : faux numéro. Il manque ${Math.max(0, 20 - n.length)} chiffre(s), ou il y en a trop. C'est pourtant facile à retenir.`, "err"); },
+  whoami: () => out("Vous êtes la nouvelle responsable des relations. Votre CV mentionne « beaucoup d'expérience avec les ordinateurs »."),
+  date: () => out("Jeudi, 15 h. D'après le calculateur, en tout cas."),
+  ping: () => out("PING the-internet (1 boîte) : 1 diode transmise, 1 diode reçue, 0 % de perte. Ne la faites pas tomber."),
+  tea: () => out("L'eau chauffe. Le ticket attendra."),
+  rtfm: () => out("Le manuel est la fiche 00. Personne ne l'a lu, vous serez le premier."),
+  sudo: () => out("Vous n'êtes pas dans le fichier des sudoers. Cet incident sera signalé au 34e étage, qui ne saura pas quoi en faire.", "err"),
+  clear: () => { log.textContent = ""; },
+  reboot: async () => { out("Extinction…"); $("#accueil").scrollIntoView(); setPower(false); await sleep(1100); setPower(true); },
+  off: () => { $("#accueil").scrollIntoView(); setPower(false); },
+  on: () => setPower(true),
+  exit: () => { out("Taxi!"); scrollTo({ top: 0 }); },
+  fire: () => { out("Dear Sir/Madam, I am writing to inform you of a fire…"); setFire(true); },
+  internet: () => { out("Il est à l'étage -4, sur son socle. Il clignote. Tout va bien."); $("#incidents").scrollIntoView(); },
+  google: a => { if (/google/i.test(a || "")) { out("Vous avez tapé Google dans Google.", "err"); breakNet(); } else out("Résultats : 0. Essayez de taper Google."); },
+  friendface: () => out("Friendface est bloqué sur ce réseau. Votre mère vous a tout de même envoyé une demande."),
+  tnetennba: () => out("Good morning, that's a nice tnetennba."),
+  door: () => { out("Non."); $("#porte").scrollIntoView(); },
+  panic: () => panic(),
+  hello: () => out("Hello, IT. Have you tried turning it off and on again?"),
+  light: () => $("#light").click(),
+};
+COMMANDS.dir = COMMANDS.ls; COMMANDS.man = COMMANDS.help; COMMANDS["?"] = COMMANDS.help; COMMANDS.aide = COMMANDS.help; COMMANDS.taxi = COMMANDS.exit; COMMANDS.quit = COMMANDS.exit;
+function run(line) {
+  line = line.trim(); if (!line) return;
+  out("it> " + line, "in"); hist.push(line); hi = hist.length;
+  const [name, ...rest] = line.split(/\s+/), fn = COMMANDS[name.toLowerCase()];
+  if (fn) { unknown = 0; return fn(rest.join(" ")); }
+  unknown++;
+  out(unknown === 1 ? "Commande inconnue. Have you tried turning it off and on again?"
+    : unknown === 2 ? "Toujours pas. Is it definitely plugged in?"
+    : "Le service est en pause. Tapez « help », ou revenez jeudi.", "err");
+}
+$("#termform").addEventListener("submit", e => { e.preventDefault(); const v = cmd.value; cmd.value = ""; run(v); });
+cmd.addEventListener("keydown", e => {
+  if (e.key === "ArrowUp" && hi > 0) { cmd.value = hist[--hi]; e.preventDefault(); }
+  else if (e.key === "ArrowDown") { hi = Math.min(hist.length, hi + 1); cmd.value = hist[hi] || ""; e.preventDefault(); }
+  else if (e.key === "Tab" && cmd.value && !cmd.value.includes(" ")) {
+    const m = Object.keys(COMMANDS).filter(k => k.startsWith(cmd.value.toLowerCase()));
+    if (m.length === 1) { cmd.value = m[0] + " "; e.preventDefault(); }
+  }
+});
+$$(".chip").forEach(b => b.addEventListener("click", () => { run(b.dataset.cmd); }));
+out("Reynholm Industries, service informatique (sous-sol).\nHello, IT. Tapez « help ».", "hi");
+
+/* ------------------------------------------------ fiches */
+const JOKES = {
+  "00": "Le journal des désaccords. 75 contradictions, dont 33 tiennent bon.",
+  "01": "Qui a fabriqué quoi, où, et pourquoi il n'y a pas de saison 5.",
+  "02": "Six permanents, des dizaines d'invités, une mère jamais montrée.",
+  "03": "Épisodes 1 à 12. Un incendie, une porte rouge, une sortie au théâtre.",
+  "04": "Épisodes 13 à 25. Une boîte noire, un jeu de lettres clandestin, la fin.",
+  "05": "102 répliques, 28 gags récurrents, un numéro à vingt chiffres.",
+  "06": "Le sous-sol, objet par objet. Le canapé reste non documenté.",
+  "07": "Ce que le décor cite, et ce que les gags parodient.",
+  "08": "Accents, jurons édulcorés, et pourquoi ça se traduit mal.",
+  "09": "Critiques, prix, mèmes, et ce qui a mal vieilli.",
+  "10": "Le générique image par image. La seule fiche qui a regardé quelque chose.",
+};
+const SHORT = { "00": "Contradictions et lacunes", "01": "Production et diffusion", "02": "Personnages et casting",
+  "03": "Épisodes, saisons 1 et 2", "04": "Épisodes, saisons 3 et 4, spécial", "05": "Répliques et running gags",
+  "06": "Décors, lieux, accessoires", "07": "Références geek et pop culture", "08": "Accents, langue, humour", "09": "Réception, mèmes, héritage", "10": "Générique image par image" };
+KB.fiches.forEach(f => { f.long = f.title; f.title = SHORT[f.n] || f.title; });
+const HUES = ["var(--red)", "var(--cyan)", "var(--yel)", "var(--mag)", "var(--grn)", "var(--org)", "var(--vio)", "var(--blue)", "var(--cyan)", "var(--red)"];
+const TAGCLS = { "VÉRIFIÉ": "t-ver", "PROBABLE": "t-pro", "À VÉRIFIER": "t-ave", "ANALYSE": "t-ana", "VU À L'IMAGE": "t-vu" };
+$("#tapes").innerHTML = KB.fiches.map((f, i) => {
+  const tot = Object.values(f.tags).reduce((a, b) => a + b, 0) || 1;
+  const bar = Object.entries(f.tags).filter(([, v]) => v).map(([k, v]) => `<i class="${TAGCLS[k]}" style="width:${(v / tot * 100).toFixed(1)}%" title="${k} : ${v}"></i>`).join("");
+  const sum = Object.entries(f.tags).filter(([, v]) => v).map(([k, v]) => `${v} ${k.toLowerCase()}`).join(", ");
+  return `<li><button class="tape" data-n="${f.n}" style="--c:${HUES[i]}">
+    <span class="lab"><span class="num">${f.n}</span><span class="ttl">${esc(f.title)}</span><span class="joke">${esc(JOKES[f.n] || "")}</span></span>
+    <span class="reels" aria-hidden="true"><i></i><i></i></span>
+    <span class="foot"><span class="proof" role="img" aria-label="Étiquettes : ${esc(sum)}">${bar}</span>${kb(f.bytes)}, ${f.lines} lignes, ${f.sections.length} sections</span>
+  </button></li>`;
+}).join("");
+$("#tapes").addEventListener("click", e => { const b = e.target.closest(".tape"); if (b) openFiche(fiche(b.dataset.n)); });
+
+const dlg = $("#dlg"), reader = $("#reader");
+$("#dlg-x").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+function inline(s) {
+  s = esc(s);
+  s = s.replace(/`([^`]+)`/g, "<code>$1</code>");
+  s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/(^|[\s(«])\*([^*\s][^*]*)\*/g, "$1<em>$2</em>");
+  s = s.replace(/\[(VÉRIFIÉ|PROBABLE|À VÉRIFIER|ANALYSE|VU À L'IMAGE)([^\]]{0,40})\]/g, (m, t) => `<span class="tag ${TAGCLS[t]}">${m}</span>`);
+  return s;
+}
+function md(src) {
+  src = src.replace(/^---\n[\s\S]*?\n---\n/, "");
+  const lines = src.split("\n"), o = []; let i = 0;
+  const cells = l => l.trim().replace(/^\||\|$/g, "").split(/(?<!\\)\|/).map(c => c.trim());
+  while (i < lines.length) {
+    const l = lines[i];
+    if (/^```/.test(l)) { const b = []; i++; while (i < lines.length && !/^```/.test(lines[i])) b.push(lines[i++]); i++; o.push(`<pre>${esc(b.join("\n"))}</pre>`); continue; }
+    const h = l.match(/^(#{1,4})\s+(.*)$/);
+    if (h) { o.push(`<h${h[1].length}>${inline(h[2])}</h${h[1].length}>`); i++; continue; }
+    if (/^\|/.test(l) && /^\|[\s:|-]+\|?\s*$/.test(lines[i + 1] || "")) {
+      const head = cells(l); i += 2; const rows = [];
+      while (i < lines.length && /^\|/.test(lines[i])) rows.push(cells(lines[i++]));
+      o.push(`<div class="tbl" tabindex="0"><table><thead><tr>${head.map(c => `<th>${inline(c)}</th>`).join("")}</tr></thead><tbody>${rows.map(r => `<tr>${r.map(c => `<td>${inline(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`);
+      continue;
+    }
+    if (/^\s*([-*]|\d+\.)\s+/.test(l)) {
+      const ord = /^\s*\d+\./.test(l), items = [];
+      while (i < lines.length && /^\s*([-*]|\d+\.)\s+/.test(lines[i])) items.push(lines[i++].replace(/^\s*([-*]|\d+\.)\s+/, ""));
+      o.push(`<${ord ? "ol" : "ul"}>${items.map(t => `<li>${inline(t)}</li>`).join("")}</${ord ? "ol" : "ul"}>`); continue;
+    }
+    if (/^---+\s*$/.test(l) || !l.trim()) { i++; continue; }
+    const p = []; while (i < lines.length && lines[i].trim() && !/^(#{1,4}\s|\||```|\s*[-*]\s|\s*\d+\.\s)/.test(lines[i])) p.push(lines[i++]);
+    o.push(`<p>${inline(p.join(" "))}</p>`);
+  }
+  return o.join("\n");
+}
+async function openFiche(f) {
+  $("#dlg-t").textContent = `Cassette ${f.n} : ${f.title}`; $("#dlg-src").href = gh.blob(f.file);
+  reader.innerHTML = `<p>Chargement de la cassette ${f.n}. Ne pas éteindre. Ni rallumer.</p>`;
+  if (!dlg.open) dlg.showModal();
+  try {
+    const r = await fetch(gh.raw(f.file)); if (!r.ok) throw new Error(r.status);
+    reader.innerHTML = md(await r.text()); reader.scrollTop = 0;
+  } catch (err) {
+    reader.innerHTML = `<h1>${esc(f.long)}</h1><p>${esc(f.scope)}</p><h2>Sections</h2><ul>${f.sections.map(s => `<li>${esc(s)}</li>`).join("")}</ul>
+      <p><strong>La cassette n'a pas pu être chargée ici.</strong> Une page ouverte par double-clic n'a pas le droit de lire les fichiers voisins. Servez le dépôt avec <code>python3 -m http.server</code> depuis sa racine, ou <a href="${gh.blob(f.file)}" target="_blank" rel="noopener">ouvrez le fichier ${esc(f.file)}</a>.</p>`;
+  }
+}
+
+/* ------------------------------------------------ épisodes */
+const grid = $("#grid25"), card = $("#epcard");
+let gh25 = "";
+[1, 2, 3, 4].forEach(s => {
+  gh25 += `<div class="sea">Saison ${s}</div>`;
+  KB.episodes.filter(e => e.code.startsWith("S" + s)).forEach(e => gh25 += `<button data-code="${e.code}" aria-pressed="false" aria-label="${e.code}, ${esc(e.title)}">${e.code.slice(2)}</button>`);
+});
+gh25 += `<div class="sea">Spécial, 2013</div><button class="sp" data-code="SP" aria-pressed="false">The Internet Is Coming</button>`;
+grid.innerHTML = gh25;
+function showEp(code) {
+  const e = KB.episodes.find(e => e.code === code); if (!e) return;
+  $$("button", grid).forEach(b => b.setAttribute("aria-pressed", String(b.dataset.code === code)));
+  const ficheN = e.n <= 12 ? "03" : "04";
+  card.innerHTML = `<div style="color:var(--dim)">${e.code === "SP" ? "Épisode spécial" : `Saison ${e.code[1]}, épisode ${e.code[3]}`}, n° ${e.n} sur 25</div>
+    <h3>${esc(e.title)}</h3>
+    <dl><dt>Channel 4</dt><dd>${frDate(e.date)} <span class="tag t-ver">[VÉRIFIÉ]</span></dd>
+    <dt>Titre français</dt><dd>${esc(e.fr)} <span class="tag t-ave">[À VÉRIFIER]</span></dd>
+    ${e.alt && e.alt !== "—" ? `<dt>Variante</dt><dd>${esc(e.alt)}</dd>` : ""}
+    <dt>Synopsis</dt><dd><button class="chip" id="ep-open">Ouvrir la fiche ${ficheN}</button></dd></dl>`;
+  $("#ep-open").onclick = () => openFiche(fiche(ficheN));
+}
+grid.addEventListener("click", e => { const b = e.target.closest("button"); if (b) showEp(b.dataset.code); });
+showEp("S1E2");
+
+/* ------------------------------------------------ défilement : étage, couloir, numéro, feu */
+const floors = $$("main > section[aria-labelledby]"), navLinks = $$(".rail nav a"), floorEl = $("#floor");
+let curFloor = null;
+function setFloor(i) {
+  if (i === curFloor) return; curFloor = i;
+  floorEl.innerHTML = pixelText(i === 0 ? "0" : "-" + i, { scale: 6, color: i === 5 ? "#e4252d" : "#f5d90a" });
+  navLinks.forEach((a, k) => a.setAttribute("aria-current", String(k === i)));
+}
+const corridor = $("#couloir");
+const WALKERS = ["tech", "genius", "boss_lady", "mogul"].map((k, i) => {
+  const el = document.createElement("div"); el.className = "w"; el.innerHTML = sprite(k, 5, "A") + sprite(k, 5, "B");
+  corridor.insertBefore(el, $(".front", corridor)); return { el, k, i, fallen: false };
+});
+$("#cdoor").insertAdjacentHTML("afterbegin", sprite("goth", 5));
+const big = $("#bignum");
+big.innerHTML = pixelText("0118 999 881 999 119 725 . . . . . . . . . . . . 3", { scale: 12, color: "#e4252d" });
+const fireCv = $("#firecv"), blazeCv = $("#blaze");
+let fireLevel = 0;
+function onScroll() {
+  const vh = innerHeight, mid = vh * 0.45;
+  let f = 0; floors.forEach((s, i) => { if (s.getBoundingClientRect().top <= mid) f = i; }); setFloor(f);
+  // couloir : progression 0..1 pendant sa traversée de l'écran
+  const cr = corridor.getBoundingClientRect(), cw = cr.width;
+  const p = Math.min(1, Math.max(0, (vh - cr.top) / (vh + cr.height)));
+  const holeX = cw * (parseFloat(getComputedStyle(corridor).getPropertyValue("--hole")) || 0.62);
+  WALKERS.forEach(w => {
+    let x = -90 + (cw + 180) * (p * 1.5 - w.i * 0.17);
+    let y = 0;
+    if (w.k === "mogul") {
+      const edge = holeX + 6;
+      if (x >= edge) { x = edge + 10; y = 190; if (!w.fallen) { w.fallen = true; w.el.classList.add("fallen"); incident("La direction vient de tomber dans un trou."); } }
+      else if (w.fallen) { w.fallen = false; }
+    } else {
+      const dx = (x + 30) - (holeX + 46);
+      if (Math.abs(dx) < 80) y = -38 * (1 - (dx / 80) ** 2);
+    }
+    w.el.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px)`;
+    w.el.classList.toggle("alt", Math.floor(x / 16) % 2 === 0);
+  });
+  $("#cdoor").classList.toggle("open", p > 0.35 && p < 0.9);
+  // numéro d'urgence
+  const tr = big.parentElement.getBoundingClientRect();
+  const q = Math.min(1, Math.max(0, (vh - tr.top) / (vh * 0.9 + tr.height)));
+  big.style.transform = `translateX(${(tr.width * 0.5 - q * (big.scrollWidth - tr.width * 0.35)).toFixed(1)}px)`;
+  // feu
+  const fr = $("#firecard").getBoundingClientRect();
+  fireLevel = Math.min(1, Math.max(0, (vh - fr.top) / (vh * 0.9)));
+  $("#mailbody").textContent = fireLevel < 0.45 ? "Dear Sir/Madam," : fireLevel < 0.8 ? "Dear Sir/Madam, I am writing to inform you of a fire…" : "Fire! Exclamation mark. Help me! Exclamation mark.";
+}
+let ticking = false;
+addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; onScroll(); }); } }, { passive: true });
+addEventListener("resize", onScroll);
+
+function drawFire(cv, level, t) {
+  const c = cv.getContext("2d"), W = cv.width, H = cv.height;
+  c.clearRect(0, 0, W, H);
+  for (let x = 0; x < W; x++) {
+    const u = x / (W - 1), dome = 0.3 + 0.7 * (1 - Math.abs(2 * u - 1) ** 1.7);
+    const n = 0.62 + 0.38 * Math.abs(Math.sin(x * 12.9898 + t * 3.1) * Math.cos(x * 4.13 - t * 1.7));
+    const h = Math.round(H * level * dome * n);
+    for (let k = 0; k < h; k++) {
+      const r = k / h; c.fillStyle = r < 0.34 ? "#f5d90a" : r < 0.7 ? "#ff8a1e" : "#e4252d";
+      c.fillRect(x, H - 1 - k, 1, 1);
+    }
+    if (h > 2 && (x * 7 + t) % 9 === 0) { c.fillStyle = "#ff8a1e"; c.fillRect(x, Math.max(0, H - h - 2 - (t % 3)), 1, 1); }
+  }
+}
+let ft = 0;
+function fireTick() {
+  ft++;
+  drawFire(fireCv, 0.12 + fireLevel * 0.88, calmMotion ? 3 : ft);
+  if (html.classList.contains("onfire")) drawFire(blazeCv, 1, calmMotion ? 5 : ft + 40);
+}
+fireTick(); if (!calmMotion) setInterval(fireTick, 125);
+function setFire(on) {
+  html.classList.toggle("onfire", on);
+  if (on) { incident("Dear Sir/Madam, I am writing to inform you of a fire. (Éteignez et rallumez pour l'éteindre.)"); fireTick(); }
+}
+
+/* ------------------------------------------------ The Internet */
+function breakNet() { if (html.classList.contains("offline")) return; html.classList.add("offline"); incident(); $("#fixnet").focus({ preventScroll: true }); }
+$("#box").addEventListener("click", breakNet);
+$("#fixnet").addEventListener("click", () => { html.classList.remove("offline"); toast("Les Anciens ont livré une autre boîte. Elle clignote."); $("#box").focus({ preventScroll: true }); });
+
+/* ------------------------------------------------ lumière, partage */
+$("#light").addEventListener("click", e => {
+  const on = html.dataset.theme !== "light"; html.dataset.theme = on ? "light" : "dark";
+  e.currentTarget.setAttribute("aria-pressed", String(on));
+  toast(on ? "Lumière allumée. On voit mieux la poussière." : "Lumière éteinte. Retour à la normale.");
+});
+$("#share").addEventListener("click", async () => {
+  const data = { title: document.title, text: "L'encyclopédie des fans de The IT Crowd. Have you tried turning it off and on again?", url: location.href.split("#")[0] };
+  try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); toast("Adresse copiée. Collez-la dans un courriel, objet : « Fire »."); } }
+  catch (err) { if (err.name !== "AbortError") toast("Impossible de partager. Recopiez l'adresse à la main, comme en 2006."); }
+});
+
+/* ------------------------------------------------ clavier : œufs de Pâques */
+const KONAMI = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+let kpos = 0, typed = "";
+const SECRETS = {
+  "fire": () => setFire(true),
+  "0118999": () => toast("0118 999 881 999 119 725… 3. Well, that's easy to remember.", 6000),
+  "tnetennba": () => toast("Good morning, that's a nice tnetennba."),
+  "moss": () => toast("Il est occupé. Il range l'extincteur avec le reste du feu."),
+  "jen": () => { toast("Taxi!"); scrollTo({ top: 0 }); },
+  "roy": () => toast("Il ne décroche pas. Il a mis la bande."),
+  "richmond": () => $("#porte").scrollIntoView(),
+  "google": () => toast("N'allez pas plus loin. Surtout pas deux fois."),
+  "googlegoogle": () => breakNet(),
+};
+addEventListener("keydown", e => {
+  if (e.key === "Escape" && !dlg.open) {
+    if (html.classList.contains("panic")) return $("#panic-b").click();
+    toast("Taxi!"); scrollTo({ top: 0 }); return;
+  }
+  kpos = e.key === KONAMI[kpos] || e.key.toLowerCase() === KONAMI[kpos] ? kpos + 1 : (e.key === KONAMI[0] ? 1 : 0);
+  if (kpos === KONAMI.length) { kpos = 0; panic("cheat code detected in the basement"); return; }
+  if (e.target.matches("input,textarea") || e.ctrlKey || e.metaKey || e.altKey || e.key.length !== 1) return;
+  typed = (typed + e.key.toLowerCase()).replace(/\s/g, "").slice(-14);
+  for (const k of Object.keys(SECRETS).sort((a, b) => b.length - a.length)) if (typed.endsWith(k)) { typed = k === "google" ? typed : ""; SECRETS[k](); break; }
+});
+
+setFloor(0); onScroll(); boot(false);
+})();
+</script>
+</body>
+</html>
