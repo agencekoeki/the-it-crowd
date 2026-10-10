@@ -1,14 +1,14 @@
 ---
 title: "The IT Crowd — Le générique d'ouverture, image par image"
 scope: "Découpage minuté du générique (Shynola / Neil Hannon), comparaison des versions saisons 1 à 4 et spécial 2013, grammaire d'animation pour le motion design"
-last_updated: 2026-10-10
+last_updated: 2026-10-11
 ---
 
 # 10 — Le générique d'ouverture, image par image
 
 ## 0. Méthode et limites
 
-- Cette fiche est la seule de la base fondée sur un **visionnage direct** : des captures du générique prises sur YouTube le 2026-10-10.
+- Cette fiche est fondée sur un **visionnage direct** : des captures du générique prises sur YouTube le 2026-10-10. Elle était la seule dans ce cas à sa rédaction ; depuis, le dossier `episodes/` décrit 24 épisodes d'après l'image et la section 7 bis ci-dessous en reprend ce qui touche au générique, aux titres et aux cartons.
 - Étiquettes : `[VU À L'IMAGE]` = constaté sur une capture nommée ; `[VÉRIFIÉ]` = lu dans une source écrite (voir fiches 01 et 06) ; `[INTERPRÉTATION]` = lecture personnelle d'une image ambiguë ; `[À VÉRIFIER]` = non contrôlé.
 - Captures : PNG 1920×1080 dans `generique/` (une image toutes les 0,2 s) et `generique/fin/` (une image toutes les 0,04 s). Planches-contact dans `generique/_planches/`.
 - **Les minutages sont ceux de la vidéo capturée**, pas ceux du master : t = 0 est le début de la vidéo YouTube. D'une version à l'autre le décalage de départ varie de 0,2 à 0,8 s.
@@ -83,7 +83,7 @@ Trois univers graphiques se succèdent : **le monde d'en haut** (fil de fer vert
 
 ## 4. La chute dans le « trou noir »
 
-Hypothèse de Greg : un personnage fait une vraie chute physique dans une sorte de trou noir. **Verdict : CONFIRMÉE, et ils sont trois à tomber.**
+Hypothèse de départ : un personnage fait une vraie chute physique dans une sorte de trou noir. **Verdict : CONFIRMÉE, et ils sont trois à tomber.**
 
 - Le déclencheur est un gag : pendant que Roy, Moss et Jen massacrent son poste, l'employé-robot tire calmement une chaîne, et une trappe s'ouvre sous eux. `[VU À L'IMAGE]` `s1_t14.00`, `s1_t14.20`, `s1_t14.60`
 - La chute a deux temps : le puits de cadres concentriques vu dans l'axe (15,2 – 16,2), puis la coupe de l'immeuble avec le conduit en zigzag (16,4 – 18,8). `[VU À L'IMAGE]`
@@ -105,7 +105,7 @@ Hypothèse de Greg : un personnage fait une vraie chute physique dans une sorte 
 
 ### Le personnage supplémentaire
 
-Hypothèse de Greg : il y aurait deux versions du générique, avec un personnage en plus dans l'une. **Verdict : CONFIRMÉE.**
+Hypothèse de départ : il y aurait deux versions du générique, avec un personnage en plus dans l'une. **Verdict : CONFIRMÉE.**
 
 - Le personnage est **Douglas Reynholm** : cheveux longs et barbe brun-rouge, costume blanc, chemise et cravate jaunes, main sur la hanche, accoudé au bureau de l'employé-robot. Le crédit « Matt Berry » s'affiche à sa droite. `[VU À L'IMAGE]` `sp_t14.60`
 - Il apparaît de 14,0 s à 15,4 s environ, soit un peu moins d'une seconde et demie. `[VU À L'IMAGE]` `sp_t14.00` à `sp_t15.40`
@@ -137,6 +137,19 @@ Ce qui fait la signature de la séquence, à réutiliser pour des créations ori
 5. Nature de l'objet de Moss (batte, planche, clavier allongé) et du fouet de Jen (fouet ou câble).
 6. Synchronisation avec la musique : non étudiée, les captures sont muettes.
 7. Codes couleur exacts : non relevés, les captures viennent d'un flux compressé.
+
+## 7 bis. Compléments issus des fiches d'épisodes (ajout du 2026-10-11)
+
+Constats des découpages `episodes/` qui touchent à l'habillage ; ils ne modifient pas le découpage du générique ci-dessus.
+
+| Élément | Constat | Preuve |
+|---|---|---|
+| Titre d'épisode, saison 1 | Carton-titre après le générique pour les six épisodes | `[VU À L'IMAGE]` (episodes/S1E1, 0:30 ; S1E2 à S1E6, 0:32) |
+| Titre d'épisode, saisons 2 à 4 et spécial | Titre incrusté sur la première scène : relevé pour S2E5 (0:34), S2E6 (2:20, lecture sur vignette à confirmer), S3E1 (0:32), S3E2 (0:33), S3E3 (1:09), S3E5 (1:30), S3E6 (23:18 de la vidéo double), S4E2 (0:40), S4E3 (1:54), S4E4 (0:50), S4E6 (0:34) et le spécial (0:34) ; non relevé pour S2E2, S2E3, S2E4 et S4E5 ; S3E4 non visionné | `[VU À L'IMAGE]` (fiches `episodes/` correspondantes) |
+| Carton de coupure, S1E4 | Carton encadré de deux images animées, dont une silhouette rousse en tailleur | `[VU À L'IMAGE]` (episodes/S1E4, 9:12–9:24) |
+| Carton de coupure, S3E2 | Carton en pixel art | `[VU À L'IMAGE]` (episodes/S3E2, 10:51) |
+| Retour de coupure, saison 4 | Carton « THE IT CROWD » puis courte animation en pixels de Jen à un bureau ; déjà vue dans S4E3 | `[VU À L'IMAGE]` (episodes/S4E4, 13:12–13:20 ; episodes/S4E3, 9:00) |
+| Générique du spécial vu depuis le découpage de l'épisode | Sur les images échantillonnées par la fiche d'épisode, la figure ajoutée relevée à 0:10 est Jen ; Douglas, que la présente fiche situe vers 14 s (section 5, captures `sp_t13.40` à `sp_t14.60`), n'a pas été vu dans les images saisies par la fiche d'épisode. Les deux relevés portent sur des instants différents et ne se contredisent pas | `[VU À L'IMAGE]` (episodes/SP, 0:10 ; présente fiche, section 5) |
 
 ## 8. Index des fichiers
 

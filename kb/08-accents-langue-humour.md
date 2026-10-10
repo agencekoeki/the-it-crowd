@@ -1,7 +1,8 @@
 ---
 title: "The IT Crowd — Accents, langue, écriture comique et style"
 scope: "Voix et accents des personnages et des interprètes ; registre, argot, jurons et glossaire pour francophones ; mécanique de farce de Graham Linehan ; jeu d'acteur et comique physique ; place dans l'humour britannique (sitcom de studio vs. single-camera) ; VF, titres français et pertes à la traduction."
-last_updated: 2026-10-10
+last_updated: 2026-10-11
+viewing_review: "Passe du 2026-10-11 : fiche écrite sur sources avant tout visionnage, puis corrigée d'après les fiches episodes/ (24 épisodes sur 25 regardés sur la chaîne YouTube officielle, image et sous-titres automatiques) ; le son n'a pas été écouté, donc aucun accent, aucune intonation, aucun rire n'a été contrôlé ; ajouts marqués « VIS »"
 cross_review: "Relecture croisée du 2026-10-10 : corrections marquées « RC » dans le texte ; conventions et table des 25 épisodes dans README.md ; contradictions et lacunes dans 00-CONTRADICTIONS-ET-LACUNES.md"
 language: fr
 series: "The IT Crowd (Channel 4, 2006-2013, créée par Graham Linehan)"
@@ -11,6 +12,8 @@ evidence_labels:
   PROBABLE: "Souvenir de visionnage ou connaissance générale concordante, non relue dans une source consultée."
   À VÉRIFIER: "Affirmation répandue ou plausible, non confirmée ; ou sources contradictoires."
   ANALYSE: "Interprétation du rédacteur de la fiche, pas un fait sourcé."
+  "VU À L'IMAGE": "Constaté à l'image pendant le visionnage ; renvoi à la fiche episodes/ et au minutage."
+  "SOUS-TITRES AUTO": "Lu dans les sous-titres automatiques de YouTube, non contrôlé à l'oreille ; graphies non probantes."
 method_note: "Aucun script ni sous-titre officiel n'a pu être consulté (sites de transcriptions inaccessibles). Les répliques citées proviennent de sources secondaires et sont limitées à une ligne."
 ---
 
@@ -23,6 +26,8 @@ method_note: "Aucun script ni sous-titre officiel n'a pu être consulté (sites 
 | Étiquette de preuve | Chaque ligne de tableau ou puce porte `[VÉRIFIÉ]`, `[PROBABLE]`, `[À VÉRIFIER]` ou `[ANALYSE]`. |
 | Renvoi | `[Sxx]` = identifiant de la section **Sources** en fin de fiche. |
 | Citations VO | Une ligne maximum, entre guillemets anglais, jamais traduites dans la cellule de citation. |
+| Note « VIS » | Ajout du 2026-10-11 d'après le visionnage (fiches `episodes/`), avec `[VU À L'IMAGE]` (constaté à l'écran) ou `[SOUS-TITRES AUTO]` (lu dans les sous-titres automatiques de YouTube) et un renvoi « episodes/SxEy, minutage ». La note VIS l'emporte sur le texte d'origine et sur les notes RC ; l'ancienne version reste en place avec sa source. |
+| Limite du visionnage | Le son n'a pas été écouté : tout ce qui touche aux accents, aux intonations et aux prononciations reste fondé sur les sources écrites ou sur `[ANALYSE]`. Le mot « visionnage » dans la définition de `[PROBABLE]` désigne un souvenir antérieur du rédacteur, pas la passe du 2026-10-11. S3E4 n'a pas été visionné. |
 | Numérotation | `SxEy` = saison x, épisode y (numérotation Channel 4). |
 | Niveau de source | Wikipédia, TV Tropes et les wikis de fans sont des sources **secondaires ou tertiaires** : un `[VÉRIFIÉ]` qui s'y appuie signifie « écrit dans cette source », pas « contrôlé sur l'épisode ». |
 
@@ -75,8 +80,8 @@ Résumé en trois faits porteurs :
 | Citation | "No, just use your own voice." | `[VÉRIFIÉ]` [S18] |
 | Registre | Sur-précision technique incompréhensible pour les autres ; incapacité à mentir ; maladresses sociales | `[VÉRIFIÉ]` [S02][S38] |
 | Rapport aux jurons | Se retient de jurer et remplace par des euphémismes enfantins (voir § 3.2) | `[VÉRIFIÉ]` [S02][S05] |
-| Prononciations fautives | « tapas » prononcé « tape-ass » (S1E5), « Messy Joe's » (S1E3) | `[VÉRIFIÉ]` [S05] ; RC : TV Tropes, relu le 2026-10-10, ne nomme pas l'épisode de « tape-ass » ; S1E5 est déduit du restaurant de tapas de cet épisode (`[PROBABLE]`) |
-| Voix contrefaite | S3E2 : prend une voix grave pour impressionner le facteur | `[VÉRIFIÉ]` [S40f] |
+| Prononciations fautives | « tapas » prononcé « tape-ass » (S1E5), « Messy Joe's » (S1E3) | `[VÉRIFIÉ]` [S05] ; RC : TV Tropes, relu le 2026-10-10, ne nomme pas l'épisode de « tape-ass » ; S1E5 est déduit du restaurant de tapas de cet épisode (auparavant `[PROBABLE]`, épisode désormais confirmé) VIS : NUANCÉ — S1E5 est confirmé pour « tapas » : Jen cite le restaurant de tapas, Moss ne connaît pas le mot puis en conteste la prononciation `[SOUS-TITRES AUTO]` (episodes/S1E5, 2:02–3:05) ; la forme « tape-ass » elle-même n'est pas observable (son non écouté pendant le visionnage). Pour Messy Joe's (S1E3), le quiproquo sur le nom est joué par Jen puis par Roy, pas par Moss `[SOUS-TITRES AUTO]` (episodes/S1E3, 17:47–18:20) ; l'enseigne « MESSY JOE'S RESTAURANT » est lue `[VU À L'IMAGE]` (18:20). |
+| Voix contrefaite | S3E2 : prend une voix grave pour impressionner le facteur | `[VÉRIFIÉ]` [S40f] VIS : CONFIRMÉ en substance — Roy parle de « football voice » à propos de Moss `[SOUS-TITRES AUTO]` (episodes/S3E2, 1:30) ; la hauteur de la voix n'est pas observable (son non écouté pendant le visionnage). |
 | Rythme | Débit staccato, articulation complète de chaque syllabe, intonation plate suivie d'accélérations | `[ANALYSE]` |
 | Qualification de l'accent (anglais standard du sud, non régional) | Non documentée dans les sources consultées | `[ANALYSE]` |
 | Réserve critique | Une critique de 2006 juge que son interprétation « lacks nuance » | `[VÉRIFIÉ]` [S33] |
@@ -87,7 +92,7 @@ Résumé en trois faits porteurs :
 |---|---|---|
 | Casting | Poussée à auditionner par Chris O'Dowd, ami de LAMDA, la série peinant à trouver son rôle féminin | `[VÉRIFIÉ]` [S23c] |
 | Intention | Linehan voulait un personnage « normal » auquel s'identifier | `[VÉRIFIÉ]` [S23c][S02] |
-| Tic de prononciation | Accentue mal « computer » : noté « COMputer » par TV Tropes, « comp-you-ters » par Wikipédia (voir Contradictions) | `[VÉRIFIÉ]` [S05][S06][S01] |
+| Tic de prononciation | Accentue mal « computer » : noté « COMputer » par TV Tropes, « comp-you-ters » par Wikipédia (voir Contradictions) | `[VÉRIFIÉ]` [S05][S06][S01] VIS : NON VÉRIFIABLE — son non écouté pendant le visionnage ; ni « COMputer » ni « comp-you-ters » ne peut être départagé par les sous-titres automatiques. |
 | Fautes de langue | Emploi abusif de « literally » ; « social piranha » pour « social pariah » | `[VÉRIFIÉ]` [S09][S40b] |
 | Citation | "I'd literally rather sleep with a rat" | `[VÉRIFIÉ]` [S09] |
 | Volume | Encline aux cris soudains ; réplique fétiche « TAXI! » | `[VÉRIFIÉ]` [S06][S05] |
@@ -102,7 +107,7 @@ Résumé en trois faits porteurs :
 | Nature de la voix | Voix « distinctive » ; c'est sa voix réelle, sa marque de fabrique même en conversation | `[VÉRIFIÉ]` [S23d][S20] |
 | Portrait critique de la voix | "somewhere between Brigadier General, operatic tenor and London jazz club owner from the 1940s" | `[VÉRIFIÉ]` [S20] |
 | Qualificatif récurrent | « plummy aplomb » (diction de classe supérieure, ronde, satisfaite) | `[VÉRIFIÉ]` [S32] |
-| Entrée en scène | S2E2 : fait irruption aux obsèques en hurlant « Father! » (transcrit avec lettres étirées par les sources) | `[VÉRIFIÉ]` [S20][S06][S03] |
+| Entrée en scène | S2E2 : fait irruption aux obsèques en hurlant « Father! » (transcrit avec lettres étirées par les sources) | `[VÉRIFIÉ]` [S20][S06][S03] VIS : CONFIRMÉ pour l'irruption — Douglas ouvre la porte de l'église à la volée, remonte l'allée en courant en appelant son père, puis se bat avec l'officiant `[VU À L'IMAGE]` `[SOUS-TITRES AUTO]` (episodes/S2E2, 17:36–18:22) ; le hurlement n'est pas observable (son non écouté pendant le visionnage). |
 | Jugement de Linehan | Loue sa voix « extraordinaire » et son don comique | `[VÉRIFIÉ]` [S02] |
 | Approche de jeu | Selon Berry, un personnage qui a l'air de se moquer de tout est toujours drôle | `[VÉRIFIÉ]` [S19] |
 | Mécanique | Alternance de certitude tonitruante et de perplexité impassible | `[VÉRIFIÉ]` [S20] |
@@ -142,20 +147,20 @@ Résumé en trois faits porteurs :
 | Personnage | Interprète | Épisode | Trait vocal ou linguistique | Preuve |
 |---|---|---|---|---|
 | Bill Crouse | Adam Buxton | S1E5 | Intonation montante agaçante en fin de phrase (« rising inflection ») | `[VÉRIFIÉ]` [S02][S03] |
-| Mr Yamamoto | Togo Igawa | S1E2 (et S3E1 en visioconférence) | Dirigeant japonais ; son interprète (Takatsuna Mukai) traduit en japonais la bordée d'injures de Jen | `[VÉRIFIÉ]` [S41b][S07][S40e] |
-| Paul, conseiller culturel | Danny Wallace | S1E2 | Manie le « Profanity Buzzer » qui couvre les jurons | `[VÉRIFIÉ]` [S02][S07][S41b] |
-| Voix off | Peter Serafinowicz | S1E2 | Voix d'annonce (crédit « Voice Over ») | `[VÉRIFIÉ]` [S41b] |
-| Jerome, attaché de presse | Nicholas Burns | S2E1 | Imite l'accent irlandais de Roy | `[VÉRIFIÉ]` [S40g][S41c] |
-| Johann | Philip Rham | S2E3 | Allemand à l'anglais approximatif ; son annonce mal traduite crée le quiproquo | `[VÉRIFIÉ]` [S40d][S41d][S03] |
-| Jorg (ou Yorg) | Gerald Lepkowski | S2E3 | Compagnon de Jen dans le coin fumeurs « soviétique », présenté comme russe par le wiki de fans | `[VÉRIFIÉ]` pour le rôle [S41d] ; `[À VÉRIFIER]` pour la nationalité [S40d] |
-| Peter File | Orlando Seale (RC : crédit British Comedy Guide, fiches 02 et 03) | S2E4 | Nom qui, lu à voix haute, sonne comme « paedophile » | `[VÉRIFIÉ]` [S03][S40h][S07] |
+| Mr Yamamoto | Togo Igawa | S1E2 (et S3E1 en visioconférence) | Dirigeant japonais ; son interprète (Takatsuna Mukai) traduit en japonais la bordée d'injures de Jen | `[VÉRIFIÉ]` [S41b][S07][S40e] VIS : CONFIRMÉ pour S1E2 — cérémonie avec Yamamoto et son traducteur, tirade de Jen nez à nez `[VU À L'IMAGE]` (episodes/S1E2, 15:27–17:02) ; la traduction de la tirade en japonais n'est pas observable (son non écouté pendant le visionnage, sous-titres fragmentaires). |
+| Paul, conseiller culturel | Danny Wallace | S1E2 | Manie le « Profanity Buzzer » qui couvre les jurons | `[VÉRIFIÉ]` [S02][S07][S41b] VIS : CONFIRMÉ — plaque « PROFANITY BUZZER » au-dessus d'un gros bouton rouge mural, Paul debout à côté `[VU À L'IMAGE]` (episodes/S1E2, 17:16–17:20). |
+| Voix off | Peter Serafinowicz | S1E2 | Voix d'annonce (crédit « Voice Over ») | `[VÉRIFIÉ]` [S41b] VIS : CONFIRMÉ — crédit « Voice Over » lu au générique de fin `[VU À L'IMAGE]` (episodes/S1E2, 22:46) ; il est aussi crédité « Voice of Newsreader » dans S1E6 `[VU À L'IMAGE]` (episodes/S1E6, 24:35). |
+| Jerome, attaché de presse | Nicholas Burns | S2E1 | Imite l'accent irlandais de Roy | `[VÉRIFIÉ]` [S40g][S41c] VIS : NUANCÉ — les sous-titres montrent Jerome s'extasiant que Roy soit irlandais et promettant de la « craic » `[SOUS-TITRES AUTO]` (episodes/S2E1, 7:35–7:58) ; une imitation d'accent n'est pas observable (son non écouté pendant le visionnage). |
+| Johann | Philip Rham | S2E3 | Allemand à l'anglais approximatif ; son annonce mal traduite crée le quiproquo | `[VÉRIFIÉ]` [S40d][S41d][S03] VIS : CONFIRMÉ pour l'annonce, lue à voix haute par Moss `[SOUS-TITRES AUTO]` (episodes/S2E3, 12:03) ; l'accent n'est pas observable (son non écouté pendant le visionnage). |
+| Jorg (ou Yorg) | Gerald Lepkowski | S2E3 | Compagnon de Jen dans le coin fumeurs « soviétique », présenté comme russe par le wiki de fans | `[VÉRIFIÉ]` pour le rôle [S41d] ; `[À VÉRIFIER]` pour la nationalité [S40d] VIS : NON TRANCHÉ — la nationalité n'est établie ni à l'image ni dans les sous-titres ; c'est Jen qui juge l'extérieur « trop soviétique » et cite « Gorky Park » `[SOUS-TITRES AUTO]` (episodes/S2E3, 4:36–4:52) ; les sous-titres automatiques déforment le prénom, graphie non probante. |
+| Peter File | Orlando Seale (RC : crédit British Comedy Guide, fiches 02 et 03) | S2E4 | Nom qui, lu à voix haute, sonne comme « paedophile » | `[VÉRIFIÉ]` [S03][S40h][S07] VIS : CONFIRMÉ pour le crédit `[VU À L'IMAGE]` (episodes/S2E4, 21:06). |
 | April | Lucy Montgomery | S3E4 | « I used to be a man » compris « I'm from Iran » par Douglas | `[VÉRIFIÉ]` [S02][S45][S05] |
 | Dan, Luke, Barry | Cavan Clerkin, Derek Ezenagu, Jon Foster | S3E2 | Les « vrais hommes » du pub, cibles du jargon de football | `[VÉRIFIÉ]` [S40f] |
-| Bernatelli | Martino Lazzeri | S4E4 | Homme d'affaires italien que Jen prétend traduire | `[VÉRIFIÉ]` [S41a][S40c] |
-| French Tech Support | Kevin Eldon | S4E5 | Technicien à l'accent quasi incompréhensible | `[VÉRIFIÉ]` [S42][S02][S43] |
-| Barry, laveur de vitres | Brian « Limmy » Limond | S4E2 | Interprète écossais (Glasgow), accent conservé | `[VÉRIFIÉ]` pour le rôle [S41e][S03] ; `[PROBABLE]` pour l'origine et l'accent (non relus) |
-| Prime | Benedict Wong | S4E2 | Parodie de parrain de club clandestin, diction grave | `[VÉRIFIÉ]` pour le rôle [S03][S41e] ; `[ANALYSE]` pour la diction |
-| Groupe de Manchester | (figurants) | S2E1 | Roy est embarqué dans le car d'un groupe en fauteuil venu de Manchester | `[VÉRIFIÉ]` [S03][S40g] ; accents du nord non documentés `[À VÉRIFIER]` |
+| Bernatelli | Martino Lazzeri | S4E4 | Homme d'affaires italien que Jen prétend traduire | `[VÉRIFIÉ]` [S41a][S40c] VIS : CONFIRMÉ — crédit lu au générique `[VU À L'IMAGE]` (episodes/S4E4, 23:48) ; ses répliques sont sous-titrées à l'image `[VU À L'IMAGE]` (20:26–22:44). |
+| French Tech Support | Kevin Eldon | S4E5 | Technicien à l'accent quasi incompréhensible | `[VÉRIFIÉ]` [S42][S02][S43] VIS : CONFIRMÉ pour le crédit « French Tech Support — Kevin Eldon » `[VU À L'IMAGE]` (episodes/S4E5, 21:29) ; l'accent n'est pas observable (son non écouté pendant le visionnage), mais les sous-titres automatiques ne transcrivent presque rien du technicien (15:10–16:48). |
+| Barry, laveur de vitres | Brian « Limmy » Limond | S4E2 | Interprète écossais (Glasgow), accent conservé | `[VÉRIFIÉ]` pour le rôle [S41e][S03] ; `[PROBABLE]` pour l'origine et l'accent (non relus) VIS : CONFIRMÉ pour le crédit, graphie « Barry the Window Cleaner — Brian Limond » `[VU À L'IMAGE]` (episodes/S4E2, 23:24) ; l'accent reste `[PROBABLE]` (son non écouté pendant le visionnage). |
+| Prime | Benedict Wong | S4E2 | Parodie de parrain de club clandestin, diction grave | `[VÉRIFIÉ]` pour le rôle [S03][S41e] ; `[ANALYSE]` pour la diction VIS : crédit non lu au générique (ligne hors échantillon, episodes/S4E2) : reste fondé sur les sources d'origine. |
+| Groupe de Manchester | (figurants) | S2E1 | Roy est embarqué dans le car d'un groupe en fauteuil venu de Manchester | `[VÉRIFIÉ]` [S03][S40g] ; accents du nord non documentés `[À VÉRIFIER]` VIS : CONFIRMÉ pour le rattachement de Roy au groupe `[SOUS-TITRES AUTO]` (episodes/S2E1, 16:24–16:50, 17:08) ; accents non observables (son non écouté pendant le visionnage). |
 
 Notes de périmètre :
 
@@ -167,35 +172,35 @@ Notes de périmètre :
 
 | Épisode | Ressort linguistique | Détail | Preuve |
 |---|---|---|---|
-| S1E2 *Calamity Jen* | Juron + interprétariat + bip | Tirade ordurière de Jen bipée, traduite en japonais par l'interprète ; un juron de Denholm passe parce que le bip arrive une seconde trop tard | `[VÉRIFIÉ]` [S05][S07][S03] |
-| S1E5 *The Haunting of Bill Crouse* | Intonation + prononciation | Intonation montante de Bill ; querelle « tapas » / « tape-ass » | `[VÉRIFIÉ]` [S03][S05] |
+| S1E2 *Calamity Jen* | Juron + interprétariat + bip | Tirade ordurière de Jen bipée, traduite en japonais par l'interprète ; un juron de Denholm passe parce que le bip arrive une seconde trop tard | `[VÉRIFIÉ]` [S05][S07][S03] VIS : NUANCÉ — tirade de Jen face à Yamamoto `[VU À L'IMAGE]` (episodes/S1E2, 16:28–16:52) et bouton « PROFANITY BUZZER » `[VU À L'IMAGE]` (17:16–17:20) ; les bips, la traduction en japonais et le juron de Denholm passé trop tard ne sont pas observables (son non écouté pendant le visionnage). |
+| S1E5 *The Haunting of Bill Crouse* | Intonation + prononciation | Intonation montante de Bill ; querelle « tapas » / « tape-ass » | `[VÉRIFIÉ]` [S03][S05] VIS : CONFIRMÉ — le dîner est montré `[VU À L'IMAGE]` (episodes/S1E5, 0:32–2:04) ; le mot « tapas », la querelle de prononciation et l'intonation montante viennent du récit de Jen `[SOUS-TITRES AUTO]` (2:02–3:05) ; l'intonation elle-même n'est pas observable (son non écouté pendant le visionnage). |
 | S1E6 *Aunt Irma Visits* | Euphémisme | « Aunt Irma » pour le syndrome prémenstruel ; accumulation d'euphémismes avant que Roy comprenne | `[VÉRIFIÉ]` [S03][S05] |
-| S2E1 *The Work Outing* | Titre à double sens + moquerie d'accent | « outing » = sortie et révélation d'homosexualité ; Jerome singe l'accent irlandais | `[VÉRIFIÉ]` [S40g] |
-| S2E3 *Moss and the German* | Erreur de traduction | L'annonce « I want to cook with you » voulait dire « te cuisiner » ; parodie de l'affaire Armin Meiwes | `[VÉRIFIÉ]` [S40d][S03] |
-| S2E4 *The Dinner Party* | Homophonie | « Peter File » ; ne fonctionne qu'en prononciation britannique /ˈpiːdəfaɪl/ (américain /ˈpedəfaɪl/) | `[VÉRIFIÉ]` [S03][S44][S07] |
-| S2E5 *Smoke and Mirrors* | Mot-valise + pseudonyme oublié | « A-bra-cada-bra » ; Moss oublie son faux nom | `[VÉRIFIÉ]` [S03][S40b] |
-| S3E2 *Are We Not Men?* | Sociolecte contrefait | Site Bluffball, « football parlance » ; phrases volontairement creuses ; « the football voice » | `[VÉRIFIÉ]` [S31][S40f][S03] |
+| S2E1 *The Work Outing* | Titre à double sens + moquerie d'accent | « outing » = sortie et révélation d'homosexualité ; Jerome singe l'accent irlandais | `[VÉRIFIÉ]` [S40g] VIS : NUANCÉ — voir la ligne Jerome en 2.1 : enthousiasme pour l'Irlandais et jeu sur « craic » `[SOUS-TITRES AUTO]` (episodes/S2E1, 7:35–7:58) ; imitation d'accent non observable. |
+| S2E3 *Moss and the German* | Erreur de traduction | L'annonce « I want to cook with you » voulait dire « te cuisiner » ; parodie de l'affaire Armin Meiwes | `[VÉRIFIÉ]` [S40d][S03] VIS : CONFIRMÉ pour le texte de l'annonce `[SOUS-TITRES AUTO]` (episodes/S2E3, 12:03). |
+| S2E4 *The Dinner Party* | Homophonie | « Peter File » ; ne fonctionne qu'en prononciation britannique /ˈpiːdəfaɪl/ (américain /ˈpedəfaɪl/) | `[VÉRIFIÉ]` [S03][S44][S07] VIS : CONFIRMÉ — scène « Peter File » `[SOUS-TITRES AUTO]` (episodes/S2E4, 14:45–16:00) et appel au haut-parleur de l'aéroport, porte 24 `[SOUS-TITRES AUTO]` (20:20–20:58) ; l'homophonie elle-même n'est pas observable (son non écouté pendant le visionnage). |
+| S2E5 *Smoke and Mirrors* | Mot-valise + pseudonyme oublié | « A-bra-cada-bra » ; Moss oublie son faux nom | `[VÉRIFIÉ]` [S03][S40b] VIS : CONFIRMÉ — « Abracadabra » dans les sous-titres `[SOUS-TITRES AUTO]` (episodes/S2E5, 11:45), le découpage du mot n'étant pas observable ; pseudonyme dont le nom de famille change d'une phrase à l'autre `[SOUS-TITRES AUTO]` (11:50–13:00). |
+| S3E2 *Are We Not Men?* | Sociolecte contrefait | Site Bluffball, « football parlance » ; phrases volontairement creuses ; « the football voice » | `[VÉRIFIÉ]` [S31][S40f][S03] VIS : CONFIRMÉ — écran « BLUFFBALL.CO.UK » avec un onglet « PRONUNCIATION GUIDE » `[VU À L'IMAGE]` (episodes/S3E2, 1:39–1:51) ; « football voice » `[SOUS-TITRES AUTO]` (1:30). |
 | S3E4 *The Speech* | Malentendu phonétique + jargon | « from Iran » ; « the internet » dans une boîte noire, pris au sérieux par les actionnaires | `[VÉRIFIÉ]` [S45][S03] |
-| S4E1 *Jen the Fredo* | Référence confondue | Moss confond Fredo (*The Godfather*) et Frodo | `[VÉRIFIÉ]` [S05][S03] |
-| S4E4 *Italian for Beginners* | Fausse langue étrangère | Jen débite de l'italien d'apparence ; logiciel de traduction vocale ; face à face sans ordinateur | `[VÉRIFIÉ]` [S40c][S35][S03] |
-| S4E5 *Bad Boys* | Accent incompréhensible + argot scolaire | Technicien « français » ; « bunk off » (sécher) ; parodie de *Scared Straight!* | `[VÉRIFIÉ]` [S40i][S42][S03] |
-| S4E6 *Reynholm vs Reynholm* | Barbarisme | Roy dit « damp squid » pour « damp squib » | `[VÉRIFIÉ]` [S36][S05] |
-| Spécial *The Internet Is Coming* | Mot mal entendu | Roy rapporte « artistic spectrum » ; sa compagne a vraisemblablement dit « autistic spectrum » | `[VÉRIFIÉ]` [S02] |
+| S4E1 *Jen the Fredo* | Référence confondue | Moss confond Fredo (*The Godfather*) et Frodo | `[VÉRIFIÉ]` [S05][S03] VIS : CONFIRMÉ `[SOUS-TITRES AUTO]` (episodes/S4E1, 7:02–7:10). |
+| S4E4 *Italian for Beginners* | Fausse langue étrangère | Jen débite de l'italien d'apparence ; logiciel de traduction vocale ; face à face sans ordinateur | `[VÉRIFIÉ]` [S40c][S35][S03] VIS : NUANCÉ — Jen invente aussi, en anglais, ce que l'Italien est censé dire `[SOUS-TITRES AUTO]` (episodes/S4E4, 21:05–22:52) ; les répliques de Bernatelli sont sous-titrées à l'image `[VU À L'IMAGE]` (20:26–22:44). |
+| S4E5 *Bad Boys* | Accent incompréhensible + argot scolaire | Technicien « français » ; « bunk off » (sécher) ; parodie de *Scared Straight!* | `[VÉRIFIÉ]` [S40i][S42][S03] VIS : NUANCÉ — le témoignage de Moss s'adresse à de très jeunes enfants, révélés à la chute `[VU À L'IMAGE]` (episodes/S4E5, 21:02) ; accent du technicien non observable (son non écouté pendant le visionnage). |
+| S4E6 *Reynholm vs Reynholm* | Barbarisme | Roy dit « damp squid » pour « damp squib » | `[VÉRIFIÉ]` [S36][S05] VIS : CONFIRMÉ et complété — « damp squid » est dit par Roy à la barre et corrigé par le juge `[SOUS-TITRES AUTO]` (episodes/S4E6, 14:57–16:03). Le même épisode contient un second barbarisme : Jen dit « pedal stool » au sous-sol et Roy la corrige en « pedestal » `[SOUS-TITRES AUTO]` (6:50–7:21). |
+| Spécial *The Internet Is Coming* | Mot mal entendu | Roy rapporte « artistic spectrum » ; sa compagne a vraisemblablement dit « autistic spectrum » | `[VÉRIFIÉ]` [S02] VIS : CONFIRMÉ en substance — Roy rapporte « emotionally artistic » à propos d'Alice `[SOUS-TITRES AUTO]` (episodes/SP, 3:52–4:29) ; Jen revient sur le mot plus loin (14:08–15:14) ; ce qu'Alice a réellement dit n'est pas montré. |
 
 Précisions sur trois cas demandés :
 
 | Cas | Ce que disent les sources | Statut |
 |---|---|---|
-| « Faux accent cockney » (S3E2) | Les sources parlent de « football voice », de « deep voice » (Moss) et de « best no-good youth voice » (Roy) ; **aucune n'emploie le mot « cockney »** [S31][S40f]. La voix prise par Roy et Moss est, de mémoire de visionnage, un parler de « lad » londonien forcé. | `[PROBABLE]` pour le caractère londonien populaire ; l'étiquette « cockney » reste `[À VÉRIFIER]` |
-| « Faux italien » (S4E4) | Phrases citées : "Tutti piace l'odore di gatti" puis "Ragni" [S40c] ; non-conversation "Vienetta, Fiat Punto" [S35] ; accent « implausibly authentic » quand elle lit le logiciel [S35]. | `[VÉRIFIÉ]` |
-| Technicien « français » (S4E5) | Crédité « French Tech Support » [S42][S43] ; des spectateurs l'ont cru néerlandais et jugent la voix instable [S43]. | `[VÉRIFIÉ]` pour le crédit ; nationalité perçue contestée |
+| « Faux accent cockney » (S3E2) | Les sources parlent de « football voice », de « deep voice » (Moss) et de « best no-good youth voice » (Roy) ; **aucune n'emploie le mot « cockney »** [S31][S40f]. La voix prise par Roy et Moss est, de mémoire de visionnage, un parler de « lad » londonien forcé. | `[PROBABLE]` pour le caractère londonien populaire ; l'étiquette « cockney » reste `[À VÉRIFIER]` VIS : le visionnage de 2026 ne tranche pas (son non écouté pendant le visionnage). Seul élément constaté : la minerve et le « Cockney neck » du même épisode `[SOUS-TITRES AUTO]` (episodes/S3E2, 8:33), qui ne dit rien de la voix prise au pub. |
+| « Faux italien » (S4E4) | Phrases citées : "Tutti piace l'odore di gatti" puis "Ragni" [S40c] ; non-conversation "Vienetta, Fiat Punto" [S35] ; accent « implausibly authentic » quand elle lit le logiciel [S35]. | `[VÉRIFIÉ]` VIS : NUANCÉ — les traductions apparaissent en sous-titres incrustés (« Everyone likes cat smell. » / « Spiders. ») `[VU À L'IMAGE]` (episodes/S4E4, 7:56–8:00), dans le retour en arrière sur la première réunion et non devant Bernatelli ; les marques citées par [S35] ne sont pas vérifiables (son non écouté pendant le visionnage). |
+| Technicien « français » (S4E5) | Crédité « French Tech Support » [S42][S43] ; des spectateurs l'ont cru néerlandais et jugent la voix instable [S43]. | `[VÉRIFIÉ]` pour le crédit ; nationalité perçue contestée VIS : CONFIRMÉ pour le crédit `[VU À L'IMAGE]` (episodes/S4E5, 21:29) ; la nationalité perçue ne peut pas être jugée (son non écouté pendant le visionnage). |
 
 Phrases de Bluffball :
 
 | Réplique | Preuve |
 |---|---|
-| "Did you see that ludicrous display last night?" | `[VÉRIFIÉ]` [S31][S40f] ; réutilisée en S4E3 [S40f] |
-| "The thing about Arsenal is, they always try and walk it in!" | `[VÉRIFIÉ]` — RC : Wikiquote, section « Are We Not Men? [3.2] », réplique de Moss (fiche 05, R07) |
+| "Did you see that ludicrous display last night?" | `[VÉRIFIÉ]` [S31][S40f] ; réutilisée en S4E3 [S40f] VIS : CONFIRMÉ — dite par Moss au facteur `[SOUS-TITRES AUTO]` (episodes/S3E2, 1:12) et lue sur l'écran Bluffball `[VU À L'IMAGE]` (1:39) ; reprise confirmée dans la scène du massage `[SOUS-TITRES AUTO]` (episodes/S4E3, 8:19). |
+| "The thing about Arsenal is, they always try and walk it in!" | `[VÉRIFIÉ]` — RC : Wikiquote, section « Are We Not Men? [3.2] », réplique de Moss (fiche 05, R07) VIS : CORRIGÉ pour la lettre — l'écran Bluffball porte « Thing about Arsenal, they always try to walk it in. » `[VU À L'IMAGE]` (episodes/S3E2, 1:48) ; dite par Moss (1:12) puis par Roy (4:26) `[SOUS-TITRES AUTO]`. |
 | Jugement critique sur ce jargon | `[VÉRIFIÉ]` "perfectly, hilariously vague" [S31] |
 
 ---
@@ -224,19 +229,19 @@ Colonne « Attestation » : source qui relie le terme à la série ou à ses int
 | standard nerds | Anglais général | Denholm qualifie Roy et Moss | « des geeks de base » | « nerd » plus péjoratif que « geek » | `[VÉRIFIÉ]` [S01] |
 | bastard | Anglais GB | Salaud ; ici type d'homme qui plairait aux femmes selon Roy (S1E3) | « salaud », « ordure » | Insulte courante et modérée en GB, bien plus faible que « bâtard » en français | `[VÉRIFIÉ]` [S03][S40a] |
 | piss off | Anglais GB | Va te faire voir | « dégage », « va te faire voir » | Vulgaire léger, plus doux que « fuck off » | `[VÉRIFIÉ]` [S05][S07] |
-| motherflipping / motherfudging | Euphémisme inventé | Substituts de « motherfucking » dans la bouche de Moss | « un flingue de sa mère la… punaise » | Le comique vient de l'écart entre situation (une arme) et juron d'enfant de chœur | `[VÉRIFIÉ]` [S05][S31] |
+| motherflipping / motherfudging | Euphémisme inventé | Substituts de « motherfucking » dans la bouche de Moss | « un flingue de sa mère la… punaise » | Le comique vient de l'écart entre situation (une arme) et juron d'enfant de chœur | `[VÉRIFIÉ]` [S05][S31] VIS : NUANCÉ — dans S3E1, les sous-titres automatiques ne donnent que « got a gun » et « flipping gun » répété `[SOUS-TITRES AUTO]` (episodes/S3E1, 22:05) ; la forme « motherflipping » n'est pas confirmée par le visionnage. |
 | the flip (« rape the flip out of ») | Euphémisme | « flip » pour « fuck » | « purée », « fichtre » | Même mécanisme d'atténuation | `[VÉRIFIÉ]` [S40b] |
 | Ploppers! | Mot enfantin | Juron le plus fort de Moss | « Crotte de bique ! » | « plop » = bruit et mot d'enfant pour les selles | `[VÉRIFIÉ]` [S05] |
 | Aunt Irma | Euphémisme inventé | Les règles, le syndrome prémenstruel | « les Anglais débarquent », « avoir ses ragnagnas » | Le français possède justement une périphrase à base d'Anglais | `[VÉRIFIÉ]` [S03][S05] |
-| to bunk off | Argot scolaire GB | Sécher les cours ou le travail | « sécher », « faire l'école buissonnière » | Connotation de collégien, d'où le comique chez deux adultes | `[VÉRIFIÉ]` [S40i][S03] |
-| boss-eyed | Anglais GB familier | Qui louche | « bigleux », « qui a un œil qui dit zut à l'autre » | Vieilli et peu délicat | `[VÉRIFIÉ]` [S03] |
+| to bunk off | Argot scolaire GB | Sécher les cours ou le travail | « sécher », « faire l'école buissonnière » | Connotation de collégien, d'où le comique chez deux adultes | `[VÉRIFIÉ]` [S40i][S03] VIS : CONFIRMÉ pour l'épisode — chapitre de la vidéo intitulé « Bunking off work » (episodes/S4E5, 7:23). |
+| boss-eyed | Anglais GB familier | Qui louche | « bigleux », « qui a un œil qui dit zut à l'autre » | Vieilli et peu délicat | `[VÉRIFIÉ]` [S03] VIS : CONFIRMÉ `[SOUS-TITRES AUTO]` (episodes/S3E6, 23:57–24:45). |
 | tramp | Anglais GB | Clochard, sans-abri (titre S3E3) | « clodo », « clochard » | En anglais américain, « tramp » peut aussi vouloir dire « traînée » : faux ami interne | `[VÉRIFIÉ]` pour le titre [S03] |
 | stag night | Anglais GB | Enterrement de vie de garçon | idem | Américain : « bachelor party » | `[VÉRIFIÉ]` [S03] |
 | damp squib | Idiome GB | Pétard mouillé | « pétard mouillé » | Équivalent français exact | `[VÉRIFIÉ]` [S36] |
-| damp squid | Barbarisme de Roy | « calmar humide » | « un pétard nouillé », « un pétrin mouillé » | Il faut inventer une faute française crédible | `[VÉRIFIÉ]` [S36][S05] |
+| damp squid | Barbarisme de Roy | « calmar humide » | « un pétard nouillé », « un pétrin mouillé » | Il faut inventer une faute française crédible | `[VÉRIFIÉ]` [S36][S05] VIS : CONFIRMÉ — Roy, à la barre, corrigé par le juge en « squib » `[SOUS-TITRES AUTO]` (episodes/S4E6, 14:57–16:03). |
 | social piranha | Barbarisme de Jen | Pour « social pariah » | « un piranha social » | Fonctionne presque tel quel (paria / piranha) | `[VÉRIFIÉ]` [S40b] |
 | literally | Tic de langue | Emploi abusif assumé par Linehan | « littéralement » | Le tic existe aussi en français | `[VÉRIFIÉ]` [S09][S08] |
-| tape-ass | Prononciation fautive | « tapas » lu à l'anglaise ; retourné en insulte | Intraduisible tel quel | Repose sur « ass » (cul) | `[VÉRIFIÉ]` [S05] |
+| tape-ass | Prononciation fautive | « tapas » lu à l'anglaise ; retourné en insulte | Intraduisible tel quel | Repose sur « ass » (cul) | `[VÉRIFIÉ]` [S05] VIS : S1E5 confirmé pour la querelle de prononciation `[SOUS-TITRES AUTO]` (episodes/S1E5, 2:02–3:05) ; la forme prononcée et son retournement en insulte ne sont pas observables (son non écouté pendant le visionnage). |
 | taxi job | Argot | Faire le chauffeur pour un coup | « faire le taxi » | Roy comprend trop tard qu'il s'agit d'un braquage | `[VÉRIFIÉ]` [S40f] |
 | lads / proper men | Anglais GB | Les mecs, « les vrais » | « les potes », « les vrais mecs » | Culture « lad » : pub, foot, vannes | `[VÉRIFIÉ]` [S31] |
 | ludicrous display | Registre soutenu déplacé | « prestation grotesque » | « Vous avez vu cette prestation lamentable hier soir ? » | Comique : formule guindée dans un contexte de pub | `[VÉRIFIÉ]` [S31] |
@@ -247,7 +252,7 @@ Colonne « Attestation » : source qui relie le terme à la série ou à ses int
 | cad | Anglais GB vieilli | Goujat séducteur | « goujat », « mufle » | Mot d'un autre siècle, qui convient à Douglas | `[VÉRIFIÉ]` [S20] |
 | to slag | Argot irlandais et GB | Se moquer, chambrer | « chambrer », « charrier » | Employé par O'Dowd en interview, **pas attesté dans la série** | `[VÉRIFIÉ]` [S21] |
 | feckin' | Argot irlandais | Atténuation de « fucking » | « fichu », « putain de » | Marqueur de *Father Ted* ; **non attesté dans The IT Crowd** par les sources consultées | `[VÉRIFIÉ]` pour *Father Ted* [S47] ; `[À VÉRIFIER]` pour la série |
-| pedal stool | Barbarisme prêté à la série | Pour « pedestal » | « mettre sur un pied d'escale » | Souvent cité avec « damp squid » ; non retrouvé dans les sources. RC : TV Tropes écrit « peddle stool » et l'attribue à Jen ; la fiche 04 écrit « petal stool » et l'attribue à Roy (S4E6) ; graphie, locuteur et épisode non tranchés | `[À VÉRIFIER]` |
+| pedal stool | Barbarisme prêté à la série | Pour « pedestal » | « mettre sur un pied d'escale » | Souvent cité avec « damp squid » ; non retrouvé dans les sources. RC : TV Tropes écrit « peddle stool » et l'attribue à Jen ; la fiche 04 écrit « petal stool » et l'attribue à Roy (S4E6) ; graphie, locuteur et épisode non tranchés | `[SOUS-TITRES AUTO]` pour le locuteur et l'épisode (auparavant `[À VÉRIFIER]`) ; graphie `[À VÉRIFIER]` VIS : TRANCHÉ pour le locuteur et l'épisode — c'est Jen qui le dit, dans S4E6, au sous-sol, et Roy la corrige (« pedestal ») `[SOUS-TITRES AUTO]` (episodes/S4E6, 6:50–7:21). L'attribution à Roy (ancienne fiche 04) était fausse ; TV Tropes avait raison sur le locuteur. La graphie « pedal stool » est celle des sous-titres automatiques, non probante pour l'orthographe. |
 
 ### 3.3 Répliques fétiches
 
@@ -256,11 +261,11 @@ Colonne « Attestation » : source qui relie le terme à la série ou à ses int
 | Roy | "Hello, IT. Have you tried turning it off and on again?" | `[VÉRIFIÉ]` [S05][S01] |
 | Roy (variante lasse) | "oh piss off I'm not in the mood" | `[VÉRIFIÉ]` [S05] |
 | Jen | "Taxi!" | `[VÉRIFIÉ]` [S05][S06] |
-| Moss | "I came here to drink milk and kick ass, and I've just finished my milk." | `[VÉRIFIÉ]` [S02] |
+| Moss | "I came here to drink milk and kick ass, and I've just finished my milk." | `[VÉRIFIÉ]` [S02] VIS : CONFIRMÉ en substance `[SOUS-TITRES AUTO]` (episodes/S4E2, 16:40). |
 | Moss | "Memory is RAM!" | `[VÉRIFIÉ]` [S05] |
 | Douglas | "I'm the boss. Head Honcho. El Numero Uno." | `[VÉRIFIÉ]` [S06] |
-| Numéro d'urgence | 0118 999 881 999 119 7253 | `[VÉRIFIÉ]` [S40e] |
-| Roy | "I'm disabled." | `[VÉRIFIÉ]` — RC : Wikiquote, section « Work Outing [2.1] » (fiche 05, R33) |
+| Numéro d'urgence | 0118 999 881 999 119 7253 | `[VÉRIFIÉ]` [S40e] VIS : CONFIRMÉ — numéro lu à l'écran, groupé « 0118 999 881 999 119 7253 » `[VU À L'IMAGE]` (episodes/S1E2, 1:44). |
+| Roy | "I'm disabled." | `[VÉRIFIÉ]` — RC : Wikiquote, section « Work Outing [2.1] » (fiche 05, R33) VIS : CONFIRMÉ — Roy, enfermé dans les toilettes pour handicapés après avoir tiré le cordon d'alarme `[SOUS-TITRES AUTO]` (episodes/S2E1, 13:27–13:54). |
 
 ---
 
@@ -358,12 +363,12 @@ Schéma type d'un épisode `[ANALYSE]` :
 
 | Interprète | Registre de jeu | Comique physique attesté | Preuve |
 |---|---|---|---|
-| Chris O'Dowd | Exaspération, mauvaise foi, chute dans la panique ; Linehan le dit « effortlessly funny » | Chocolat sur le front (S1E3) ; coincé sous un bureau (S1E4) ; au sol dans les toilettes handicapés (S2E1) ; torse nu puis dans un carton (S3E3) ; dos bloqué (S4E3) ; mains brûlées (S4E4) ; pétrifié devant le robot démineur (S4E5) | `[VÉRIFIÉ]` [S08][S40a][S03] |
-| Richard Ayoade | Raideur, littéralité, enfance prolongée (Ayoade décrit Moss comme enfantin et positif) | Lunettes qui changent de taille ; oreille brûlante arrosée ; écran jeté contre le mur ; « five-finger fillet » ; pyramide de verres renversée (S2E1) ; enfermé dans la machine à pince (S4E4) ; performance physique saluée en S4E6 | `[VÉRIFIÉ]` [S02][S40b][S40g][S40c][S36] |
-| Katherine Parkinson | Aplomb qui se fissure ; « poise under pressure » ; spirale paranoïaque | Pieds broyés par des chaussures trop petites (S1E2) ; soutien-gorge qui prend feu (S2E5) ; décor de toilettes détruit dans un bêtisier de la saison 3 | `[VÉRIFIÉ]` [S35][S31][S03][S05] |
-| Matt Berry | Grandiloquence, sérieux absolu dans le ridicule | Se tire dans la jambe (S3E1) ; pantalon électrique (S3E3) ; bagarre avec April (S3E4) ; main animatronique ; fausse crise cardiaque (S4E6) | `[VÉRIFIÉ]` [S20][S40j][S03] |
-| Chris Morris | Autorité démente et immobile | Regard fixe prolongé ; saut par la fenêtre à l'arrivée de la police (S2E2) | `[VÉRIFIÉ]` [S02][S03] |
-| Noel Fielding | Douceur lunaire, lenteur | Apparitions depuis la salle des serveurs ; clip « Goth2Boss » (S4E6) | `[VÉRIFIÉ]` [S03][S36] |
+| Chris O'Dowd | Exaspération, mauvaise foi, chute dans la panique ; Linehan le dit « effortlessly funny » | Chocolat sur le front (S1E3) ; coincé sous un bureau (S1E4) ; au sol dans les toilettes handicapés (S2E1) ; torse nu puis dans un carton (S3E3) ; dos bloqué (S4E3) ; mains brûlées (S4E4) ; pétrifié devant le robot démineur (S4E5) | `[VÉRIFIÉ]` [S08][S40a][S03] VIS : CONFIRMÉ à l'image : traînée brune sur le front (episodes/S1E3, 0:44–0:56) ; sous le bureau (episodes/S1E4, 6:57–7:55) ; torse nu (episodes/S3E3, 8:27–8:33) ; massage du dos (episodes/S4E3, 7:42–8:44) ; mains en moufles de bandage (episodes/S4E4, 20:40–20:50 et 23:12–23:24) `[VU À L'IMAGE]` ; « pétrifié » devant le robot `[SOUS-TITRES AUTO]` (episodes/S4E5, 18:55–19:12). Les toilettes de S2E1 sont vues (13:18–14:00) ; la position « au sol » n'est pas relevée dans la fiche d'épisode. |
+| Richard Ayoade | Raideur, littéralité, enfance prolongée (Ayoade décrit Moss comme enfantin et positif) | Lunettes qui changent de taille ; oreille brûlante arrosée ; écran jeté contre le mur ; « five-finger fillet » ; pyramide de verres renversée (S2E1) ; enfermé dans la machine à pince (S4E4) ; performance physique saluée en S4E6 | `[VÉRIFIÉ]` [S02][S40b][S40g][S40c][S36] VIS : CONFIRMÉ : machine à pince (episodes/S4E4, 15:56–16:30) et numéro physique à la barre (episodes/S4E6, 17:30–18:24) `[VU À L'IMAGE]`. NON CONFIRMÉ : la pyramide de verres renversée de S2E1, aucun verre renversé sur les images échantillonnées (episodes/S2E1, 20:10–20:36 et 24:20–24:40). |
+| Katherine Parkinson | Aplomb qui se fissure ; « poise under pressure » ; spirale paranoïaque | Pieds broyés par des chaussures trop petites (S1E2) ; soutien-gorge qui prend feu (S2E5) ; décor de toilettes détruit dans un bêtisier de la saison 3 | `[VÉRIFIÉ]` [S35][S31][S03][S05] VIS : CONFIRMÉ : soutien-gorge qui prend feu devant les Dragons `[VU À L'IMAGE]` (episodes/S2E5, 21:24–22:46) ; pieds abîmés cités par Denholm `[SOUS-TITRES AUTO]` (episodes/S1E2, 17:05–17:30). Le bêtisier n'a pas été regardé. |
+| Matt Berry | Grandiloquence, sérieux absolu dans le ridicule | Se tire dans la jambe (S3E1) ; pantalon électrique (S3E3) ; bagarre avec April (S3E4) ; main animatronique ; fausse crise cardiaque (S4E6) | `[VÉRIFIÉ]` [S20][S40j][S03] VIS : CONFIRMÉ : jean taché de sang à la cuisse et aveu à Moss `[VU À L'IMAGE]` `[SOUS-TITRES AUTO]` (episodes/S3E1, 17:28–17:34) ; décharges du pantalon électrique `[VU À L'IMAGE]` (episodes/S3E3, 8:36–8:48 et 18:12–18:27) ; fausse crise cardiaque (episodes/S4E6, 22:14–23:38). La bagarre de S3E4 n'a pas pu être contrôlée (épisode non visionné). |
+| Chris Morris | Autorité démente et immobile | Regard fixe prolongé ; saut par la fenêtre à l'arrivée de la police (S2E2) | `[VÉRIFIÉ]` [S02][S03] VIS : NUANCÉ — Denholm est vu debout à la fenêtre, mais le saut lui-même n'a pas été vu sur les images échantillonnées `[VU À L'IMAGE]` (episodes/S2E2, 0:38–1:42). |
+| Noel Fielding | Douceur lunaire, lenteur | Apparitions depuis la salle des serveurs ; clip « Goth2Boss » (S4E6) | `[VÉRIFIÉ]` [S03][S36] VIS : CONFIRMÉ pour le logo « Goth2Boss » `[VU À L'IMAGE]` (episodes/S4E6, 20:18) ; à l'oral « from goth to boss » `[SOUS-TITRES AUTO]` (20:44). |
 
 - `[VÉRIFIÉ]` Linehan dirige de près : « You can't just let actors act » [S12].
 - `[VÉRIFIÉ]` Il se projette dans ses deux héros : Roy est lui « avant le mariage », Moss lui « vers 16 ans » [S08][S09].
@@ -469,9 +474,9 @@ Aucun sous-titre ni dialogue de VF n'a pu être consulté : la colonne « Soluti
 
 | Gag | Mécanisme en VO | Difficulté pour le français | Piste d'adaptation | Solution VF réelle |
 |---|---|---|---|---|
-| Peter File (S2E4) | Homophonie avec « paedophile » en prononciation britannique [S44] | Très élevée : le nom propre porte le gag et s'affiche à l'écran | Changer le nom (type « Pierre Dofil ») au prix d'une incohérence visuelle | Inconnue |
+| Peter File (S2E4) | Homophonie avec « paedophile » en prononciation britannique [S44] | Très élevée : le nom propre porte le gag et s'affiche à l'écran | Changer le nom (type « Pierre Dofil ») au prix d'une incohérence visuelle | Inconnue VIS : NUANCÉ — dans les scènes visionnées, le nom est dit (scène du dîner) et appelé au haut-parleur de l'aéroport `[SOUS-TITRES AUTO]` (episodes/S2E4, 14:45–16:00 et 20:20–20:58) ; un affichage du nom à l'écran n'est pas relevé dans la fiche d'épisode, hors crédit de fin « Peter File — Orlando Seale » `[VU À L'IMAGE]` (21:06). |
 | tapas / tape-ass (S1E5) | Lecture anglaise d'un mot espagnol, puis insulte | Élevée : « ass » n'a pas d'écho en français | Autre mot mal prononcé | Inconnue |
-| damp squid (S4E6) | Barbarisme sur un idiome | Moyenne : idiome équivalent disponible, faute à inventer | « pétard nouillé » | Inconnue |
+| damp squid (S4E6) | Barbarisme sur un idiome | Moyenne : idiome équivalent disponible, faute à inventer | « pétard nouillé » | Inconnue VIS : CONFIRMÉ `[SOUS-TITRES AUTO]` (episodes/S4E6, 14:57–16:03). |
 | Fredo / Frodo (S4E1) | Paronymie de deux noms de fiction | Faible : fonctionne tel quel | Aucune adaptation nécessaire | Inconnue |
 | from Iran / used to be a man (S3E4) | Malentendu phonétique | Très élevée : aucune proximité sonore en français | Autre paire sonore, ou gag perdu en sous-titres | Inconnue |
 | artistic / autistic spectrum (spécial) | Paronymie | Faible : « artistique / autistique » fonctionne | Littéral | Inconnue |
@@ -500,21 +505,21 @@ Enseignements :
 
 | Sujet | Version A | Version B | Lecture |
 |---|---|---|---|
-| Titre de l'épisode final | *The Internet Is Coming* [S01][S03] | *The Last Byte* selon « certains sites » [S04] | A retenu ; B signalé comme erroné par Wikipédia |
+| Titre de l'épisode final | *The Internet Is Coming* [S01][S03] | *The Last Byte* selon « certains sites » [S04] | A retenu ; B signalé comme erroné par Wikipédia VIS : TRANCHÉ — le titre incrusté à l'écran est « The Internet is Coming » `[VU À L'IMAGE]` (episodes/SP, 0:34). |
 | Compagne de Roy en S4E4 | « Julia », jouée par Nathalie Cox [S41a][S40c] | « Nathalie Cox (Nathalie Cox) » [S03] | A retenu ; B est une erreur de saisie probable |
-| Nationalité du technicien de S4E5 | Crédité « French Tech Support » [S42][S43] | Perçu comme néerlandais ; « slipped all over the place » [S43] | Crédit = français ; exécution floue |
+| Nationalité du technicien de S4E5 | Crédité « French Tech Support » [S42][S43] | Perçu comme néerlandais ; « slipped all over the place » [S43] | Crédit = français ; exécution floue VIS : crédit confirmé `[VU À L'IMAGE]` (episodes/S4E5, 21:29) ; l'exécution de l'accent ne peut pas être jugée (son non écouté pendant le visionnage). |
 | Rôle de Douglas écrit pour Berry | Berry aurait dit que le rôle était écrit pour lui [S02] | Berry : « God knows […] I've no idea » sur la raison de son casting [S19] | Non tranché |
-| Prononciation fautive de Jen | « COMputer » (accent sur la première syllabe) [S05][S06] | « comp-you-ters » [S01] | À contrôler à l'écoute |
-| Règle « sans gros mots » | Enfreinte une seule fois, à l'épisode 3 [S10] | Juron non bipé de Denholm situé en S1E2 [S05] ; jurons nets dans les saisons suivantes [S03][S05] | Déclaration d'avant diffusion, valable au mieux pour la saison 1 ; épisode exact à contrôler |
+| Prononciation fautive de Jen | « COMputer » (accent sur la première syllabe) [S05][S06] | « comp-you-ters » [S01] | À contrôler à l'écoute VIS : toujours non tranché : son non écouté pendant le visionnage. |
+| Règle « sans gros mots » | Enfreinte une seule fois, à l'épisode 3 [S10] | Juron non bipé de Denholm situé en S1E2 [S05] ; jurons nets dans les saisons suivantes [S03][S05] | Déclaration d'avant diffusion, valable au mieux pour la saison 1 ; épisode exact à contrôler VIS : non tranché — le bouton « PROFANITY BUZZER » est vu dans S1E2 `[VU À L'IMAGE]` (episodes/S1E2, 17:16–17:20), mais les bips et les jurons audibles ne sont pas observables (son non écouté pendant le visionnage). |
 | Formulation de la réplique culte | « turning it off and on again » [S01] | « on and off again » [S38] ; « switching it off and back on again » [S37] | A retenu |
 | Orthographe du cannibale et du fumeur | Johann, Jorg [S41d] | Johan [S03] ; Yorg [S40d] | A retenu (crédits British Comedy Guide) |
-| Visage bandé de Paula (S2E4) | Après une opération [S03] | Après un accident de voiture [S40h] | Non tranché |
-| Bagarre Douglas/April | À travers un mur [S45] | À travers une fenêtre [S40j] | Non tranché |
-| Trophée « Shithead of the Year » | Manque Jen de peu [S03] | Brise son pare-brise [S40j] | Non tranché |
+| Visage bandé de Paula (S2E4) | Après une opération [S03] | Après un accident de voiture [S40h] | Non tranché VIS : TRANCHÉ — les deux versions sont compatibles : Jen parle d'une chirurgie reconstructrice du visage après un grave accident de voiture `[SOUS-TITRES AUTO]` (episodes/S2E4, 6:41–7:25) ; visage bandé `[VU À L'IMAGE]` (7:05–7:20, 9:30). |
+| Bagarre Douglas/April | À travers un mur [S45] | À travers une fenêtre [S40j] | Non tranché VIS : non tranché : S3E4 est le seul épisode non visionné (episodes/S3E4-the-speech-NON-TRAITE.md). |
+| Trophée « Shithead of the Year » | Manque Jen de peu [S03] | Brise son pare-brise [S40j] | Non tranché VIS : non tranché : S3E4 non visionné. |
 | Famille de Noel Fielding | Mère Yvonne Fagan ; Diane est sa belle-mère [S23e] | « born to Diane and Ray Fielding » [S40k] | A retenu |
 | Année de naissance de Parkinson | 1977 dans le texte [S23c] | 1977 ou 1978 dans l'encadré [S23c] | Non tranché |
 | Entretiens Linehan de 2006 et 2009 | British Comedy Guide, 2006 [S09] | Chortle, daté 2009 [S08] | Mêmes citations : même entretien republié, à compter comme **une** source |
-| Pseudonyme de Moss en S2E5 | Interviewé sur *Newsnight* [S03] | « BBC News », plusieurs graphies du pseudonyme [S40b] | Non tranché |
+| Pseudonyme de Moss en S2E5 | Interviewé sur *Newsnight* [S03] | « BBC News », plusieurs graphies du pseudonyme [S40b] | Non tranché VIS : en partie tranché — plateau d'information sur l'Irak confirmé `[VU À L'IMAGE]` `[SOUS-TITRES AUTO]` (episodes/S2E5, 13:39–14:55), mais ni le nom de l'émission ni un logo n'ont été lus ; le nom de famille du pseudonyme change d'une phrase à l'autre `[SOUS-TITRES AUTO]` (11:50–13:00), ce qui explique les graphies multiples. |
 
 ---
 
@@ -522,12 +527,13 @@ Enseignements :
 
 | Lacune | Conséquence | Piste pour combler |
 |---|---|---|
-| Aucun script ni sous-titre officiel consulté (sites de transcriptions bloqués ou vides) | Les répliques citées viennent de sources secondaires ; le glossaire ne couvre que les termes attestés par ces sources | Relever les sous-titres anglais des DVD ou de la plateforme de diffusion |
+| Aucun script ni sous-titre officiel consulté (sites de transcriptions bloqués ou vides) | Les répliques citées viennent de sources secondaires ; le glossaire ne couvre que les termes attestés par ces sources | Relever les sous-titres anglais des DVD ou de la plateforme de diffusion VIS : en partie comblé le 2026-10-11 : les sous-titres automatiques de YouTube (non officiels, sans locuteur, avec erreurs) ont été lus pour 24 épisodes sur 25 ; ils ne font pas foi pour le mot à mot ni pour l'orthographe. |
 | Aucune VF ni sous-titre français consulté | Colonne « Solution VF réelle » vide ; impossible de juger l'adaptation | Visionner la VF ; identifier l'auteur de l'adaptation au générique |
 | Studio, directeur artistique et adaptateur de la VF inconnus | Crédit de doublage incomplet | Carton de fin de la VF ; bases RS Doublage ou Doublage Séries Database |
 | Voix françaises attestées par une seule source — RC : recoupées par laVF.fr en fiche 01, sauf Richmond (Roland Timsit) | Fiabilité correcte pour cinq rôles, limitée pour Richmond | Recouper la voix de Richmond avec une base de doublage |
 | Titres français attestés par une seule source — RC : recoupés par AlloCiné pour 16 épisodes sur 25 ; deux jeux de titres concurrents pour 5 épisodes ; aucun titre français recoupé pour S4E4 à S4E6 et le spécial (corrigé par un second recoupement : JustWatch France donne pour ces quatre épisodes les titres de Wikipédia FR, soit 20 titres recoupés sur 25) | Fiabilité limitée ; graphies hétérogènes ; statut officiel toujours inconnu | Notices INA (TPS Star, Canal+), jaquette de DVD, VF elle-même |
-| Aucune analyse phonétique des accents (O'Dowd, Berry, Ayoade, Parkinson, Morris) | Les descriptions d'accent restent `[ANALYSE]` | Travaux de sociolinguistique ; chaînes de coachs d'accent |
+| Son non écouté pendant le visionnage du 2026-10-11 ; S3E4 non visionné | Accents, intonations, prononciations fautives (« tape-ass », « COMputer »), bips de censure et rires du public restent non contrôlés ; les gags de langue de S3E4 (« from Iran ») aussi | Écouter les 25 épisodes en VO, casque sur les oreilles, avec les fiches `episodes/` en regard |
+| Aucune analyse phonétique des accents (O'Dowd, Berry, Ayoade, Parkinson, Morris) | Les descriptions d'accent restent `[ANALYSE]` | Travaux de sociolinguistique ; chaînes de coachs d'accent VIS : le visionnage n'apporte rien sur ce point : son non écouté pendant le visionnage (ni accents, ni intonations, ni rires, ni musique). |
 | Argot spécifiquement irlandais de Roy non documenté | Impossible d'affirmer que Roy emploie « feck », « eejit », « grand », etc. | Dépouillement des sous-titres |
 | Accent cockney et accents du nord de l'Angleterre non confirmés | Deux demandes du cahier des charges restent sans preuve | Écoute de S3E1, S3E2 et S2E1 |
 | Aucun accent scandinave trouvé | Demande sans objet en l'état | — |

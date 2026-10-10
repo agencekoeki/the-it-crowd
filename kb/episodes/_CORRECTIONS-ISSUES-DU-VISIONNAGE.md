@@ -1,12 +1,31 @@
 ---
 title: "Corrections issues du visionnage"
-scope: "Regroupement, épisode par épisode, de ce que le visionnage confirme, corrige ou nuance dans les fiches 01 à 09. Les fiches 01 à 09 ne sont pas encore modifiées en conséquence."
-last_updated: 2026-10-10
+scope: "Regroupement, épisode par épisode, de ce que le visionnage confirme, corrige ou nuance dans les fiches 01 à 09. Reporté dans les fiches 01 à 09, le fichier 00 et le README le 2026-10-11 (notes « VIS ») ; l'en-tête dit ce qui n'a pas été reporté."
+last_updated: 2026-10-11
 ---
 
 # Corrections issues du visionnage
 
-Extrait automatiquement de la section « Ce que le visionnage confirme ou corrige » de chaque fiche d'épisode. **Les fiches 01 à 09 n'ont pas encore été corrigées** : ce fichier fait foi en cas de désaccord avec elles.
+Extrait automatiquement de la section « Ce que le visionnage confirme ou corrige » de chaque fiche d'épisode.
+
+## État du report (2026-10-11)
+
+**Les fiches 01 à 09 ont été corrigées d'après ce fichier le 2026-10-11.** Les tableaux ci-dessous sont laissés tels qu'ils étaient avant le report : la colonne de gauche cite donc l'ancien texte des fiches, et les mentions « à corriger », « à ajouter » décrivent un travail désormais fait, sauf exceptions listées plus bas.
+
+- Dans les fiches 01 à 09, chaque report est une note `VIS` placée sur la ligne concernée, avec `[VU À L'IMAGE]` ou `[SOUS-TITRES AUTO]` et le renvoi « episodes/SxEy, minutage ». L'ancienne version est conservée avec sa source. Définition de la marque : `../README.md`, section 2.
+- Lignes CORRIGÉ, NUANCÉ, TRANCHÉ : reportées dans la fiche visée et, quand le fait y est répété, dans les autres fiches (02, 05, 06, 07, 08, 09).
+- Lignes CONFIRMÉ portant sur un fait jusque-là `[PROBABLE]` ou `[À VÉRIFIER]` : étiquette relevée, avec la formule « auparavant `[PROBABLE]` » ou « auparavant `[À VÉRIFIER]` ».
+- Points transversaux : réalisation (README section 4 ; fiches 01, 02, 03, 04, 07 ; 00, X07), titres à l'écran (README section 4 ; fiche 06, section 9 ; fiche 10, section 7 bis), t-shirts de Roy (fiches 02 et 06, section 7.2), textes du décor (fiche 06, section 3.8), attributions de répliques et premières apparitions des gags (fiche 05, section 1.4), contradictions tranchées (fichier 00, colonne « Apport du visionnage »).
+
+Ce qui n'a pas été reporté, et pourquoi :
+
+- **Confirmations simples de faits déjà `[VÉRIFIÉ]`** : une vingtaine de lignes CONFIRMÉ (détails de synopsis, répliques secondaires, crédits d'invités déjà sourcés) n'ont pas reçu de note `VIS` une à une, puisqu'il n'y avait ni correction ni étiquette à relever. Elles restent consultables ici et dans la fiche d'épisode. Exemples : S1E3 21:08 (tache de chocolat au restaurant), S1E6 17:40–18:20 (Dr Mendall au sous-sol), S2E4 16:30–16:57 (Moss et Margaret), S3E5 18:15–18:24 (Douglas à la soirée), S4E2 21:52–22:26 (Douglas à l'aérobic).
+- **Ligne SP, « Générique d'ouverture modifié avec un Matt Berry pixelisé » (0:10)** : non reportée comme correction. La fiche d'épisode voit Jen à 0:10 ; la fiche 10 situe Douglas et le crédit « Matt Berry » vers 14 s. Les deux relevés portent sur des instants différents et ne se contredisent pas (fiche 10, section 7 bis).
+- **Lignes « non vérifiable » ou « non vu »** (son non écouté, image échantillonnée, générique lu en partie) : reportées comme réserves, sans changer l'étiquette d'origine du fait.
+- **S3E4 « The Speech »** : aucune ligne, l'épisode n'ayant pas été visionné.
+- **Dialogues** : aucune réplique n'a été recopiée au-delà d'une ligne ; les mots à mot issus des sous-titres automatiques ne sont pas repris comme texte établi.
+
+En cas de désaccord résiduel entre ce fichier et une fiche 01 à 09, la fiche d'épisode fait foi pour ce qui se voit à l'écran.
 
 ## S1E1 — `S1E1-yesterdays-jam.md`
 

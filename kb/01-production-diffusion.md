@@ -1,7 +1,8 @@
 ---
 title: "The IT Crowd — Production et diffusion"
 scope: "Genèse, production, tournage, générique, diffusion Channel 4, audiences, saison 5 annulée, éditions vidéo, streaming, remakes, diffusion internationale et française"
-last_updated: 2026-10-10
+last_updated: 2026-10-11
+viewing_review: "Passe du 2026-10-11 : fiche écrite sur sources avant tout visionnage, puis corrigée d'après les fiches episodes/ (24 épisodes sur 25 regardés sur la chaîne YouTube officielle, image et sous-titres automatiques, son non écouté) ; ajouts marqués « VIS »"
 cross_review: "Relecture croisée du 2026-10-10 : corrections marquées « RC » dans le texte ; conventions et table des 25 épisodes dans README.md ; contradictions et lacunes dans 00-CONTRADICTIONS-ET-LACUNES.md"
 language: fr
 series: "The IT Crowd"
@@ -11,6 +12,8 @@ reliability_labels:
   VÉRIFIÉ: "Lu dans une source consultée pendant cette recherche (renvoi [Sn] vers la section Sources)"
   PROBABLE: "Souvenir cohérent, non recoupé dans une source consultée pendant cette recherche"
   À VÉRIFIER: "Incertain, ou sources contradictoires"
+  "VU À L'IMAGE": "Constaté à l'image pendant le visionnage ; renvoi à la fiche episodes/ et au minutage"
+  "SOUS-TITRES AUTO": "Lu dans les sous-titres automatiques de YouTube, non contrôlé à l'oreille ; graphies non probantes"
 ---
 
 # The IT Crowd — Production et diffusion
@@ -21,6 +24,7 @@ reliability_labels:
 - Les renvois `[S1]`, `[S2]`… pointent vers la section 14 (Sources).
 - « Recoupé » = le fait a été lu dans au moins deux sources indépendantes pendant cette recherche.
 - Les contradictions entre sources sont regroupées en section 12 ; les manques en section 13.
+- « VIS » = note ajoutée le 2026-10-11 d'après le visionnage (fiches `episodes/`). Elle porte l'étiquette `[VU À L'IMAGE]` (constaté à l'écran) ou `[SOUS-TITRES AUTO]` (lu dans les sous-titres automatiques, son non écouté) et un renvoi « episodes/SxEy, minutage ». En cas de désaccord, la note VIS l'emporte sur le texte d'origine et sur les notes RC ; l'ancienne version est laissée en place avec sa source.
 - Limite méthodologique : les pages ont été lues via un outil d'extraction automatique ; les citations courtes sont fidèles, mais aucune page n'a été copiée intégralement. Wikipedia est une source secondaire : un fait qui ne repose que sur Wikipedia est signalé « Wikipedia seul ».
 
 ## 1. Carte d'identité
@@ -34,8 +38,8 @@ reliability_labels:
 | Période | 2006-2013 | [VÉRIFIÉ] recoupé | [S1] [S4] |
 | Nombre de saisons | 4 saisons + 1 épisode spécial | [VÉRIFIÉ] recoupé | [S1] [S2] |
 | Nombre d'épisodes | 25 (24 + le spécial) | [VÉRIFIÉ] recoupé | [S1] [S2] [S4] |
-| Durée d'un épisode | environ 24 minutes (case horaire de 30 minutes) | [VÉRIFIÉ] | [S1] [S5] |
-| Durée du spécial | 45 minutes annoncées (communiqué Channel 4), 47 à 48 minutes constatées (Wikipedia EN), créneau de diffusion de 60 minutes (British Comedy Guide, TVmaze) — voir section 12. RC : valeurs compatibles (durée annoncée, durée nette, créneau avec publicité) | [VÉRIFIÉ] pour chaque valeur dans sa source ; durée nette exacte [À VÉRIFIER] | [S1] [S2] [S20] |
+| Durée d'un épisode | environ 24 minutes (case horaire de 30 minutes) | [VÉRIFIÉ] | [S1] [S5] VIS : durées des vidéos de la chaîne YouTube officielle, génériques compris : de 21:14 (S2E4) à 25:17 (S1E6) pour les 23 épisodes de saison visionnés (episodes/README.md). |
+| Durée du spécial | 45 minutes annoncées (communiqué Channel 4), 47 à 48 minutes constatées (Wikipedia EN), créneau de diffusion de 60 minutes (British Comedy Guide, TVmaze) — voir section 12. RC : valeurs compatibles (durée annoncée, durée nette, créneau avec publicité) | [VÉRIFIÉ] pour chaque valeur dans sa source ; durée nette exacte [À VÉRIFIER] | [S1] [S2] [S20] VIS : la vidéo de la chaîne YouTube officielle dure 48:07 (episodes/README.md), ce qui s'accorde avec les 47 à 48 minutes de Wikipedia EN. |
 | Format | Sitcom multi-caméras, enregistrée en vidéo devant un public en studio | [VÉRIFIÉ] recoupé | [S1] [S28] [S31] |
 | Pays / langue | Royaume-Uni / anglais | [VÉRIFIÉ] | [S1] |
 
@@ -72,8 +76,8 @@ reliability_labels:
 
 | Période | Société | Fiabilité | Sources |
 |---|---|---|---|
-| Saisons 1 à 4 (2006-2010) | Talkback Thames (graphié « TalkbackThames » sur British Comedy Guide) | [VÉRIFIÉ] recoupé | [S1] [S4] [S11] |
-| Spécial 2013 | Retort (groupe FremantleMedia UK), en association avec Delightful Industries | [VÉRIFIÉ] recoupé | [S1] [S20] |
+| Saisons 1 à 4 (2006-2010) | Talkback Thames (graphié « TalkbackThames » sur British Comedy Guide) | [VÉRIFIÉ] recoupé | [S1] [S4] [S11] VIS : logo talkbackTHAMES « for Channel 4 » lu en fin de générique de la saison 3 `[VU À L'IMAGE]` (episodes/S3E3, 21:51 ; S3E6, 46:09). |
+| Spécial 2013 | Retort (groupe FremantleMedia UK), en association avec Delightful Industries | [VÉRIFIÉ] recoupé | [S1] [S20] VIS : CONFIRMÉ à l'image — carton de fin : « RETORT, part of FremantleMedia UK, in association with Delightful Industries, for Channel 4 » `[VU À L'IMAGE]` (episodes/SP, 47:51). |
 
 - [PROBABLE] Delightful Industries est la société de Graham Linehan (cohérent avec son blog *Why That's Delightful*, cité en [S6]) ; le lien de propriété n'a pas été lu dans une source.
 - [PROBABLE] Talkback Thames était une filiale de FremantleMedia ; non relu pendant cette recherche.
@@ -82,21 +86,21 @@ reliability_labels:
 
 | Saison | Réalisation | Production | Montage | Décors | Fiabilité | Sources |
 |---|---|---|---|---|---|---|
-| 1 (2006) | Graham Linehan + Ben Gosling Fuller (crédité « Ben Fuller ») | Ash Atalla, Derrin Schlesinger | Paul Machliss | Dennis De Groot | [VÉRIFIÉ] | [S5] |
-| 2 (2007) | Graham Linehan + Barbara Wiltshire | Ash Atalla, Jamie Glazebrook | Paul Machliss | Dennis De Groot | [VÉRIFIÉ] | [S7] |
-| 3 (2008) | Graham Linehan + Richard Boden | Richard Boden ; producteur exécutif Ash Atalla | Paul Machliss | Jo Sutherland | [VÉRIFIÉ] | [S8] |
-| 4 (2010) | Graham Linehan + Richard Boden | Richard Boden | Richard Halladay | Jo Sutherland | [VÉRIFIÉ] | [S9] |
-| Spécial (2013) | Graham Linehan + Richard Boden | Richard Boden ; producteur exécutif Jon Rolph | Graham Barker | Jo Sutherland | [VÉRIFIÉ] — RC : fiche épisode British Comedy Guide relue le 2026-10-10 (https://www.comedy.co.uk/tv/the_it_crowd/episodes/2013/1/), concordante avec la fiche 04 (section 1.1) | [S20] + fiche épisode BCG |
+| 1 (2006) | Graham Linehan + Ben Gosling Fuller (crédité « Ben Fuller ») | Ash Atalla, Derrin Schlesinger | Paul Machliss | Dennis De Groot | [VÉRIFIÉ] | [S5] VIS : CORRIGÉ pour la colonne Réalisation — les six génériques de fin de la saison 1 donnent « Director — Graham Linehan » seul ; Ben Fuller y est « Studio Director », sur une ligne distincte `[VU À L'IMAGE]` (episodes/S1E1, 21:53–21:59 ; tableaux de crédits de S1E2 à S1E6). Production lue au même générique : « Producer » Derrin Schlesinger, « Series Producer » Ash Atalla, « Line Producer » Jo Hunter. « Editor » Paul Machliss et « Designer » Dennis De Groot confirmés. British Comedy Guide présentait Fuller comme co-réalisateur. |
+| 2 (2007) | Graham Linehan + Barbara Wiltshire | Ash Atalla, Jamie Glazebrook | Paul Machliss | Dennis De Groot | [VÉRIFIÉ] | [S7] VIS : génériques de fin de la saison 2 lus en partie seulement : ni la ligne « Director » ni un crédit de Barbara Wiltshire n'ont été relevés, son crédit exact reste [À VÉRIFIER]. Lus : « Editor — Paul Machliss » (episodes/S2E1, 24:22–24:40), « Consultant Producer — Derrin Schlesinger » (episodes/S2E2, 23:00 ; S2E3, 23:38), un crédit « Dennis De Groot » (episodes/S2E5, 23:10) `[VU À L'IMAGE]` ; Jamie Glazebrook non lu au générique (son nom figure sur l'affiche fictive de S2E1, 6:12). |
+| 3 (2008) | Graham Linehan + Richard Boden | Richard Boden ; producteur exécutif Ash Atalla | Paul Machliss | Jo Sutherland | [VÉRIFIÉ] | [S8] VIS : CORRIGÉ pour la colonne Réalisation — « Director — Graham Linehan » seul ; Richard Boden est « Series Producer » et, sur une ligne distincte lue dans S3E6, « Studio Director » `[VU À L'IMAGE]` (episodes/S3E1, 22:58 ; S3E2, 21:35 ; S3E3, 21:45 ; S3E6, 45:57–46:00). Confirmés : « Executive Producer » Ash Atalla, « Editor » Paul Machliss, « Production Designer » Jo Sutherland, « Script Editor » Robert Popper ; aussi « Consultant Producer » Derrin Schlesinger (S3E2, S3E5). Carton de réalisation non vu pour S3E5 ; S3E4 non visionné. |
+| 4 (2010) | Graham Linehan + Richard Boden | Richard Boden | Richard Halladay | Jo Sutherland | [VÉRIFIÉ] | [S9] VIS : CORRIGÉ pour la colonne Réalisation — « Director Graham Linehan » seul (episodes/S4E1, 24:30 ; S4E2, 23:40–23:44) ; Richard Boden est « Series Producer » et « Studio Director » (S4E2 ; S4E6, 24:00) `[VU À L'IMAGE]`. Confirmés : « Production Designer » Jo Sutherland, « Script Editor » Andrew Ellard ; le monteur est lu « Richard Halladey » (S4E3, S4E4, S4E6), British Comedy Guide écrit « Halladay ». Bas du générique non lu pour S4E3, S4E4, S4E5 ; ligne « Director » non lue pour S4E6. |
+| Spécial (2013) | Graham Linehan + Richard Boden | Richard Boden ; producteur exécutif Jon Rolph | Graham Barker | Jo Sutherland | [VÉRIFIÉ] — RC : fiche épisode British Comedy Guide relue le 2026-10-10 (https://www.comedy.co.uk/tv/the_it_crowd/episodes/2013/1/), concordante avec la fiche 04 (section 1.1) | [S20] + fiche épisode BCG VIS : CORRIGÉ pour la colonne Réalisation — « Director Graham Linehan » seul ; Richard Boden est « Producer » `[VU À L'IMAGE]` (episodes/SP, 47:48). Confirmés : « Executive Producer » Jon Rolph, « Editor » Graham Barker, « Script Editor » Andrew Ellard ; crédit de décor non lu. |
 
-- [VÉRIFIÉ] Ces crédits sont lus sur le premier épisode de chaque saison ; l'extension à toute la saison est une extrapolation raisonnable, pas un relevé épisode par épisode. [S5] [S7] [S8] [S9]
-- [À VÉRIFIER] Wikipedia EN crédite Graham Linehan seul comme réalisateur des 25 épisodes ; British Comedy Guide ajoute un co-réalisateur par saison (voir section 12). [S2] [S5]
-- [PROBABLE] Le second nom correspond au réalisateur plateau/multi-caméras, pratique courante en sitcom de studio ; la répartition exacte des rôles n'a pas été lue dans une source.
-- [VÉRIFIÉ] Script editor de la saison 4 : Andrew Ellard. [S9]
+- [VÉRIFIÉ] Ces crédits sont lus sur le premier épisode de chaque saison ; l'extension à toute la saison est une extrapolation raisonnable, pas un relevé épisode par épisode. [S5] [S7] [S8] [S9] VIS : le visionnage a relevé les génériques de fin épisode par épisode pour la saison 1 (complets) et en partie pour les saisons 2 à 4 et le spécial : voir les notes VIS du tableau.
+- VIS : TRANCHÉ en faveur de Wikipedia EN pour les saisons 1, 3, 4 et le spécial — les génériques de fin lus créditent « Director — Graham Linehan » seul `[VU À L'IMAGE]` (episodes/S1E1, 21:53–21:59 ; S3E1, 22:58 ; S4E1, 24:30 ; SP, 47:48 ; auparavant [À VÉRIFIER]) ; saison 2 non lue. Texte d'origine : Wikipedia EN crédite Graham Linehan seul comme réalisateur des 25 épisodes ; British Comedy Guide ajoute un co-réalisateur par saison (voir section 12). [S2] [S5]
+- VIS : CONFIRMÉ pour Ben Fuller et Richard Boden, crédités « Studio Director » aux génériques de fin `[VU À L'IMAGE]` (episodes/S1E1, 21:53–21:59 ; S3E6, 45:57 ; S4E2, 23:40 ; auparavant [PROBABLE]) ; non lu pour Barbara Wiltshire. Texte d'origine : le second nom correspond au réalisateur plateau/multi-caméras, pratique courante en sitcom de studio ; la répartition exacte des rôles n'a pas été lue dans une source.
+- [VÉRIFIÉ] Script editor de la saison 4 : Andrew Ellard. [S9] VIS : crédit lu aux génériques de S4E1 (24:12), S4E2, S4E3, S4E4 et du spécial `[VU À L'IMAGE]` ; pour la saison 3, « Script Editor — Robert Popper » (episodes/S3E2, 21:15). Autres crédits lus : « I.T. Consultant — Sean D. Sollé » (S4E2, 23:28) ; « Countdown Director — Derek Hallworth » (S4E2, 23:40) ; « Costume Designer — Annie Hardinge » (saisons 1 à 4).
 - [VÉRIFIÉ] Selon la page Wikipedia de Linehan, celui-ci est producteur exécutif sur la saison 1 seulement. [S3]
 - [VÉRIFIÉ] La saison 2 est commandée par Caroline Leddy, head of comedy de Channel 4. [S11]
 - [VÉRIFIÉ] En 2013, Nerys Evans (Deputy Head of Comedy, Channel 4) porte l'annonce du spécial. [S20]
-- [VÉRIFIÉ] Ash Atalla fait une brève apparition à l'écran dans l'épisode 1 de la saison 2. [S6]
-- [VÉRIFIÉ] Linehan fait deux caméos : chanteur mariachi (saison 1, épisode 3) et sorcier irlandais aveugle (saison 2, épisode 6). [S6] RC : [S6] n'en cite que deux ; la fiche 02 (section 4, « Synthèse des caméos ») en recense cinq : S1E3, S2E6, S3E4 (homme paniqué), S4E3 (Beth Gaga Shaggy, non crédité par British Comedy Guide) et une voix dans le spécial.
+- [VÉRIFIÉ] Ash Atalla fait une brève apparition à l'écran dans l'épisode 1 de la saison 2. [S6] VIS : crédit « Rampant Gay Man — Ash Atalla » lu au générique de fin `[VU À L'IMAGE]` (episodes/S2E1, 24:22).
+- [VÉRIFIÉ] Linehan fait deux caméos : chanteur mariachi (saison 1, épisode 3) et sorcier irlandais aveugle (saison 2, épisode 6). [S6] RC : [S6] n'en cite que deux ; la fiche 02 (section 4, « Synthèse des caméos ») en recense cinq : S1E3, S2E6, S3E4 (homme paniqué), S4E3 (Beth Gaga Shaggy, non crédité par British Comedy Guide) et une voix dans le spécial. VIS : le caméo de S1E3 n'est pas confirmé par le générique de fin, dont le seul crédit lié est « Mariachi Guitar — Robert Popper » (episodes/S1E3, 22:54) ; celui de S2E6 n'a pas été lu au générique (une seule image) ; identités non établies par l'image.
 
 ## 4. Tournage
 
@@ -126,20 +130,20 @@ reliability_labels:
 
 ### 4.4 Décor
 
-- [VÉRIFIÉ] Décors, accessoires et costumes sont truffés de références « geek » (T-shirts de Roy : RTFM, niveau de Pac-Man, 42). [S6]
+- [VÉRIFIÉ] Décors, accessoires et costumes sont truffés de références « geek » (T-shirts de Roy : RTFM, niveau de Pac-Man, 42). [S6] VIS : les trois t-shirts cités sont lus à l'image : « RTFM » (episodes/S1E1, 4:25), niveau 256 de *Pac-Man* (episodes/S1E4, 5:20), « 42 » (episodes/S1E6, 1:20) `[VU À L'IMAGE]`. Inventaire des textes lus dans le décor : fiche 06, section 3.8.
 - [VÉRIFIÉ] Le 12 août 2008, Linehan lance sur son blog un appel à suggestions (posters, comics, fanzines, T-shirts) pour habiller le décor de la saison 3, qu'il veut « a cross between a comics shop and the Batcave ». [S18]
 - [VÉRIFIÉ] *The Register* a fourni des mugs et T-shirts (BOFH, El Reg) pour le décor. [S16]
-- [VÉRIFIÉ] Un autocollant EFF est visible dès le premier épisode (relevé par Slashdot en janvier 2006). [S10]
+- [VÉRIFIÉ] Un autocollant EFF est visible dès le premier épisode (relevé par Slashdot en janvier 2006). [S10] VIS : CONFIRMÉ à l'image — autocollants EFF (logo et « www.eff.org », « FAIR USE HAS A POSSE ») sur la porte, le bureau de Roy et le portable de Moss `[VU À L'IMAGE]` (episodes/S1E1, 2:20, 4:12, 17:52).
 
 ## 5. Générique et musique
 
-- [VÉRIFIÉ] recoupé — Musique du générique : Neil Hannon (The Divine Comedy). [S1] [S5] [S26]
+- [VÉRIFIÉ] recoupé — Musique du générique : Neil Hannon (The Divine Comedy). [S1] [S5] [S26] VIS : crédit lu aux génériques de fin : « Music — Neil Hannon » en saison 1, « Title Music — Neil Hannon » ensuite `[VU À L'IMAGE]` (episodes/S1E1, 21:39–21:53 ; S3E1, 22:34).
 - [VÉRIFIÉ] Neil Hannon est aussi l'auteur du jingle de la publicité pour le numéro d'urgence vue dans la série. [S26]
 - [VÉRIFIÉ] Un chanteur, Gavin Keenan, est crédité sur l'épisode 1 de la saison 2. [S7]
-- [VÉRIFIÉ] recoupé — Séquence de générique produite par Shynola. [S1] [S27] [S24]
+- [VÉRIFIÉ] recoupé — Séquence de générique produite par Shynola. [S1] [S27] [S24] VIS : crédit lu : « Titles Design — Shynola » (saison 1), « Title Design — Shynola » (saisons 3, 4 et spécial) `[VU À L'IMAGE]` (episodes/S1E1, 21:39–21:53 ; S4E1, 24:10–24:30).
 - [VÉRIFIÉ] Shynola est un collectif de réalisateurs basé à Londres (Chris Harding, Richard Kenworthy, Jason Groves, Gideon Baws ; ce dernier décédé en 2008). [S27]
 - [VÉRIFIÉ] Le DVD de la saison 3 inclut un animatic d'un générique alternatif. [S22]
-- [PROBABLE] Le générique est une animation en pixels évoquant les jeux vidéo et interfaces des années 1980 ; description de mémoire, non lue dans une source consultée.
+- VIS : CONFIRMÉ et décrit image par image en fiche 10 `[VU À L'IMAGE]` (auparavant [PROBABLE]). La séquence dure environ 28 secondes et enchaîne trois univers : un open space en fil de fer vert, une chute, puis le sous-sol en aplats de couleurs vives, avec des personnages en pixel art (Roy, Moss, Jen). Elle se termine en panne informatique : le titre « THE IT CROWD » se tape lettre à lettre, l'affichage saute, un écran de plantage du noyau Linux passe pendant quelques images (version se terminant par `_FC4` : Fedora Core 4), puis une boîte de dialogue affiche « Written by Graham Linehan ». Crédits d'acteurs des saisons 1 à 4 : Chris O'Dowd, Richard Ayoade, Katherine Parkinson. Le personnage de Douglas et le crédit « Matt Berry » n'apparaissent que dans le générique du spécial 2013, de 14,0 s à 15,4 s environ (fiche 10, section 5 ; versions examinées : premier épisode de chaque saison et spécial). Texte d'origine : le générique est une animation en pixels évoquant les jeux vidéo et interfaces des années 1980 ; description de mémoire, non lue dans une source consultée.
 - [À VÉRIFIER] Qualification « 8-bit / chiptune » du thème musical : aucune source consultée ne décrit le style du thème. Le terme « 8-bit » est en revanche attesté pour les menus DVD de la saison 2. [S23] RC : les fiches 06 (section 9) et 07 (section 5) rapportent, d'après une copie 2007 de Wikipedia EN (source unique ancienne), un thème conçu pour évoquer Gary Numan (« Are 'Friends' Electric? ») ; Wikipédia FR parle de « parodie » d'une chanson de Gary Numan. Parenté [À VÉRIFIER] : aucune déclaration de Neil Hannon n'a été lue.
 
 ## 6. Diffusion originale sur Channel 4
@@ -195,7 +199,7 @@ reliability_labels:
 - [VÉRIFIÉ] La série a aussi servi à promouvoir le service de rattrapage à 30 jours de 4oD à son lancement. [S28]
 - [VÉRIFIÉ] La saison 2 était annoncée en mars 2006 à huit épisodes de 30 minutes ; six ont été diffusés. [S11] [S2]
 - [VÉRIFIÉ] Le dernier épisode de la saison 3 est diffusé le 26 décembre 2008 (Boxing Day). [S2]
-- [VÉRIFIÉ] Certaines sources ont donné à tort au spécial le titre « The Last Byte ». [S2]
+- [VÉRIFIÉ] Certaines sources ont donné à tort au spécial le titre « The Last Byte ». [S2] VIS : titre lu à l'écran : « The Internet is Coming » `[VU À L'IMAGE]` (episodes/SP, 0:34) ; la chaîne YouTube officielle titre la vidéo « Series 5 Episode 1 ».
 - [VÉRIFIÉ] British Comedy Guide recense 780 rediffusions au Royaume-Uni (compteur lu le jour de la recherche). [S4]
 
 ## 7. Audiences
@@ -246,7 +250,7 @@ reliability_labels:
 
 ### 8.3 Le spécial
 
-- [VÉRIFIÉ] Les quatre comédiens principaux reviennent : Chris O'Dowd, Richard Ayoade, Katherine Parkinson, Matt Berry. [S20]
+- [VÉRIFIÉ] Les quatre comédiens principaux reviennent : Chris O'Dowd, Richard Ayoade, Katherine Parkinson, Matt Berry. [S20] VIS : le générique d'ouverture du spécial est le seul à créditer « Matt Berry » et à montrer Douglas en pixel art `[VU À L'IMAGE]` (fiche 10, section 5) ; au générique de fin, « with Noel Fielding as Richmond » (episodes/SP, 47:18).
 - [VÉRIFIÉ] Channel 4 n'a pas fermé la porte à une suite (« never-say-never », Nerys Evans). [S20]
 - [VÉRIFIÉ] Linehan voulait pour le spécial une histoire « big, juicy » avec une intrigue forte pour chaque personnage. [S21]
 - [VÉRIFIÉ] Wikipedia seul — Linehan a évoqué des spécials dérivés, notamment un centré sur Douglas. [S1]
@@ -301,7 +305,7 @@ reliability_labels:
 - [VÉRIFIÉ] Wikipedia seul — Saison 2, épisode 4 : un listing BBC BASIC. [S1]
 - [VÉRIFIÉ] Wikipedia seul — Saison 2, épisode 6 : des barres lumineuses lisibles avec un lecteur de codes-barres. [S1]
 - [VÉRIFIÉ] Selon Wikipedia DE, la saison 2 remplace les sous-titres leet par des easter eggs. [S24]
-- [VÉRIFIÉ] Saison 2, épisode 6 : une image de Douglas presque nu apparaît brièvement pendant le générique (détail d'épisode, pas spécifique au DVD). [S6]
+- [VÉRIFIÉ] Saison 2, épisode 6 : une image de Douglas presque nu apparaît brièvement pendant le générique (détail d'épisode, pas spécifique au DVD). [S6] VIS : non vue au visionnage (une seule image du générique de fin regardée) ; une image éclair est insérée dans le film d'entreprise de l'épisode (episodes/S2E6, 19:00, 19:11), contenu non identifié.
 
 ### 9.5 Bonus par volume
 
@@ -456,7 +460,7 @@ reliability_labels:
 | # | Sujet | Version A | Version B | État |
 |---|---|---|---|---|
 | C1 | Date de retrait de « The Speech » | 4 octobre 2020 (Wikipedia EN, page série) [S1] | 5 octobre 2020 (communiqué Channel 4 ; Wikipedia EN, page épisode et liste) [S39] [S30] [S2] | Le communiqué daté du 5 octobre est la source primaire ; le retrait effectif a pu avoir lieu la veille |
-| C2 | Réalisation | Graham Linehan seul sur les 25 épisodes (Wikipedia EN) [S2] | Linehan + un co-réalisateur par saison : Ben Fuller, Barbara Wiltshire, Richard Boden (British Comedy Guide) [S5] [S7] [S8] [S9] | Non tranché ; probable différence entre réalisateur principal et réalisateur plateau. RC : indice supplémentaire, le site des BAFTA cite Barbara Wiltshire (nomination 2008) et Richard Boden (2009, 2014) dans l'équipe nommée pour la série, sans préciser leur fonction |
+| C2 | Réalisation | Graham Linehan seul sur les 25 épisodes (Wikipedia EN) [S2] | Linehan + un co-réalisateur par saison : Ben Fuller, Barbara Wiltshire, Richard Boden (British Comedy Guide) [S5] [S7] [S8] [S9] | Non tranché à l'origine (voir la note VIS) ; probable différence entre réalisateur principal et réalisateur plateau. RC : indice supplémentaire, le site des BAFTA cite Barbara Wiltshire (nomination 2008) et Richard Boden (2009, 2014) dans l'équipe nommée pour la série, sans préciser leur fonction VIS : TRANCHÉ par les génériques de fin lus — « Director — Graham Linehan » seul (saisons 1, 3, 4 et spécial) ; Ben Fuller et Richard Boden sont « Studio Director », Boden aussi « Series Producer » puis « Producer » `[VU À L'IMAGE]` (episodes/S1E1, 21:53–21:59 ; S3E6, 45:57–46:00 ; S4E2, 23:40–23:44 ; SP, 47:48). Saison 2 (Barbara Wiltshire) : non lue, [À VÉRIFIER]. |
 | C3 | Sortie DVD R2 de la saison 1 | 13 octobre 2006 (tableau Wikipedia EN) [S1] | novembre 2006 (texte Wikipedia EN) ; 13 novembre 2006 (Wikipedia DE) [S1] [S24] | Novembre 2006 plus vraisemblable (deux mentions ; article Boing Boing du 15 novembre 2006 sur le DVD tout juste sorti [S36]) |
 | C4 | Sortie DVD R2 de la saison 4 | 27 septembre 2010 (Wikipedia EN) [S1] | 26 septembre 2010 (Wikipedia DE) [S24] | Non tranché ; le 27 est un lundi, jour habituel des sorties vidéo britanniques [PROBABLE] |
 | C5 | Lancement sur IFC (États-Unis) | 29 septembre 2008 (Chortle, The Register) [S47] [S18] | mardi 30 septembre 2008, 22 h (The Hollywood Reporter, d'après le titre du résultat de recherche ; page non lue) [S55] | Non tranché |
@@ -468,7 +472,7 @@ reliability_labels:
 | C11 | Interprète de Roy dans le pilote américain | Joel McHale (Wikipedia EN, Chortle, Lost Media Wiki) [S1] [S43] [S42] | l'article British Comedy Guide du 17 janvier 2007 mentionne aussi Riley Smith dans le rôle de Roy [S41] | McHale est établi par trois sources ; la mention de Riley Smith reste inexpliquée (extraction confuse possible) |
 | C12 | Date de la troisième tentative américaine | 22 décembre 2017 (CultBox) ; fin 2017 (Wikipedia DE) [S44] [S24] | janvier 2018 (Wikipedia EN) [S1] | Annonce fin décembre 2017, reprise par la presse en janvier 2018 |
 | C13 | Nombre d'épisodes | 25 (Wikipedia EN, British Comedy Guide) [S1] [S4] | 24 (laVF.fr ; The Register en 2010-2011) [S52] [S15] | 24 avant le spécial, 25 avec |
-| C14 | Statut d'Ash Atalla | producteur (saisons 1 et 2), producteur exécutif (saison 3) selon British Comedy Guide [S5] [S7] [S8] | producteur exécutif (Wikipedia EN, infobox) ; « series producer » (Mediatel) [S1] [S11] | Évolution de fonction probable |
+| C14 | Statut d'Ash Atalla | producteur (saisons 1 et 2), producteur exécutif (saison 3) selon British Comedy Guide [S5] [S7] [S8] | producteur exécutif (Wikipedia EN, infobox) ; « series producer » (Mediatel) [S1] [S11] | Évolution de fonction probable VIS : lu aux génériques : « Series Producer » en saison 1 (episodes/S1E1, 21:54–21:59), « Executive Producer » en saison 3 (episodes/S3E1, 22:58) `[VU À L'IMAGE]` ; saison 2 non lue. |
 | C15 | Studio du spécial | BBC Elstree Centre (British Comedy Guide) [S4] | Wikipedia EN ne cite que Teddington puis Pinewood [S1] | Compatibles (RC) : Wikipedia EN ne nomme aucun studio pour le spécial ; British Comedy Guide donne Elstree et la date d'enregistrement du 8 juin 2013 (fiche épisode relue le 2026-10-10). Source unique pour Elstree |
 | C16 | Découpage en saisons sur JustWatch | saison 4 à 7 épisodes + « saison 5 » à 1 épisode [S40] | 6 épisodes par saison + 1 spécial [S2] | Erreur de métadonnées de l'agrégateur |
 | C17 | Dates de *Black Books* sur la page de Linehan | « 2000-2004 » dans le résumé [S3] | filmographie : 6 épisodes en 2000 [S3] [S33] | Série 2000-2004 ; participation de Linehan limitée à la saison 1 |
@@ -478,8 +482,8 @@ reliability_labels:
 
 - Audiences : aucun chiffre trouvé pour les saisons 2 et 3 ni pour le spécial 2013 ; aucun chiffre consolidé BARB consulté.
 - Audiences : les chiffres de la saison 4 reposent sur Wikipedia EN et sur une page ACMI, sans source de mesure primaire.
-- Musique : aucune source consultée ne décrit le style du thème (8-bit, chiptune, synthétiseur) ni ses conditions de composition.
-- Générique : aucune description sourcée du design de la séquence Shynola (seule l'attribution est établie).
+- Musique : aucune source consultée ne décrit le style du thème (8-bit, chiptune, synthétiseur) ni ses conditions de composition. VIS : le visionnage n'apporte rien : le son n'a pas été écouté.
+- Générique : aucune description sourcée du design de la séquence Shynola (seule l'attribution est établie). VIS : lacune comblée par la fiche 10 (description image par image) ; restent ouverts le rôle de chaque membre de Shynola, les URL des vidéos capturées et l'examen complet des versions des saisons 2 à 4.
 - Extérieurs : les lieux reposent sur Wikipedia EN seul ; aucun détail par épisode.
 - Plateaux : numéros de plateau à Teddington et Pinewood non trouvés ; dates d'enregistrement par saison non trouvées (sauf printemps 2010 pour la saison 4 et juin 2013 pour le spécial).
 - Mise en ligne anticipée : restrictions géographiques, DRM et fenêtre exacte par épisode non établis ; aucune information sur une mise en ligne anticipée pour les saisons 2 à 4.

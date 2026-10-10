@@ -4,7 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The IT Crowd, l'encyclopédie des fans (non officielle)</title>
-<meta name="description" content="Base de connaissances de fans sur la sitcom britannique The IT Crowd : dix fiches sourcées, 25 épisodes, une discipline de preuve. Projet non officiel.">
+<!-- BEGIN:meta (généré par tools/build_svg.py --sync-docs, ne pas modifier à la main) -->
+<meta name="description" content="Base de connaissances de fans sur la sitcom britannique The IT Crowd : 11 fiches sourcées, 24 épisodes sur 25 découpés scène par scène, une discipline de preuve. Projet non officiel.">
+<link rel="canonical" href="https://agencekoeki.github.io/the-it-crowd/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2013%2012%22%20shape-rendering%3D%22crispEdges%22%3E%3Crect%20width%3D%2213%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%230d0f2b%22%2F%3E%3Cpath%20transform%3D%22translate%282%202%29%22%20fill%3D%22%2335d46a%22%20d%3D%22M0%200h1v1h-1zM8%200h1v1h-1zM1%201h1v1h-1zM3%201h3v1h-3zM7%201h1v1h-1zM2%202h5v1h-5zM1%203h2v1h-2zM4%203h1v1h-1zM6%203h2v1h-2zM0%204h9v1h-9zM0%205h1v1h-1zM2%205h5v1h-5zM8%205h1v1h-1zM0%206h1v1h-1zM2%206h1v1h-1zM6%206h1v1h-1zM8%206h1v1h-1zM3%207h1v1h-1zM5%207h1v1h-1z%22%2F%3E%3Cpath%20transform%3D%22translate%282%202%29%22%20fill%3D%22%23e4252d%22%20d%3D%22M3%203h1v1h-1zM5%203h1v1h-1z%22%2F%3E%3C%2Fsvg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="The IT Crowd, l'encyclopédie des fans">
+<meta property="og:title" content="The IT Crowd, l'encyclopédie des fans (non officielle)">
+<meta property="og:description" content="L'encyclopédie des fans, rangée au sous-sol. Have you tried turning it off and on again?">
+<meta property="og:url" content="https://agencekoeki.github.io/the-it-crowd/">
+<meta property="og:image" content="https://agencekoeki.github.io/the-it-crowd/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Écran de micro-ordinateur en pixels : The IT Crowd, l'encyclopédie des fans, et cinq personnages originaux.">
+<meta name="twitter:card" content="summary_large_image">
+<!-- END:meta -->
 <meta name="color-scheme" content="dark light">
 <style>
 :root{
@@ -28,6 +43,8 @@ a:hover{color:var(--yel)} html[data-theme="light"] a:hover{color:var(--red)}
 html[data-theme="light"] :focus-visible{outline-color:var(--red)}
 button{font:inherit;color:inherit;cursor:pointer}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip{position:fixed;left:12px;top:-80px;z-index:200;background:var(--yel);color:#0d0f2b;padding:10px 14px;font-weight:700;text-decoration:none;border:4px solid #0d0f2b}
+.skip:focus{top:12px;color:#0d0f2b}
 svg.px{display:block;max-width:100%;height:auto;shape-rendering:crispEdges}
 code,kbd{font:inherit}
 kbd{border:2px solid var(--rule);padding:0 .4em;background:var(--panel)}
@@ -96,7 +113,7 @@ html.off main > section,html.off .rail nav,html.off .gauge{transition:filter .5s
 .pitch li{padding:18px 20px;border-right:4px solid var(--rule)}
 .pitch li:last-child{border-right:0}
 .pitch strong{display:block;color:var(--yel);font-size:17px;margin-bottom:4px}
-html[data-theme="light"] .pitch strong{color:var(--red)}
+html[data-theme="light"] .pitch strong{color:#b3141b}
 .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
 .btn{display:inline-block;border:4px solid var(--fg);background:var(--fg);color:var(--bg);padding:10px 18px;text-decoration:none;font-weight:700}
 .btn:hover{background:var(--yel);border-color:var(--yel);color:#0d0f2b}
@@ -107,6 +124,7 @@ html[data-theme="light"] .pitch strong{color:var(--red)}
 .term{background:#000;border:4px solid var(--rule);color:#d7f7df;font-size:15px}
 .term-bar{background:var(--ink2);color:var(--fg);padding:6px 12px;font-size:13px;display:flex;justify-content:space-between;gap:10px}
 #log{height:min(52vh,400px);overflow-y:auto;padding:14px 16px 4px;white-space:pre-wrap;word-break:break-word}
+#log a{color:var(--cyan)} #log a:hover{color:var(--yel)}
 #log .in{color:var(--yel)} #log .err{color:#ff8087} #log .hi{color:var(--cyan)} #log .dimm{color:#9aa0c8}
 .term form{display:flex;gap:8px;padding:6px 16px 14px;align-items:center}
 .term label{color:var(--grn);white-space:nowrap}
@@ -114,8 +132,10 @@ html[data-theme="light"] .pitch strong{color:var(--red)}
 #cmd:focus{outline:none}
 .term:focus-within{border-color:var(--yel)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.chip{background:none;border:2px solid var(--rule);padding:3px 10px;font-size:14px}
-.chip:hover{border-color:var(--fg)}
+.chip{display:inline-block;background:none;border:2px solid var(--rule);padding:3px 10px;font-size:14px;color:var(--fg);text-decoration:none;line-height:1.6}
+.chip:hover{border-color:var(--fg);color:var(--fg)}
+.chip.go{background:var(--yel);border-color:var(--yel);color:#0d0f2b;font-weight:700}
+.chip.go:hover{background:var(--fg);border-color:var(--fg);color:var(--bg)}
 
 /* ---------- le couloir ---------- */
 #couloir{--hole:.62;padding:0;height:190px;overflow:hidden;background:#12143a;border-bottom:0}
@@ -153,14 +173,16 @@ html[data-theme="light"] .pitch strong{color:var(--red)}
 .legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 22px;padding:0;list-style:none;font-size:13.5px}
 .legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
 .t-ver{background:var(--grn)} .t-pro{background:var(--yel)} .t-ave{background:var(--org)} .t-ana{background:var(--vio)} .t-vu{background:var(--cyan)}
+.t-sub{background:#ff9be8} .t-int{background:var(--vio)} .t-con{background:#c9cdf0}
 
 dialog{width:min(1000px,96vw);height:min(92vh,1000px);padding:0;border:4px solid var(--fg);background:var(--bg);color:var(--fg);overflow:hidden}
-dialog[open]{display:grid;grid-template-rows:auto 1fr}
+dialog[open]{display:grid;grid-template-rows:auto minmax(0,1fr);grid-template-columns:minmax(0,1fr)}
 dialog::backdrop{background:rgba(3,4,16,.82)}
 .dlg-bar{display:flex;gap:10px;align-items:center;justify-content:space-between;background:var(--ink2);padding:8px 12px;font-size:14px}
-.dlg-bar strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dlg-bar strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
 .dlg-bar div{display:flex;gap:8px;flex:none}
-.dlg-bar a,.dlg-bar button{border:2px solid var(--fg);background:none;color:var(--fg);padding:2px 10px;text-decoration:none;font-size:13px}
+.dlg-bar a,.dlg-bar button{border:2px solid var(--fg);background:none;color:var(--fg);padding:2px 10px;text-decoration:none;font-size:13px;white-space:nowrap}
+.dlg-bar a:hover,.dlg-bar button:hover{background:var(--fg);color:var(--bg)}
 #reader{overflow:auto;padding:20px clamp(14px,3vw,36px) 60px;font-size:14.5px;line-height:1.65;overscroll-behavior:contain}
 #reader h1{font-size:24px;line-height:1.25} #reader h2{font-size:20px;margin-top:2em;border-top:4px solid var(--rule);padding-top:.8em} #reader h3{font-size:17px;margin-top:1.6em} #reader h4{font-size:15px}
 #reader p,#reader li{max-width:78ch}
@@ -170,17 +192,38 @@ dialog::backdrop{background:rgba(3,4,16,.82)}
 #reader th{background:var(--ink2);position:sticky;top:0}
 #reader code{background:var(--ink2);padding:0 .3em}
 #reader pre{background:var(--panel);padding:10px;overflow:auto;border:2px solid var(--rule)}
-.tag{padding:0 .3em;color:#0d0f2b;font-weight:700;white-space:nowrap}
+#reader ul,#reader ol{padding-left:1.5em} #reader li{margin:.25em 0} #reader li > ul,#reader li > ol{margin:.25em 0}
+#reader a{overflow-wrap:anywhere}
+.tag{padding:0 .3em;color:#0d0f2b;font-weight:700;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.tag.s{white-space:nowrap}
+#reader .tag code{background:none;padding:0}
+.rd-head{border:4px solid var(--rule);background:var(--panel);padding:12px 16px;margin-bottom:8px;font-size:13.5px}
+.rd-head p{margin:0 0 8px;max-width:none}
+.rd-head .rd-meta{font-size:15px;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
+.rd-head .rd-nav{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+.rd-legend{color:var(--dim);line-height:2}
+.missing{border:4px dashed var(--red);background:var(--panel);padding:18px 20px;margin-bottom:8px}
+.missing svg{color:var(--fg);margin-bottom:12px}
+.missing p{margin:0 0 10px}
+.missing .rd-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 
 /* ---------- les épisodes ---------- */
 .grid25{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;max-width:520px}
 .grid25 .sea{grid-column:1/-1;font-size:13px;color:var(--dim);margin-top:8px}
-.grid25 button{aspect-ratio:1;background:var(--panel);border:4px solid var(--rule);font-size:14px;padding:0}
+.grid25 button{aspect-ratio:1;background:var(--panel);border:4px solid var(--rule);font-size:15px;padding:0;display:grid;align-content:center;justify-items:center;gap:1px;line-height:1.15}
+.grid25 button b{font-size:17px}
+.grid25 button small{font-size:11px;color:var(--dim)}
 .grid25 button:hover{border-color:var(--fg)}
-.grid25 button[aria-pressed="true"]{background:var(--yel);color:#0d0f2b;border-color:var(--yel)}
-.grid25 button.sp{aspect-ratio:auto;grid-column:1/-1;padding:8px}
+.grid25 button[aria-current="true"]{background:var(--yel);color:#0d0f2b;border-color:var(--yel)}
+.grid25 button[aria-current="true"] small{color:#0d0f2b}
+.grid25 button.na{border-style:dashed}
+.grid25 button.na b{text-decoration:line-through;text-decoration-thickness:2px}
+.grid25 button.sp{aspect-ratio:auto;grid-column:1/-1;padding:8px;grid-auto-flow:column;justify-content:center;gap:14px;align-items:baseline}
+.annexes{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;align-items:center;font-size:13.5px;color:var(--dim)}
+.ep-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+#epcard small{color:var(--dim);font-size:13px}
 .eps{display:grid;grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:28px;align-items:start}
-#epcard{border:4px solid var(--rule);background:var(--panel);padding:18px 20px;min-height:250px}
+#epcard{border:4px solid var(--rule);background:var(--panel);padding:18px 20px;min-height:330px}
 #epcard h3{margin:0 0 4px;font-size:24px;line-height:1.2}
 #epcard dl{margin:14px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14.5px}
 #epcard dt{color:var(--dim)} #epcard dd{margin:0}
@@ -189,6 +232,7 @@ dialog::backdrop{background:rgba(3,4,16,.82)}
 #incidents{overflow:hidden}
 .num-track{margin:30px calc(-1*clamp(16px,5vw,64px)) 8px;background:#000;padding:22px 0;overflow:hidden;border-block:4px solid var(--rule)}
 #bignum{white-space:nowrap;will-change:transform;display:flex;width:max-content}
+#bignum svg{max-width:none}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px}
 .card.spot{background:radial-gradient(ellipse 60% 70% at 50% 100%,rgba(236,230,208,.16),transparent 70%),var(--panel)}
 .card{border:4px solid var(--rule);background:var(--panel);padding:20px;position:relative;overflow:hidden;min-height:330px}
@@ -213,7 +257,7 @@ html.offline #offline{display:flex}
 #porte{background:var(--panel)}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:36px}
 .cols h3{font-size:19px;margin:0 0 8px;color:var(--yel)}
-html[data-theme="light"] .cols h3{color:var(--red)}
+html[data-theme="light"] .cols h3{color:#b3141b}
 ol.steps{padding-left:1.4em;margin:0} ol.steps li{margin-bottom:12px;max-width:60ch}
 pre.sh{background:#000;color:#d7f7df;padding:10px 12px;margin:6px 0 0;overflow-x:auto;border:2px solid var(--rule);font-size:14px;position:relative}
 table.labels{border-collapse:collapse;font-size:14px;width:100%}
@@ -234,7 +278,7 @@ html.panic #panic{display:block}
 /* ---------- mobile ---------- */
 @media (max-width:900px){
   :root{--rail:0px}
-  .rail{position:sticky;top:0;inset:auto;width:auto;flex-direction:row;align-items:center;gap:10px;padding:8px 10px;border-right:0;border-bottom:4px solid var(--rule);overflow:visible}
+  .rail{position:sticky;inset:auto;top:0;width:auto;flex-direction:row;align-items:center;gap:10px;padding:8px 10px;border-right:0;border-bottom:4px solid var(--rule);overflow:visible}
   .lift{padding:4px 8px;border-width:2px;flex:none} .lift small{display:none} #floor{height:28px;width:54px}
   .rail nav{flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
   .rail nav ol{display:flex;gap:2px}
@@ -248,10 +292,16 @@ html.panic #panic{display:block}
   .pitch{grid-template-columns:1fr} .pitch li{border-right:0;border-bottom:4px solid var(--rule)} .pitch li:last-child{border-bottom:0}
   .eps,.two,.cols{grid-template-columns:1fr}
   .grid25{max-width:none}
+  .num-track{padding:16px 0} #bignum svg{height:84px;width:auto}
   #couloir{height:170px;--hole:.42}
   #couloir .door{right:3%}
   #couloir .cap{font-size:11px;left:8px;top:6px}
   .card{min-height:400px}
+  dialog{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;border-width:4px 0}
+  .dlg-bar{padding:6px 8px;gap:6px} .dlg-bar div{gap:5px} .dlg-bar a,.dlg-bar button{padding:2px 7px}
+  .rd-head,.missing{padding:10px 12px}
+  #dlg-yt{display:none}
+  #epcard{min-height:0}
   footer{margin-left:0}
 }
 @media (prefers-reduced-motion:reduce){
@@ -261,6 +311,7 @@ html.panic #panic{display:block}
 </style>
 </head>
 <body>
+<a class="skip" href="#top">Aller au contenu</a>
 
 <header class="rail" aria-label="Ascenseur">
   <div class="lift" aria-hidden="true"><div id="floor"></div><small>étage</small></div>
@@ -280,7 +331,8 @@ html.panic #panic{display:block}
   </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
+<noscript><p style="margin:0;padding:16px;background:#f5d90a;color:#0d0f2b;max-width:none">Sans JavaScript, le sous-sol reste éteint : ni cassettes, ni épisodes, ni terminal. Les fiches se lisent telles quelles <a style="color:#0d0f2b" href="https://github.com/agencekoeki/the-it-crowd/tree/HEAD/kb">sur GitHub</a>.</p></noscript>
 
 <section id="accueil" aria-labelledby="h-accueil">
   <div class="wrap">
@@ -290,7 +342,7 @@ html.panic #panic{display:block}
         <div id="title">
           <h1 id="h-accueil" data-px="THE IT CROWD" data-scale="12" data-shadow="1">The IT Crowd, l'encyclopédie des fans</h1>
           <p class="sub">L'encyclopédie des fans, rangée au sous-sol</p>
-          <p class="meta">10 fiches / 25 épisodes / 0 épisode visionné / projet non officiel</p>
+          <p class="meta"><span data-stat="fiches">11</span> fiches / <span data-stat="eps">25</span> épisodes / <span data-stat="vus">24</span> visionnés / projet non officiel</p>
           <p class="prompt" aria-hidden="true">&gt; <span id="typed"></span><span class="cursor"></span></p>
         </div>
       </div>
@@ -301,12 +353,13 @@ html.panic #panic{display:block}
     </div>
 
     <ul class="pitch">
-      <li><strong>Onze fiches, 730 Ko</strong>Production, personnages, 25 épisodes, répliques, décors, références, accents, postérité.</li>
-      <li><strong>Chaque fait porte son étiquette</strong>Vérifié, probable, à vérifier, analyse. On sait toujours d'où ça sort.</li>
+      <li><strong><span data-stat="fiches">11</span> fiches, <span data-stat="decoupages">24</span> découpages</strong>Production, personnages, répliques, décors, références, accents, postérité. Et <span data-stat="vus">24</span> épisodes sur <span data-stat="eps">25</span> racontés scène par scène. <span data-stat="kb_poids">1,8 Mo</span> de texte.</li>
+      <li><strong>Chaque fait porte son étiquette</strong>Vérifié, probable, à vérifier, analyse, vu à l'image. On sait toujours d'où ça sort.</li>
       <li><strong>Zéro image de la série</strong>Du texte, des liens, du pixel art maison. Les captures restent chez vous.</li>
     </ul>
     <div class="cta">
       <a class="btn" href="#fiches">Lire les fiches</a>
+      <a class="btn ghost" href="#episodes">Parcourir les épisodes</a>
       <a class="btn ghost" href="#porte">Installer chez soi</a>
       <button class="btn ghost" id="share">Partager la page</button>
     </div>
@@ -330,6 +383,7 @@ html.panic #panic{display:block}
       <button class="chip" data-cmd="ls">ls</button>
       <button class="chip" data-cmd="cat 05">cat 05</button>
       <button class="chip" data-cmd="ep S2E1">ep S2E1</button>
+      <button class="chip" data-cmd="scenes S2E1">scenes S2E1</button>
       <button class="chip" data-cmd="call 999">call 999</button>
       <button class="chip" data-cmd="google google">google google</button>
       <button class="chip" data-cmd="reboot">reboot</button>
@@ -346,14 +400,15 @@ html.panic #panic{display:block}
 
 <section id="fiches" aria-labelledby="h-fiches">
   <div class="wrap">
-    <h2 id="h-fiches" data-px="LES ARCHIVES">Les archives : dix fiches</h2>
-    <p class="lede">Onze cassettes, à charger dans l'ordre que vous voulez. La barre de couleur de chaque cassette donne la répartition de ses étiquettes de preuve, comptées dans le texte.</p>
+    <h2 id="h-fiches" data-px="LES ARCHIVES">Les archives : <span data-stat="fiches">11</span> fiches</h2>
+    <p class="lede"><span data-stat="fiches">11</span> cassettes, à charger dans l'ordre que vous voulez. La barre de couleur de chaque cassette donne la répartition de ses étiquettes de preuve, comptées dans le texte.</p>
     <ul class="legend" aria-label="Légende des étiquettes">
       <li><i class="t-ver"></i>[VÉRIFIÉ] lu dans la source citée</li>
       <li><i class="t-pro"></i>[PROBABLE] déduit, pas lu tel quel</li>
       <li><i class="t-ave"></i>[À VÉRIFIER] fragile ou contradictoire</li>
       <li><i class="t-ana"></i>[ANALYSE] avis du rédacteur</li>
       <li><i class="t-vu"></i>[VU À L'IMAGE] constaté au visionnage</li>
+      <li><i class="t-sub"></i>[SOUS-TITRES AUTO] lu dans les sous-titres automatiques</li>
     </ul>
     <ul class="tapes" id="tapes"></ul>
   </div>
@@ -361,12 +416,13 @@ html.panic #panic{display:block}
 
 <section id="episodes" aria-labelledby="h-episodes">
   <div class="wrap">
-    <h2 id="h-episodes" data-px="LA RÉGIE">La régie : 25 épisodes</h2>
-    <p class="lede">Quatre saisons de six épisodes, un spécial. Les titres originaux et les dates sont recoupés dans trois sources. Aucun titre français n'est confirmé par un diffuseur.</p>
+    <h2 id="h-episodes" data-px="LA RÉGIE">La régie : <span data-stat="eps">25</span> épisodes, <span data-stat="vus">24</span> découpages scène par scène</h2>
+    <p class="lede">Quatre saisons de six épisodes, un spécial. <span data-stat="vus">24</span> épisodes sur <span data-stat="eps">25</span> ont été regardés sur la chaîne officielle, sans le son, puis racontés scène par scène : <span data-stat="scenes">652</span> scènes en tout. Choisissez un épisode pour lire son découpage. Aucun dialogue n'est retranscrit ; pour ça, il y a la vidéo officielle.</p>
     <div class="eps">
-      <div class="grid25" id="grid25" role="group" aria-label="Choisir un épisode"></div>
-      <div id="epcard" aria-live="polite"></div>
+      <div class="grid25" id="grid25" role="group" aria-label="Ouvrir le découpage d'un épisode"></div>
+      <div id="epcard"></div>
     </div>
+    <div class="annexes" id="annexes"></div>
   </div>
 </section>
 
@@ -401,7 +457,7 @@ html.panic #panic{display:block}
         <h3>Installer chez soi</h3>
         <ol class="steps">
           <li>Clonez le dépôt.<pre class="sh" id="clone">git clone https://github.com/agencekoeki/the-it-crowd.git</pre></li>
-          <li>Servez le dossier, puis ouvrez la page. Un serveur local permet à la page de charger les fiches.<pre class="sh">cd it-crowd &amp;&amp; python3 -m http.server 8118
+          <li>Servez le dossier, puis ouvrez la page. Un serveur local permet à la page de charger les fiches et les découpages.<pre class="sh" id="serve">cd the-it-crowd &amp;&amp; python3 -m http.server 8118
 # puis http://localhost:8118/docs/</pre></li>
           <li>Pour votre propre vitrine : fourchez le dépôt, puis activez GitHub Pages sur le dossier <code>/docs</code> de la branche principale.</li>
           <li>Si rien ne marche : éteignez, rallumez.</li>
@@ -411,13 +467,15 @@ html.panic #panic{display:block}
         <h3>Contribuer</h3>
         <p>Une correction vaut par sa source. Chaque fait ajouté porte une étiquette et la clé de la source lue.</p>
         <table class="labels">
-          <tr><td><span class="tag t-ver">[VÉRIFIÉ]</span></td><td>Lu dans la source citée. Pas « vu à l'écran ».</td></tr>
-          <tr><td><span class="tag t-pro">[PROBABLE]</span></td><td>Déduit de faits vérifiés. À ne pas citer comme établi.</td></tr>
-          <tr><td><span class="tag t-ave">[À VÉRIFIER]</span></td><td>Sources en désaccord, source unique fragile, ou souvenir.</td></tr>
-          <tr><td><span class="tag t-ana">[ANALYSE]</span></td><td>Interprétation du rédacteur. Pas une information.</td></tr>
-          <tr><td><span class="tag t-vu">[VU À L'IMAGE]</span></td><td>Constaté au visionnage, avec épisode et minutage.</td></tr>
+          <tr><td><span class="tag s t-ver">[VÉRIFIÉ]</span></td><td>Lu dans la source citée. Pas « vu à l'écran ».</td></tr>
+          <tr><td><span class="tag s t-pro">[PROBABLE]</span></td><td>Déduit de faits vérifiés. À ne pas citer comme établi.</td></tr>
+          <tr><td><span class="tag s t-ave">[À VÉRIFIER]</span></td><td>Sources en désaccord, source unique fragile, ou souvenir.</td></tr>
+          <tr><td><span class="tag s t-ana">[ANALYSE]</span></td><td>Interprétation du rédacteur. Pas une information.</td></tr>
+          <tr><td><span class="tag s t-vu">[VU À L'IMAGE]</span></td><td>Constaté au visionnage, avec épisode et minutage.</td></tr>
+          <tr><td><span class="tag s t-sub">[SOUS-TITRES AUTO]</span></td><td>Lu dans les sous-titres automatiques. Pas contrôlé à l'oreille.</td></tr>
+          <tr><td><span class="tag s t-int">[INTERPRÉTATION]</span></td><td>Dans un découpage : ce que le rédacteur déduit d'une image.</td></tr>
         </table>
-        <p>Les répliques se citent en VO, une ligne au plus. Aucune capture, aucun extrait : voir <code>LICENSE-NOTES.md</code>.</p>
+        <p>Les répliques se citent en VO, une ligne au plus. Aucune capture, aucun extrait : voir <a data-repo-path="/blob/HEAD/LICENSE-NOTES.md" href="https://github.com/agencekoeki/the-it-crowd/blob/HEAD/LICENSE-NOTES.md"><code>LICENSE-NOTES.md</code></a>.</p>
       </div>
     </div>
   </div>
@@ -426,6 +484,7 @@ html.panic #panic{display:block}
 
 <footer>
   <p><strong>Projet de fans, non officiel.</strong> Ce site n'a aucun lien avec Channel 4, Talkback Thames, Graham Linehan ni aucun ayant droit de <i>The IT Crowd</i>. Il ne contient aucune image, aucun logo, aucun son ni aucun extrait de la série. Les personnages en pixels sont des créations originales, les répliques sont citées en une ligne, en version originale, à titre de référence.</p>
+  <p>Le tout est <a data-repo-path="" href="https://github.com/agencekoeki/the-it-crowd">sur GitHub</a> : code sous licence MIT, textes sous CC BY-SA 4.0, pixel art sous CC BY 4.0. Ces licences ne couvrent que ce que le projet a produit, jamais la série.</p>
   <p>Fabriqué par Kōeki, au sous-sol. Clavier : <kbd>Échap</kbd> appelle un taxi, et le reste se découvre en tapant.</p>
 </footer>
 
@@ -435,12 +494,12 @@ html.panic #panic{display:block}
 <div id="toast" role="status" aria-live="polite"></div>
 
 <dialog id="dlg" aria-labelledby="dlg-t">
-  <div class="dlg-bar"><strong id="dlg-t"></strong><div><a id="dlg-src" href="#" target="_blank" rel="noopener">Fichier .md</a><button id="dlg-x">Fermer</button></div></div>
+  <div class="dlg-bar"><strong id="dlg-t"></strong><div><a id="dlg-yt" href="#" target="_blank" rel="noopener" hidden>YouTube ↗</a><a id="dlg-src" href="#" target="_blank" rel="noopener">Fichier .md</a><button id="dlg-x">Fermer</button></div></div>
   <div id="reader" tabindex="0"></div>
 </dialog>
 
 <script id="pixel-data" type="application/json">{"font":{" ":"...../...../...../...../...../...../.....","A":".###./#...#/#...#/#####/#...#/#...#/#...#","B":"####./#...#/#...#/####./#...#/#...#/####.","C":".###./#...#/#..../#..../#..../#...#/.###.","D":"####./#...#/#...#/#...#/#...#/#...#/####.","E":"#####/#..../#..../####./#..../#..../#####","F":"#####/#..../#..../####./#..../#..../#....","G":".###./#...#/#..../#.###/#...#/#...#/.###.","H":"#...#/#...#/#...#/#####/#...#/#...#/#...#","I":"#####/..#../..#../..#../..#../..#../#####","J":"..###/...#./...#./...#./...#./#..#./.##..","K":"#...#/#..#./#.#../##.../#.#../#..#./#...#","L":"#..../#..../#..../#..../#..../#..../#####","M":"#...#/##.##/#.#.#/#.#.#/#...#/#...#/#...#","N":"#...#/##..#/#.#.#/#..##/#...#/#...#/#...#","O":".###./#...#/#...#/#...#/#...#/#...#/.###.","P":"####./#...#/#...#/####./#..../#..../#....","Q":".###./#...#/#...#/#...#/#.#.#/#..#./.##.#","R":"####./#...#/#...#/####./#.#../#..#./#...#","S":".####/#..../#..../.###./....#/....#/####.","T":"#####/..#../..#../..#../..#../..#../..#..","U":"#...#/#...#/#...#/#...#/#...#/#...#/.###.","V":"#...#/#...#/#...#/#...#/#...#/.#.#./..#..","W":"#...#/#...#/#...#/#.#.#/#.#.#/##.##/#...#","X":"#...#/#...#/.#.#./..#../.#.#./#...#/#...#","Y":"#...#/#...#/.#.#./..#../..#../..#../..#..","Z":"#####/....#/...#./..#../.#.../#..../#####","0":".###./#...#/#..##/#.#.#/##..#/#...#/.###.","1":"..#../.##../..#../..#../..#../..#../.###.","2":".###./#...#/....#/...#./..#../.#.../#####","3":"####./....#/....#/.###./....#/....#/####.","4":"...#./..##./.#.#./#..#./#####/...#./...#.","5":"#####/#..../####./....#/....#/#...#/.###.","6":".###./#..../#..../####./#...#/#...#/.###.","7":"#####/....#/...#./..#../..#../..#../..#..","8":".###./#...#/#...#/.###./#...#/#...#/.###.","9":".###./#...#/#...#/.####/....#/....#/.###.",".":"...../...../...../...../...../.##../.##..",",":"...../...../...../...../.##../..#../.#...",":":"...../.##../.##../...../.##../.##../.....","!":"..#../..#../..#../..#../..#../...../..#..","?":".###./#...#/....#/...#./..#../...../..#..","'":"..#../..#../.#.../...../...../...../.....","\"":".#.#./.#.#./...../...../...../...../.....","-":"...../...../...../.###./...../...../.....","+":"...../..#../..#../#####/..#../..#../.....","/":"....#/....#/...#./..#../.#.../#..../#....","(":"...#./..#../.#.../.#.../.#.../..#../...#.",")":".#.../..#../...#./...#./...#./..#../.#...","[":".###./.#.../.#.../.#.../.#.../.#.../.###.","]":".###./...#./...#./...#./...#./...#./.###.","_":"...../...../...../...../...../...../#####","=":"...../...../#####/...../#####/...../.....","%":"##..#/##..#/...#./..#../.#.../#..##/#..##","<":"...#./..#../.#.../#..../.#.../..#../...#.",">":".#.../..#../...#./....#/...#./..#../.#...","*":"...../#.#.#/.###./#####/.###./#.#.#/.....","#":".#.#./.#.#./#####/.#.#./#####/.#.#./.#.#.","@":".###./#...#/#.###/#.#.#/#.###/#..../.###.","&":".##../#..#./#.#../.#.../#.#.#/#..#./.##.#","°":".##../#..#./#..#./.##../...../...../.....","|":"..#../..#../..#../..#../..#../..#../..#..","█":"#####/#####/#####/#####/#####/#####/#####","…":"...../...../...../...../...../...../#.#.#","·":"...../...../...../..#../...../...../.....","«":"...../..#.#/.#.#./#.#../.#.#./..#.#/.....","»":"...../#.#../.#.#./..#.#/.#.#./#.#../.....","→":"...../..#../...#./#####/...#./..#../.....","←":"...../..#../.#.../#####/.#.../..#../....."},"accents":{"acute":["...#.","..#.."],"grave":[".#...","..#.."],"circ":["..#..",".#.#."]},"composed":{"É":["E","acute"],"È":["E","grave"],"Ê":["E","circ"],"À":["A","grave"],"Â":["A","circ"],"Ô":["O","circ"],"Û":["U","circ"],"Ù":["U","grave"],"Î":["I","circ"],"Ç":["C","cedilla"]},"sprites":{"tech":{"label":"Le technicien blasé","color":"#2ee6e6","accent":"#f5d90a","body":["..#.#.##....","..#######...","..#######...","..#oo#oo#...","..#######...","..###oo##...","...#####....","....###.....","..#######...",".#########..",".#.##o##.#..",".#.#ooo#.#aa",".#.#####.##a","...#####...."]},"genius":{"label":"Le génie à lunettes","color":"#f5d90a","accent":"#e4252d","body":["...#####....","..#######...",".#########..",".#########..",".#ooo#ooo#..",".#o#o#o#o#..","..ooo#ooo...","...##o##....","....#a#.....","..###a###...",".####a####..",".#.ooooo.#..",".#.#####.#..","...#####...."]},"boss_lady":{"label":"La cheffe qui n'y connaît rien","color":"#e23be0","accent":"#e4252d","body":["...#####....","..#######...",".##ooooo##..",".#o#####o#..",".#o#o#o#o#..",".#o#####o#..",".##o###o##..",".##.###.##..","..#######...",".#########..",".#.#####.#..",".#.#####.#..","..#######...",".#########.."],"legsA":["...#...#....","..#.....#...","..#.....#...",".aa.....aa.."],"legsB":["....#.#.....","....#.#.....","....#.#.....","...aa.aa...."]},"mogul":{"label":"Le patron mégalo","color":"#ece6d0","accent":"#f5d90a","body":["..a.a.a.a...","..aaaaaaa...","..#######...","..#o###o#...","..#######...","..#ooooo#...","...#####....","....###.....",".####a####..","#####a######","#.###a###.##","#.###a###...","#.#######...","..#######..."]},"goth":{"label":"Le gothique derrière la porte rouge","color":"#a98bff","accent":"#ece6d0","body":["...#####....","..#######...",".#########..",".##o###o##..",".##oo#oo##..",".#########..",".###ooo###..",".##.###.##..",".##..a..##..",".#.#####.#..",".#.#####.#..","...#####....","...#####....","...#####...."]},"_legsA":["...##.##....","..##...##...",".##.....##..",".###....###."],"_legsB":["...##.##....","...##.##....","...##.##....","...###.###.."],"bug":{"label":"Un bug","color":"#35d46a","accent":"#e4252d","body":["#.......#",".#.###.#.","..#####..",".##a#a##.","#########","#.#####.#","#.#...#.#","...#.#..."]}}}</script>
-<script id="kb-data" type="application/json">{"fiches":[{"n":"00","file":"00-CONTRADICTIONS-ET-LACUNES.md","title":"Contradictions entre fiches et lacunes de la base (relecture croisée)","scope":"Tableau consolidé des contradictions relevées entre les fiches 01 à 09 (versions en présence, sources, décision, fiches corrigées) ; recoupement des titres français ; liste dédoublonnée et priorisée des lacunes restantes avec le moyen le plus direct de les combler. Ne couvre pas la fiche 10 (générique), en cours d'écriture à la date de la relecture.","bytes":49765,"lines":275,"sections":["Mode d'emploi","Bilan chiffré","Tableau consolidé des contradictions","Recoupement des titres français","Lacunes restantes, dédoublonnées et priorisées","Sources consultées pendant la relecture croisée"],"tags":{"VÉRIFIÉ":18,"PROBABLE":13,"À VÉRIFIER":19,"ANALYSE":1,"VU À L'IMAGE":1}},{"n":"01","file":"01-production-diffusion.md","title":"Production et diffusion","scope":"Genèse, production, tournage, générique, diffusion Channel 4, audiences, saison 5 annulée, éditions vidéo, streaming, remakes, diffusion internationale et française","bytes":56225,"lines":562,"sections":["Mode d'emploi de la fiche","Carte d'identité","Genèse du projet","Sociétés de production et équipe","Tournage","Générique et musique","Diffusion originale sur Channel 4","Audiences","Saison 5 annulée et épisode spécial","Sorties vidéo (DVD / Blu-ray)","Streaming et vidéo à la demande","Remakes, adaptations et diffusion internationale","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":265,"PROBABLE":8,"À VÉRIFIER":19,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"02","file":"02-personnages-casting.md","title":"Personnages et distribution","scope":"Personnages principaux, récurrents et secondaires ; guest stars et caméos épisode par épisode ; biographies et prix des acteurs ; changements de casting. Série Channel 4, 2006-2013, créée par Graham Linehan.","bytes":86030,"lines":1126,"sections":["Mode d'emploi et discipline de preuve","Vue d'ensemble de la distribution","Personnages principaux","Personnages récurrents et secondaires","Guest stars et caméos, épisode par épisode","Les acteurs principaux","Changements de casting","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":565,"PROBABLE":15,"À VÉRIFIER":70,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"03","file":"03-episodes-saisons-1-2.md","title":"Guide des épisodes, saisons 1 et 2 (épisodes 1 à 12)","scope":"Fiche épisode par épisode des 12 premiers épisodes (Channel 4, 3 février 2006 – 28 septembre 2007) : générique, synopsis, décors, distribution, gags, répliques, références, production et réception. Hors périmètre : saisons 3-4, spécial 2013, biographies, remakes.","bytes":71795,"lines":864,"sections":["Mode d'emploi","Tableau récapitulatif","Faits communs aux deux saisons","Saison 1 (2006)","Saison 2 (2007)","Contradictions entre sources","Synthèse des arcs","Lacunes","Sources"],"tags":{"VÉRIFIÉ":381,"PROBABLE":11,"À VÉRIFIER":24,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"04","file":"04-episodes-saisons-3-4-special.md","title":"Guide des épisodes : saisons 3 et 4 + spécial final « The Internet Is Coming »","scope":"13 épisodes (n° globaux 13 à 25) : saison 3 (2008, 6 ép.), saison 4 (2010, 6 ép.), épisode spécial final (2013). Diffusion d'origine Channel 4. Fiche n° 04 de la base de connaissances.","bytes":85630,"lines":1057,"sections":["Mode d'emploi et discipline de preuve","Tableau récapitulatif","Saison 3 (2008)","Saison 4 (2010)","Épisode spécial final (2013)","Contradictions entre sources","Synthèse des arcs","Lacunes","Sources"],"tags":{"VÉRIFIÉ":481,"PROBABLE":27,"À VÉRIFIER":20,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"05","file":"05-repliques-gimmicks-running-gags.md","title":"Répliques cultes, catchphrases, gimmicks et running gags","scope":"Catalogue des répliques récurrentes et cultes (VO courte + traduction), des gags récurrents, des faux produits / fausses pubs / fausses émissions, des chansons et jingles, et des mots inventés ou détournés de la série The IT Crowd (Channel 4, 2006-2013, 4 saisons + 1 épisode spécial). Hors périmètre : résumés détaillés d'épisodes, biographies de personnages, production.","bytes":85720,"lines":554,"sections":["Mode d'emploi","Catalogue des catchphrases et répliques cultes","Running gags et gimmicks","Faux produits, fausses pubs, fausses émissions et parodies internes","Chansons, jingles et musiques propres à la série","Mots inventés ou détournés","Synthèse des répliques passées dans l'usage courant","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":242,"PROBABLE":22,"À VÉRIFIER":42,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"06","file":"06-decors-lieux-accessoires.md","title":"Décors, lieux, accessoires et univers visuel","scope":"Reynholm Industries, sous-sol du service informatique, set dressing, autres intérieurs, extérieurs et lieux de tournage, studios, costumes, matériel informatique à l'écran, générique","bytes":52270,"lines":597,"sections":["Mode d'emploi de la fiche","Reynholm Industries","Le sous-sol du service informatique","Inventaire du set dressing","Les autres intérieurs","Les extérieurs et lieux de tournage réels","Studios de tournage par saison","Costumes","Matériel informatique et systèmes à l'écran","Le générique et l'habillage","Synthèse visuelle (pour ingestion rapide)","Annexe A — correspondance des épisodes","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":190,"PROBABLE":10,"À VÉRIFIER":28,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"07","file":"07-references-geek-tech-pop-culture.md","title":"Références geek, techniques et pop culture","scope":"Références informatiques, culture hacker/libre, jeux, science-fiction, comics, cinéma, musique, parodies d'émissions britanniques, easter eggs (décor, générique, DVD, sites), tableau épisode par épisode, sujets de société et épisodes controversés. Série Channel 4, 2006-2013, créée par Graham Linehan.","bytes":80011,"lines":647,"sections":["Mode d'emploi","Références informatiques et techniques","Culture hacker et logiciel libre","Jeux vidéo, jeux de rôle, jeux de société, rétro-informatique","Science-fiction, comics, cinéma et séries","Musique et sous-cultures","Parodies d'émissions réelles et culture britannique à expliquer","Easter eggs","Tableau épisode par épisode","Sujets de société et épisodes controversés","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":256,"PROBABLE":28,"À VÉRIFIER":33,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"08","file":"08-accents-langue-humour.md","title":"Accents, langue, écriture comique et style","scope":"Voix et accents des personnages et des interprètes ; registre, argot, jurons et glossaire pour francophones ; mécanique de farce de Graham Linehan ; jeu d'acteur et comique physique ; place dans l'humour britannique (sitcom de studio vs. single-camera) ; VF, titres français et pertes à la traduction.","bytes":64602,"lines":629,"sections":["Mode d'emploi de la fiche","Accents et voix : personnages principaux","Personnages secondaires, accents étrangers et gags de langue","Registre de langue et vocabulaire","Mécanique comique : l'écriture de Graham Linehan","Jeu d'acteur et comique physique","Place dans l'humour britannique","Traduction et doublage français","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":228,"PROBABLE":7,"À VÉRIFIER":15,"ANALYSE":20,"VU À L'IMAGE":0}},{"n":"09","file":"09-reception-memes-heritage.md","title":"Réception, héritage culturel, mèmes et discours","scope":"Réception critique et publique, audiences, prix, statut culte, mèmes, YouTube, communautés, postérité des acteurs, projets de suite, controverses (épisode « The Speech », Graham Linehan) — état au 2026-10-10","bytes":64469,"lines":554,"sections":["Mode d'emploi de la fiche","Repères rapides","Réception critique","Audiences Channel 4 et visionnage en ligne","Prix et nominations","Communauté tech, statut culte et classements","Mèmes et formats viraux","Présence sur YouTube","Communautés, produits dérivés, citations et usages","Postérité des acteurs, retrouvailles et projets de suite","Controverses","Lacunes","Contradictions et écarts entre sources","Sources"],"tags":{"VÉRIFIÉ":235,"PROBABLE":12,"À VÉRIFIER":26,"ANALYSE":0,"VU À L'IMAGE":0}},{"n":"10","file":"10-generique.md","title":"Le générique d'ouverture, image par image","scope":"Découpage minuté du générique (Shynola / Neil Hannon), comparaison des versions saisons 1 à 4 et spécial 2013, grammaire d'animation pour le motion design","bytes":15290,"lines":150,"sections":["Méthode et limites","Fiche d'identité","Découpage plan par plan (version saison 1)","L'écran de plantage","La chute dans le « trou noir »","Comparaison des versions","Pour le motion design","Lacunes","Index des fichiers"],"tags":{"VÉRIFIÉ":3,"PROBABLE":0,"À VÉRIFIER":6,"ANALYSE":0,"VU À L'IMAGE":15}}],"episodes":[{"n":1,"code":"S1E1","title":"Yesterday's Jam","date":"2006-02-03","fr":"Les givrés du sous-sol","alt":"Les chaussettes d'hier (Wikipédia FR seule)"},{"n":2,"code":"S1E2","title":"Calamity Jen","date":"2006-02-03","fr":"Aïe mes pieds !","alt":"Calamity Jen ! (Wikipédia FR seule)"},{"n":3,"code":"S1E3","title":"Fifty-Fifty","date":"2006-02-10","fr":"Le millionnaire","alt":"50-50 (Wikipédia FR seule)"},{"n":4,"code":"S1E4","title":"The Red Door","date":"2006-02-17","fr":"La Porte rouge","alt":"—"},{"n":5,"code":"S1E5","title":"The Haunting of Bill Crouse","date":"2006-02-24","fr":"Jen est morte","alt":"—"},{"n":6,"code":"S1E6","title":"Aunt Irma Visits","date":"2006-03-03","fr":"Tante Irma est arrivée","alt":"—"},{"n":7,"code":"S2E1","title":"The Work Outing","date":"2007-08-24","fr":"La Soirée gay","alt":"—"},{"n":8,"code":"S2E2","title":"Return of the Golden Child","date":"2007-08-31","fr":"Le patron saute","alt":"—"},{"n":9,"code":"S2E3","title":"Moss and the German","date":"2007-09-07","fr":"Cuisine à l'allemande","alt":"—"},{"n":10,"code":"S2E4","title":"The Dinner Party","date":"2007-09-14","fr":"Le Dîner de Jen","alt":"—"},{"n":11,"code":"S2E5","title":"Smoke and Mirrors","date":"2007-09-21","fr":"Écran de fumée","alt":"—"},{"n":12,"code":"S2E6","title":"Men Without Women","date":"2007-09-28","fr":"La Potion magique","alt":"—"},{"n":13,"code":"S3E1","title":"From Hell","date":"2008-11-21","fr":"Le maçon","alt":"—"},{"n":14,"code":"S3E2","title":"Are We Not Men?","date":"2008-11-28","fr":"Les vrais mecs","alt":"Ne sommes-nous pas des hommes ? (Wikipédia FR seule)"},{"n":15,"code":"S3E3","title":"Tramps Like Us","date":"2008-12-05","fr":"Ceinture de chasteté","alt":"—"},{"n":16,"code":"S3E4","title":"The Speech","date":"2008-12-12","fr":"Le Discours","alt":"—"},{"n":17,"code":"S3E5","title":"Friendface","date":"2008-12-19","fr":"Friendface","alt":"—"},{"n":18,"code":"S3E6","title":"Calendar Geeks","date":"2008-12-26","fr":"À poil les scientifiques !","alt":"Le Calendrier des geeks (Wikipédia FR seule)"},{"n":19,"code":"S4E1","title":"Jen the Fredo","date":"2010-06-25","fr":"Jen et les féministes","alt":"—"},{"n":20,"code":"S4E2","title":"The Final Countdown","date":"2010-07-02","fr":"Finale sanglante","alt":"—"},{"n":21,"code":"S4E3","title":"Something Happened","date":"2010-07-09","fr":"La Spaciologie","alt":"—"},{"n":22,"code":"S4E4","title":"Italian for Beginners","date":"2010-07-16","fr":"Traduction très spéciale","alt":"AlloCiné garde le titre original"},{"n":23,"code":"S4E5","title":"Bad Boys","date":"2010-07-23","fr":"Les taulards","alt":"AlloCiné garde le titre original"},{"n":24,"code":"S4E6","title":"Reynholm vs Reynholm","date":"2010-07-30","fr":"Douglas devant les tribunaux","alt":"AlloCiné et une notice INA gardent le titre original"},{"n":25,"code":"SP","title":"The Internet Is Coming","date":"2013-09-27","fr":"L'ultime épisode","alt":"The Last Byte (AlloCiné, titre erroné)"}]}</script>
+<script id="kb-data" type="application/json">{"fiches":[{"n":"00","file":"00-CONTRADICTIONS-ET-LACUNES.md","title":"Contradictions entre fiches et lacunes de la base (relecture croisée)","scope":"Tableau consolidé des contradictions relevées entre les fiches 01 à 09 (versions en présence, sources, décision, fiches corrigées) ; recoupement des titres français ; liste dédoublonnée et priorisée des lacunes restantes avec le moyen le plus direct de les combler. Ne couvrait pas la fiche 10 (générique) à la date de la relecture ; mise à jour le 2026-10-11 d'après le visionnage de 24 épisodes sur 25 (colonne « Apport du visionnage », lacunes L21 à L25).","bytes":67289,"lines":293,"sections":["Mode d'emploi","Bilan chiffré","Tableau consolidé des contradictions","Recoupement des titres français","Lacunes restantes, dédoublonnées et priorisées","Sources consultées pendant la relecture croisée"],"tags":{"VÉRIFIÉ":18,"PROBABLE":13,"À VÉRIFIER":21,"ANALYSE":1,"VU À L'IMAGE":35,"SOUS-TITRES AUTO":31}},{"n":"01","file":"01-production-diffusion.md","title":"Production et diffusion","scope":"Genèse, production, tournage, générique, diffusion Channel 4, audiences, saison 5 annulée, éditions vidéo, streaming, remakes, diffusion internationale et française","bytes":65097,"lines":566,"sections":["Mode d'emploi de la fiche","Carte d'identité","Genèse du projet","Sociétés de production et équipe","Tournage","Générique et musique","Diffusion originale sur Channel 4","Audiences","Saison 5 annulée et épisode spécial","Sorties vidéo (DVD / Blu-ray)","Streaming et vidéo à la demande","Remakes, adaptations et diffusion internationale","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":265,"PROBABLE":8,"À VÉRIFIER":21,"ANALYSE":0,"VU À L'IMAGE":21,"SOUS-TITRES AUTO":1}},{"n":"02","file":"02-personnages-casting.md","title":"Personnages et distribution","scope":"Personnages principaux, récurrents et secondaires ; guest stars et caméos épisode par épisode ; biographies et prix des acteurs ; changements de casting. Série Channel 4, 2006-2013, créée par Graham Linehan.","bytes":108495,"lines":1134,"sections":["Mode d'emploi et discipline de preuve","Vue d'ensemble de la distribution","Personnages principaux","Personnages récurrents et secondaires","Guest stars et caméos, épisode par épisode","Les acteurs principaux","Changements de casting","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":565,"PROBABLE":17,"À VÉRIFIER":54,"ANALYSE":0,"VU À L'IMAGE":49,"SOUS-TITRES AUTO":14}},{"n":"03","file":"03-episodes-saisons-1-2.md","title":"Guide des épisodes, saisons 1 et 2 (épisodes 1 à 12)","scope":"Fiche épisode par épisode des 12 premiers épisodes (Channel 4, 3 février 2006 – 28 septembre 2007) : générique, synopsis, décors, distribution, gags, répliques, références, production et réception. Hors périmètre : saisons 3-4, spécial 2013, biographies, remakes.","bytes":111940,"lines":873,"sections":["Mode d'emploi","Tableau récapitulatif","Faits communs aux deux saisons","Saison 1 (2006)","Saison 2 (2007)","Contradictions entre sources","Synthèse des arcs","Lacunes","Sources"],"tags":{"VÉRIFIÉ":381,"PROBABLE":13,"À VÉRIFIER":46,"ANALYSE":0,"VU À L'IMAGE":107,"SOUS-TITRES AUTO":53}},{"n":"04","file":"04-episodes-saisons-3-4-special.md","title":"Guide des épisodes : saisons 3 et 4 + spécial final « The Internet Is Coming »","scope":"13 épisodes (n° globaux 13 à 25) : saison 3 (2008, 6 ép.), saison 4 (2010, 6 ép.), épisode spécial final (2013). Diffusion d'origine Channel 4. Fiche n° 04 de la base de connaissances.","bytes":125698,"lines":1072,"sections":["Mode d'emploi et discipline de preuve","Tableau récapitulatif","Saison 3 (2008)","Saison 4 (2010)","Épisode spécial final (2013)","Contradictions entre sources","Synthèse des arcs","Lacunes","Sources"],"tags":{"VÉRIFIÉ":481,"PROBABLE":28,"À VÉRIFIER":31,"ANALYSE":0,"VU À L'IMAGE":100,"SOUS-TITRES AUTO":55}},{"n":"05","file":"05-repliques-gimmicks-running-gags.md","title":"Répliques cultes, catchphrases, gimmicks et running gags","scope":"Catalogue des répliques récurrentes et cultes (VO courte + traduction), des gags récurrents, des faux produits / fausses pubs / fausses émissions, des chansons et jingles, et des mots inventés ou détournés de la série The IT Crowd (Channel 4, 2006-2013, 4 saisons + 1 épisode spécial). Hors périmètre : résumés détaillés d'épisodes, biographies de personnages, production.","bytes":115852,"lines":596,"sections":["Mode d'emploi","Catalogue des catchphrases et répliques cultes","Running gags et gimmicks","Faux produits, fausses pubs, fausses émissions et parodies internes","Chansons, jingles et musiques propres à la série","Mots inventés ou détournés","Synthèse des répliques passées dans l'usage courant","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":242,"PROBABLE":25,"À VÉRIFIER":46,"ANALYSE":0,"VU À L'IMAGE":59,"SOUS-TITRES AUTO":93}},{"n":"06","file":"06-decors-lieux-accessoires.md","title":"Décors, lieux, accessoires et univers visuel","scope":"Reynholm Industries, sous-sol du service informatique, set dressing, autres intérieurs, extérieurs et lieux de tournage, studios, costumes, matériel informatique à l'écran, générique","bytes":95625,"lines":712,"sections":["Mode d'emploi de la fiche","Reynholm Industries","Le sous-sol du service informatique","Inventaire du set dressing","Les autres intérieurs","Les extérieurs et lieux de tournage réels","Studios de tournage par saison","Costumes","Matériel informatique et systèmes à l'écran","Le générique et l'habillage","Synthèse visuelle (pour ingestion rapide)","Annexe A — correspondance des épisodes","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":189,"PROBABLE":16,"À VÉRIFIER":36,"ANALYSE":0,"VU À L'IMAGE":75,"SOUS-TITRES AUTO":6}},{"n":"07","file":"07-references-geek-tech-pop-culture.md","title":"Références geek, techniques et pop culture","scope":"Références informatiques, culture hacker/libre, jeux, science-fiction, comics, cinéma, musique, parodies d'émissions britanniques, easter eggs (décor, générique, DVD, sites), tableau épisode par épisode, sujets de société et épisodes controversés. Série Channel 4, 2006-2013, créée par Graham Linehan.","bytes":103531,"lines":651,"sections":["Mode d'emploi","Références informatiques et techniques","Culture hacker et logiciel libre","Jeux vidéo, jeux de rôle, jeux de société, rétro-informatique","Science-fiction, comics, cinéma et séries","Musique et sous-cultures","Parodies d'émissions réelles et culture britannique à expliquer","Easter eggs","Tableau épisode par épisode","Sujets de société et épisodes controversés","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":256,"PROBABLE":27,"À VÉRIFIER":33,"ANALYSE":0,"VU À L'IMAGE":56,"SOUS-TITRES AUTO":18}},{"n":"08","file":"08-accents-langue-humour.md","title":"Accents, langue, écriture comique et style","scope":"Voix et accents des personnages et des interprètes ; registre, argot, jurons et glossaire pour francophones ; mécanique de farce de Graham Linehan ; jeu d'acteur et comique physique ; place dans l'humour britannique (sitcom de studio vs. single-camera) ; VF, titres français et pertes à la traduction.","bytes":79369,"lines":635,"sections":["Mode d'emploi de la fiche","Accents et voix : personnages principaux","Personnages secondaires, accents étrangers et gags de langue","Registre de langue et vocabulaire","Mécanique comique : l'écriture de Graham Linehan","Jeu d'acteur et comique physique","Place dans l'humour britannique","Traduction et doublage français","Contradictions entre sources","Lacunes","Sources"],"tags":{"VÉRIFIÉ":228,"PROBABLE":9,"À VÉRIFIER":16,"ANALYSE":21,"VU À L'IMAGE":36,"SOUS-TITRES AUTO":43}},{"n":"09","file":"09-reception-memes-heritage.md","title":"Réception, héritage culturel, mèmes et discours","scope":"Réception critique et publique, audiences, prix, statut culte, mèmes, YouTube, communautés, postérité des acteurs, projets de suite, controverses (épisode « The Speech », Graham Linehan) — état au 2026-10-10","bytes":71325,"lines":558,"sections":["Mode d'emploi de la fiche","Repères rapides","Réception critique","Audiences Channel 4 et visionnage en ligne","Prix et nominations","Communauté tech, statut culte et classements","Mèmes et formats viraux","Présence sur YouTube","Communautés, produits dérivés, citations et usages","Postérité des acteurs, retrouvailles et projets de suite","Controverses","Lacunes","Contradictions et écarts entre sources","Sources"],"tags":{"VÉRIFIÉ":235,"PROBABLE":13,"À VÉRIFIER":26,"ANALYSE":0,"VU À L'IMAGE":16,"SOUS-TITRES AUTO":23}},{"n":"10","file":"10-generique.md","title":"Le générique d'ouverture, image par image","scope":"Découpage minuté du générique (Shynola / Neil Hannon), comparaison des versions saisons 1 à 4 et spécial 2013, grammaire d'animation pour le motion design","bytes":17296,"lines":163,"sections":["Méthode et limites","Fiche d'identité","Découpage plan par plan (version saison 1)","L'écran de plantage","La chute dans le « trou noir »","Comparaison des versions","Pour le motion design","Lacunes","7 bis. Compléments issus des fiches d'épisodes (ajout du 2026-10-11)","Index des fichiers"],"tags":{"VÉRIFIÉ":3,"PROBABLE":0,"À VÉRIFIER":6,"ANALYSE":0,"VU À L'IMAGE":21,"SOUS-TITRES AUTO":0}}],"episodes":[{"n":1,"code":"S1E1","title":"Yesterday's Jam","date":"2006-02-03","fr":"Les givrés du sous-sol","alt":"Les chaussettes d'hier (Wikipédia FR seule)","file":"episodes/S1E1-yesterdays-jam.md","bytes":35693,"ok":true,"video":"NNRQaDkQ7F8","dur":"22:58","scenes":29},{"n":2,"code":"S1E2","title":"Calamity Jen","date":"2006-02-03","fr":"Aïe mes pieds !","alt":"Calamity Jen ! (Wikipédia FR seule)","file":"episodes/S1E2-calamity-jen.md","bytes":33221,"ok":true,"video":"Z0dvAy1puIE","dur":"23:22","scenes":28},{"n":3,"code":"S1E3","title":"Fifty-Fifty","date":"2006-02-10","fr":"Le millionnaire","alt":"50-50 (Wikipédia FR seule)","file":"episodes/S1E3-fifty-fifty.md","bytes":31375,"ok":true,"video":"WrCgYo5i6yI","dur":"23:28","scenes":27},{"n":4,"code":"S1E4","title":"The Red Door","date":"2006-02-17","fr":"La Porte rouge","alt":"—","file":"episodes/S1E4-the-red-door.md","bytes":31502,"ok":true,"video":"4xQqJtHfsjE","dur":"22:31","scenes":28},{"n":5,"code":"S1E5","title":"The Haunting of Bill Crouse","date":"2006-02-24","fr":"Jen est morte","alt":"—","file":"episodes/S1E5-the-haunting-of-bill-crouse.md","bytes":31477,"ok":true,"video":"jSs55TwR9hM","dur":"23:54","scenes":32},{"n":6,"code":"S1E6","title":"Aunt Irma Visits","date":"2006-03-03","fr":"Tante Irma est arrivée","alt":"—","file":"episodes/S1E6-aunt-irma-visits.md","bytes":33928,"ok":true,"video":"hGLkOxsD2Mc","dur":"25:17","scenes":31},{"n":7,"code":"S2E1","title":"The Work Outing","date":"2007-08-24","fr":"La Soirée gay","alt":"—","file":"episodes/S2E1-the-work-outing.md","bytes":38536,"ok":true,"video":"cj490uNht4o","dur":"25:01","scenes":32},{"n":8,"code":"S2E2","title":"Return of the Golden Child","date":"2007-08-31","fr":"Le patron saute","alt":"—","file":"episodes/S2E2-return-of-the-golden-child.md","bytes":34493,"ok":true,"video":"TK_KRziyWvo","dur":"23:13","scenes":35},{"n":9,"code":"S2E3","title":"Moss and the German","date":"2007-09-07","fr":"Cuisine à l'allemande","alt":"—","file":"episodes/S2E3-moss-and-the-german.md","bytes":32005,"ok":true,"video":"9EDkTAaUMDU","dur":"24:02","scenes":28},{"n":10,"code":"S2E4","title":"The Dinner Party","date":"2007-09-14","fr":"Le Dîner de Jen","alt":"—","file":"episodes/S2E4-the-dinner-party.md","bytes":30327,"ok":true,"video":"ninyI8S-QTc","dur":"21:14","scenes":25},{"n":11,"code":"S2E5","title":"Smoke and Mirrors","date":"2007-09-21","fr":"Écran de fumée","alt":"—","file":"episodes/S2E5-smoke-and-mirrors.md","bytes":34067,"ok":true,"video":"QZW4_68LokI","dur":"23:32","scenes":30},{"n":12,"code":"S2E6","title":"Men Without Women","date":"2007-09-28","fr":"La Potion magique","alt":"—","file":"episodes/S2E6-men-without-women.md","bytes":30181,"ok":true,"video":"Pbwr7L62zgg","dur":"23:09","scenes":22},{"n":13,"code":"S3E1","title":"From Hell","date":"2008-11-21","fr":"Le maçon","alt":"—","file":"episodes/S3E1-from-hell.md","bytes":40536,"ok":true,"video":"6GshHYOw64A","dur":"23:12","scenes":26},{"n":14,"code":"S3E2","title":"Are We Not Men?","date":"2008-11-28","fr":"Les vrais mecs","alt":"Ne sommes-nous pas des hommes ? (Wikipédia FR seule)","file":"episodes/S3E2-are-we-not-men.md","bytes":35559,"ok":true,"video":"EfE-ts3IwPM","dur":"21:49","scenes":25},{"n":15,"code":"S3E3","title":"Tramps Like Us","date":"2008-12-05","fr":"Ceinture de chasteté","alt":"—","file":"episodes/S3E3-tramps-like-us.md","bytes":37947,"ok":true,"video":"5MopyhmsHuI","dur":"22:03","scenes":27},{"n":16,"code":"S3E4","title":"The Speech","date":"2008-12-12","fr":"Le Discours","alt":"—","file":"episodes/S3E4-the-speech-NON-TRAITE.md","bytes":2651,"ok":false},{"n":17,"code":"S3E5","title":"Friendface","date":"2008-12-19","fr":"Friendface","alt":"—","file":"episodes/S3E5-friendface.md","bytes":31272,"ok":true,"video":"VuTMphDrc4A","dur":"22:37","scenes":22},{"n":18,"code":"S3E6","title":"Calendar Geeks","date":"2008-12-26","fr":"À poil les scientifiques !","alt":"Le Calendrier des geeks (Wikipédia FR seule)","file":"episodes/S3E6-calendar-geeks.md","bytes":35115,"ok":true,"video":"XO-E-WQ2KLU","dur":"23:42","scenes":21,"t":1354,"from":"22:34"},{"n":19,"code":"S4E1","title":"Jen the Fredo","date":"2010-06-25","fr":"Jen et les féministes","alt":"—","file":"episodes/S4E1-jen-the-fredo.md","bytes":26433,"ok":true,"video":"L9ed_Lid02k","dur":"24:40","scenes":21},{"n":20,"code":"S4E2","title":"The Final Countdown","date":"2010-07-02","fr":"Finale sanglante","alt":"—","file":"episodes/S4E2-the-final-countdown.md","bytes":26343,"ok":true,"video":"ghFFuKgibfQ","dur":"23:48","scenes":27},{"n":21,"code":"S4E3","title":"Something Happened","date":"2010-07-09","fr":"La Spaciologie","alt":"—","file":"episodes/S4E3-something-happened.md","bytes":24921,"ok":true,"video":"7eT2O1uhDM0","dur":"23:16","scenes":21},{"n":22,"code":"S4E4","title":"Italian for Beginners","date":"2010-07-16","fr":"Traduction très spéciale","alt":"AlloCiné garde le titre original","file":"episodes/S4E4-italian-for-beginners.md","bytes":27539,"ok":true,"video":"Xk1jFV1_AWw","dur":"24:18","scenes":24},{"n":23,"code":"S4E5","title":"Bad Boys","date":"2010-07-23","fr":"Les taulards","alt":"AlloCiné garde le titre original","file":"episodes/S4E5-bad-boys.md","bytes":26450,"ok":true,"video":"sXO3dwYTprM","dur":"22:04","scenes":24},{"n":24,"code":"S4E6","title":"Reynholm vs Reynholm","date":"2010-07-30","fr":"Douglas devant les tribunaux","alt":"AlloCiné et une notice INA gardent le titre original","file":"episodes/S4E6-reynholm-vs-reynholm.md","bytes":28898,"ok":true,"video":"tFinIkgYnuM","dur":"24:20","scenes":22},{"n":25,"code":"SP","title":"The Internet Is Coming","date":"2013-09-27","fr":"L'ultime épisode","alt":"The Last Byte (AlloCiné, titre erroné)","file":"episodes/SP-the-internet-is-coming.md","bytes":49592,"ok":true,"video":"Sw4luvVwou0","dur":"48:07","scenes":45}],"annexes":[{"key":"readme","file":"README.md","title":"Mode d'emploi de la base","bytes":35096},{"key":"index","file":"episodes/README.md","title":"Index des découpages","bytes":4497},{"key":"methode","file":"_methode/visionnage.md","title":"Méthode de visionnage","bytes":3423},{"key":"corrections","file":"episodes/_CORRECTIONS-ISSUES-DU-VISIONNAGE.md","title":"Ce que le visionnage corrige","bytes":88692}],"stats":{"n_fiches":11,"n_eps":25,"n_vus":24,"fiches":"11","fiches_poids":"939 Ko","eps":"25","vus":"24","manquants":"1","decoupages":"24","decoupages_poids":"769 Ko","scenes":"652","kb_fichiers":"40","kb_poids":"1,8 Mo","premiere":"00","derniere":"10","svg":"16"}}</script>
 <script>
 (() => {
 "use strict";
@@ -449,6 +508,7 @@ const CONFIG = { repo: "" };
 
 const PX = JSON.parse(document.getElementById("pixel-data").textContent);
 const KB = JSON.parse(document.getElementById("kb-data").textContent);
+const ST = KB.stats;   // compteurs calculés par tools/build_svg.py --sync-docs
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const calmMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -465,7 +525,11 @@ const gh = (() => {
     blob: f => repo ? `https://github.com/${repo}/blob/HEAD/kb/${f}` : `../kb/${f}`,
   };
 })();
-if (gh.repo) $("#clone").textContent = `git clone https://github.com/${gh.repo}.git`;
+if (gh.repo) {   // page servie depuis une fourche : les commandes et les liens suivent
+  $("#clone").textContent = `git clone https://github.com/${gh.repo}.git`;
+  $("#serve").textContent = $("#serve").textContent.replace(/^cd \S+/, "cd " + gh.repo.split("/")[1]);
+  document.querySelectorAll("[data-repo-path]").forEach(a => { a.href = `https://github.com/${gh.repo}${a.dataset.repoPath}`; });
+}
 
 /* ------------------------------------------------ pixels */
 function rowsOf(c) {
@@ -534,7 +598,7 @@ const BOOT = [
   ["c", "The Internet ............ 1 box, blinking"],
   ["r", "Red door ................ do not open"],
   ["y", "Fire extinguisher ....... on fire"],
-  ["g", "Loading 10 fiches, 25 episodes .......... OK"],
+  ["g", `Loading ${ST.fiches} fiches, ${ST.eps} episodes .......... OK`],
 ];
 const PROMPT = "Have you tried turning it off and on again?";
 let bootRun = 0;
@@ -603,33 +667,75 @@ const hist = []; let hi = 0, unknown = 0;
 function out(text, cls) {
   const d = document.createElement("div"); if (cls) d.className = cls; d.textContent = text; log.append(d); log.scrollTop = log.scrollHeight;
 }
-const fiche = a => KB.fiches.find(f => f.n === String(a || "").padStart(2, "0"));
+function outLink(label, href) {
+  const d = document.createElement("div"), a = document.createElement("a");
+  a.href = href; a.target = "_blank"; a.rel = "noopener"; a.textContent = href;
+  d.append(label, a); log.append(d); log.scrollTop = log.scrollHeight;
+}
+const fiche = a => /^\d{1,2}$/.test(String(a || "").trim()) ? KB.fiches.find(f => f.n === String(a).trim().padStart(2, "0")) : undefined;
+const epOf = a => KB.episodes.find(e => e.code === String(a || "").trim().toUpperCase());
+const annex = a => KB.annexes.find(x => x.key === String(a || "").trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
+const yt = e => `https://www.youtube.com/watch?v=${e.video}` + (e.t ? `&t=${e.t}s` : "");
 const kb = n => `${(n / 1024).toFixed(0)} Ko`;
+const RANGE = `${ST.premiere} à ${ST.derniere}`;
 const frDate = iso => new Date(iso + "T12:00:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
 function epText(e) {
-  return `${e.code}  n° ${e.n}/25\n  Titre original   ${e.title}   [VÉRIFIÉ, 3 sources]\n  Channel 4        ${frDate(e.date)}\n  Titre français   ${e.fr}   [À VÉRIFIER]` + (e.alt && e.alt !== "—" ? `\n  Variante         ${e.alt}` : "");
+  return `${e.code}  n° ${e.n}/${ST.eps}\n  Titre original   ${e.title}   [VÉRIFIÉ, 3 sources]\n  Channel 4        ${frDate(e.date)}\n  Titre français   ${e.fr}   [À VÉRIFIER]`
+    + (e.alt && e.alt !== "—" ? `\n  Variante         ${e.alt}` : "")
+    + (e.ok ? `\n  Découpage        ${e.dur}, ${e.scenes} scènes, ${kb(e.bytes)}   [VU À L'IMAGE]`
+      : `\n  Découpage        non traité : pas en entier sur la chaîne officielle`);
 }
+const epLine = e => `${e.code.padEnd(5)} ${e.title.slice(0, 30).padEnd(30)}  ` + (e.ok ? `${e.dur}  ${String(e.scenes).padStart(2)} scènes  ${kb(e.bytes).padStart(5)}` : "non traité");
+const BADCODE = "code inconnu. Essayez S1E1 à S4E6, ou SP.";
 const COMMANDS = {
   help: () => out(
 `Commandes disponibles :
-  ls                 lister les fiches
+  ls                 lister les fiches et les découpages
   cat <n>            résumé d'une fiche (ex. cat 05)
-  open <n>           ouvrir la fiche dans le lecteur
-  episodes           les 25 épisodes
+  open <n>           ouvrir une fiche dans le lecteur (${RANGE})
+  episodes           les ${ST.eps} épisodes
   ep <code>          un épisode (ex. ep S2E1, ep SP)
+  scenes <code>      ouvrir son découpage scène par scène
+  yt <code>          l'adresse de la vidéo officielle
+  open methode       comment les épisodes ont été regardés
   call <numéro>      appeler les urgences
   whoami, date, ping, tea, clear
   reboot             éteindre et rallumer
   exit               partir dignement
 Le reste n'est pas documenté. C'est volontaire.`),
-  ls: () => { out(KB.fiches.map(f => `${f.n}  ${f.title.slice(0, 58).padEnd(58)}  ${kb(f.bytes).padStart(6)}`).join("\n")); out("10 fiches. Aucune n'a été rangée par ordre de taille.", "dimm"); },
-  cat: a => { const f = fiche(a); if (!f) return out("cat : il faut un numéro de fiche entre 00 et 09.", "err");
+  ls: a => {
+    const what = String(a || "").toLowerCase();
+    if (what && !/^(fiches|episodes|épisodes|kb)$/.test(what)) return out("ls : ici il n'y a que « fiches » et « episodes ». Et un canapé, non documenté.", "err");
+    if (what !== "episodes" && what !== "épisodes") {
+      out("kb/", "hi");
+      out(KB.fiches.map(f => `${f.n}    ${f.title.slice(0, 44).padEnd(44)}  ${kb(f.bytes).padStart(6)}`).join("\n"));
+    }
+    if (what !== "fiches") {
+      out("kb/episodes/", "hi");
+      out(KB.episodes.map(epLine).join("\n"));
+    }
+    out(`${ST.fiches} fiches, ${ST.decoupages} découpages sur ${ST.eps} épisodes. Rien n'a été rangé par ordre de taille.`, "dimm");
+  },
+  cat: a => { const f = fiche(a); if (!f) return out(`cat : il faut un numéro de fiche, de ${RANGE}.`, "err");
     out(`${f.file}  (${kb(f.bytes)}, ${f.lines} lignes)`, "hi"); out(f.scope);
     out("Sections :\n" + f.sections.map(s => "  - " + s).join("\n"));
     out(`Étiquettes : ${f.tags["VÉRIFIÉ"]} vérifié, ${f.tags["PROBABLE"]} probable, ${f.tags["À VÉRIFIER"]} à vérifier. Tapez « open ${f.n} » pour lire.`, "dimm"); },
-  open: a => { const f = fiche(a); if (!f) return out("open : il faut un numéro de fiche entre 00 et 09.", "err"); out(`Chargement de la cassette ${f.n}…`); openFiche(f); },
-  episodes: () => out(KB.episodes.map(e => `${e.code.padEnd(5)} ${e.date}  ${e.title}`).join("\n")),
-  ep: a => { const e = KB.episodes.find(e => e.code === String(a || "").toUpperCase()); e ? out(epText(e)) : out("ep : code inconnu. Essayez S1E1 à S4E6, ou SP.", "err"); },
+  open: a => {
+    const f = fiche(a), e = epOf(a), x = annex(a);
+    if (f) { out(`Chargement de la cassette ${f.n}…`); return openFiche(f); }
+    if (e) return COMMANDS.scenes(a);
+    if (x) { out(`Ouverture : ${x.title}…`); return openAnnex(x); }
+    out(`open : il faut un numéro de fiche, de ${RANGE}, ou un code d'épisode (S2E1, SP), ou « methode », « corrections », « index ».`, "err");
+  },
+  episodes: () => out(KB.episodes.map(e => `${e.code.padEnd(5)} ${e.date}  ${e.title.padEnd(30)} ${e.ok ? e.dur : "non traité"}`).join("\n")),
+  ep: a => { const e = epOf(a); if (!e) return out("ep : " + BADCODE, "err");
+    out(epText(e));
+    if (e.ok) { outLink("  Vidéo officielle ", yt(e)); out(`Tapez « scenes ${e.code} » pour ouvrir le découpage scène par scène.`, "dimm"); }
+    else out(`Tapez « scenes ${e.code} » pour lire le constat. C'est court.`, "dimm"); },
+  scenes: a => { const e = epOf(a); if (!e) return out("scenes : " + BADCODE, "err");
+    out(e.ok ? `Rembobinage de ${e.code}, ${e.scenes} scènes…` : `${e.code} : la cassette est vide. Ouverture du constat…`); openEp(e); },
+  yt: a => { const e = epOf(a); if (!e) return out("yt : " + BADCODE, "err");
+    e.ok ? outLink(`${e.code}, chaîne officielle : `, yt(e)) : out(`${e.code} : pas de vidéo officielle complète. Le service a cherché. Deux fois.`, "err"); },
   call: a => { const n = String(a || "").replace(/\D/g, "");
     if (!n) return out("call : quel numéro ?", "err");
     if (n === "999") return out("Ce numéro n'est plus attribué. Composez le nouveau : 0118 999 881 999 119 725… 3", "err");
@@ -658,10 +764,11 @@ Le reste n'est pas documenté. C'est volontaire.`),
   light: () => $("#light").click(),
 };
 COMMANDS.dir = COMMANDS.ls; COMMANDS.man = COMMANDS.help; COMMANDS["?"] = COMMANDS.help; COMMANDS.aide = COMMANDS.help; COMMANDS.taxi = COMMANDS.exit; COMMANDS.quit = COMMANDS.exit;
+COMMANDS.decoupage = COMMANDS.scenes; COMMANDS["découpage"] = COMMANDS.scenes; COMMANDS.youtube = COMMANDS.yt;
 function run(line) {
   line = line.trim(); if (!line) return;
   out("it> " + line, "in"); hist.push(line); hi = hist.length;
-  const [name, ...rest] = line.split(/\s+/), fn = COMMANDS[name.toLowerCase()];
+  const [name, ...rest] = line.split(/\s+/), fn = Object.hasOwn(COMMANDS, name.toLowerCase()) && COMMANDS[name.toLowerCase()];
   if (fn) { unknown = 0; return fn(rest.join(" ")); }
   unknown++;
   out(unknown === 1 ? "Commande inconnue. Have you tried turning it off and on again?"
@@ -677,7 +784,7 @@ cmd.addEventListener("keydown", e => {
     if (m.length === 1) { cmd.value = m[0] + " "; e.preventDefault(); }
   }
 });
-$$(".chip").forEach(b => b.addEventListener("click", () => { run(b.dataset.cmd); }));
+$$(".chip[data-cmd]").forEach(b => b.addEventListener("click", () => { run(b.dataset.cmd); }));
 out("Reynholm Industries, service informatique (sous-sol).\nHello, IT. Tapez « help ».", "hi");
 
 /* ------------------------------------------------ fiches */
@@ -692,99 +799,209 @@ const JOKES = {
   "07": "Ce que le décor cite, et ce que les gags parodient.",
   "08": "Accents, jurons édulcorés, et pourquoi ça se traduit mal.",
   "09": "Critiques, prix, mèmes, et ce qui a mal vieilli.",
-  "10": "Le générique image par image. La seule fiche qui a regardé quelque chose.",
+  "10": "Le générique image par image. La première fiche qui a regardé quelque chose.",
 };
 const SHORT = { "00": "Contradictions et lacunes", "01": "Production et diffusion", "02": "Personnages et casting",
   "03": "Épisodes, saisons 1 et 2", "04": "Épisodes, saisons 3 et 4, spécial", "05": "Répliques et running gags",
   "06": "Décors, lieux, accessoires", "07": "Références geek et pop culture", "08": "Accents, langue, humour", "09": "Réception, mèmes, héritage", "10": "Générique image par image" };
 KB.fiches.forEach(f => { f.long = f.title; f.title = SHORT[f.n] || f.title; });
-const HUES = ["var(--red)", "var(--cyan)", "var(--yel)", "var(--mag)", "var(--grn)", "var(--org)", "var(--vio)", "var(--blue)", "var(--cyan)", "var(--red)"];
-const TAGCLS = { "VÉRIFIÉ": "t-ver", "PROBABLE": "t-pro", "À VÉRIFIER": "t-ave", "ANALYSE": "t-ana", "VU À L'IMAGE": "t-vu" };
+const HUES = ["var(--red)", "var(--cyan)", "var(--yel)", "var(--mag)", "var(--grn)", "var(--org)", "var(--vio)", "var(--blue)", "var(--cyan)", "var(--red)", "var(--yel)"];
+const TAGCLS = { "VÉRIFIÉ": "t-ver", "PROBABLE": "t-pro", "À VÉRIFIER": "t-ave", "ANALYSE": "t-ana", "VU À L'IMAGE": "t-vu",
+  "SOUS-TITRES AUTO": "t-sub", "INTERPRÉTATION": "t-int", "CONSTATÉ": "t-con" };
 $("#tapes").innerHTML = KB.fiches.map((f, i) => {
   const tot = Object.values(f.tags).reduce((a, b) => a + b, 0) || 1;
   const bar = Object.entries(f.tags).filter(([, v]) => v).map(([k, v]) => `<i class="${TAGCLS[k]}" style="width:${(v / tot * 100).toFixed(1)}%" title="${k} : ${v}"></i>`).join("");
   const sum = Object.entries(f.tags).filter(([, v]) => v).map(([k, v]) => `${v} ${k.toLowerCase()}`).join(", ");
-  return `<li><button class="tape" data-n="${f.n}" style="--c:${HUES[i]}">
+  return `<li><button class="tape" data-fiche="${f.n}" style="--c:${HUES[i % HUES.length]}">
     <span class="lab"><span class="num">${f.n}</span><span class="ttl">${esc(f.title)}</span><span class="joke">${esc(JOKES[f.n] || "")}</span></span>
     <span class="reels" aria-hidden="true"><i></i><i></i></span>
     <span class="foot"><span class="proof" role="img" aria-label="Étiquettes : ${esc(sum)}">${bar}</span>${kb(f.bytes)}, ${f.lines} lignes, ${f.sections.length} sections</span>
   </button></li>`;
 }).join("");
-$("#tapes").addEventListener("click", e => { const b = e.target.closest(".tape"); if (b) openFiche(fiche(b.dataset.n)); });
 
+/* ------------------------------------------------ lecteur */
 const dlg = $("#dlg"), reader = $("#reader");
+let cur = null;   // chemin, sous kb/, du fichier affiché
 $("#dlg-x").addEventListener("click", () => dlg.close());
 dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+dlg.addEventListener("close", () => { if (dlg.open) return;   // fermeture périmée : le lecteur a déjà été rouvert
+  cur = null; if (location.hash.startsWith("#lire=")) history.replaceState(null, "", location.pathname + location.search); });
+const TAGRE = /\[((?:VÉRIFIÉ|PROBABLE|À VÉRIFIER|ANALYSE|INTERPRÉTATION|VU À L'IMAGE|SOUS-TITRES AUTO|CONSTATÉ)(?![A-Za-zÀ-ÿ])[^\]]{0,220})\]/g;
+const TAGKEY = /^\s*(VÉRIFIÉ|PROBABLE|À VÉRIFIER|ANALYSE|INTERPRÉTATION|VU À L'IMAGE|SOUS-TITRES AUTO|CONSTATÉ)/;
+function tags(s) {
+  return s.replace(TAGRE, (m, inner) => {
+    let cls = "", parts = inner.split(/(?<=;)/);
+    return parts.map((p, i) => {
+      const k = p.match(TAGKEY); if (k) cls = TAGCLS[k[1]];
+      return `<span class="tag ${cls}${p.length < 30 ? " s" : ""}">${i === 0 ? "[" : ""}${p}${i === parts.length - 1 ? "]" : ""}</span>`;
+    }).join("");
+  });
+}
+function resolve(base, rel) {
+  const parts = base.split("/").slice(0, -1);
+  for (const p of rel.split("/")) { if (p === "..") { if (!parts.length) return null; parts.pop(); } else if (p !== "." && p) parts.push(p); }
+  return parts.join("/");
+}
 function inline(s) {
   s = esc(s);
   s = s.replace(/`([^`]+)`/g, "<code>$1</code>");
   s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-  s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/(^|[\s(«])\*([^*\s][^*]*)\*/g, "$1<em>$2</em>");
-  s = s.replace(/\[(VÉRIFIÉ|PROBABLE|À VÉRIFIER|ANALYSE|VU À L'IMAGE)([^\]]{0,40})\]/g, (m, t) => `<span class="tag ${TAGCLS[t]}">${m}</span>`);
-  return s;
+  s = s.replace(/\[([^\]]+)\]\(([^)\s:]+\.md)(#[^)\s]*)?\)/g, (m, t, rel) => {
+    const path = cur && resolve(cur, rel);
+    return path ? `<a href="${gh.blob(path)}" data-md="${path}">${t}</a>` : t;
+  });
+  s = s.replace(/(^|[\s(«])(https?:\/\/[^\s<]+[^\s<.,;:!?)»])/g, '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+  s = s.replace(/\*\*\*([^*]+)\*\*\*/g, "<strong><em>$1</em></strong>").replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/(^|[\s(«>])\*([^*\s][^*]*)\*/g, "$1<em>$2</em>");
+  return tags(s);
 }
 function md(src) {
-  src = src.replace(/^---\n[\s\S]*?\n---\n/, "");
+  src = src.replace(/\r\n?/g, "\n").replace(/^---\n[\s\S]*?\n---\n/, "");
   const lines = src.split("\n"), o = []; let i = 0;
   const cells = l => l.trim().replace(/^\||\|$/g, "").split(/(?<!\\)\|/).map(c => c.trim());
+  const LI = /^(\s*)([-*]|\d+\.)\s+(.*)$/;
   while (i < lines.length) {
     const l = lines[i];
-    if (/^```/.test(l)) { const b = []; i++; while (i < lines.length && !/^```/.test(lines[i])) b.push(lines[i++]); i++; o.push(`<pre>${esc(b.join("\n"))}</pre>`); continue; }
-    const h = l.match(/^(#{1,4})\s+(.*)$/);
+    if (/^```/.test(l)) { const b = []; i++; while (i < lines.length && !/^```/.test(lines[i])) b.push(lines[i++]); i++; o.push(`<pre tabindex="0">${esc(b.join("\n"))}</pre>`); continue; }
+    const h = l.match(/^(#{1,6})\s+(.*)$/);
     if (h) { o.push(`<h${h[1].length}>${inline(h[2])}</h${h[1].length}>`); i++; continue; }
     if (/^\|/.test(l) && /^\|[\s:|-]+\|?\s*$/.test(lines[i + 1] || "")) {
       const head = cells(l); i += 2; const rows = [];
       while (i < lines.length && /^\|/.test(lines[i])) rows.push(cells(lines[i++]));
-      o.push(`<div class="tbl" tabindex="0"><table><thead><tr>${head.map(c => `<th>${inline(c)}</th>`).join("")}</tr></thead><tbody>${rows.map(r => `<tr>${r.map(c => `<td>${inline(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`);
+      o.push(`<div class="tbl" tabindex="0" role="region" aria-label="Tableau : ${esc(head.join(", ").replace(/[`*]/g, ""))}"><table><thead><tr>${head.map(c => `<th scope="col">${inline(c)}</th>`).join("")}</tr></thead><tbody>${rows.map(r => `<tr>${r.map(c => `<td>${inline(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`);
       continue;
     }
-    if (/^\s*([-*]|\d+\.)\s+/.test(l)) {
-      const ord = /^\s*\d+\./.test(l), items = [];
-      while (i < lines.length && /^\s*([-*]|\d+\.)\s+/.test(lines[i])) items.push(lines[i++].replace(/^\s*([-*]|\d+\.)\s+/, ""));
-      o.push(`<${ord ? "ol" : "ul"}>${items.map(t => `<li>${inline(t)}</li>`).join("")}</${ord ? "ol" : "ul"}>`); continue;
+    if (LI.test(l)) {
+      // listes à puces ou numérotées, imbriquées par l'indentation ; une ligne indentée sans puce continue l'élément
+      const items = [];
+      while (i < lines.length) {
+        const m = lines[i].match(LI);
+        if (m) items.push({ ind: m[1].length, ord: /\d/.test(m[2]), t: m[3] });
+        else if (/^\s{2,}\S/.test(lines[i])) items[items.length - 1].t += " " + lines[i].trim();
+        else break;
+        i++;
+      }
+      let out = ""; const stack = [];
+      for (const it of items) {
+        while (stack.length > 1 && it.ind < stack[stack.length - 1].ind) out += `</li></${stack.pop().tag}>`;
+        if (!stack.length || it.ind > stack[stack.length - 1].ind) { const tag = it.ord ? "ol" : "ul"; stack.push({ ind: it.ind, tag }); out += `<${tag}><li>`; }
+        else out += "</li><li>";
+        out += inline(it.t);
+      }
+      while (stack.length) out += `</li></${stack.pop().tag}>`;
+      o.push(out); continue;
     }
     if (/^---+\s*$/.test(l) || !l.trim()) { i++; continue; }
-    const p = []; while (i < lines.length && lines[i].trim() && !/^(#{1,4}\s|\||```|\s*[-*]\s|\s*\d+\.\s)/.test(lines[i])) p.push(lines[i++]);
+    if (/^>\s?/.test(l)) { const q = []; while (i < lines.length && /^>\s?/.test(lines[i])) q.push(lines[i++].replace(/^>\s?/, "")); o.push(`<blockquote>${inline(q.join(" "))}</blockquote>`); continue; }
+    const p = [lines[i++]]; while (i < lines.length && lines[i].trim() && !/^(#{1,6}\s|\||```|>|\s*[-*]\s|\s*\d+\.\s)/.test(lines[i])) p.push(lines[i++]);
     o.push(`<p>${inline(p.join(" "))}</p>`);
   }
   return o.join("\n");
 }
-async function openFiche(f) {
-  $("#dlg-t").textContent = `Cassette ${f.n} : ${f.title}`; $("#dlg-src").href = gh.blob(f.file);
-  reader.innerHTML = `<p>Chargement de la cassette ${f.n}. Ne pas éteindre. Ni rallumer.</p>`;
+const NOFILE = "Une page ouverte par double-clic n'a pas le droit de lire les fichiers voisins. Servez le dépôt avec <code>python3 -m http.server</code> depuis sa racine, ou ";
+async function openDoc({ key, file, title, head = "", fallback = "", video = "" }) {
+  cur = file;
+  $("#dlg-t").textContent = title; $("#dlg-src").href = gh.blob(file);
+  $("#dlg-yt").hidden = !video; $("#dlg-yt").href = video || "#";
+  reader.innerHTML = head + `<p>Chargement de la cassette. Ne pas éteindre. Ni rallumer.</p>`;
   if (!dlg.open) dlg.showModal();
+  reader.scrollTop = 0; reader.focus({ preventScroll: true });
+  if (key) history.replaceState(null, "", "#lire=" + key);
   try {
-    const r = await fetch(gh.raw(f.file)); if (!r.ok) throw new Error(r.status);
-    reader.innerHTML = md(await r.text()); reader.scrollTop = 0;
+    const r = await fetch(gh.raw(file)); if (!r.ok) throw new Error(r.status);
+    const text = await r.text(); if (cur !== file) return;
+    reader.innerHTML = head + md(text);
   } catch (err) {
-    reader.innerHTML = `<h1>${esc(f.long)}</h1><p>${esc(f.scope)}</p><h2>Sections</h2><ul>${f.sections.map(s => `<li>${esc(s)}</li>`).join("")}</ul>
-      <p><strong>La cassette n'a pas pu être chargée ici.</strong> Une page ouverte par double-clic n'a pas le droit de lire les fichiers voisins. Servez le dépôt avec <code>python3 -m http.server</code> depuis sa racine, ou <a href="${gh.blob(f.file)}" target="_blank" rel="noopener">ouvrez le fichier ${esc(f.file)}</a>.</p>`;
+    if (cur !== file) return;
+    reader.innerHTML = head + fallback + `<p><strong>La cassette n'a pas pu être chargée ici.</strong> ${NOFILE}<a href="${gh.blob(file)}" target="_blank" rel="noopener">ouvrez le fichier ${esc(file)}</a>.</p>`;
   }
+  reader.scrollTop = 0;
 }
+function openFiche(f) {
+  return openDoc({ key: f.n, file: f.file, title: `Cassette ${f.n} : ${f.title}`,
+    fallback: `<h1>${esc(f.long)}</h1><p>${esc(f.scope)}</p><h2>Sections</h2><ul>${f.sections.map(s => `<li>${esc(s)}</li>`).join("")}</ul>` });
+}
+function openAnnex(x) { return openDoc({ key: x.key, file: x.file, title: x.title }); }
+const LEGEND = `<p class="rd-legend"><span class="tag s t-vu">[VU À L'IMAGE]</span> vu sur les planches d'images, avec le minutage. <span class="tag s t-sub">[SOUS-TITRES AUTO]</span> lu dans les sous-titres automatiques, pas contrôlé à l'oreille. <span class="tag s t-int">[INTERPRÉTATION]</span> déduction du rédacteur. Le son n'a pas été écouté.</p>`;
+function epNav(e) {
+  const i = KB.episodes.indexOf(e), a = KB.episodes[i - 1], b = KB.episodes[i + 1], ficheN = e.n <= 12 ? "03" : "04";
+  return `<p class="rd-nav">${a ? `<button class="chip" data-ep="${a.code}" aria-label="Épisode précédent : ${a.code}, ${esc(a.title)}">← ${a.code}</button>` : ""}`
+    + `${b ? `<button class="chip" data-ep="${b.code}" aria-label="Épisode suivant : ${b.code}, ${esc(b.title)}">${b.code} →</button>` : ""}`
+    + `<button class="chip" data-fiche="${ficheN}">Synopsis : fiche ${ficheN}</button></p>`;
+}
+function openEp(e) {
+  select(e.code);
+  const where = `${e.code === "SP" ? "Épisode spécial" : `Saison ${e.code[1]}, épisode ${e.code[3]}`}, n° ${e.n} sur ${ST.eps}`;
+  if (e.ok) {
+    return openDoc({ key: e.code, file: e.file, title: `Découpage ${e.code} : ${e.title}`, video: yt(e),
+      head: `<div class="rd-head"><p class="rd-meta"><strong>${where}</strong><span>${e.dur}</span><span>${e.scenes} scènes</span><a href="${yt(e)}" target="_blank" rel="noopener">Voir sur YouTube, chaîne officielle${e.t ? ` (à partir de ${e.from})` : ""} ↗</a></p>${LEGEND}${epNav(e)}</div>`,
+      fallback: `<h1>${esc(e.code)} : ${esc(e.title)}</h1>` });
+  }
+  const head = `<div class="missing">${pixelText(`CASSETTE ${e.n} : VIDE`, { scale: 4, shadow: true })}
+    <p><strong>${esc(e.title)} n'a pas été regardé.</strong> ${where}. L'épisode n'est pas en entier sur la chaîne officielle, et le service ne regarde rien ailleurs.</p>
+    <p>${ST.vus} épisodes sur ${ST.eps} sont découpés. Il manque précisément celui où l'on présente Internet à la direction. Internet a tout, sauf ça.</p>
+    <p>Le service a essayé d'éteindre et de rallumer la chaîne. Sans effet.</p>${epNav(e)}</div>`;
+  if (!e.file) {
+    cur = null; $("#dlg-t").textContent = `${e.code} : ${e.title} (non traité)`; $("#dlg-src").href = gh.blob("episodes/"); $("#dlg-yt").hidden = true;
+    reader.innerHTML = head; if (!dlg.open) dlg.showModal(); history.replaceState(null, "", "#lire=" + e.code); return;
+  }
+  return openDoc({ key: e.code, file: e.file, title: `${e.code} : ${e.title} (non traité)`, head });
+}
+function openKey(k) {
+  const f = fiche(k), e = epOf(k), x = annex(k);
+  return f ? openFiche(f) : e ? openEp(e) : x ? openAnnex(x) : null;
+}
+function openPath(path) {
+  const f = KB.fiches.find(f => f.file === path), e = KB.episodes.find(e => e.file === path), x = KB.annexes.find(x => x.file === path);
+  return f ? openFiche(f) : e ? openEp(e) : x ? openAnnex(x) : openDoc({ file: path, title: path });
+}
+document.addEventListener("click", ev => {
+  const t = ev.target.closest("[data-ep],[data-fiche],[data-annex],a[data-md]"); if (!t) return;
+  if (t.dataset.md) { if (ev.ctrlKey || ev.metaKey || ev.shiftKey) return; ev.preventDefault(); return openPath(t.dataset.md); }
+  if (t.dataset.ep) return openEp(epOf(t.dataset.ep));
+  if (t.dataset.fiche) return openFiche(fiche(t.dataset.fiche));
+  openAnnex(annex(t.dataset.annex));
+});
 
 /* ------------------------------------------------ épisodes */
 const grid = $("#grid25"), card = $("#epcard");
+const epLabel = e => `${e.code}, ${e.title}, ` + (e.ok ? `${e.dur.replace(":", " minutes ")}, ${e.scenes} scènes : ouvrir le découpage` : "non traité : lire le constat");
+const cell = e => `<button data-code="${e.code}" class="${e.ok ? "" : "na"}" aria-label="${esc(epLabel(e))}"><b>E${e.code[3]}</b>`
+  + (e.ok ? `<small>${e.dur}</small><small>${e.scenes} sc.</small>` : `<small>non</small><small>traité</small>`) + `</button>`;
 let gh25 = "";
 [1, 2, 3, 4].forEach(s => {
   gh25 += `<div class="sea">Saison ${s}</div>`;
-  KB.episodes.filter(e => e.code.startsWith("S" + s)).forEach(e => gh25 += `<button data-code="${e.code}" aria-pressed="false" aria-label="${e.code}, ${esc(e.title)}">${e.code.slice(2)}</button>`);
+  KB.episodes.filter(e => e.code.startsWith("S" + s)).forEach(e => gh25 += cell(e));
 });
-gh25 += `<div class="sea">Spécial, 2013</div><button class="sp" data-code="SP" aria-pressed="false">The Internet Is Coming</button>`;
+const sp = epOf("SP");
+gh25 += `<div class="sea">Spécial, ${sp.date.slice(0, 4)}</div><button class="sp${sp.ok ? "" : " na"}" data-code="SP" aria-label="${esc(epLabel(sp))}"><b>${esc(sp.title)}</b>`
+  + (sp.ok ? `<small>${sp.dur}</small><small>${sp.scenes} scènes</small>` : `<small>non traité</small>`) + `</button>`;
 grid.innerHTML = gh25;
+let selected = "S2E1", shown = "";
 function showEp(code) {
-  const e = KB.episodes.find(e => e.code === code); if (!e) return;
-  $$("button", grid).forEach(b => b.setAttribute("aria-pressed", String(b.dataset.code === code)));
+  const e = epOf(code); if (!e || code === shown) return;   // ne pas reconstruire la carte pour rien : on y perdrait le focus
+  shown = code;
   const ficheN = e.n <= 12 ? "03" : "04";
-  card.innerHTML = `<div style="color:var(--dim)">${e.code === "SP" ? "Épisode spécial" : `Saison ${e.code[1]}, épisode ${e.code[3]}`}, n° ${e.n} sur 25</div>
+  card.innerHTML = `<div style="color:var(--dim)">${e.code === "SP" ? "Épisode spécial" : `Saison ${e.code[1]}, épisode ${e.code[3]}`}, n° ${e.n} sur ${ST.eps}</div>
     <h3>${esc(e.title)}</h3>
-    <dl><dt>Channel 4</dt><dd>${frDate(e.date)} <span class="tag t-ver">[VÉRIFIÉ]</span></dd>
-    <dt>Titre français</dt><dd>${esc(e.fr)} <span class="tag t-ave">[À VÉRIFIER]</span></dd>
+    <dl><dt>Channel 4</dt><dd>${frDate(e.date)} <span class="tag s t-ver">[VÉRIFIÉ]</span></dd>
+    <dt>Titre français</dt><dd>${esc(e.fr)} <span class="tag s t-ave">[À VÉRIFIER]</span></dd>
     ${e.alt && e.alt !== "—" ? `<dt>Variante</dt><dd>${esc(e.alt)}</dd>` : ""}
-    <dt>Synopsis</dt><dd><button class="chip" id="ep-open">Ouvrir la fiche ${ficheN}</button></dd></dl>`;
-  $("#ep-open").onclick = () => openFiche(fiche(ficheN));
+    <dt>Découpage</dt><dd>${e.ok ? `${e.dur}, ${e.scenes} scènes, ${kb(e.bytes)} <span class="tag s t-vu">[VU À L'IMAGE]</span>${e.t ? `<br><small>La vidéo officielle est une compilation : l'épisode y commence à ${e.from}.</small>` : ""}`
+      : `Non traité. L'épisode n'est pas en entier sur la chaîne officielle. Le service a ouvert un ticket, puis l'a perdu.`}</dd></dl>
+    <div class="ep-act"><button class="chip go" data-ep="${e.code}">${e.ok ? "Lire le découpage" : "Lire le constat"}</button>${e.ok ? `<a class="chip" href="${yt(e)}" target="_blank" rel="noopener">Voir sur YouTube<span class="sr">, vidéo officielle, nouvel onglet</span> ↗</a>` : ""}<button class="chip" data-fiche="${ficheN}">Synopsis : fiche ${ficheN}</button></div>`;
 }
-grid.addEventListener("click", e => { const b = e.target.closest("button"); if (b) showEp(b.dataset.code); });
-showEp("S1E2");
+function select(code) {
+  selected = code;
+  $$("button", grid).forEach(b => b.setAttribute("aria-current", String(b.dataset.code === code)));
+  showEp(code);
+}
+grid.addEventListener("click", e => { const b = e.target.closest("button"); if (b) openEp(epOf(b.dataset.code)); });
+// survol ou focus : l'épisode devient l'épisode courant et la carte le décrit (on peut alors aller y cliquer)
+const peek = e => { const b = e.target.closest("button"); if (b && b.dataset.code !== selected) select(b.dataset.code); };
+grid.addEventListener("mouseover", peek); grid.addEventListener("focusin", peek);
+select(selected);
+$("#annexes").innerHTML = "<span>À lire aussi :</span>" + KB.annexes.filter(x => x.key !== "readme").map(x => `<button class="chip" data-annex="${x.key}">${esc(x.title)} (${kb(x.bytes)})</button>`).join("");
+if (location.hash.startsWith("#lire=")) openKey(decodeURIComponent(location.hash.slice(6)));
 
 /* ------------------------------------------------ défilement : étage, couloir, numéro, feu */
 const floors = $$("main > section[aria-labelledby]"), navLinks = $$(".rail nav a"), floorEl = $("#floor");
@@ -801,7 +1018,8 @@ const WALKERS = ["tech", "genius", "boss_lady", "mogul"].map((k, i) => {
 });
 $("#cdoor").insertAdjacentHTML("afterbegin", sprite("goth", 5));
 const big = $("#bignum");
-big.innerHTML = pixelText("0118 999 881 999 119 725 . . . . . . . . . . . . 3", { scale: 12, color: "#e4252d" });
+const BIGNUM = "0118 999 881 999 119 725 . . . . 3";   // court après les chiffres : ils restent à l'écran plus longtemps
+big.innerHTML = pixelText(BIGNUM, { scale: 12, color: "#e4252d" });
 const fireCv = $("#firecv"), blazeCv = $("#blaze");
 let fireLevel = 0;
 function onScroll() {

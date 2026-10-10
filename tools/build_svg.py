@@ -1,21 +1,32 @@
 #!/usr/bin/env python3
-"""Génère les SVG animés de assets/ à partir de tools/pixel.json.
+"""Fabrique tout ce qui est dérivé : SVG animés, image de partage, index de la page, compteurs.
 
-Usage :  python3 tools/build_svg.py            (régénère assets/*.svg)
-         python3 tools/build_svg.py --sync-docs (recopie aussi pixel.json dans docs/index.html)
+Usage :  python3 tools/build_svg.py              régénère assets/*.svg et assets/social-preview.png
+         python3 tools/build_svg.py --sync-docs  met aussi à jour docs/ et les compteurs des documents
 
-Contraintes tenues par ce script (un README GitHub n'exécute ni JS ni CSS externe) :
+Avec --sync-docs, le script relit kb/ et :
+  - injecte dans docs/index.html la police et les personnages (bloc pixel-data), l'index des fiches
+    et des découpages (bloc kb-data : identifiant vidéo, durée, nombre de scènes comptées dans chaque
+    fichier de kb/episodes/), les compteurs (<span data-stat="...">), les balises meta et l'icône ;
+  - écrit docs/404.html et docs/social-preview.png ;
+  - met à jour les compteurs de README.md et STRUCTURE.md (<!--n:cle-->...<!--/n-->), les poids du
+    sommaire, le texte alternatif des badges et le tableau des découpages du README.
+Rien n'est écrit en dur : changer kb/ puis relancer suffit. Relancer deux fois ne change rien.
+
+Contraintes tenues pour les SVG (un README GitHub n'exécute ni JS ni CSS externe) :
   - aucun <script>, aucun <foreignObject>, aucune police ni ressource externe ;
   - tout le texte est dessiné en pixels (glyphes 5x7 définis une fois dans <defs>, repris par <use>) ;
   - chaque SVG porte son propre fond opaque : lisible en thème clair et sombre ;
   - animations CSS @keyframes uniquement ; l'état de base (sans animation) est une image
     lisible, c'est elle qui s'affiche avec prefers-reduced-motion.
-Tout le graphisme est original. Rien ne vient de la série.
+Tout le graphisme est original. Rien ne vient de la série. Aucune dépendance hors bibliothèque standard.
 """
 import json
 import random
 import re
+import struct
 import sys
+import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -233,7 +244,7 @@ def hero():
         ("THE INTERNET ............ 1 BOX, BLINKING", CYAN),
         ("RED DOOR ................ DO NOT OPEN", RED),
         ("FIRE EXTINGUISHER ....... ON FIRE", YEL),
-        ("LOADING 10 FICHES, 25 EPISODES .......... OK", GRN),
+        (f"LOADING {ST['fiches']} FICHES, {ST['eps']} EPISODES .......... OK", GRN),
     ]
     g = ""
     t0 = 2.5
@@ -264,7 +275,7 @@ def hero():
         f'<g class="gh g1">{ttl(-14, 0, CYAN)}</g><g class="gh g2">{ttl(14, 0, MAG)}</g>'
         + ttl(8, 8, RED) + ttl(0, 0, PAPER)
         + d.text(W / 2, 214, "L'ENCYCLOPÉDIE DES FANS, RANGÉE AU SOUS-SOL", 3, CYAN, anchor="middle")
-        + d.text(W / 2, 256, "10 FICHES / 25 ÉPISODES / 0 ÉPISODE VISIONNÉ / PROJET NON OFFICIEL", 2, GREY, anchor="middle")
+        + d.text(W / 2, 256, f"{ST['fiches']} FICHES / {ST['eps']} ÉPISODES / {ST['vus']} VISIONNÉS / PROJET NON OFFICIEL", 2, GREY, anchor="middle")
         + d.text(px, 320, prompt, 3, YEL)
         + rect(px - 4, 312, pw + 30, 40, DEEP, cls="cover")
         + f'<g class="curs">{rect(0, 320, 15, 21, YEL, cls="blink")}</g>'
@@ -852,14 +863,20 @@ def badge(label, values, T=8):
     return d.render()
 
 
-BADGES = {
-    "badge-fan-made": ("PROJET DE FANS", [("NON OFFICIEL", RED, PAPER)]),
-    "badge-fiches": ("FICHES", [("10", CYAN, INK), ("717 KO", CYAN, INK), ("DE TEXTE", CYAN, INK)]),
-    "badge-episodes-vus": ("ÉPISODES VISIONNÉS", [("24 / 25", YEL, INK), ("IL EN MANQUE UN", YEL, INK)]),
-    "badge-power": ("ALIMENTATION", [("ON", GRN, INK), ("OFF", RED, PAPER), ("ON AGAIN", GRN, INK)]),
-    "badge-preuve": ("ÉTIQUETTE", [("[VÉRIFIÉ]", GRN, INK), ("[PROBABLE]", YEL, INK), ("[À VÉRIFIER]", ORG, INK),
-                                    ("[ANALYSE]", VIO, INK), ("[VU À L'IMAGE]", CYAN, INK)]),
-}
+def badges():
+    """Les cinq badges. Ceux qui comptent quelque chose le comptent dans kb/."""
+    miss = ST["n_eps"] - ST["n_vus"]
+    reste = "TOUS, ENFIN" if miss == 0 else "IL EN MANQUE UN" if miss == 1 else f"IL EN MANQUE {miss}"
+    return {
+        "badge-fan-made": ("PROJET DE FANS", [("NON OFFICIEL", RED, PAPER)]),
+        "badge-fiches": ("FICHES", [(ST["fiches"], CYAN, INK), (f"+ {ST['decoupages']} DÉCOUPAGES", CYAN, INK),
+                                    (f"{ST['kb_poids'].upper()} DE TEXTE", CYAN, INK)]),
+        "badge-episodes-vus": ("ÉPISODES VISIONNÉS", [(f"{ST['vus']} / {ST['eps']}", YEL, INK), (reste, YEL, INK)]),
+        "badge-power": ("ALIMENTATION", [("ON", GRN, INK), ("OFF", RED, PAPER), ("ON AGAIN", GRN, INK)]),
+        "badge-preuve": ("ÉTIQUETTE", [("[VÉRIFIÉ]", GRN, INK), ("[PROBABLE]", YEL, INK), ("[À VÉRIFIER]", ORG, INK),
+                                        ("[ANALYSE]", VIO, INK), ("[VU À L'IMAGE]", CYAN, INK)]),
+    }
+
 
 SCENES = {
     "hero": hero, "emergency-number": emergency, "the-internet": internet, "fire": fire,
@@ -867,54 +884,74 @@ SCENES = {
     "counter": counter, "loading": loading, "answerphone": answerphone, "tnetennba": tnetennba,
 }
 
-
-def main():
-    out = ROOT / "assets"
-    out.mkdir(exist_ok=True)
-    res = {}
-    for name, fn in SCENES.items():
-        res[name] = fn()
-    for name, (label, values) in BADGES.items():
-        res[name] = badge(label, values)
-    for name, svg in res.items():
-        assert "<script" not in svg and "foreignObject" not in svg
-        p = out / f"{name}.svg"
-        p.write_text(svg, encoding="utf-8")
-        kb = len(svg.encode()) / 1024
-        assert kb < 150, f"{name} trop lourd : {kb:.0f} Ko"
-        print(f"{name}.svg  {kb:6.1f} Ko")
-    if "--sync-docs" in sys.argv:
-        page = ROOT / "docs" / "index.html"
-        html = page.read_text(encoding="utf-8")
-        blocks = {
-            "pixel-data": {k: DATA[k] for k in ("font", "accents", "composed", "sprites")},
-            "kb-data": kb_data(),
-        }
-        for bid, obj in blocks.items():
-            payload = json.dumps(obj, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-            html, n = re.subn(rf'(<script id="{bid}" type="application/json">).*?(</script>)',
-                              lambda m: m.group(1) + payload + m.group(2), html, flags=re.S)
-            assert n == 1, f"bloc {bid} introuvable dans docs/index.html"
-        page.write_text(html, encoding="utf-8")
-        print("docs/index.html : pixel-data et kb-data synchronisés")
+# ---------------------------------------------------------------- lecture de kb/
+REPO = "agencekoeki/the-it-crowd"                     # dépôt de référence (liens absolus des pages)
+SITE = "https://agencekoeki.github.io/the-it-crowd/"  # adresse publique (balises de partage)
+TAGS = ["VÉRIFIÉ", "PROBABLE", "À VÉRIFIER", "ANALYSE", "VU À L'IMAGE", "SOUS-TITRES AUTO"]
+KB = None   # index complet, rempli par main()
+ST = None   # compteurs prêts à afficher (chaînes), rempli par main()
 
 
-TAGS = ["VÉRIFIÉ", "PROBABLE", "À VÉRIFIER", "ANALYSE", "VU À L'IMAGE"]
+def frontmatter(txt):
+    meta = {}
+    fm = re.match(r"---\n(.*?)\n---\n", txt, flags=re.S)
+    if fm:
+        for line in fm.group(1).splitlines():
+            m = re.match(r'(\w+):\s*"?(.*?)"?\s*$', line)
+            if m:
+                meta[m.group(1)] = m.group(2)
+    return meta
+
+
+def size_fr(n):
+    """Poids lisible : « 695 Ko », « 1,5 Mo »."""
+    ko = n / 1024
+    if ko < 1000:
+        return f"{ko:.0f} Ko"
+    return f"{ko / 1024:.1f} Mo".replace(".", ",")
+
+
+def count_scenes(txt):
+    """Scènes numérotées (« ### 12. … » ou « ### Scène 12 — … ») de la section « Découpage »."""
+    m = re.search(r"^## Découpage[^\n]*\n(.*?)(?=^## |\Z)", txt, flags=re.S | re.M)
+    return len(re.findall(r"^### (?:Scène\s+)?\d+\b", m.group(1), flags=re.M)) if m else 0
+
+
+def episode_files():
+    """Index de kb/episodes/ : un enregistrement par fichier qui déclare « episode: » dans son frontmatter."""
+    found = {}
+    folder = ROOT / "kb" / "episodes"
+    for f in sorted(folder.glob("*.md")) if folder.is_dir() else []:
+        txt = f.read_text(encoding="utf-8")
+        meta = frontmatter(txt)
+        code = meta.get("episode", "").upper()
+        if not code:
+            continue
+        video = meta.get("source_video", "")
+        video = video if re.fullmatch(r"[\w-]{11}", video) else ""
+        duree = meta.get("duree", "")
+        dur = re.match(r"\d+:\d\d(?::\d\d)?", duree)
+        start = re.search(r"de (\d+):(\d\d) à", duree)
+        scenes = count_scenes(txt)
+        rec = {"file": f"episodes/{f.name}", "bytes": len(txt.encode()),
+               "ok": bool(video and scenes and meta.get("statut") != "non_traite")}
+        if rec["ok"]:
+            rec.update(video=video, dur=dur.group(0) if dur else "", scenes=scenes)
+            if start:
+                rec["t"] = int(start.group(1)) * 60 + int(start.group(2))
+                rec["from"] = f"{start.group(1)}:{start.group(2)}"
+        if code not in found or (rec["ok"] and not found[code]["ok"]):
+            found[code] = rec
+    return found
 
 
 def kb_data():
-    """Index des fiches (titre, périmètre, sections, décompte des étiquettes) et table des épisodes."""
+    """Index des fiches, table des 25 épisodes complétée par les découpages, annexes, compteurs."""
     kb = ROOT / "kb"
     fiches = []
     for f in sorted(kb.glob("[0-9][0-9]-*.md")):
         txt = f.read_text(encoding="utf-8")
-        fm = re.match(r"---\n(.*?)\n---\n", txt, flags=re.S)
-        meta = {}
-        if fm:
-            for line in fm.group(1).splitlines():
-                m = re.match(r'(\w+):\s*"?(.*?)"?\s*$', line)
-                if m:
-                    meta[m.group(1)] = m.group(2)
+        meta = frontmatter(txt)
         title = re.sub(r"^The IT Crowd\s*[—-]\s*", "", meta.get("title", f.stem))
         counts = {t: len(re.findall(r"\[" + re.escape(t) + r"\b", txt)) for t in TAGS}
         fiches.append({
@@ -925,16 +962,378 @@ def kb_data():
         })
     readme = (kb / "README.md").read_text(encoding="utf-8")
     eps = []
-    for m in re.finditer(r"^\| (\d+) \| (\S+)[^|]*\| ([^|]+) \| [^|]+ \| (\d{4}-\d\d-\d\d) \|$", readme, flags=re.M):
+    for m in re.finditer(r"^\| (\d+) \| (\S+)[^|]*\| ([^|]+) \| [^|]+ \| (\d{4}-\d\d-\d\d) \|(?:[^|\n]*\|)*$", readme, flags=re.M):
         code = "SP" if m.group(2).startswith("Sp") else m.group(2)
         eps.append({"n": int(m.group(1)), "code": code, "title": m.group(3).strip(), "date": m.group(4)})
     fr = {}
     for m in re.finditer(r"^\| (S\dE\d|Spécial) \| ([^|]+) \| ([^|]+) \| [^|]+ \|$", readme, flags=re.M):
         fr["SP" if m.group(1) == "Spécial" else m.group(1)] = (m.group(2).strip(), m.group(3).strip())
+    files = episode_files()
     for e in eps:
         e["fr"], e["alt"] = fr.get(e["code"], ("", ""))
-    assert len(eps) == 25, len(eps)
-    return {"fiches": fiches, "episodes": eps}
+        e.update(files.get(e["code"], {"ok": False}))
+    assert len(eps) == 25, f"table de référence de kb/README.md : {len(eps)} épisodes lus au lieu de 25"
+
+    annexes = []
+    for key, rel, label in (("readme", "README.md", "Mode d'emploi de la base"),
+                            ("index", "episodes/README.md", "Index des découpages"),
+                            ("methode", "_methode/visionnage.md", "Méthode de visionnage"),
+                            ("corrections", "episodes/_CORRECTIONS-ISSUES-DU-VISIONNAGE.md",
+                             "Ce que le visionnage corrige")):
+        f = kb / rel
+        if f.is_file():
+            annexes.append({"key": key, "file": rel, "title": label, "bytes": f.stat().st_size})
+
+    seen = [e for e in eps if e["ok"]]
+    all_md = [f for f in kb.rglob("*.md")]
+    stats = {
+        "n_fiches": len(fiches), "n_eps": len(eps), "n_vus": len(seen),
+        "fiches": str(len(fiches)), "fiches_poids": size_fr(sum(f["bytes"] for f in fiches)),
+        "eps": str(len(eps)), "vus": str(len(seen)), "manquants": str(len(eps) - len(seen)),
+        "decoupages": str(len(seen)), "decoupages_poids": size_fr(sum(e["bytes"] for e in seen)),
+        "scenes": str(sum(e["scenes"] for e in seen)),
+        "kb_fichiers": str(len(all_md)), "kb_poids": size_fr(sum(f.stat().st_size for f in all_md)),
+        "premiere": fiches[0]["n"], "derniere": fiches[-1]["n"],
+        "svg": str(len(SCENES) + 5),
+    }
+    return {"fiches": fiches, "episodes": eps, "annexes": annexes, "stats": stats}
+
+
+# ---------------------------------------------------------------- pixels hors SVG animés
+def glyph_cells(c):
+    """Pixels allumés d'un glyphe : [(x, y)], y de -3 (accents) à 8 (cédille)."""
+    cells = []
+
+    def put(rows, y0):
+        cells.extend((x, y + y0) for y, row in enumerate(rows) for x, ch in enumerate(row) if ch == "#")
+    comp = DATA["composed"].get(c)
+    if comp:
+        put(FONT[comp[0]].split("/"), 0)
+        put(["..#..", ".#..."], 7) if comp[1] == "cedilla" else put(ACC[comp[1]], -3)
+    else:
+        put(FONT[c].split("/"), 0)
+    return cells
+
+
+def text_svg(s, scale, fill, shadow=None, cls="px"):
+    """Texte pixel en SVG autonome, pour les pages HTML générées."""
+    w = 6 * len(s) - 1
+    grid = [["."] * w for _ in range(12)]
+    for i, c in enumerate(s):
+        if c != " ":
+            for x, y in glyph_cells(c):
+                grid[y + 3][i * 6 + x] = "#"
+    d = runs_path(["".join(r) for r in grid], y0=-3)
+    pad = 1 if shadow else 0
+    sh = f'<path transform="translate(.7 .7)" fill="{shadow}" d="{d}"/>' if shadow else ""
+    return (f'<svg class="{cls}" aria-hidden="true" viewBox="0 -3 {w + pad} {12 + pad}" width="{(w + pad) * scale}" '
+            f'height="{(12 + pad) * scale}" shape-rendering="crispEdges">{sh}<path fill="{fill}" d="{d}"/></svg>')
+
+
+def sprite_rows(key, legs="A"):
+    s = SPR[key]
+    return list(s["body"]) + list(s.get("legs" + legs, SPR["_legs" + legs]))
+
+
+def sprite_svg(key, scale, legs="A"):
+    s = SPR[key]
+    rows = sprite_rows(key, legs)
+    paths = "".join(f'<path fill="{col}" d="{runs_path(rows, ch=ch)}"/>'
+                    for ch, col in (("#", s["color"]), ("o", INK), ("a", s["accent"])) if runs_path(rows, ch=ch))
+    return (f'<svg aria-hidden="true" viewBox="0 0 {len(rows[0])} {len(rows)}" width="{len(rows[0]) * scale}" '
+            f'height="{len(rows) * scale}" shape-rendering="crispEdges">{paths}</svg>')
+
+
+def favicon():
+    """Icône : le bug du projet (sprite original), en SVG, en ligne dans la page."""
+    from urllib.parse import quote
+    bug = SPR["bug"]
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 12" shape-rendering="crispEdges">'
+           f'<rect width="13" height="12" rx="2" fill="{INK}"/>'
+           f'<path transform="translate(2 2)" fill="{bug["color"]}" d="{runs_path(bug["body"])}"/>'
+           f'<path transform="translate(2 2)" fill="{bug["accent"]}" d="{runs_path(bug["body"], ch="a")}"/></svg>')
+    return "data:image/svg+xml," + quote(svg, safe="")
+
+
+class Canvas:
+    """Image RVB en mémoire, dessinée au rectangle : de quoi écrire un PNG sans dépendance."""
+
+    def __init__(self, w, h, bg):
+        self.w, self.h = w, h
+        self.px = bytearray(bytes.fromhex(bg[1:]) * (w * h))
+
+    def rect(self, x, y, w, h, col):
+        x0, y0, x1, y1 = max(0, int(x)), max(0, int(y)), min(self.w, int(x + w)), min(self.h, int(y + h))
+        if x1 <= x0:
+            return
+        row = bytes.fromhex(col[1:]) * (x1 - x0)
+        for yy in range(y0, y1):
+            self.px[(yy * self.w + x0) * 3:(yy * self.w + x1) * 3] = row
+
+    def text(self, x, y, s, scale, col, anchor="start"):
+        w = (6 * len(s) - 1) * scale
+        x -= w / 2 if anchor == "middle" else w if anchor == "end" else 0
+        for i, c in enumerate(s):
+            if c != " ":
+                for gx, gy in glyph_cells(c):
+                    self.rect(x + (i * 6 + gx) * scale, y + gy * scale, scale, scale, col)
+
+    def sprite(self, rows, colors, scale, x, y):
+        for ry, row in enumerate(rows):
+            for rx, ch in enumerate(row):
+                if ch in colors:
+                    self.rect(x + rx * scale, y + ry * scale, scale, scale, colors[ch])
+
+    def png(self):
+        def chunk(tag, data):
+            return struct.pack(">I", len(data)) + tag + data + struct.pack(">I", zlib.crc32(tag + data))
+        stride = self.w * 3
+        raw = b"".join(b"\x00" + bytes(self.px[y * stride:(y + 1) * stride]) for y in range(self.h))
+        return (b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", self.w, self.h, 8, 2, 0, 0, 0))
+                + chunk(b"IDAT", zlib.compress(raw, 9)) + chunk(b"IEND", b""))
+
+
+def social_preview():
+    """Image de partage 1280 x 640 : l'écran-titre, l'équipe, la question. Aucun chiffre : elle ne périme pas."""
+    W, H = 1280, 640
+    c = Canvas(W, H, INK2)
+    for i in range(H // 20 + 1):                      # bordure de chargement, comme la bannière
+        c.rect(0, i * 20, W, 20, RED if i % 2 else CYAN)
+    sx, sy, sw, sh = 56, 56, W - 112, H - 112
+    c.rect(sx, sy, sw, sh, DEEP)
+    ts = 14
+    c.text(W / 2 + 10, 112 + 10, "THE IT CROWD", ts, RED, anchor="middle")
+    c.text(W / 2, 112, "THE IT CROWD", ts, PAPER, anchor="middle")
+    c.text(W / 2, 244, "L'ENCYCLOPÉDIE DES FANS, RANGÉE AU SOUS-SOL", 4, CYAN, anchor="middle")
+    # l'équipe, sur le sol du couloir
+    S, floor = 8, 468
+    keys = ("tech", "genius", "boss_lady", "mogul", "goth")
+    gap = 150
+    x0 = (W - (gap * (len(keys) - 1) + 12 * S)) / 2
+    c.rect(sx, floor, sw, 6, GREY)
+    c.rect(sx, floor + 6, sw, 22, INK2)
+    for i, k in enumerate(keys):
+        s = SPR[k]
+        rows = sprite_rows(k, "A" if i % 2 == 0 else "B")
+        c.sprite(rows, {"#": s["color"], "o": INK, "a": s["accent"]}, S, x0 + i * gap, floor - len(rows) * S)
+    c.text(W / 2, 516, "> HAVE YOU TRIED TURNING IT OFF AND ON AGAIN?", 3, YEL, anchor="middle")
+    c.text(W / 2, 554, "PROJET DE FANS, NON OFFICIEL. PIXEL ART ORIGINAL.", 2, GREY, anchor="middle")
+    return c.png()
+
+
+# ---------------------------------------------------------------- pages et documents
+PAGE_404 = """<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Étage 404 : cette page est tombée dans le trou</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="@ICON@">
+<style>
+:root{--bg:#0d0f2b;--fg:#ece6d0;--dim:#9aa0c8;--rule:#2c3172;--link:#2ee6e6;--hot:#f5d90a}
+@media (prefers-color-scheme:light){:root{--bg:#ece6d0;--fg:#0d0f2b;--dim:#4b4f7c;--rule:#b9b39c;--link:#1a27c9;--hot:#b3141b}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--fg);
+  font:16px/1.6 ui-monospace,"Cascadia Mono","SF Mono",Menlo,Consolas,"DejaVu Sans Mono",monospace;padding:24px 16px}
+main{width:min(100%,640px)}
+svg{display:block;max-width:100%;height:auto}
+h1{margin:0 0 8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.pit{position:relative;height:160px;margin:28px 0 24px;overflow:hidden;background:#12143a;border:4px solid var(--rule)}
+.pit .floor{position:absolute;left:0;right:0;bottom:0;height:34px;background:#1b1f52;border-top:4px solid #8e93b8}
+.pit .hole{position:absolute;left:50%;bottom:0;width:96px;height:34px;margin-left:-48px;background:#000;border-inline:4px solid #8e93b8}
+.pit .sign{position:absolute;left:50%;bottom:92px;margin-left:66px;background:#f5d90a;color:#0d0f2b;font-size:12px;font-weight:700;padding:2px 8px}
+.pit .sign::after{content:"";position:absolute;left:50%;top:100%;width:4px;height:60px;background:#8e93b8}
+.pit .who{position:absolute;left:50%;bottom:34px;margin-left:-30px;animation:fall 5s cubic-bezier(.6,0,1,.6) infinite}
+@keyframes fall{0%{transform:translate(-190px,0)}34%,40%{transform:translate(0,0)}54%,100%{transform:translate(0,170px)}}
+p{margin:0 0 14px;max-width:60ch}
+.dim{color:var(--dim);font-size:14px}
+ol{margin:0 0 22px;padding-left:1.4em}
+a{color:var(--link);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--hot);outline-offset:3px}
+.go{display:inline-block;border:4px solid var(--fg);background:var(--fg);color:var(--bg);padding:9px 16px;font-weight:700;text-decoration:none;margin:0 12px 12px 0}
+.go.ghost{background:none;color:var(--fg)}
+.go:hover{background:#f5d90a;border-color:#f5d90a;color:#0d0f2b}
+@media (prefers-reduced-motion:reduce){.pit .who{animation:none;transform:translate(0,22px)}}
+</style>
+</head>
+<body>
+<main>
+  <h1><span class="sr">Étage 404 : cette page n'existe pas</span>@TITLE@</h1>
+  <p class="dim">Erreur 404. Cet étage n'est desservi par aucun ascenseur.</p>
+  <div class="pit" aria-hidden="true">
+    <div class="who">@WHO@</div>
+    <div class="floor"></div><div class="hole"></div><span class="sign">ÉTAGE 404</span>
+  </div>
+  <p>La page demandée n'existe pas, ou elle est rangée derrière la porte rouge. La direction vient d'aller vérifier en personne. Elle ne répond plus.</p>
+  <p>Le service informatique a été prévenu. Il recommande la procédure habituelle :</p>
+  <ol>
+    <li>Éteindre, puis rallumer.</li>
+    <li>Vérifier que l'adresse est bien branchée.</li>
+    <li>Revenir à l'accueil, où tout fonctionne à peu près.</li>
+  </ol>
+  <a class="go" id="home" href="./">Retour à l'accueil</a>
+  <a class="go ghost" href="https://github.com/@REPO@">Le dépôt sur GitHub</a>
+  <p class="dim" style="margin-top:22px">Projet de fans, non officiel. Aucun lien avec Channel 4 ni avec les ayants droit de <i>The IT Crowd</i>. Pixel art original.</p>
+</main>
+<script>
+// GitHub Pages sert cette page à n'importe quelle adresse : le lien d'accueil doit viser la racine du site.
+(function () {
+  var seg = location.pathname.split("/")[1] || "";
+  if (/\\.github\\.io$/.test(location.hostname) && seg) document.getElementById("home").href = "/" + seg + "/";
+})();
+</script>
+</body>
+</html>
+"""
+
+
+def page_404():
+    return (PAGE_404.replace("@ICON@", favicon()).replace("@REPO@", REPO)
+            .replace("@TITLE@", text_svg("ÉTAGE 404", 9, "currentColor", shadow=RED))
+            .replace("@WHO@", sprite_svg("mogul", 5)))
+
+
+def meta_block():
+    desc = (f"Base de connaissances de fans sur la sitcom britannique The IT Crowd : {ST['fiches']} fiches sourcées, "
+            f"{ST['vus']} épisodes sur {ST['eps']} découpés scène par scène, une discipline de preuve. Projet non officiel.")
+    short = "L'encyclopédie des fans, rangée au sous-sol. Have you tried turning it off and on again?"
+    title = "The IT Crowd, l'encyclopédie des fans (non officielle)"
+    lines = [
+        f'<meta name="description" content="{desc}">',
+        f'<link rel="canonical" href="{SITE}">',
+        f'<link rel="icon" href="{favicon()}">',
+        '<meta property="og:type" content="website">',
+        '<meta property="og:locale" content="fr_FR">',
+        '<meta property="og:site_name" content="The IT Crowd, l\'encyclopédie des fans">',
+        f'<meta property="og:title" content="{title}">',
+        f'<meta property="og:description" content="{short}">',
+        f'<meta property="og:url" content="{SITE}">',
+        f'<meta property="og:image" content="{SITE}social-preview.png">',
+        '<meta property="og:image:width" content="1280">',
+        '<meta property="og:image:height" content="640">',
+        '<meta property="og:image:alt" content="Écran de micro-ordinateur en pixels : The IT Crowd, '
+        'l\'encyclopédie des fans, et cinq personnages originaux.">',
+        '<meta name="twitter:card" content="summary_large_image">',
+    ]
+    return "\n".join(lines)
+
+
+def put_block(text, name, body, where):
+    """Remplace le contenu entre <!-- BEGIN:name ... --> et <!-- END:name -->."""
+    out, n = re.subn(rf"(<!-- BEGIN:{name}\b[^>]*-->\n).*?(<!-- END:{name} -->)",
+                     lambda m: m.group(1) + body + "\n" + m.group(2), text, flags=re.S)
+    assert n == 1, f"repère BEGIN:{name} introuvable dans {where}"
+    return out
+
+
+def put_stats(text, pattern, where):
+    def sub(m):
+        assert m.group(2) in ST, f"compteur inconnu « {m.group(2)} » dans {where}"
+        return m.group(1) + ST[m.group(2)] + m.group(3)
+    return re.sub(pattern, sub, text)
+
+
+def write_if_changed(path, data):
+    old = path.read_bytes() if path.exists() else None
+    new = data if isinstance(data, bytes) else data.encode("utf-8")
+    if old != new:
+        path.write_bytes(new)
+        return True
+    return False
+
+
+def sync_page():
+    page = ROOT / "docs" / "index.html"
+    html = page.read_text(encoding="utf-8")
+    blocks = {
+        "pixel-data": {k: DATA[k] for k in ("font", "accents", "composed", "sprites")},
+        "kb-data": KB,
+    }
+    for bid, obj in blocks.items():
+        payload = json.dumps(obj, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+        html, n = re.subn(rf'(<script id="{bid}" type="application/json">).*?(</script>)',
+                          lambda m: m.group(1) + payload + m.group(2), html, flags=re.S)
+        assert n == 1, f"bloc {bid} introuvable dans docs/index.html"
+    html = put_block(html, "meta", meta_block(), "docs/index.html")
+    html = put_stats(html, r'(<span data-stat="(\w+)">)[^<]*(</span>)', "docs/index.html")
+    return write_if_changed(page, html)
+
+
+def readme_episodes():
+    """Tableau des découpages du README, une ligne par épisode de la table de référence."""
+    rows = ["| Épisode | Titre | Durée | Scènes | Découpage | Vidéo officielle |", "|---|---|---|---|---|---|"]
+    for e in KB["episodes"]:
+        if e["ok"]:
+            url = f"https://www.youtube.com/watch?v={e['video']}" + (f"&t={e['t']}s" if e.get("t") else "")
+            where = f"[YouTube, à partir de {e['from']}]({url})" if e.get("t") else f"[YouTube]({url})"
+            rows.append(f"| {e['code']} | *{e['title']}* | {e['dur']} | {e['scenes']} | "
+                        f"[lire](kb/{e['file']}) ({size_fr(e['bytes'])}) | {where} |")
+        else:
+            link = f"[le constat](kb/{e['file']})" if e.get("file") else "à faire"
+            rows.append(f"| {e['code']} | *{e['title']}* | — | — | non traité : {link} | pas en entier sur la chaîne officielle |")
+    return "\n".join(rows)
+
+
+def sync_documents():
+    """Compteurs, poids et tableaux des documents de la racine."""
+    changed = []
+    alts = {
+        "badge-fiches": f"Fiches thématiques : {ST['fiches']}, plus {ST['decoupages']} découpages d'épisodes",
+        "badge-episodes-vus": f"Épisodes visionnés : {ST['vus']} sur {ST['eps']}",
+    }
+    for name in ("README.md", "STRUCTURE.md"):
+        path = ROOT / name
+        if not path.exists():
+            continue
+        txt = path.read_text(encoding="utf-8")
+        txt = put_stats(txt, r"(<!--n:(\w+)-->).*?(<!--/n-->)", name)
+        if name == "README.md":
+            txt = put_block(txt, "decoupages", readme_episodes(), name)
+            for badge, alt in alts.items():
+                txt, n = re.subn(rf'(<img src="assets/{badge}\.svg"[^>]*\balt=")[^"]*(")',
+                                 lambda m: m.group(1) + alt + m.group(2), txt)
+                assert n == 1, f"badge {badge} introuvable dans README.md"
+
+            def weight(m):
+                f = ROOT / m.group(2)
+                return m.group(1) + (size_fr(f.stat().st_size) if f.is_file() else m.group(3)) + m.group(4)
+            txt = re.sub(r"^(\| \[[^\]]+\]\((kb/[^)\s]+\.md)\) \|.*\| )([^|\n]+?)( \|)$", weight, txt, flags=re.M)
+        if write_if_changed(path, txt):
+            changed.append(name)
+    return changed
+
+
+def main():
+    global KB, ST
+    KB = kb_data()
+    ST = KB["stats"]
+    out = ROOT / "assets"
+    out.mkdir(exist_ok=True)
+    res = {name: fn() for name, fn in SCENES.items()}
+    for name, (label, values) in badges().items():
+        res[name] = badge(label, values)
+    assert len(res) == int(ST["svg"])
+    for name, svg in res.items():
+        assert "<script" not in svg and "foreignObject" not in svg and "http" not in svg.replace("http://www.w3.org/2000/svg", "")
+        write_if_changed(out / f"{name}.svg", svg)
+        kb = len(svg.encode()) / 1024
+        assert kb < 150, f"{name} trop lourd : {kb:.0f} Ko"
+        print(f"{name}.svg  {kb:6.1f} Ko")
+    png = social_preview()
+    write_if_changed(out / "social-preview.png", png)
+    print(f"social-preview.png  {len(png) / 1024:6.1f} Ko")
+    print(f"kb/ : {ST['fiches']} fiches ({ST['fiches_poids']}), {ST['vus']} épisodes sur {ST['eps']} découpés "
+          f"({ST['scenes']} scènes, {ST['decoupages_poids']}), {ST['kb_fichiers']} fichiers, {ST['kb_poids']}")
+    if "--sync-docs" in sys.argv:
+        docs = ROOT / "docs"
+        done = ["docs/index.html"] if sync_page() else []
+        done += ["docs/404.html"] if write_if_changed(docs / "404.html", page_404()) else []
+        done += ["docs/social-preview.png"] if write_if_changed(docs / "social-preview.png", png) else []
+        done += sync_documents()
+        print("synchronisé : " + (", ".join(done) if done else "rien à changer, tout était à jour"))
 
 
 if __name__ == "__main__":

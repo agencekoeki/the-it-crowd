@@ -1,11 +1,14 @@
 ---
 title: "The IT Crowd — Personnages et distribution"
 scope: "Personnages principaux, récurrents et secondaires ; guest stars et caméos épisode par épisode ; biographies et prix des acteurs ; changements de casting. Série Channel 4, 2006-2013, créée par Graham Linehan."
-last_updated: 2026-10-10
+last_updated: 2026-10-11
 cross_review: "Relecture croisée du 2026-10-10 : corrections marquées « RC » dans le texte ; conventions et table des 25 épisodes dans README.md ; contradictions et lacunes dans 00-CONTRADICTIONS-ET-LACUNES.md"
+viewing_review: "Passe de visionnage du 2026-10-11 : corrections marquées « VIS » dans le texte, d'après les découpages de episodes/ et la fiche 10"
 language: fr
 fiche: "02"
 proof_labels:
+  "VU À L'IMAGE": "Constaté sur une image de l'épisode ou du générique lors du visionnage ; renvoi à la fiche d'épisode et au minutage."
+  "SOUS-TITRES AUTO": "Lu dans les sous-titres automatiques de YouTube ; non contrôlé à l'oreille."
   VÉRIFIÉ: "Lu dans une source consultée pendant la rédaction ; renvoi entre crochets vers la section Sources."
   PROBABLE: "Souvenir cohérent ou déduction, non recoupé dans une source consultée."
   À VÉRIFIER: "Affirmation fragile : source unique de faible fiabilité, sources contradictoires, ou donnée non retrouvée."
@@ -22,6 +25,7 @@ proof_labels:
 - Limite de méthode : les pages ont été lues via un outil d'extraction automatique, pas en HTML brut. Les orthographes de noms propres suivent la source citée ; une erreur de transcription reste possible.
 - IMDb n'a pas pu être consulté (accès refusé par robots.txt). Aucun fait de cette fiche ne provient d'IMDb.
 - Numérotation : `S2E3` = série 2, épisode 3. `SP` = spécial de 2013 « The Internet Is Coming ».
+- Marque `VIS` : correction, nuance ou confirmation issue du visionnage du 2026-10-11 (24 épisodes sur 25, S3E4 excepté). Elle porte `[VU À L'IMAGE]` ou `[SOUS-TITRES AUTO]` et renvoie à la fiche d'épisode (`episodes/SxEy`, minutage). La note `VIS` prévaut sur le texte d'origine et sur les notes `RC`. Les génériques de fin n'ont souvent été lus qu'en partie : « non lu au générique » ne veut pas dire « absent du générique ».
 
 ## 1. Vue d'ensemble de la distribution
 
@@ -39,7 +43,7 @@ proof_labels:
 - La série compte 25 épisodes : 24 répartis sur 4 séries de 6, plus le spécial de 2013. [VÉRIFIÉ] [W-EP]
 - BCG écrit « 25 épisodes sur 4 séries » en plus du spécial ; le décompte Wikipedia (24 + 1) est celui que confirment les listes d'épisodes. [VÉRIFIÉ] [W-EP] [BCG-CAST]
 - Graham Linehan a écrit tous les épisodes. [VÉRIFIÉ] [W-EP] [BCG-CAST]
-- Réalisation : Wikipedia attribue tous les épisodes à Linehan ; BCG crédite aussi Ben Fuller (S1), Barbara Wiltshire (S2) et Richard Boden (S3-S4) comme réalisateurs. [VÉRIFIÉ] [W-EP] [BCG-CAST] — voir contradiction C7.
+- Réalisation : Wikipedia attribue tous les épisodes à Linehan ; BCG crédite aussi Ben Fuller (S1), Barbara Wiltshire (S2) et Richard Boden (S3-S4) comme réalisateurs. [VÉRIFIÉ] [W-EP] [BCG-CAST] — voir contradiction C7. VIS : TRANCHÉ pour les saisons 1, 3, 4 et le spécial — les génériques de fin lus donnent « Director — Graham Linehan » seul ; Ben Fuller (saison 1) et Richard Boden (saisons 3 et 4) sont crédités « Studio Director », Boden étant aussi « Series Producer », et « Producer » sur le spécial `[VU À L'IMAGE]` (episodes/S1E1, 21:53–21:59 ; S3E6, 45:57–46:00 ; S4E2, 23:40–23:44 ; SP, 47:48). Le crédit de Barbara Wiltshire (saison 2) n'a été lu dans aucun générique : [À VÉRIFIER].
 - Musique : Neil Hannon. [VÉRIFIÉ] [W-SERIE] [BCG-CAST]
 
 ### 1.2 Présence par épisode (génériques BCG)
@@ -75,8 +79,9 @@ Légende : `X` = crédité dans le générique BCG de l'épisode ; `–` = non c
 | SP | The Internet Is Coming | X | X | X | – | X | X |
 
 - Tout le tableau : [VÉRIFIÉ] [BCG-S1E1 … BCG-SP], sauf cases `?`.
-- Denholm en S1E3 : crédité par BCG, mais absent de la liste d'apparitions de sa page Fandom et du résumé Fandom de l'épisode. [À VÉRIFIER] [BCG-S1E3] [FANDOM-DENHOLM] [FANDOM-5050]
-- Douglas en S2E1 et S2E4 : crédité par BCG, alors que le personnage n'est introduit qu'en S2E2. [À VÉRIFIER] [BCG-S2E1] [BCG-S2E4] [W-CHAR]
+- Denholm en S1E3 : crédité par BCG, mais absent de la liste d'apparitions de sa page Fandom et du résumé Fandom de l'épisode. [À VÉRIFIER] [BCG-S1E3] [FANDOM-DENHOLM] [FANDOM-5050] VIS : CORRIGÉ — Chris Morris n'est pas au générique de fin de S1E3, dont le déroulant commence par « Rebecca », et Denholm n'apparaît sur aucune image regardée `[VU À L'IMAGE]` (episodes/S1E3, 22:48–23:14 ; auparavant [À VÉRIFIER]). La case `?` du tableau est à lire `–` ; BCG disait le contraire.
+- Douglas en S2E1 et S2E4 : crédité par BCG, alors que le personnage n'est introduit qu'en S2E2. [À VÉRIFIER] [BCG-S2E1] [BCG-S2E4] [W-CHAR] VIS : Douglas n'apparaît sur aucune image regardée de ces deux épisodes (episodes/S2E1, episodes/S2E4) ; leurs génériques de fin n'ont été lus qu'en partie, le crédit lui-même reste [À VÉRIFIER].
+- Générique d'ouverture : VIS — le personnage de Douglas en pixel art et le crédit « Matt Berry » n'apparaissent que dans la version du spécial 2013 ; les versions examinées des saisons 1 à 4 ne montrent et ne créditent que Roy, Moss et Jen (Chris O'Dowd, Richard Ayoade, Katherine Parkinson). Ni Chris Morris ni Noel Fielding n'y ont de personnage ou de crédit `[VU À L'IMAGE]` (fiche 10, section 5 ; versions examinées : premier épisode de chaque saison et spécial).
 - Indice de recoupement : Wikipedia attribue 16 épisodes à Matt Berry ; les crédits BCG en totalisent 18 ; l'écart de 2 correspond exactement à S2E1 et S2E4. [PROBABLE] (déduction à partir de [W-BERRY] et BCG)
 - Douglas en S2E3 et S2E5 : présence confirmée par les résumés Fandom des épisodes. [VÉRIFIÉ] [FANDOM-MATG] [FANDOM-SAM]
 - Richmond : 7 apparitions (S1E4, S1E6, S2E1, S2E2, S2E4, S4E6, SP), cohérent avec Wikipedia (« six épisodes en séries 1, 2 et 4, plus le spécial »). [VÉRIFIÉ] [BCG] [W-FIELDING]
@@ -101,7 +106,7 @@ Légende : `X` = crédité dans le générique BCG de l'épisode ; `–` = non c
 
 - Le nom de famille de Roy n'est pas donné dans les séries 1 à 3. [VÉRIFIÉ] [W-CHAR]
 - Un visuel de Graham Linehan de 2008, lié à « The Speech », affichait « Tenneman ». [VÉRIFIÉ] [W-CHAR]
-- Le nom devient « Trenneman » dans « Something Happened » (2010). [VÉRIFIÉ] [W-CHAR] [FANDOM-ROY]
+- Le nom devient « Trenneman » dans « Something Happened » (2010). [VÉRIFIÉ] [W-CHAR] [FANDOM-ROY] VIS : le nom est dit dans S4E3, avec une graphie déformée dans les sous-titres `[SOUS-TITRES AUTO]` (episodes/S4E3, 19:00, 19:56) ; la graphie « Roy Trenneman » est lue à l'écran dans le reportage en 3D du spécial `[VU À L'IMAGE]` (episodes/SP, 31:32).
 - Une carte de visite dans « The Haunting of Bill Crouse » ne montre que son prénom. [VÉRIFIÉ] [W-CHAR]
 - Selon Fandom, Linehan considère « Tenneman » comme non canonique. [À VÉRIFIER] [FANDOM-ROY]
 
@@ -130,9 +135,9 @@ Légende : `X` = crédité dans le générique BCG de l'épisode ; `–` = non c
 #### Tics et réplique signature
 
 - Il décroche le téléphone par la formule « Have you tried turning it off and on again? ». [VÉRIFIÉ] [W-CHAR]
-- Il utilise un enregistrement automatique de cette phrase dans « Fifty-Fifty ». [VÉRIFIÉ] [W-CHAR]
+- Il utilise un enregistrement automatique de cette phrase dans « Fifty-Fifty ». [VÉRIFIÉ] [W-CHAR] VIS : confirmé — magnétophone à bandes sur son bureau, qui répond au téléphone `[VU À L'IMAGE]` (episodes/S1E3, 2:48–2:56, 8:08, 8:40–8:44). Dans S1E1, la formule est dite trois fois, la dernière par Jen `[SOUS-TITRES AUTO]` (episodes/S1E1, 2:58, 4:58, 21:27).
 - La formule complète à l'écran commence par « Hello, IT. ». [PROBABLE] ; variante citée par [TROPEDIA]
-- En S4E5, Jen parie qu'il ne tiendra pas une journée sans dire à quelqu'un de redémarrer son ordinateur. [VÉRIFIÉ] [W-EP] RC : Fandom et TV Tropes présentent le même pari comme un pari de Roy, pour 100 £ (fiches 04 et 05) ; formulations compatibles (pari mutuel, gagné par Jen).
+- En S4E5, Jen parie qu'il ne tiendra pas une journée sans dire à quelqu'un de redémarrer son ordinateur. [VÉRIFIÉ] [W-EP] RC : Fandom et TV Tropes présentent le même pari comme un pari de Roy, pour 100 £ (fiches 04 et 05) ; formulations compatibles (pari mutuel, gagné par Jen). VIS : TRANCHÉ par les sous-titres — Roy parie 100 £ qu'il ne dira pas la phrase de la journée ; Jen parie le contraire `[SOUS-TITRES AUTO]` (episodes/S4E5, 3:08–3:26).
 
 #### Phobies et vulnérabilités
 
@@ -145,43 +150,43 @@ Légende : `X` = crédité dans le générique BCG de l'épisode ; `–` = non c
 
 - Tenue décontractée, à la différence de ses collègues : jean et t-shirts « geek-chic ». [VÉRIFIÉ] [W-CHAR]
 - Cheveux bruns indisciplinés et barbe de quelques jours ; cheveux plus courts et barbe à partir de S3. [VÉRIFIÉ] [FANDOM-ROY]
-- Les t-shirts changent plusieurs fois par épisode ; Fandom en tient l'inventaire. [VÉRIFIÉ] [FANDOM-ROY]
+- Les t-shirts changent plusieurs fois par épisode ; Fandom en tient l'inventaire. [VÉRIFIÉ] [FANDOM-ROY] VIS : NUANCÉ — le nombre varie : un seul t-shirt dans S4E5 et S4E6, cinq dans S4E2, six tenues dans le spécial `[VU À L'IMAGE]` (fiches d'épisode, section « Costumes »).
 
-T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoupées) :
+T-shirts par épisode. VIS — table refaite le 2026-10-11 : la liste d'origine (source unique : Fandom, descriptions de fans) est remplacée par ce qui a été lu à l'image pendant le visionnage ; la troisième colonne garde, comme `[À VÉRIFIER]`, ce que [FANDOM-ROY] annonçait et qui n'a pas été vu ou pas pu être lu. Minutages : fiche d'épisode correspondante dans `episodes/`. Table de référence, avec recoupements écrits : fiche 06, section 7.2.
 
-| Épisode | T-shirts relevés | Preuve |
+| Épisode | Lu à l'image `[VU À L'IMAGE]` | Annoncé par [FANDOM-ROY], non vu ou non lu : `[À VÉRIFIER]` |
 |---|---|---|
-| S1E1 | Mao « RTFM » (blanc) ; Amsterdam (bleu clair) | [À VÉRIFIER] [FANDOM-ROY] |
-| S1E2 | Space Invaders « 10 Points » (noir) | [À VÉRIFIER] [FANDOM-ROY] |
-| S1E3 | Éclair (gris) ; « The Imports » (olive) ; blanc uni | [À VÉRIFIER] [FANDOM-ROY] |
-| S1E4 | Pac-Man niveau 256 (noir) ; « The Imports » ; Guided By Voices | [À VÉRIFIER] [FANDOM-ROY] |
-| S1E5 | Guitares croisées (rose) ; vert clair | [À VÉRIFIER] [FANDOM-ROY] |
-| S1E6 | « 42 » style baseball (gris) ; Ladyproblems.com | [À VÉRIFIER] [FANDOM-ROY] |
-| S2E1 | Télévision orange (bleu-gris) ; tête humaine sur corps de lion (gris) | [À VÉRIFIER] [FANDOM-ROY] |
-| S2E2 | « I see dumb people » (noir) ; chemise blanche (funérailles) ; robot jouant aux jeux vidéo (bleu) | [À VÉRIFIER] [FANDOM-ROY] |
-| S2E3 | Touche Escape (bleu-gris) ; Pink Floyd (noir) ; « meh. » (noir) | [À VÉRIFIER] [FANDOM-ROY] |
-| S2E4 | Drapeau pirate (gris) ; chemise verte | [À VÉRIFIER] [FANDOM-ROY] |
-| S2E5 | Soleil en colère (noir) ; Apple « undo » (vert) ; caméra (bleu clair) ; Aqua Teen Hunger Force « Never Forget » (marron) | [À VÉRIFIER] [FANDOM-ROY] |
-| S2E6 | Sorcier 8-bit, « magic missiles » au dos (vert) | [À VÉRIFIER] [FANDOM-ROY] |
-| S3E1 | Diagramme de Venn musical (noir) ; Portal « cake is a lie » (noir) | [À VÉRIFIER] [FANDOM-ROY] |
-| S3E2 | Kermit en pixels (noir) ; Battle Royale (anthracite) ; pompiers Fahrenheit 451 (rouge) | [À VÉRIFIER] [FANDOM-ROY] |
-| S3E3 | « series of tubes » (blanc) ; A Clockwork Orange « Ludovico Technique » (noir) | [À VÉRIFIER] [FANDOM-ROY] |
-| S3E4 | « My pet monster » japonais (gris) ; robot en carton (noir) ; Overlook Hotel de The Shining (gris) | [À VÉRIFIER] [FANDOM-ROY] |
-| S3E5 | « Filthy Panda » (bleu) ; Robot Jox (marine) ; 2000AD (olive) | [À VÉRIFIER] [FANDOM-ROY] |
-| S3E6 | Bert et Ernie en pixels (bleu) ; « Nothing is any good » (bordeaux) ; fantômes Pac-Man (noir) | [À VÉRIFIER] [FANDOM-ROY] |
-| S4E1 | « NO » (noir) ; écriture japonaise (rouge) ; cassette-crâne « Home taping » (kaki) | [À VÉRIFIER] [FANDOM-ROY] |
-| S4E2 | Rolf Harris « ROFL » (marron) ; « I don't work here. » (noir) | [À VÉRIFIER] [FANDOM-ROY] |
-| S4E3 | Texte sur le voyage dans le temps (marron) ; chat pianiste « GAME OVER » (noir) ; chemise blanche (procès) | [À VÉRIFIER] [FANDOM-ROY] |
-| S4E4 | OMFG Ontario (marine) ; « Don't even think about tagging me » (rouge) ; blouse d'hôpital | [À VÉRIFIER] [FANDOM-ROY] |
-| S4E5 | Orque, « wizard has turned you into a whale » (bleu) | [À VÉRIFIER] [FANDOM-ROY] |
-| S4E6 | « I read your email » (noir) ; costume | [À VÉRIFIER] [FANDOM-ROY] |
-| SP | « GAME OVER, OLD SPORT! » (noir) ; hamburger « I want to be inside you » (rouge) ; dés « Choose your weapon » ; J!NX Space Invaders ; loup-garou et licorne « It's on now » | [À VÉRIFIER] [FANDOM-ROY] |
+| S1E1 | Crème, « RTFM » en rouge au-dessus d'un pastiche d'affiche de propagande maoïste (4:25) ; t-shirt bleu sur les photos de fête foraine du générique de fin (21:36–22:00) | Texte « Holland/Amsterdam » du t-shirt bleu : non lu ; [FANDOM-ROY] disait « blanc » pour le RTFM |
+| S1E2 | Noir, envahisseur de *Space Invaders* en gros pixels jaune-orange, légende « 10 POINTS » (22:17) | — |
+| S1E3 | Gris-bleu, gros éclair jaune, sans texte (2:36) ; kaki, « the Imports » en lettres gothiques au-dessus de trois éclairs (16:00) ; blanc sous le blouson de cuir, au restaurant (18:52) | — |
+| S1E4 | Noir, écran corrompu du niveau 256 de *Pac-Man* (5:20) ; beige à manches longues grises, « Guided by Voices » en arc, dans l'insert du bus (2:04) ; brun à motif orange dans les scènes finales, semblable à « the Imports », motif non lisible (21:45) | Identité du t-shirt des scènes finales : `[PROBABLE]` |
+| S1E5 | Rose, deux guitares électriques noires croisées, sans texte (3:12) ; vert sous une veste kaki, scène post-générique (23:42) | Modèle des guitares (« Stratocaster » selon [FANDOM-ROY]) : non établi |
+| S1E6 | Gris-bleu à col et bords de manches jaunes, « 42 » en gros chiffres jaunes (1:20) ; à la fête, t-shirt blanc à l'image du site ladyproblems.com, porté aussi par Moss et Jen (21:48–22:52) | — |
+| S2E1 | Bleu ardoise, téléviseur rétro orange à antennes, au bureau (0:50, 3:20) ; gris foncé à motif noir sous une veste kaki, au théâtre (6:28) | « Tête humaine sur corps de lion » : motif non identifié à l'image |
+| S2E2 | Noir, « I see dumb people » en petits caractères blancs (5:00) ; bleu vif, motif non lisible, scène finale (21:30) | « Robot jouant aux jeux vidéo » : non lu (peut correspondre au t-shirt bleu) |
+| S2E3 | Gris anthracite, forme rosée au-dessus d'un bâtiment à hautes cheminées, compatible avec le cochon de Pink Floyd (5:00, 8:42) ; noir, « meh. » en blanc (15:40, 18:10, 23:20) ; t-shirt sombre sous surchemise kaki, chez lui (1:40) | « Bleu-gris, touche Échap » : non vu dans l'épisode (la fiche 03 disait « Ctrl ») |
+| S2E4 | Gris, carré noir à tête de mort et os croisés blancs, aspect pixelisé, au bureau (1:10, 4:20) ; violet, séquence du générique de fin (21:10) | « Chemise verte » : non relevée |
+| S2E5 | Noir, soleil jaune à rayons au-dessus d'une ligne de texte jaune illisible (4:50, 7:16) ; vert foncé à petite étiquette claire (9:30) ; turquoise sous veste kaki, puis bleu ciel à silhouette noire d'animal (15:30, 18:52) ; brun à motif sous veste en jean (21:50) | Slogan « The sun is trying to kill me » : non lu ; pomme/« undo », bordeaux, caméra de cinéma, téléviseur, *Aqua Teen Hunger Force* : motifs non identifiés |
+| S2E6 | Vert foncé, petit motif (traînée de points bleus, figure blanche), texte éventuel non lisible (4:20, 21:50) | Slogan « Guns don't kill people, magic missiles kill people » : non lu |
+| S3E1 | Noir, diagramme de Venn « MUSIC I LIKE / MUSIC I USED TO LIKE / MUSIC YOU LIKE » (2:10) ; noir, carré orange à pictogramme de gâteau, aucun texte lu (18:47, 21:58) | Slogan « The cake is a lie » : non lu ; « gris clair » : non relevé |
+| S3E2 | Noir, grenouille verte en gros pixels (silhouette de Kermit), ligne de texte non lue (2:00) ; bleu ciel sous une veste de survêtement, au stade (7:03) ; sombre à motif (personnage clair) sous veste militaire (8:48) ; rouge à impression jaune non lue (20:42) | *Battle Royale*, « pompiers au lance-flammes » : motifs non identifiés (peuvent correspondre aux deux derniers) |
+| S3E3 | Blanc, petits dessins au trait et une ligne de texte, non lus, taché de café à partir de 6:08 (3:06) ; brun foncé, impression orange « … Ludovico Technique », première ligne non lue, au générique de fin (21:30) | « A series of tubes » : non lu ; chemise à carreaux rose et jaune : non relevée |
+| S3E4 | Épisode non visionné (absent de la chaîne officielle) | Gris « My pet monster » ; noir, robot ; gris « The Overlook Hotel » |
+| S3E5 | Bleu clair, tête de panda noire et lignes de texte non lues (1:36) ; bleu marine, robot bleu clair, ligne de texte non lue (5:21) ; brun, « LAUGH THIS OFF, TWINKLETOES », personnage au fusil (11:54) | « Filthy Panda » : texte non lu ; *Robot Jox* : film non identifiable à l'image |
+| S3E6 | Rouge, motif jaune et rouge non identifié (23:36) ; bleu vif, deux marionnettes de télévision en gros pixels, Bert et Ernie (29:09) ; bordeaux, texte blanc lu par fragments « …HING IS ANY … / …HER PEOPLE … IT » (38:51) ; noir à grand motif gris au trait, non identifié (42:48). Minutages de la vidéo double | *Fahrenheit 451* : non confirmé (peut correspondre au t-shirt rouge) ; « fantôme de Pac-Man » : non identifié (peut correspondre au t-shirt noir) |
+| S4E1 | Noir, « NO. » en blanc (2:43) ; rouge, dessin circulaire bleu, noir et blanc, inscription illisible (14:00) ; kaki, cassette audio sur os croisés, deux lignes de texte dont le mot « MUSIC » (23:11) | « Texte japonais » du t-shirt rouge : non lu ; libellé complet « Home taping is killing music » : lecture incertaine |
+| S4E2 | Bleu à motif orange, contour de carré arrondi (0:44) ; rouge à motif sombre sous une parka (2:26) ; marron, carré rose, visage barbu à lunettes, « ROFL » (3:34) ; bordeaux à motif jaune non identifié (9:10) ; noir, « I don't work here. » (23:16) | « Infectedur » : non vu ; *Fahrenheit 451* : non identifié ; « texte japonais » : non lu |
+| S4E3 | Marron, « LET'S SAY YOU'VE GONE BACK IN TIME » suivi de petit texte (2:14) ; noir, diagramme de Venn à deux cercles, textes illisibles (7:24) ; noir, chat roux en chemise bleue jouant du clavier, le « Keyboard Cat » (11:40) | Texte « GAME OVER » du t-shirt au chat : non lu |
+| S4E4 | Marine, « OMFG » en lettres bleues, ligne de petit texte illisible et feuille (3:10) ; noir uni, au restaurant (6:40) ; bordeaux, « …HING IS ANY GOOD / …OTHER PEOPLE LIKE IT » (15:34) | Rouge « Don't even think about tagging me » : non vu dans l'épisode ; « gris uni » : seul un sweat gris à capuche est relevé (14:02) |
+| S4E5 | Bleu roi, orque noire et blanche au-dessus de quatre lignes de texte blanc illisibles (2:56, 14:44) | Texte « A wizard has turned you into a whale » : non lu |
+| S4E6 | Noir, « I read your email. » en blanc (7:04–7:12) | — |
+| SP | Gris anthracite, « GAME OVER, OLD SPORT! » et petit personnage pixelisé jaune (3:10) ; rouge à tête de personnage jaune (21:54) ; marron, rangée de dés polyédriques, « CHOOSE YOUR WEAPON », lecture probable (28:10) ; gris à lettrage bleu et orange, texte non lu (38:10) ; bordeaux, « CAFFEINE POWERS ACTIVATE! » et gobelet dessiné (42:46) ; gris à mappemonde dans le film de fin (47:42) | « I want to be inside you » (t-shirt rouge) : non lu ; logo « J!NX » : non lu ; « loup-garou/licorne, It's on now » : non vu ; [FANDOM-ROY] écrivait « CAFFINE » |
 
 #### Compétences
 
 - Il sait installer des machines, monter des sites web et bricoler du matériel (répondeur automatique, caméras chez Jen). [VÉRIFIÉ] [FANDOM-ROY]
 - Moss est décrit comme techniquement plus fort que lui. [VÉRIFIÉ] [FANDOM-ROY] [W-FR]
-- Douglas le paie 50 £ pour créer le site de la Spaceology (S4E3). [VÉRIFIÉ] [FANDOM-DOUGLAS]
+- Douglas le paie 50 £ pour créer le site de la Spaceology (S4E3). [VÉRIFIÉ] [FANDOM-DOUGLAS] VIS : confirmé — site web avec film à effets spéciaux, payé 50 £ au lieu des 100 convenues `[SOUS-TITRES AUTO]` (episodes/S4E3, 0:31–2:12).
 
 #### Vie sentimentale
 
@@ -196,7 +201,7 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 | S3E6 | Kimberly | Alexandra Weaver | Collègue du 7e étage, brève liaison | [VÉRIFIÉ] [BCG-S3E6] [FANDOM-ROY] |
 | S4E1 | Ex non nommée | – | Il l'efface de ses photos avec Photoshop | [VÉRIFIÉ] [W-EP] |
 | S4E4 | Julia | Nathalie Cox | Petite amie au passé étrange (incendie d'un « Sea Parks ») | [VÉRIFIÉ] [BCG-S4E4] [W-EP] |
-| SP | Nouvelle petite amie | Rachel Parris (rôle « Alice ») | Elle lui attribue un « artistic spectrum » | [VÉRIFIÉ] [W-CHAR] pour le fait ; identification à Alice [PROBABLE] d'après [BCG-SP] |
+| SP | Nouvelle petite amie | Rachel Parris (rôle « Alice ») | Elle lui attribue un « artistic spectrum » | [VÉRIFIÉ] [W-CHAR] pour le fait ; identification à Alice : VIS — CONFIRMÉE, Roy la nomme Alice `[SOUS-TITRES AUTO]` (episodes/SP, 27:33–28:30) et le générique de fin crédite « Alice — Rachel Parris » `[VU À L'IMAGE]` (47:18 ; auparavant [PROBABLE]) |
 
 #### Relations
 
@@ -251,7 +256,7 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 - Pantalon en velours côtelé porté très haut. [VÉRIFIÉ] [FANDOM-MOSS]
 - Il change de lunettes, de tailles différentes, quand lui et Roy montent un plan. [VÉRIFIÉ] [W-CHAR]
 - Il garde plusieurs paires de lunettes sous son bureau. [VÉRIFIÉ] [FANDOM-MOSS]
-- Dans le spécial, un pantalon de femme (« women's slacks ») lui donne de l'assurance. [PROBABLE] (souvenir ; Fandom mentionne seulement que Douglas lui donne des conseils de confiance)
+- Dans le spécial, un pantalon de femme (« women's slacks ») lui donne de l'assurance. VIS : CONFIRMÉ — Douglas lui révèle son « secret », les pantalons de femme ; Moss en achète et en porte `[SOUS-TITRES AUTO]` (episodes/SP, 11:14–12:28, 15:38–16:22, 23:01–23:45 ; auparavant [PROBABLE], souvenir du rédacteur)
 
 #### Tics et manies
 
@@ -287,12 +292,12 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 - Sa remarque sur « Aunt Irma » se propage et provoque des émeutes (S1E6). [VÉRIFIÉ] [W-EP]
 - Il devient barman par erreur au théâtre (S2E1). [VÉRIFIÉ] [W-EP]
 - Il suit un cours de « cuisine » allemande tenu par un cannibale (S2E3). [VÉRIFIÉ] [W-EP]
-- Il est interviewé par erreur à *Newsnight* (S2E5). [VÉRIFIÉ] [W-EP] ; Kirsty Wark dans son propre rôle [BCG-S2E5]
+- Il est interviewé par erreur à *Newsnight* (S2E5). [VÉRIFIÉ] [W-EP] ; Kirsty Wark dans son propre rôle [BCG-S2E5] VIS : méprise et plateau sur l'Irak confirmés (episodes/S2E5, 13:39–14:55) ; le nom de l'émission n'apparaît pas dans les sous-titres, aucun logo ni nom de présentatrice n'a été lu à l'image.
 - Il fait fuir ses harceleurs avec le revolver de Douglas (S3E1). [VÉRIFIÉ] [W-EP]
 - Une commotion lui fait oublier tout ce qu'il sait des ordinateurs (S3E3). [VÉRIFIÉ] [W-EP]
 - Il reste coincé dans une machine à pince en voulant gagner un iPhone (S4E4). [VÉRIFIÉ] [W-EP]
 - Arrêté pour vol à l'étalage, il écope de trois heures de travaux d'intérêt général et doit donner une conférence de type « Scared Straight » (S4E5). [VÉRIFIÉ] [W-CHAR] [W-EP]
-- Objet volé selon Fandom : des DVD de *Grand Designs*. [À VÉRIFIER] [FANDOM-MOSS]
+- Objet volé selon Fandom : des DVD de *Grand Designs*. [FANDOM-MOSS] VIS : CONFIRMÉ — boîtiers « GRAND DESIGNS » lisibles `[VU À L'IMAGE]` (episodes/S4E5, 14:16 ; auparavant [À VÉRIFIER]). La chute de l'épisode révèle que le public de sa conférence est fait de très jeunes enfants (21:02).
 
 #### Relations
 
@@ -323,7 +328,7 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 |---|---|---|
 | Interprète | Katherine Parkinson | [VÉRIFIÉ] [W-CHAR] [BCG-CAST] |
 | Voix française | Rafaèle Moutier | [VÉRIFIÉ] [W-FR] |
-| Fonction | Head of the IT Department ; « Relationship Manager » de fait | [VÉRIFIÉ] [W-CHAR] [BCG-ABOUT] |
+| Fonction | Head of the IT Department ; « Relationship Manager » de fait | [VÉRIFIÉ] [W-CHAR] [BCG-ABOUT] ; VIS : le titre est écrit sur la plaque de sa porte, « RELATIONSHIP MANAGER », de S1E2 à S3E6 `[VU À L'IMAGE]` (episodes/S1E2, 20:23, 22:25 ; S3E6, 29:09) ; dans S1E1, les sous-titres la donnent seulement « people person » (episodes/S1E1, 18:05–18:12) |
 | Autres titres | Employee of the Month (S3E4) ; candidate au poste d'Entertainment Manager (S4E1) | [VÉRIFIÉ] [W-CHAR] [W-EP] |
 | Date de naissance fictive | 27 mars 1978 | [À VÉRIFIER] [FANDOM-JEN] |
 
@@ -375,7 +380,7 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 | SP | Juan the Barista | Cristian Solimeno | Béguin pour un barista | [VÉRIFIÉ] [W-EP] [BCG-SP] |
 
 - Métier de Michael selon Fandom : moniteur d'auto-école. [À VÉRIFIER] [FANDOM-JEN]
-- Liaison d'un soir sous-entendue avec Moss après la fête de S1E6. [À VÉRIFIER] [FANDOM-MOSS] ; Wikipedia dit seulement que le trio se réveille auprès de partenaires inattendus [W-EP]
+- Liaison d'un soir sous-entendue avec Moss après la fête de S1E6. [À VÉRIFIER] [FANDOM-MOSS] ; Wikipedia dit seulement que le trio se réveille auprès de partenaires inattendus [W-EP] VIS : ce qui est à l'image — le lendemain, Moss sort de la salle de bains de Jen en court kimono de satin rose `[VU À L'IMAGE]` (episodes/S1E6, 24:04) ; rien de plus n'est montré.
 
 #### Évolution par saison
 
@@ -384,7 +389,7 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 | S1 | Parachutée au sous-sol, en conflit puis en alliance avec Roy et Moss | S1E1, S1E2 | [VÉRIFIÉ] [W-EP] [BCG-S1E1] |
 | S1 | Découvre Richmond derrière la porte rouge | S1E4 | [VÉRIFIÉ] [W-EP] |
 | S2 | Tabac, dîner raté, assistante de Douglas | S2E3, S2E4, S2E6 | [VÉRIFIÉ] [W-EP] |
-| S3 | Refuse un autre emploi ; discours de l'« Internet » | S3E3, S3E4 | [VÉRIFIÉ] [W-EP] [FANDOM-JEN] |
+| S3 | Refuse un autre emploi ; discours de l'« Internet » | S3E3, S3E4 | [VÉRIFIÉ] [W-EP] [FANDOM-JEN] ; VIS : confirmé et précisé pour S3E3 — June l'accueille par « welcome aboard », puis Jen rappelle et décline l'offre pour « raisons personnelles » `[SOUS-TITRES AUTO]` (episodes/S3E3, 17:21, 20:43–21:06) |
 | S4 | Ambition : Entertainment Manager, interprète, avocate improvisée | S4E1, S4E4, S4E6 | [VÉRIFIÉ] [W-EP] |
 | SP | Exposée par une vidéo virale ; reçoit la direction avec Roy et Moss | SP | [VÉRIFIÉ] [W-EP] |
 
@@ -397,7 +402,7 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 | Interprète | Chris Morris | [VÉRIFIÉ] [W-CHAR] [BCG-CAST] |
 | Voix française | Constantin Pappas | [VÉRIFIÉ] [W-FR] |
 | Fonction | Fondateur et directeur de Reynholm Industries | [VÉRIFIÉ] [W-CHAR] |
-| Statut au générique | Principal en S1, invité en S2 ; caméo en S3 | [VÉRIFIÉ] [W-CHAR] [BCG-S3E1] |
+| Statut au générique | Principal en S1, invité en S2 ; caméo en S3 | [VÉRIFIÉ] [W-CHAR] [BCG-S3E1] ; VIS : NUANCÉ — « générique » vaut ici pour la distribution selon les sources ; dans le générique d'ouverture animé, Chris Morris n'a ni personnage ni crédit (fiche 10, section 5). Aux génériques de fin, « Denholm — Chris Morris » est lu pour S1E2, S1E4, S1E6 et S2E2 `[VU À L'IMAGE]`, pas pour S1E3 |
 
 #### Biographie fictive
 
@@ -408,12 +413,12 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 - Il instaure des idées « modernes » ridicules, comme les toilettes mixtes. [VÉRIFIÉ] [W-FR]
 - Il renvoie le conseiller culturel Paul, puis le reprend (S1E2). [VÉRIFIÉ] [W-CHAR]
 - Il rétablit Richmond dans ses fonctions, puis se ravise (S1E4). [VÉRIFIÉ] [W-EP]
-- Il fête le succès de « Project Icarus » en remerciant les agents d'entretien, pas l'IT (S1E6). [VÉRIFIÉ] [W-CHAR]
-- Quand la police vient l'interroger sur des irrégularités dans le fonds de pension, il ouvre une fenêtre et saute (S2E2). [VÉRIFIÉ] [W-CHAR] [W-EP]
+- Il fête le succès de « Project Icarus » en remerciant les agents d'entretien, pas l'IT (S1E6). [VÉRIFIÉ] [W-CHAR] VIS : confirmé — « Project Icarus » dit par Denholm, banderole « WE DID IT! » ; il remercie juristes, comptabilité et les trois agents d'entretien des toilettes (episodes/S1E6, 0:36–2:12).
+- Quand la police vient l'interroger sur des irrégularités dans le fonds de pension, il ouvre une fenêtre et saute (S2E2). [VÉRIFIÉ] [W-CHAR] [W-EP] VIS : vu jusqu'à Denholm debout à la fenêtre (episodes/S2E2, 0:38–1:42) ; le saut n'est pas sur les images échantillonnées.
 - En S3E1, il apparaît à Douglas dans ce qui semble être le paradis, jusqu'à ce qu'Adolf Hitler surgisse. [VÉRIFIÉ] [W-CHAR] [DOG-S3E1]
 - Il a licencié tout un étage pour « manque d'esprit d'équipe ». [VÉRIFIÉ] [FANDOM-DENHOLM]
 - Sa veuve se prénomme Barbara. [VÉRIFIÉ] [BCG-S2E2] [FANDOM-DENHOLM]
-- Testament vidéo diffusé aux funérailles. [VÉRIFIÉ] [FANDOM-DENHOLM] [TROPEDIA]
+- Testament vidéo diffusé aux funérailles. [VÉRIFIÉ] [FANDOM-DENHOLM] [TROPEDIA] VIS : la vidéo est vue dans S2E2 (episodes/S2E2, 15:57–16:15 ; elle défile encore sous le générique de fin). Dans S3E1, son message à Douglas est en revanche une lettre sur papier, que Douglas tient et lit `[VU À L'IMAGE]` (episodes/S3E1, 11:46–12:13).
 
 #### Look et bureau
 
@@ -430,7 +435,7 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 
 | Saison | Épisodes | Preuve |
 |---|---|---|
-| S1 | S1E1, S1E2, S1E4, S1E5, S1E6 (S1E3 : crédité par BCG, non confirmé ailleurs) | [VÉRIFIÉ] [BCG] [FANDOM-DENHOLM] |
+| S1 | S1E1, S1E2, S1E4, S1E5, S1E6 (S1E3 : crédité par BCG, non confirmé ailleurs) | [VÉRIFIÉ] [BCG] [FANDOM-DENHOLM] ; VIS : S1E3 CORRIGÉ — ni au générique de fin ni à l'image (episodes/S1E3, 22:48–23:14) ; présence vue dans les cinq autres épisodes |
 | S2 | S2E2 uniquement (mort du personnage) | [VÉRIFIÉ] [BCG-S2E2] [BCG-ABOUT] |
 | S3 | S3E1 uniquement (vision de Douglas) | [VÉRIFIÉ] [BCG-S3E1] [W-CHAR] |
 | S4, SP | Absent | [VÉRIFIÉ] [BCG] |
@@ -444,7 +449,7 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 | Interprète | Matt Berry | [VÉRIFIÉ] [W-CHAR] [BCG-CAST] |
 | Voix française | Jérôme Berthoud | [VÉRIFIÉ] [W-FR] |
 | Fonction | Fils de Denholm ; dirige Reynholm Industries après sa mort | [VÉRIFIÉ] [W-CHAR] |
-| Statut au générique | Récurrent en S2, principal à partir de S3 | [VÉRIFIÉ] [W-CHAR] |
+| Statut au générique | Récurrent en S2, principal à partir de S3 | [VÉRIFIÉ] [W-CHAR] ; VIS : NUANCÉ — dans le générique d'ouverture animé, le personnage de Douglas et le crédit « Matt Berry » n'apparaissent que dans la version du spécial 2013 ; les versions examinées des saisons 2, 3 et 4 ne créditent que les trois acteurs d'origine `[VU À L'IMAGE]` (fiche 10, section 5). Le statut « principal à partir de S3 » est celui des sources écrites |
 | Nombre d'épisodes | 16 (2007-2013) | [VÉRIFIÉ] [W-BERRY] |
 
 #### Biographie fictive
@@ -459,7 +464,7 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 - Il jette son trophée « Shithead of the Year » par la fenêtre (S4E1). [VÉRIFIÉ] [W-EP]
 - Il adhère à la « Spaceology » et finit avec une main robotique (S4E3). [VÉRIFIÉ] [W-CHAR]
 - Il nie régulièrement avoir tué sa première femme, Melissa. [VÉRIFIÉ] [W-CHAR]
-- Il se remet deux semaines avec Victoria, qui le poursuit ensuite pour 212 millions de livres ; accord à 70 millions (S4E6). [VÉRIFIÉ] [W-CHAR] [W-EP]
+- Il se remet deux semaines avec Victoria, qui le poursuit ensuite pour 212 millions de livres ; accord à 70 millions (S4E6). [VÉRIFIÉ] [W-CHAR] [W-EP] VIS : 212 millions et 70 millions confirmés `[SOUS-TITRES AUTO]` (episodes/S4E6, 8:09, 22:14–23:38) ; NUANCÉ — dans les sous-titres, « deux semaines » désigne la durée du premier mariage (1:08), pas celle des retrouvailles.
 - Dans le spécial, il part en cavale après avoir servi de l'alcool à des mineurs dans *The Secret Millionaire* et confie l'entreprise à Jen, Roy et Moss. [VÉRIFIÉ] [W-EP] [W-SERIE]
 
 #### Traits de caractère
@@ -498,7 +503,7 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 | Interprète | Noel Fielding | [VÉRIFIÉ] [W-CHAR] [BCG-CAST] |
 | Voix française | Roland Timsit | [VÉRIFIÉ] [W-FR] |
 | Nom complet | Richmond Felicity Avenal | [VÉRIFIÉ] [W-SERIE] [FANDOM-RICHMOND] |
-| Fonction | Ancien cadre dirigeant, relégué dans la salle des serveurs de l'IT | [VÉRIFIÉ] [W-CHAR] |
+| Fonction | Ancien cadre dirigeant, relégué dans la salle des serveurs de l'IT | [VÉRIFIÉ] [W-CHAR] ; VIS : sa fonction passée est lue sur une plaque de porte, « RICHMOND AVENAL / PROJECT EXECUTIVE », dans un retour en arrière `[VU À L'IMAGE]` (episodes/S1E4, 12:08) ; il se dit relégué depuis quatre ans (11:10) |
 | Nombre d'apparitions | 7 (6 épisodes + spécial) | [VÉRIFIÉ] [W-FIELDING] [BCG] |
 
 #### Biographie fictive
@@ -510,8 +515,8 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 - Jen le découvre et obtient sa réintégration, que Denholm annule (S1E4). [VÉRIFIÉ] [W-EP]
 - Invité au dîner de Jen, il se rapproche de Jessica (S2E4). [VÉRIFIÉ] [W-EP] [BCG-S2E4]
 - Son absence en série 3 est expliquée par le scorbut (S3E1). [VÉRIFIÉ] [W-CHAR]
-- En S4E6, il revient sans maquillage goth pour témoigner au procès de Douglas ; il a fondé « Goth2Boss ». [VÉRIFIÉ] [W-CHAR] [W-EP]
-- Dans le spécial, il reparaît en costume goth : Goth2Boss a échoué, il est devenu voix off. [VÉRIFIÉ] [W-CHAR]
+- En S4E6, il revient sans maquillage goth pour témoigner au procès de Douglas ; il a fondé « Goth2Boss ». [VÉRIFIÉ] [W-CHAR] [W-EP] VIS : NUANCÉ — cheveux blonds et costume, mais yeux encore cernés de noir `[VU À L'IMAGE]` (episodes/S4E6, 19:06) ; logo « Goth2Boss » lu à l'image (20:18).
+- Dans le spécial, il reparaît en costume goth : Goth2Boss a échoué, il est devenu voix off. [VÉRIFIÉ] [W-CHAR] VIS : tenue gothique complète confirmée `[VU À L'IMAGE]` (episodes/SP, 36:20) ; générique de fin : « with Noel Fielding as Richmond » (47:18).
 - Graham Linehan prête sa voix au « Voice-Over Director » dans le spécial. [VÉRIFIÉ] [BCG-SP]
 
 #### Traits, look et voix
@@ -541,18 +546,18 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 | Personnage | Interprète | Épisode(s) | Description | Preuve |
 |---|---|---|---|---|
 | Mère de Moss | Aucune interprète identifiée | Mentionnée (S2E5, S3E5 selon Wikipedia) | Moss vit chez elle ; pomme quotidienne ; procès pour la vitre | [VÉRIFIÉ] [W-CHAR] |
-| Mère de Moss — présence à l'écran | – | – | Personnage jamais montré | [PROBABLE] ; ni Wikipedia ni Fandom ne citent d'actrice |
+| Mère de Moss — présence à l'écran | – | – | Personnage jamais montré | [PROBABLE] ; ni Wikipedia ni Fandom ne citent d'actrice ; VIS : dans S1E3, elle interpelle Moss à travers la porte des toilettes pendant le générique de fin `[SOUS-TITRES AUTO]` (episodes/S1E3, 22:33–23:17) ; dans S2E5, une dormeuse à qui Moss emprunte un soutien-gorge est vue sans être identifiée (7:18–8:00) ; elle est évoquée sur Friendface dans S3E5 (6:55). Aucune image ne la montre de façon identifiable : reste [PROBABLE] |
 | Père de Moss | Non montré | Mentionné deux fois | Moss prétexte un SMS disant que son père a tué quelqu'un | [VÉRIFIÉ] [FANDOM-PERE] |
 | Judy | Cheryl Fergison | S1E5 | Agent d'entretien éprise de Roy ; Moss lui dit que Roy est mort | [VÉRIFIÉ] [W-CHAR] [BCG-S1E5] |
 | Julie | Lucy Liemann | S1E5 | Collègue qui plaît à Roy, confondue avec Judy | [VÉRIFIÉ] [BCG-S1E5] [W-EP] |
-| Small Paul | David Garfield | S1E5 | Pousseur de chariot ; meurt d'une crise cardiaque après avoir promené Jen | [VÉRIFIÉ] [BCG-S1E5] pour le crédit ; intrigue [FANDOM-SMALLPAUL] |
+| Small Paul | David Garfield | S1E5 | Pousseur de chariot ; meurt d'une crise cardiaque après avoir promené Jen | [VÉRIFIÉ] [BCG-S1E5] pour le crédit ; intrigue [FANDOM-SMALLPAUL] ; VIS : confirmé à l'image — il pousse Jen sur son chariot à courrier, puis se fige, cramponné au chariot `[VU À L'IMAGE]` (episodes/S1E5, 13:47–15:12) ; la chanson de l'hommage parle d'un chariot poussé trop fort et de son cœur `[SOUS-TITRES AUTO]` (22:46–23:21) |
 | Bill Crouse, dit « The News » | Adam Buxton | S1E5 | Cadre goujat ; croit Jen morte, puis se croit hanté | [VÉRIFIÉ] [W-CHAR] [BCG-S1E5] |
 | Johann (graphie « Johan » sur Wikipedia), le cannibale | Philip Rham | S2E3 | Allemand dont l'annonce « I want to cook with you » est mal comprise | [VÉRIFIÉ] [BCG-S2E3] [W-EP] [FANDOM-MATG] |
 | April | Lucy Montgomery | S3E4 | Journaliste de *Richest*, femme trans ; liaison puis bagarre avec Douglas | [VÉRIFIÉ] [W-CHAR] [BCG-S3E4] |
 | Victoria Reynholm | Belinda Stewart-Wilson | S4E6 | Deuxième épouse de Douglas ; divorce | [VÉRIFIÉ] [BCG-S4E6] [W-EP] |
 | Psychiatre : Dr Mendall | Frances Barber | S1E6 | Psychiatre d'entreprise ; attirance mutuelle avec Moss ; nuit avec Roy | [VÉRIFIÉ] [W-CHAR] [BCG-S1E6] |
 | « Harry Tarry » | – | – | Nom introuvable dans toutes les sources consultées | [À VÉRIFIER] |
-| Postman Harry | John Hopkins (crédité « John Willie Hopkins ») | S1E1, S3E2 | Postier ; candidat le plus plausible derrière « Harry Tarry » | [VÉRIFIÉ] [BCG-S1E1] [BCG-S3E2] ; rapprochement avec « Harry Tarry » [PROBABLE] |
+| Postman Harry | John Hopkins (crédité « John Willie Hopkins ») | S1E1, S3E2 | Postier ; candidat le plus plausible derrière « Harry Tarry » | [VÉRIFIÉ] [BCG-S1E1] [BCG-S3E2] ; rapprochement avec « Harry Tarry » [PROBABLE] ; VIS : au générique de fin de S1E1, le crédit est « Postman — John Willie Hopkins », sans prénom de personnage `[VU À L'IMAGE]` (episodes/S1E1, 21:35) ; « Harry the Postman » figure dans la description YouTube de S3E2, pas au générique lu |
 
 ### 3.2 Entourage de Denholm et de Douglas
 
@@ -560,18 +565,18 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 |---|---|---|---|---|
 | Stephanie | Charlotte Weston | S2E2 | Assistante de Denholm ; annonce la venue de la police | [VÉRIFIÉ] [BCG-S2E2] [FANDOM-DENHOLM] |
 | Secrétaire(s) de Denholm en série 1 | Non identifiée(s) | S1 | Aucun crédit nominatif retrouvé | [À VÉRIFIER] |
-| Barbara (Reynholm) | Belinda Stewart-Wilson | S2E2 | Épouse de Denholm selon Fandom | [VÉRIFIÉ] [BCG-S2E2] [FANDOM-DENHOLM] |
+| Barbara (Reynholm) | Belinda Stewart-Wilson | S2E2 | Épouse de Denholm selon Fandom | [VÉRIFIÉ] [BCG-S2E2] [FANDOM-DENHOLM] ; VIS : crédit « Barbara — Belinda Stewart-Wilson » lu au générique de fin ; une veuve en chapeau noir reçoit les condoléances `[VU À L'IMAGE]` (episodes/S2E2, 23:00, 12:30) |
 | Derek Pippin (graphie « Pippen » sur Fandom) | Silas Carson | S2E2 | Bras droit de Denholm, écarté par Douglas | [VÉRIFIÉ] [BCG-S2E2] [W-EP] |
 | Vicar | Alex Macqueen | S2E2 | Officiant des funérailles | [VÉRIFIÉ] [BCG-S2E2] |
-| Paul, Cultural Advisor | Danny Wallace | S1E2 | Renvoyé pour un cadeau mal choisi, sauvé par le « Profanity Buzzer » | [VÉRIFIÉ] [W-CHAR] [BCG-S1E2] |
-| Mr Yamamoto | Togo Igawa | S1E2, S3E1 | Dirigeant japonais ; marche sur le pied de Jen | [VÉRIFIÉ] [BCG-S1E2] [BCG-S3E1] |
+| Paul, Cultural Advisor | Danny Wallace | S1E2 | Renvoyé pour un cadeau mal choisi, sauvé par le « Profanity Buzzer » | [VÉRIFIÉ] [W-CHAR] [BCG-S1E2] ; VIS : crédité « Cultural Advisor » ; plaque « PROFANITY BUZZER » lue au-dessus d'un gros bouton rouge mural `[VU À L'IMAGE]` (episodes/S1E2, 22:45, 17:16–17:20) ; le prénom Paul vient du dialogue |
+| Mr Yamamoto | Togo Igawa | S1E2, S3E1 | Dirigeant japonais ; marche sur le pied de Jen | [VÉRIFIÉ] [BCG-S1E2] [BCG-S3E1] ; VIS : au générique de fin de S1E2, le rôle est libellé « Japanese Boss » (episodes/S1E2, tableau des crédits) ; « Mr Yamamoto — Togo Igawa » au générique de S3E1 `[VU À L'IMAGE]` (episodes/S3E1, 22:34) |
 | Nolan | Tom Binns | S3E1, S3E3, S3E4 | Bras droit sérieux de Douglas ; crédité « Accountant » | [VÉRIFIÉ] [W-CHAR] [BCG-S3E1] [BCG-S3E3] [BCG-S3E4] |
 | Melissa | Non montrée | Mentionnée | Première épouse de Douglas | [VÉRIFIÉ] [W-CHAR] |
 | Blind Irish Sorcerer | Graham Linehan | S2E6 | Fournit le « philtre » à Douglas | [VÉRIFIÉ] [BCG-S2E6] [W-CHAR] |
 | Beth Gaga Shaggy | Graham Linehan (selon Wikipedia) | S4E3 | Gourou de la Spaceology | [VÉRIFIÉ] [W-CHAR] — RC : recoupé par le wiki Fandom et TV Tropes (fiches 04, 05, 07) ; non crédité par [BCG-S4E3], donc générique [À VÉRIFIER] |
 
 - Point d'attention : Belinda Stewart-Wilson joue deux personnages différents, Barbara (S2) puis Victoria (S4E6). [VÉRIFIÉ] [BCG-S2E2] [BCG-S4E6]
-- BCG la crédite aussi « Barbara » dans S2E1, ce qui est incohérent avec l'intrigue de l'épisode. [À VÉRIFIER] [BCG-S2E1]
+- BCG la crédite aussi « Barbara » dans S2E1, ce qui est incohérent avec l'intrigue de l'épisode. [À VÉRIFIER] [BCG-S2E1] VIS : elle n'apparaît sur aucune planche de S2E1 ; générique de fin lu en partie seulement (episodes/S2E1) : crédit toujours [À VÉRIFIER].
 
 ### 3.3 Collègues de Reynholm Industries
 
@@ -586,16 +591,16 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 | Office Girl / Office Worker | Nancy Lodder / Pete Deagle | S1E1, S1E5 | Figurants récurrents crédités | [VÉRIFIÉ] [BCG-S1E1] [BCG-S1E5] |
 | Laura | Laura Pyper | S1E1 | Collègue | [VÉRIFIÉ] [BCG-S1E1] |
 | Philip | Jamie Michie | S2E1 | Collègue du 6e étage qui invite Jen au théâtre | [VÉRIFIÉ] [BCG-S2E1] ; étage [FANDOM-ROY] |
-| Jeff | James Bachman | S2E3 | Collègue (intrigue des fumeurs) | [VÉRIFIÉ] [BCG-S2E3] ; rôle dans l'intrigue [PROBABLE] |
-| Olive | Janet Whiteside | S3E3 | Créditée « Cleaner » par BCG, « tea lady » par Fandom | [VÉRIFIÉ] [BCG-S3E3] [FANDOM-ROY] |
+| Jeff | James Bachman | S2E3 | Collègue (intrigue des fumeurs) | [VÉRIFIÉ] [BCG-S2E3] ; rôle dans l'intrigue : VIS — CORRIGÉ : Jeff, dit « Dominator », est l'ami de Roy qui lui téléphone à propos du film et lui révèle qu'il y a un retournement ; il n'appartient pas à l'intrigue des fumeurs `[SOUS-TITRES AUTO]` (episodes/S2E3, 2:00–2:32 ; l'hypothèse d'origine était [PROBABLE]) |
+| Olive | Janet Whiteside | S3E3 | Créditée « Cleaner » par BCG, « tea lady » par Fandom | [VÉRIFIÉ] [BCG-S3E3] [FANDOM-ROY] ; VIS : à l'image, dame âgée en tablier à carreaux poussant un chariot de thé aux tasses « REYNHOLM INDUSTRIES » `[VU À L'IMAGE]` (episodes/S3E3, 4:31–4:56, 7:33), ce qui va dans le sens de « tea lady » ; son crédit n'a pas été lu au générique |
 | Kimberly | Alexandra Weaver | S3E6 | Collègue du 7e étage (calendrier) | [VÉRIFIÉ] [BCG-S3E6] [FANDOM-ROY] |
 | Nadine | Ty Glaser | S3E6 | Collègue du 7e étage | [VÉRIFIÉ] [BCG-S3E6] ; étage [PROBABLE] |
 | Joan | Hazel Douglas | S3E6 | Grand-mère du calendrier | [VÉRIFIÉ] [BCG-S3E6] ; rôle [PROBABLE] |
-| Paul, Dave, Niall | Ben Moor, Hywel John, Jacob Edwards | S3E6 | Amis geeks recrutés pour le calendrier | [VÉRIFIÉ] [BCG-S3E6] ; rôle [PROBABLE] |
+| Paul, Dave, Niall | Ben Moor, Hywel John, Jacob Edwards | S3E6 | Amis geeks recrutés pour le calendrier | [VÉRIFIÉ] [BCG-S3E6] ; rôle [PROBABLE] ; VIS : CORRIGÉ pour Dave — c'est le frère « boss-eyed » d'une employée du septième étage ; sa photo est montrée et il est présent au lancement `[VU À L'IMAGE]` (episodes/S3E6, 23:57–24:45, 43:45). « Niall — Jacob Edwards » est lu au générique (45:36) ; rôles de Paul et de Niall dans l'intrigue non établis par le visionnage |
 | Linda | Hermione Gulliford | S4E4 | Collègue dont Jen est jalouse | [VÉRIFIÉ] [BCG-S4E4] [W-EP] |
 
 - Les femmes du 7e étage préparent un calendrier de charité dénudé (S3E6). [VÉRIFIÉ] [W-EP]
-- En S1E4, le fait que les collègues d'Abi et Samantha travaillent au 5e étage n'est confirmé par aucune source consultée. [À VÉRIFIER]
+- En S1E4, le fait que les collègues d'Abi et Samantha travaillent au 5e étage n'est confirmé par aucune source consultée. [À VÉRIFIER] VIS : la fiche d'épisode situe la scène au quatrième étage (episodes/S1E4, 5:51–6:56, plateau aux écrans « REYNHOLM INDUSTRIES ») ; laquelle des deux employées est Samantha et laquelle est Abi n'est pas établi par l'image.
 
 ### 3.4 Policiers et représentants de l'autorité
 
@@ -621,23 +626,25 @@ T-shirts par épisode (source unique : Fandom ; descriptions de fans, non recoup
 
 Source de tous les crédits : fiches épisodes du British Comedy Guide. Le signe `[!]` signale un nom notable (acteur, humoriste ou personnalité connu par ailleurs).
 
+VIS — contrôle des crédits aux génériques de fin (visionnage du 2026-10-11). Les six génériques de la saison 1 ont été relevés en entier (tableaux « Générique de fin lu à l'image » des fiches `episodes/S1E1` à `S1E6`) ; ceux des saisons 2 à 4 et du spécial n'ont été lus qu'en partie. Les notes `VIS` ci-dessous signalent les écarts de libellé et ce qui n'a pas été lu ; une ligne sans note dans la série 1 est confirmée à l'image, sauf mention contraire.
+
 ### Série 1 (2006)
 
 | Épisode | Interprète | Rôle crédité | Note | Preuve |
 |---|---|---|---|---|
-| S1E1 | John Hopkins (« John Willie Hopkins ») | Postman Harry | Revient en S3E2 | [VÉRIFIÉ] [BCG-S1E1] |
+| S1E1 | John Hopkins (« John Willie Hopkins ») | Postman Harry | Revient en S3E2 | [VÉRIFIÉ] [BCG-S1E1] ; VIS : libellé du générique, « Postman — John Willie Hopkins » `[VU À L'IMAGE]` (episodes/S1E1, 21:35) |
 | S1E1 | Nancy Lodder | Office Girl | | [VÉRIFIÉ] [BCG-S1E1] |
 | S1E1 | Laura Pyper | Laura | | [VÉRIFIÉ] [BCG-S1E1] |
 | S1E1 | Pete Deagle | Office Worker | | [VÉRIFIÉ] [BCG-S1E1] |
 | S1E2 | Danny Wallace `[!]` | Paul (Cultural Advisor) | | [VÉRIFIÉ] [BCG-S1E2] [W-CHAR] |
-| S1E2 | Togo Igawa | Mr Yamamoto | Revient en S3E1 | [VÉRIFIÉ] [BCG-S1E2] |
+| S1E2 | Togo Igawa | Mr Yamamoto | Revient en S3E1 | [VÉRIFIÉ] [BCG-S1E2] ; VIS : libellé du générique, « Japanese Boss » `[VU À L'IMAGE]` (episodes/S1E2, tableau des crédits) |
 | S1E2 | Toby Longworth | Dr Julian Holmes | Animateur du séminaire sur le stress [PROBABLE] | [VÉRIFIÉ] [BCG-S1E2] |
 | S1E2 | Peter Serafinowicz `[!]` | Voice Over (voix) | | [VÉRIFIÉ] [BCG-S1E2] |
 | S1E2 | Rachel Bavidge, Pamela Lyne, Katie Males, Takatsuna Mukai, Sarah Paul, Richard Pettyfer, Wendy Wason | Stressed Woman, Old Lady, Shoe Shop Assistant, Translator, Nurse, Fireman, Woman In Lift | | [VÉRIFIÉ] [BCG-S1E2] |
-| S1E3 | Oliver Chris `[!]` | Daniel (Security Guard) | | [VÉRIFIÉ] [BCG-S1E3] |
+| S1E3 | Oliver Chris `[!]` | Daniel (Security Guard) | | [VÉRIFIÉ] [BCG-S1E3] ; VIS : libellé du générique, « Daniel Carey » `[VU À L'IMAGE]` (episodes/S1E3, 22:50) |
 | S1E3 | Alice Lowe `[!]` | Patricia | | [VÉRIFIÉ] [BCG-S1E3] |
-| S1E3 | Chris Tarrant `[!]` | Présentateur de *Who Wants To Be A Millionaire* (voix) | Dans son propre rôle | [VÉRIFIÉ] [BCG-S1E3] |
-| S1E3 | Graham Linehan `[!]` | Mariachi Singer | Caméo du créateur ; « restaurant musician » sur Wikipedia | [VÉRIFIÉ] [BCG-S1E3] [W-CHAR] |
+| S1E3 | Chris Tarrant `[!]` | Présentateur de *Who Wants To Be A Millionaire* (voix) | Dans son propre rôle | [VÉRIFIÉ] [BCG-S1E3] ; VIS : crédité « As Himself » `[VU À L'IMAGE]` (episodes/S1E3, 22:51) |
+| S1E3 | Graham Linehan `[!]` | Mariachi Singer | Caméo du créateur ; « restaurant musician » sur Wikipedia | [VÉRIFIÉ] [BCG-S1E3] [W-CHAR] ; VIS : NON CONFIRMÉ par le générique — aucun crédit « Mariachi Singer » ; le seul crédit lié est « Mariachi Guitar — Robert Popper » (episodes/S1E3, 22:54). Un mariachi moustachu est vu en gros plan (19:48–19:56), son identité n'est pas établie par l'image |
 | S1E3 | Hannah Bourne, Carsten Hayes, Bennet Thorpe | Rebecca, Waiter, Clown | | [VÉRIFIÉ] [BCG-S1E3] |
 | S1E4 | Noel Fielding `[!]` | Richmond Avenal | Première apparition | [VÉRIFIÉ] [BCG-S1E4] |
 | S1E4 | Cordelia Bugeja, Susannah Wise | Abi, Samantha | | [VÉRIFIÉ] [BCG-S1E4] |
@@ -647,7 +654,7 @@ Source de tous les crédits : fiches épisodes du British Comedy Guide. Le signe
 | S1E5 | David Garfield | Small Paul | | [VÉRIFIÉ] [BCG-S1E5] |
 | S1E5 | Jim Alexander, Nathan Harmer, Bennet Thorpe, Charlotte Weston, Jack Whitam, Thaila Zucchi | Rupert, Sombre Guy, Office Worker, Jessica, Awful Man, Sophia | | [VÉRIFIÉ] [BCG-S1E5] |
 | S1E6 | Frances Barber `[!]` | Doctor Mendall | | [VÉRIFIÉ] [BCG-S1E6] |
-| S1E6 | Peter Serafinowicz `[!]` | Voice Over (voix) | | [VÉRIFIÉ] [BCG-S1E6] |
+| S1E6 | Peter Serafinowicz `[!]` | Voice Over (voix) | | [VÉRIFIÉ] [BCG-S1E6] ; VIS : libellé du générique, « Voice of Newsreader » `[VU À L'IMAGE]` (episodes/S1E6, 24:35) ; graphie « Dr Mendall » pour Frances Barber (24:34) |
 
 ### Série 2 (2007)
 
@@ -658,21 +665,21 @@ Source de tous les crédits : fiches épisodes du British Comedy Guide. Le signe
 | S2E1 | Nicholas Burns `[!]` | Jerome (PR Man) | | [VÉRIFIÉ] [BCG-S2E1] |
 | S2E1 | Lydia Fox | Laura | Épouse de Richard Ayoade depuis 2007 | [VÉRIFIÉ] [BCG-S2E1] [W-AYOADE] |
 | S2E1 | Lorna Watson `[!]` | Milly | | [VÉRIFIÉ] [BCG-S2E1] |
-| S2E1 | Brett Allen, Adam G Goodwin, Guy Porritt, David Schaal, Adrian Schiller, Kim Wall | Donald, Barman, Policeman, Dec, Judge, Manager | | [VÉRIFIÉ] [BCG-S2E1] |
+| S2E1 | Brett Allen, Adam G Goodwin, Guy Porritt, David Schaal, Adrian Schiller, Kim Wall | Donald, Barman, Policeman, Dec, Judge, Manager | | [VÉRIFIÉ] [BCG-S2E1] ; VIS : lus au générique de S2E1, « Donald — Brett Allen », « Rampant Gay Man — Ash Atalla », « Jerome — Nicholas Burns » `[VU À L'IMAGE]` (episodes/S2E1, 24:22) ; les autres lignes n'ont pas été lues |
 | S2E2 | Silas Carson `[!]` | Derek Pippin | | [VÉRIFIÉ] [BCG-S2E2] |
 | S2E2 | Alex Macqueen `[!]` | Vicar | | [VÉRIFIÉ] [BCG-S2E2] |
 | S2E2 | Belinda Stewart-Wilson `[!]` | Barbara | | [VÉRIFIÉ] [BCG-S2E2] |
-| S2E2 | Charlotte Weston | Stephanie | Déjà « Jessica » en S1E5 | [VÉRIFIÉ] [BCG-S2E2] |
+| S2E2 | Charlotte Weston | Stephanie | Déjà « Jessica » en S1E5 | [VÉRIFIÉ] [BCG-S2E2] ; VIS : lus au générique de S2E2, Alex Macqueen, « Denholm — Chris Morris », « Barbara — Belinda Stewart-Wilson » `[VU À L'IMAGE]` (episodes/S2E2, 23:00) ; Stephanie est citée au téléphone dans S2E6 sans être vue (episodes/S2E6, 3:15, 5:50) |
 | S2E3 | Philip Rham | Johann | | [VÉRIFIÉ] [BCG-S2E3] |
-| S2E3 | James Bachman, Andrew Brooke, Richard Cambridge, Gerald Lepkowski | Jeff, Policeman, Bad Guy, Jorg | | [VÉRIFIÉ] [BCG-S2E3] |
+| S2E3 | James Bachman, Andrew Brooke, Richard Cambridge, Gerald Lepkowski | Jeff, Policeman, Bad Guy, Jorg | | [VÉRIFIÉ] [BCG-S2E3] ; VIS : crédits d'acteurs non lus au générique de S2E3 ; Jeff, dit « Dominator », est l'ami de Roy au téléphone (episodes/S2E3, 2:00–2:32) ; Jorg est le compagnon de Jen au coin fumeurs (8:41–9:10) |
 | S2E4 | Orlando Seale | Peter File | | [VÉRIFIÉ] [BCG-S2E4] |
 | S2E4 | Sarah Hadland `[!]` | Margaret | Voisine de table de Moss | [VÉRIFIÉ] [BCG-S2E4] [W-EP] |
 | S2E4 | Dolly Wells `[!]` | Paula | Revient en S4E1 dans un autre rôle | [VÉRIFIÉ] [BCG-S2E4] |
 | S2E4 | Catherine Shepherd `[!]` | Jessica | Partenaire de Richmond | [VÉRIFIÉ] [BCG-S2E4] [W-EP] |
-| S2E4 | Orla Hannon | Mother | Personnage non identifié ; rien n'indique qu'il s'agisse de la mère de Moss | [VÉRIFIÉ] [BCG-S2E4] pour le crédit ; identité [À VÉRIFIER] |
-| S2E5 | Kirsty Wark `[!]` | Self | Présentatrice de *Newsnight* | [VÉRIFIÉ] [BCG-S2E5] [W-EP] |
+| S2E4 | Orla Hannon | Mother | Personnage non identifié ; rien n'indique qu'il s'agisse de la mère de Moss | [VÉRIFIÉ] [BCG-S2E4] pour le crédit ; identité [À VÉRIFIER] ; VIS : aucune « mère » pendant la soirée ; une mère avec un enfant apparaît à l'aéroport (episodes/S2E4, 20:36), sans que le lien avec le crédit soit établi. Lus au générique : « Peter File — Orlando Seale », « Jessica — Catherine Shepherd », « Paula — Dolly… » (21:06) |
+| S2E5 | Kirsty Wark `[!]` | Self | Présentatrice de *Newsnight* | [VÉRIFIÉ] [BCG-S2E5] [W-EP] ; VIS : non vérifié — une présentatrice est vue (episodes/S2E5, 14:10), aucun nom lu à l'image |
 | S2E5 | Amelia Bullmore `[!]` | Helen Buley | Dirigeante de BHDR Industries selon Fandom | [VÉRIFIÉ] [BCG-S2E5] [FANDOM-SAM] |
-| S2E5 | Richard Attlee (crédité « Richard Atlee ») | Stephen Premel | Graphie « Steven Primel » sur Fandom | [VÉRIFIÉ] [BCG-S2E5] [FANDOM-SAM] |
+| S2E5 | Richard Attlee (crédité « Richard Atlee ») | Stephen Premel | Graphie « Steven Primel » sur Fandom | [VÉRIFIÉ] [BCG-S2E5] [FANDOM-SAM] ; VIS : le nom « Steven Premel » est appelé dans la salle d'attente `[SOUS-TITRES AUTO]` (episodes/S2E5, 13:39) ; graphie non établie par les sous-titres |
 | S2E5 | Cordelia Bugeja, Gemma Cousins, Adam Farr, Peter Sullivan | Abi, BBC Woman, Peter, John | | [VÉRIFIÉ] [BCG-S2E5] |
 | S2E5 | Investisseurs de *Dragons' Den* | Self | Non crédités par BCG | [À VÉRIFIER] |
 | S2E5 | The Ordinary Boys | – | Groupe écouté par Douglas, concert en fin d'épisode | [VÉRIFIÉ] [W-EP] [FANDOM-SAM] ; non crédités par BCG |
@@ -685,21 +692,21 @@ Source de tous les crédits : fiches épisodes du British Comedy Guide. Le signe
 | S3E1 | Chris Morris `[!]` | Denholm Reynholm | Caméo de retour | [VÉRIFIÉ] [BCG-S3E1] [DOG-S3E1] |
 | S3E1 | Tom Binns `[!]` | Nolan (Accountant) | | [VÉRIFIÉ] [BCG-S3E1] |
 | S3E1 | Jonathan Ryland | Gary (Builder) | | [VÉRIFIÉ] [BCG-S3E1] |
-| S3E1 | Togo Igawa | Mr Yamamoto | | [VÉRIFIÉ] [BCG-S3E1] |
-| S3E1 | Interprète d'Adolf Hitler | – | Non crédité par BCG | [À VÉRIFIER] |
+| S3E1 | Togo Igawa | Mr Yamamoto | | [VÉRIFIÉ] [BCG-S3E1] ; VIS : Binns (« Nolan »), Igawa (« Mr Yamamoto ») et Ryland (« Gary ») lus au générique de fin `[VU À L'IMAGE]` (episodes/S3E1, 22:34) ; la description YouTube écrit « Builder » |
+| S3E1 | Interprète d'Adolf Hitler | – | Non crédité par BCG | [À VÉRIFIER] ; VIS : la silhouette est vue (moustache, uniforme brun, brassard rouge, episodes/S3E1, 20:29) ; aucun crédit correspondant lu au générique |
 | S3E2 | Paul Bazely | Michael (Magician Boyfriend) | | [VÉRIFIÉ] [BCG-S3E2] |
 | S3E2 | Cavan Clerkin | Dan (Footy Geezer) | | [VÉRIFIÉ] [BCG-S3E2] |
-| S3E2 | John Hopkins, Jon Foster, Derek Ezenagu | Postman Harry, Barry, Luke | | [VÉRIFIÉ] [BCG-S3E2] |
+| S3E2 | John Hopkins, Jon Foster, Derek Ezenagu | Postman Harry, Barry, Luke | | [VÉRIFIÉ] [BCG-S3E2] ; VIS : au générique de S3E2, seuls Paul Bazely (« Michael ») et Cavan Clerkin (« Dan ») ont été lus `[VU À L'IMAGE]` (episodes/S3E2, 21:12) ; ces trois-ci figurent dans la description YouTube (« John Willie Hopkins – Harry the Postman ») |
 | S3E3 | Lucy Robinson `[!]` | June (Interviewer) | | [VÉRIFIÉ] [BCG-S3E3] |
 | S3E3 | Tom Meeten `[!]` | Tramp | | [VÉRIFIÉ] [BCG-S3E3] |
 | S3E3 | Lewis MacLeod | Narrator (voix) | Voix aussi en S3E5 et S3E6 | [VÉRIFIÉ] [BCG-S3E3] |
-| S3E3 | Janet Whiteside, Adam De Ville, Laura Patch, Darren Strange | Olive (Cleaner), Greg, Tour Guide, Lawyer | | [VÉRIFIÉ] [BCG-S3E3] |
+| S3E3 | Janet Whiteside, Adam De Ville, Laura Patch, Darren Strange | Olive (Cleaner), Greg, Tour Guide, Lawyer | | [VÉRIFIÉ] [BCG-S3E3] ; VIS : lus au générique de S3E3, Tom Meeten (« Tramp »), Laura Patch (« Tour Guide »), Darren Strange (« Lawyer »), Adam de Ville `[VU À L'IMAGE]` (episodes/S3E3, 21:21) ; Binns, Robinson et Whiteside sont dans la description YouTube ; crédit de Lewis MacLeod non lu |
 | S3E4 | Lucy Montgomery `[!]` | April (Douglas' Girlfriend) | | [VÉRIFIÉ] [BCG-S3E4] |
 | S3E4 | Graham Linehan `[!]` | Man in a panic | Caméo ; « panicked businessman » sur Wikipedia | [VÉRIFIÉ] [BCG-S3E4] [W-CHAR] |
 | S3E5 | Claudia Harrison | Delina (Jen's Ex-School Friend) | | [VÉRIFIÉ] [BCG-S3E5] |
 | S3E5 | Suzie Toase | Alison (Joker Face) | | [VÉRIFIÉ] [BCG-S3E5] |
-| S3E5 | James Tovell, Lewis MacLeod | Terry (Delina's Partner), Advert Voiceover (voix) | | [VÉRIFIÉ] [BCG-S3E5] |
-| S3E6 | Alexandra Weaver, Ty Glaser, Ben Moor, Hazel Douglas, Hywel John, Jacob Edwards, Lewis MacLeod | Kimberly, Nadine, Paul, Joan, Dave, Niall, Advert Voiceover (voix) | Ben Moor revient dans le spécial | [VÉRIFIÉ] [BCG-S3E6] |
+| S3E5 | James Tovell, Lewis MacLeod | Terry (Delina's Partner), Advert Voiceover (voix) | | [VÉRIFIÉ] [BCG-S3E5] ; VIS : lus au générique de S3E5, « Delina — Claudia Harrison » et « Alison — Suzie… » (coupé) `[VU À L'IMAGE]` (episodes/S3E5, 22:03) ; Tovell et MacLeod non lus |
+| S3E6 | Alexandra Weaver, Ty Glaser, Ben Moor, Hazel Douglas, Hywel John, Jacob Edwards, Lewis MacLeod | Kimberly, Nadine, Paul, Joan, Dave, Niall, Advert Voiceover (voix) | Ben Moor revient dans le spécial | [VÉRIFIÉ] [BCG-S3E6] ; VIS : lus au générique de S3E6, Weaver (« Kimberly »), Edwards (« Niall ») et MacLeod, libellé « Charity Voice » `[VU À L'IMAGE]` (episodes/S3E6, 45:36–45:39) ; Glaser, Moor, Douglas et John non lus (ils figurent, par erreur de la chaîne, dans la description de la vidéo de S3E5, avec la graphie « Ben Moore ») |
 
 ### Série 4 (2010)
 
@@ -707,28 +714,28 @@ Source de tous les crédits : fiches épisodes du British Comedy Guide. Le signe
 |---|---|---|---|---|
 | S4E1 | Dolly Wells `[!]` | Miranda (Feminist) | Déjà « Paula » en S2E4 | [VÉRIFIÉ] [BCG-S4E1] |
 | S4E1 | Ed Weeks `[!]` | John 2 (Businessman) | | [VÉRIFIÉ] [BCG-S4E1] |
-| S4E1 | Charlie Baker, Simon Snashall | Phil, John 1 (Businessmen) | | [VÉRIFIÉ] [BCG-S4E1] |
-| S4E2 | Benedict Wong `[!]` | Prime | Invite Moss au club « 8+ » | [VÉRIFIÉ] [BCG-S4E2] [W-EP] |
+| S4E1 | Charlie Baker, Simon Snashall | Phil, John 1 (Businessmen) | | [VÉRIFIÉ] [BCG-S4E1] ; VIS : les quatre invités de S4E1 (Wells « Miranda », Baker « Phil », Snashall « John 1 », Weeks « John 2 ») sont lus au générique de fin `[VU À L'IMAGE]` (episodes/S4E1, 24:10) |
+| S4E2 | Benedict Wong `[!]` | Prime | Invite Moss au club « 8+ » | [VÉRIFIÉ] [BCG-S4E2] [W-EP] ; VIS : ligne non lue au générique (hors échantillon), [À VÉRIFIER] à l'image |
 | S4E2 | Gemma Chan `[!]` | Ivana (Club Member) | Revient en S4E6 | [VÉRIFIÉ] [BCG-S4E2] |
 | S4E2 | Brian Limond, dit « Limmy » `[!]` | Barry (Window Cleaner) | | [VÉRIFIÉ] [BCG-S4E2] [W-EP] |
 | S4E2 | David Crow | Negative One | Défie Moss au « Street Countdown » | [VÉRIFIÉ] [BCG-S4E2] [W-EP] |
-| S4E2 | Rachel Riley `[!]`, Jeff Stelling `[!]`, Gyles Brandreth `[!]` | Self | Plateau de *Countdown* | [VÉRIFIÉ] [BCG-S4E2] |
-| S4E2 | Gresby Nash, Mark Chatterton, Karin Perathoner, Adam Stevens | Alistair, Jeremy, Club Receptionist, Hoist Window Cleaner | | [VÉRIFIÉ] [BCG-S4E2] |
+| S4E2 | Rachel Riley `[!]`, Jeff Stelling `[!]`, Gyles Brandreth `[!]` | Self | Plateau de *Countdown* | [VÉRIFIÉ] [BCG-S4E2] ; VIS : présentateur, assistante et arbitre vus (episodes/S4E2, 1:52, 1:10, 21:16) ; leurs noms n'ont pas été lus à l'image |
+| S4E2 | Gresby Nash, Mark Chatterton, Karin Perathoner, Adam Stevens | Alistair, Jeremy, Club Receptionist, Hoist Window Cleaner | | [VÉRIFIÉ] [BCG-S4E2] ; VIS : lus au générique de S4E2, Chan (« Ivana »), Chatterton (« Jeremy »), Crow (« Negative One »), Limond (« Barry the Window Cleaner »), Nash (« Alistair ») `[VU À L'IMAGE]` (episodes/S4E2, 23:24) ; Perathoner et Stevens non lus |
 | S4E3 | Ralph Ineson `[!]` | Paul the Masseuse | | [VÉRIFIÉ] [BCG-S4E3] |
 | S4E3 | Guy Henry `[!]` | Lawyer | | [VÉRIFIÉ] [BCG-S4E3] |
 | S4E3 | Kevin Cecil | Norman | | [VÉRIFIÉ] [BCG-S4E3] |
 | S4E3 | Anthony Bishop, Tim Elsenburg, Alistair Hamer | Sweet Billy Pilgrim | Groupe réel, dans son propre rôle | [VÉRIFIÉ] [BCG-S4E3] [W-EP] |
-| S4E3 | Graham Linehan `[!]` | Beth Gaga Shaggy | Affirmé par Wikipedia, Fandom et TV Tropes ; non crédité par BCG | [VÉRIFIÉ] [W-CHAR] (RC : trois sources secondaires concordantes ; générique [À VÉRIFIER]) |
+| S4E3 | Graham Linehan `[!]` | Beth Gaga Shaggy | Affirmé par Wikipedia, Fandom et TV Tropes ; non crédité par BCG | [VÉRIFIÉ] [W-CHAR] (RC : trois sources secondaires concordantes ; générique [À VÉRIFIER]) ; VIS : le fondateur est vu (perruque blond-roux, barbe, lunettes teintées, episodes/S4E3, 0:54–1:40), l'interprète n'est pas identifiable à l'image et aucun crédit correspondant n'est dans la partie du générique lue : toujours [À VÉRIFIER]. Ineson, Henry, Cecil et les trois membres de Sweet Billy Pilgrim sont lus au générique (22:48–22:50) |
 | S4E4 | Nathalie Cox `[!]` | Julia | | [VÉRIFIÉ] [BCG-S4E4] |
-| S4E4 | Hermione Gulliford, Martino Lazzeri | Linda, Bernatelli | | [VÉRIFIÉ] [BCG-S4E4] |
+| S4E4 | Hermione Gulliford, Martino Lazzeri | Linda, Bernatelli | | [VÉRIFIÉ] [BCG-S4E4] ; VIS : lus au générique de fin `[VU À L'IMAGE]` (episodes/S4E4, 23:48) ; ligne de Nathalie Cox non lue |
 | S4E5 | Kevin Eldon `[!]` | French Tech Support | Personnage inspiré d'un technicien français réel rencontré par Linehan | [VÉRIFIÉ] [BCG-S4E5] [W-CHAR] |
-| S4E5 | Margaret Cabourn-Smith, Sophie Colquhoun, Marcus Garvey, Chris Hayward, Liam Hourican, Adam Leese, Marc Small | Social Worker, Nikki, Bomb Disposal, Ben Genderson, Security Guard, Barry, Policeman | | [VÉRIFIÉ] [BCG-S4E5] |
+| S4E5 | Margaret Cabourn-Smith, Sophie Colquhoun, Marcus Garvey, Chris Hayward, Liam Hourican, Adam Leese, Marc Small | Social Worker, Nikki, Bomb Disposal, Ben Genderson, Security Guard, Barry, Policeman | | [VÉRIFIÉ] [BCG-S4E5] ; VIS : lus au générique de S4E5, Eldon (« French Tech Support »), Hayward, Hourican (« Security Guard »), Garvey (« Bomb Disposal »), Leese, Small (« Policeman ») `[VU À L'IMAGE]` (episodes/S4E5, 21:29) ; Cabourn-Smith et Colquhoun non lues |
 | S4E6 | Belinda Stewart-Wilson `[!]` | Victoria Reynholm | | [VÉRIFIÉ] [BCG-S4E6] |
 | S4E6 | Noel Fielding `[!]` | Richmond Avenal | Retour unique en S4 | [VÉRIFIÉ] [BCG-S4E6] |
 | S4E6 | Gemma Chan `[!]` | Female Sulu | | [VÉRIFIÉ] [BCG-S4E6] |
 | S4E6 | Susy Kane (créditée « Suzy Kane ») | Female Bones | | [VÉRIFIÉ] [BCG-S4E6] |
 | S4E6 | Alexandra Roach `[!]` | Stenographer | | [VÉRIFIÉ] [BCG-S4E6] |
-| S4E6 | Simon Kunz `[!]`, Joanna Bobin, Nicholas Sidi | Judge, Journalist, Lawyer | | [VÉRIFIÉ] [BCG-S4E6] |
+| S4E6 | Simon Kunz `[!]`, Joanna Bobin, Nicholas Sidi | Judge, Journalist, Lawyer | | [VÉRIFIÉ] [BCG-S4E6] ; VIS : lus au générique de S4E6, Kunz (« Judge »), Roach (« Stenographer »), Sidi (« Lawyer », lu « Nick Sidi »), Stewart-Wilson (« Victoria ») `[VU À L'IMAGE]` (episodes/S4E6, 23:46) ; Fielding, Bobin, Chan et Kane non lus ; crédit supplémentaire « Goth to Boss Animation — Cyriak Harris » (23:50) |
 
 ### Spécial (2013) — « The Internet Is Coming »
 
@@ -740,15 +747,15 @@ Source de tous les crédits : fiches épisodes du British Comedy Guide. Le signe
 | Matt King `[!]` | Raymond Peterfellow | | [VÉRIFIÉ] [BCG-SP] |
 | Ben Moor | Newton | Déjà « Paul » en S3E6 | [VÉRIFIÉ] [BCG-SP] |
 | Sanjeev Kohli `[!]` | Booth | | [VÉRIFIÉ] [BCG-SP] |
-| Jon Snow `[!]` | Self | Présentateur de Channel 4 News [PROBABLE] | [VÉRIFIÉ] [BCG-SP] |
+| Jon Snow `[!]` | Self | Présentateur de Channel 4 News [PROBABLE] | [VÉRIFIÉ] [BCG-SP] ; VIS : un présentateur de journal « 4 News » est vu `[VU À L'IMAGE]` (episodes/SP, 29:50–29:56) ; son nom n'a pas été lu au générique |
 | Graham Linehan `[!]` | Voice-Over Director (voix) | | [VÉRIFIÉ] [BCG-SP] |
-| Simone McAullay, Ashley McGuire, Daniel Lawrence Taylor, Giacomo Mancini, Alhaji Fofana, Theo Gregory, Margaret Cabourn-Smith, James Doherty | Shop Assistant, Homeless Lady, Ben, Moses, Mayhem, Anonymous, Anonymous's Mum, Anonymous's Dad | | [VÉRIFIÉ] [BCG-SP] |
+| Simone McAullay, Ashley McGuire, Daniel Lawrence Taylor, Giacomo Mancini, Alhaji Fofana, Theo Gregory, Margaret Cabourn-Smith, James Doherty | Shop Assistant, Homeless Lady, Ben, Moses, Mayhem, Anonymous, Anonymous's Mum, Anonymous's Dad | | [VÉRIFIÉ] [BCG-SP] ; VIS : lus au générique du spécial `[VU À L'IMAGE]` (episodes/SP, 47:18–47:27) — « with Noel Fielding as Richmond », Parris, Solimeno, Morinan, King, Moor, Daniel Lawrence Taylor, Mancini, Fofana, Gregory, Cabourn-Smith (libellé « Anonymous' Mum ») ; non lus : Kohli, McGuire, McAullay, Doherty, Jon Snow, Linehan |
 
 ### Synthèse des caméos de Graham Linehan
 
 | Épisode | Rôle | Preuve |
 |---|---|---|
-| S1E3 | Mariachi Singer / musicien de restaurant | [VÉRIFIÉ] [BCG-S1E3] [W-CHAR] |
+| S1E3 | Mariachi Singer / musicien de restaurant | [VÉRIFIÉ] [BCG-S1E3] [W-CHAR] ; VIS : non confirmé par le générique (seul crédit lié : « Mariachi Guitar — Robert Popper », episodes/S1E3, 22:54) ; identité du mariachi vu à l'image non établie |
 | S2E6 | Blind Irish Sorcerer | [VÉRIFIÉ] [BCG-S2E6] [W-CHAR] |
 | S3E4 | Man in a panic | [VÉRIFIÉ] [BCG-S3E4] [W-CHAR] |
 | S4E3 | Beth Gaga Shaggy | [VÉRIFIÉ] [W-CHAR] ; RC : recoupé par Fandom et TV Tropes ; non crédité par BCG, générique [À VÉRIFIER] |
@@ -983,7 +990,7 @@ Après la série :
 
 ### 6.1 Départ de Chris Morris
 
-- Morris est au générique principal de la série 1. [VÉRIFIÉ] [W-CHAR] [BCG]
+- Morris est au générique principal de la série 1. [VÉRIFIÉ] [W-CHAR] [BCG] VIS : NUANCÉ — le générique d'ouverture animé de la saison 1 ne crédite que Chris O'Dowd, Richard Ayoade et Katherine Parkinson ; Morris n'y a ni personnage ni crédit `[VU À L'IMAGE]` (fiche 10, sections 2 et 5). Il est crédité aux génériques de fin (« Denholm — Chris Morris »).
 - Il n'apparaît que dans un épisode de la série 2 (S2E2), où Denholm meurt. [VÉRIFIÉ] [BCG-ABOUT] [W-MORRIS]
 - Il revient pour une scène dans S3E1. [VÉRIFIÉ] [W-MORRIS] [BCG-S3E1]
 - Motif selon BCG : Morris « decided to leave the project after the first series ». [VÉRIFIÉ] [BCG-ABOUT]
@@ -995,7 +1002,7 @@ Après la série :
 
 - Douglas est introduit dans S2E2, aux funérailles de Denholm. [VÉRIFIÉ] [W-CHAR] [W-EP]
 - Berry « remplace » Morris dans la fonction de patron. [VÉRIFIÉ] [BCG-ABOUT]
-- Récurrent en série 2, principal à partir de la série 3. [VÉRIFIÉ] [W-CHAR]
+- Récurrent en série 2, principal à partir de la série 3. [VÉRIFIÉ] [W-CHAR] VIS : NUANCÉ — le crédit « Matt Berry » et le personnage de Douglas n'entrent dans le générique d'ouverture que pour le spécial 2013 `[VU À L'IMAGE]` (fiche 10, section 5).
 - Berry affirme que le rôle a été écrit pour lui. [VÉRIFIÉ] [W-CHAR] RC : la fiche 08 (section 8) relève une déclaration de sens contraire de Berry dans un entretien British Comedy Guide (« I've no idea » sur la raison de son casting) ; point non tranché, à présenter comme une déclaration rapportée.
 - Berry avait déjà travaillé avec Ayoade sur *Garth Marenghi's Darkplace*. [VÉRIFIÉ] [BCG-ABOUT]
 
@@ -1020,18 +1027,18 @@ Après la série :
 | Id | Sujet | Source A | Source B | Statut |
 |---|---|---|---|---|
 | C1 | Motif du départ de Chris Morris | BCG : il a « décidé de quitter » le projet | Fandom : indisponibilité due à d'autres projets | Non tranché |
-| C2 | Denholm dans S1E3 | BCG le crédite | Fandom ne le liste pas | Non tranché ; BCG applique peut-être un générique de série |
-| C3 | Douglas dans S2E1 et S2E4 | BCG le crédite dans les 6 épisodes de S2 | Wikipedia : introduit en S2E2 ; 16 épisodes au total | Probable erreur de BCG |
+| C2 | Denholm dans S1E3 | BCG le crédite | Fandom ne le liste pas | VIS : TRANCHÉ contre BCG — Chris Morris absent du générique de fin de S1E3 et Denholm absent de l'image `[VU À L'IMAGE]` (episodes/S1E3, 22:48–23:14) |
+| C3 | Douglas dans S2E1 et S2E4 | BCG le crédite dans les 6 épisodes de S2 | Wikipedia : introduit en S2E2 ; 16 épisodes au total | Probable erreur de BCG ; VIS : Douglas absent de toutes les images regardées de S2E1 et S2E4 ; crédits de fin lus en partie, donc non tranché sur le crédit |
 | C4 | Statut de Richmond en S2 et S3 | Page de la série (Wikipedia) : récurrent S1-S2, invité S4 | Liste des personnages (Wikipedia), telle qu'extraite : récurrent S1, invité S3 et S4 | BCG confirme la version A ; l'extraction de B est peut-être fautive |
 | C5 | Prix 2009 de Katherine Parkinson | Wikipedia (British Comedy Awards) et page de la série : Best TV Comedy Actress 2009 | Page Wikipedia de Parkinson, telle qu'extraite : « Best Female Comedy Newcomer » en 2009 | Version A retenue ; Ramona Marquez est la lauréate « newcomer » 2009 selon [W-BCA] |
 | C6 | Épisode du canular de la boîte « Internet » | Liste des épisodes (Wikipedia) : S3E4 « The Speech » | Liste des personnages (Wikipedia), telle qu'extraite : « Friendface » | Version A retenue (confirmée par [FANDOM-JEN]) |
-| C7 | Réalisation | Wikipedia : Linehan réalise tout | BCG : crédite aussi Ben Fuller (S1), Barbara Wiltshire (S2), Richard Boden (S3-S4) | Non tranché ; probable distinction réalisateur plateau / réalisateur principal |
+| C7 | Réalisation | Wikipedia : Linehan réalise tout | BCG : crédite aussi Ben Fuller (S1), Barbara Wiltshire (S2), Richard Boden (S3-S4) | VIS : TRANCHÉ pour les saisons 1, 3, 4 et le spécial — « Director — Graham Linehan » ; Fuller et Boden « Studio Director » (Boden aussi « Series Producer », puis « Producer ») `[VU À L'IMAGE]` ; saison 2 (Wiltshire) non lue, [À VÉRIFIER] |
 | C8 | Nombre d'épisodes | BCG : « 25 épisodes sur 4 séries » plus un spécial | Wikipedia : 24 + 1 spécial = 25 | Version Wikipedia retenue (listes d'épisodes) |
 | C9 | Montant réclamé par Victoria | Wikipedia : 212 millions de livres | Fandom : « plus de 200 » ou 220 millions | Wikipedia retenue |
-| C10 | Graphies | « Johann » (BCG) / « Johan » (Wikipedia) ; « Philip » (BCG) / « Phillip » (Wikipedia) ; « Pippin » (BCG) / « Pippen » (Fandom) ; « Stephen Premel » (BCG) / « Steven Primel » (Fandom) ; « Fifty-Fifty » (Wikipedia) / « 50/50 » (BCG) ; « Reynholm vs Reynholm » (BCG) / « Reynholm v Reynholm » (Fandom) | – | Graphie BCG utilisée pour les crédits |
+| C10 | Graphies | « Johann » (BCG) / « Johan » (Wikipedia) ; « Philip » (BCG) / « Phillip » (Wikipedia) ; « Pippin » (BCG) / « Pippen » (Fandom) ; « Stephen Premel » (BCG) / « Steven Primel » (Fandom) ; « Fifty-Fifty » (Wikipedia) / « 50/50 » (BCG) ; « Reynholm vs Reynholm » (BCG) / « Reynholm v Reynholm » (Fandom) | – | Graphie BCG utilisée pour les crédits ; VIS : titres lus à l'écran, « Fifty-Fifty » (episodes/S1E3, 0:32) et « Reynholm vs Reynholm » (episodes/S4E6, 0:34) `[VU À L'IMAGE]` ; les graphies de noms de personnages n'ont pas été lues, sauf « Dr Mendall », « Daniel Carey », « Delina », « Alison », « Alistair » aux génériques |
 | C11 | Titre de S2E6 | « Men Without Women » | BCG précise : annoncé par Channel 4 sous le titre « The Joy Of Sex » | Les deux coexistent |
-| C12 | Olive (S3E3) | BCG : « Cleaner » | Fandom : « tea lady » | Non tranché |
-| C13 | Indemnités après S2E6 | Fandom : 560 £ chacun | Fandom, autre passage : 500 ou 550 £ | Source interne incohérente |
+| C12 | Olive (S3E3) | BCG : « Cleaner » | Fandom : « tea lady » | Non tranché ; VIS : à l'image, elle pousse un chariot de thé (episodes/S3E3, 4:31–4:56) ; crédit non lu |
+| C13 | Indemnités après S2E6 | Fandom : 560 £ chacun | Fandom, autre passage : 500 ou 550 £ | Source interne incohérente ; VIS : TRANCHÉ — 500 £ pour Jen, 550 pour Roy, 560 pour Moss `[SOUS-TITRES AUTO]` (episodes/S3E3, 2:04, 3:21) |
 | C14 | Belinda Stewart-Wilson dans S2E1 | BCG la crédite « Barbara » | Aucune autre source ; incohérent avec l'intrigue | Probable erreur de BCG |
 
 ## 8. Lacunes
@@ -1050,7 +1057,8 @@ Après la série :
 - Le sondage Channel 4 de juin 2010 n'est attesté que par Fandom. [À VÉRIFIER]
 - Les voix françaises des six rôles principaux sont attestées par Wikipedia FR. [VÉRIFIÉ] [W-FR] RC : cinq d'entre elles (Roy, Moss, Jen, Douglas, Denholm) sont recoupées par la base laVF.fr en fiche 01 (section 11.6) ; celle de Richmond (Roland Timsit) reste à source unique.
 - La page Wikipedia de Noel Fielding, telle qu'extraite, contient des détails biographiques familiaux non recoupés ; ils ont été écartés de la fiche. [À VÉRIFIER]
-- Inventaire des t-shirts de Roy : source unique Fandom, non recoupée visuellement. [À VÉRIFIER]
+- Inventaire des t-shirts de Roy : source unique Fandom, non recoupée visuellement. VIS : lacune comblée pour 24 épisodes — la table de la section 2.1 repose désormais sur l'image ; restent [À VÉRIFIER] les textes illisibles à la définition regardée et tout S3E4.
+- VIS — limites du contrôle par visionnage : génériques de fin des saisons 2 à 4 lus en partie ; S3E4 non visionné ; son non écouté (voix, accents) ; attribution d'une réplique à un personnage fondée sur le croisement image et sous-titres automatiques.
 
 ## 9. Sources
 

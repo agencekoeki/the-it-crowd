@@ -1,3 +1,38 @@
+# Captures de contrôle de la page et des SVG : utiles en local, inutiles au dépôt.
 _previews/
+
+# Tout ce qui sort de la série reste hors du dépôt (voir LICENSE-NOTES.md).
+media-local/
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.webm
+*.m4v
+*.mp3
+*.m4a
+*.wav
+*.flac
+*.srt
+*.vtt
+*.ass
+
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+.venv/
+venv/
+
+# Outils de test éventuels
+node_modules/
+test-results/
+playwright-report/
+
+# Systèmes et éditeurs
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
