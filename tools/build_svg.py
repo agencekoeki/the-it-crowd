@@ -855,7 +855,7 @@ def badge(label, values, T=8):
 BADGES = {
     "badge-fan-made": ("PROJET DE FANS", [("NON OFFICIEL", RED, PAPER)]),
     "badge-fiches": ("FICHES", [("10", CYAN, INK), ("717 KO", CYAN, INK), ("DE TEXTE", CYAN, INK)]),
-    "badge-episodes-vus": ("ÉPISODES VISIONNÉS", [("0 / 25", YEL, INK), ("ON Y TRAVAILLE", YEL, INK)]),
+    "badge-episodes-vus": ("ÉPISODES VISIONNÉS", [("24 / 25", YEL, INK), ("IL EN MANQUE UN", YEL, INK)]),
     "badge-power": ("ALIMENTATION", [("ON", GRN, INK), ("OFF", RED, PAPER), ("ON AGAIN", GRN, INK)]),
     "badge-preuve": ("ÉTIQUETTE", [("[VÉRIFIÉ]", GRN, INK), ("[PROBABLE]", YEL, INK), ("[À VÉRIFIER]", ORG, INK),
                                     ("[ANALYSE]", VIO, INK), ("[VU À L'IMAGE]", CYAN, INK)]),

@@ -38,7 +38,9 @@ Le point d'entrée est [`kb/README.md`](kb/README.md) : conventions, table de r�
 | [09 Réception, mèmes, héritage](kb/09-reception-memes-heritage.md) | Critiques, prix, mèmes, postérité, controverses | 63 Ko |
 | [10 Générique image par image](kb/10-generique.md) | Découpage minuté, la chute, les deux versions, grammaire d'animation | 12 Ko |
 
-Une précision qu'il vaut mieux lire maintenant que plus tard : aucun épisode n'a été visionné pour écrire les fiches 01 à 09. Tout vient de sources écrites. `[VÉRIFIÉ]` veut dire « lu dans la source citée », pas « vu à l'écran ». La fiche 10, sur le générique, est la seule fondée sur un visionnage : elle porte l'étiquette `[VU À L'IMAGE]`.
+**Épisode par épisode.** 24 épisodes sur 25 regardés et découpés scène par scène (lieu, personnages, qui parle à qui, gags, décor, costumes) : [kb/episodes/](kb/episodes/README.md), 790 Ko. Le vingt-cinquième, *The Speech*, n'est pas en entier sur la chaîne officielle. Ce que le visionnage corrige dans les fiches 01 à 09 est regroupé dans [un fichier à part](kb/episodes/_CORRECTIONS-ISSUES-DU-VISIONNAGE.md) ; ces fiches ne sont pas encore mises à jour.
+
+Une précision qu'il vaut mieux lire maintenant que plus tard : les fiches 01 à 09 ont été écrites sans visionnage, à partir de sources écrites. `[VÉRIFIÉ]` veut dire « lu dans la source citée », pas « vu à l'écran ». La fiche 10, sur le générique, est la seule fondée sur un visionnage : elle porte l'étiquette `[VU À L'IMAGE]`.
 
 <p align="center">
   <img src="assets/crew.svg" width="100%" alt="Cinq personnages en pixels dans un couloir de sous-sol : un technicien, un génie à lunettes et une cheffe enjambent un trou, le patron y tombe, un gothique observe derrière une porte rouge.">

@@ -226,3 +226,11 @@ Relues le 2026-10-10.
 - [The IT Crowd, saison 3 — AlloCiné](https://www.allocine.fr/series/ficheserie-3202/saison-8260/)
 - [The IT Crowd, saison 4 — AlloCiné](https://www.allocine.fr/series/ficheserie-3202/saison-17469/)
 - [The IT Crowd, saisons 1 à 5 — JustWatch France](https://www.justwatch.com/fr/serie/the-it-crowd)
+
+## Découpages scène par scène (dossier `episodes/`)
+
+- 24 épisodes sur 25 ont été regardés sur la chaîne YouTube officielle et découpés scène par scène : voir `episodes/README.md`.
+- S3E4 « The Speech » n'est pas disponible en entier sur la chaîne officielle : non traité.
+- Méthode et limites : `_methode/visionnage.md`. Visionnage par échantillonnage d'images et sous-titres automatiques ; le son n'a pas été écouté.
+- **Les fiches 01 à 09 n'ont pas encore été corrigées d'après ce visionnage.** En cas de désaccord, `episodes/_CORRECTIONS-ISSUES-DU-VISIONNAGE.md` et les fiches d'épisodes font foi, car elles sont les seules à porter `[VU À L'IMAGE]`.
+- Étiquette supplémentaire propre à ces fiches : `[SOUS-TITRES AUTO]` = lu dans les sous-titres automatiques de YouTube, non contrôlé à l'oreille.
