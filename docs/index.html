@@ -828,8 +828,9 @@ function onScroll() {
   $("#cdoor").classList.toggle("open", p > 0.35 && p < 0.9);
   // numéro d'urgence
   const tr = big.parentElement.getBoundingClientRect();
-  const q = Math.min(1, Math.max(0, (vh - tr.top) / (vh * 0.9 + tr.height)));
-  big.style.transform = `translateX(${(tr.width * 0.5 - q * (big.scrollWidth - tr.width * 0.35)).toFixed(1)}px)`;
+  // le numéro défile tant que le bandeau est à l'écran : chiffres visibles dès son entrée, le « 3 » final quand il sort par le haut
+  const q = Math.min(1, Math.max(0, (vh * 0.92 - tr.top) / (vh * 0.92 + tr.height * 0.5)));
+  big.style.transform = `translateX(${(tr.width * 0.06 - q * (big.scrollWidth - tr.width * 0.8)).toFixed(1)}px)`;
   // feu
   const fr = $("#firecard").getBoundingClientRect();
   fireLevel = Math.min(1, Math.max(0, (vh - fr.top) / (vh * 0.9)));
