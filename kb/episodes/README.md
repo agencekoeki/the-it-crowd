@@ -41,3 +41,5 @@ Les dialogues ne sont pas retranscrits : l'action est racontée, avec au plus un
 S3E4 « The Speech » : la chaîne officielle ne propose que deux extraits ; l'épisode entier n'y figure pas. Voir `S3E4-the-speech-NON-TRAITE.md`.
 
 Les corrections que le visionnage apporte aux fiches 01 à 09 sont regroupées dans [`_CORRECTIONS-ISSUES-DU-VISIONNAGE.md`](_CORRECTIONS-ISSUES-DU-VISIONNAGE.md). Elles ont été reportées dans les fiches 01 à 09, dans `../00-CONTRADICTIONS-ET-LACUNES.md` et dans `../README.md` le 2026-10-11, sous la marque `VIS` (définie dans `../README.md`, section 2) ; l'en-tête du fichier de corrections dit ce qui n'a pas été reporté. Les fiches d'épisodes elles-mêmes n'ont pas été modifiées par ce report : leur dernière section, « Ce que le visionnage confirme ou corrige », cite donc l'état des fiches 03 et 04 avant correction.
+
+Les génériques de fin de la saison 2, lus à l'image le 2026-10-11, sont relevés dans `_GENERIQUES-DE-FIN-S2.md`.

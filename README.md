@@ -27,13 +27,13 @@ Aucune image de la série : du texte, des liens, et du pixel art fait maison.
 
 ## Sommaire de l'encyclopédie
 
-Le point d'entrée est [`kb/README.md`](kb/README.md) : conventions, table de référence des <!--n:eps-->25<!--/n--> épisodes, mode d'emploi pour une IA qui ingère la base. En tout, <!--n:kb_fichiers-->40<!--/n--> fichiers Markdown et <!--n:kb_poids-->1,8 Mo<!--/n--> de texte.
+Le point d'entrée est [`kb/README.md`](kb/README.md) : conventions, table de référence des <!--n:eps-->25<!--/n--> épisodes, mode d'emploi pour une IA qui ingère la base. En tout, <!--n:kb_fichiers-->41<!--/n--> fichiers Markdown et <!--n:kb_poids-->1,8 Mo<!--/n--> de texte.
 
 ### Les <!--n:fiches-->11<!--/n--> fiches thématiques
 
 | Fiche | Contenu | Poids |
 |---|---|---|
-| [00 Contradictions et lacunes](kb/00-CONTRADICTIONS-ET-LACUNES.md) | Le journal des désaccords entre fiches, tranchés ou non, et les lacunes classées | 66 Ko |
+| [00 Contradictions et lacunes](kb/00-CONTRADICTIONS-ET-LACUNES.md) | Le journal des désaccords entre fiches, tranchés ou non, et les lacunes classées | 67 Ko |
 | [01 Production et diffusion](kb/01-production-diffusion.md) | Genèse, équipe, studios, Channel 4, DVD, remakes, saison 5 annulée | 64 Ko |
 | [02 Personnages et casting](kb/02-personnages-casting.md) | Six permanents, les secondaires, les invités épisode par épisode | 106 Ko |
 | [03 Épisodes, saisons 1 et 2](kb/03-episodes-saisons-1-2.md) | Épisodes 1 à 12 : synopsis, gags, répliques, références | 109 Ko |
@@ -83,7 +83,7 @@ Autour des découpages :
 
 | Fichier | Contenu | Poids |
 |---|---|---|
-| [Index des découpages](kb/episodes/README.md) | La liste, telle que la base la tient | 4 Ko |
+| [Index des découpages](kb/episodes/README.md) | La liste, telle que la base la tient | 5 Ko |
 | [Méthode de visionnage](kb/_methode/visionnage.md) | Comment les épisodes ont été regardés, et ce que la méthode ne voit pas | 3 Ko |
 | [Corrections issues du visionnage](kb/episodes/_CORRECTIONS-ISSUES-DU-VISIONNAGE.md) | Épisode par épisode, ce que le visionnage confirme, nuance ou corrige dans les fiches 01 à 09 | 87 Ko |
 

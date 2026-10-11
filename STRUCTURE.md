@@ -67,10 +67,10 @@ Deux dossiers peuvent exister sur une machine sans jamais être versionnés : `_
 
 | Élément | État |
 |---|---|
-| Fiches thématiques | <!--n:fiches-->11<!--/n-->, de 00 à <!--n:derniere-->10<!--/n-->, <!--n:fiches_poids-->939 Ko<!--/n--> |
+| Fiches thématiques | <!--n:fiches-->11<!--/n-->, de 00 à <!--n:derniere-->10<!--/n-->, <!--n:fiches_poids-->940 Ko<!--/n--> |
 | Découpages scène par scène | <!--n:vus-->24<!--/n--> épisodes sur <!--n:eps-->25<!--/n-->, <!--n:scenes-->652<!--/n--> scènes, <!--n:decoupages_poids-->769 Ko<!--/n--> |
 | Méthode de visionnage, index, fichier de corrections | Écrits |
-| Base entière | <!--n:kb_fichiers-->40<!--/n--> fichiers Markdown, <!--n:kb_poids-->1,8 Mo<!--/n--> |
+| Base entière | <!--n:kb_fichiers-->41<!--/n--> fichiers Markdown, <!--n:kb_poids-->1,8 Mo<!--/n--> |
 | README animé | <!--n:svg-->16<!--/n--> SVG générés, sans script ni ressource externe |
 | Site | Terminal, lecteur de fiches et de découpages, grille des épisodes, page d'erreur, balises de partage |
 | Licences | Appliquées par défaut dans `LICENSE` ; Kōeki peut en changer (voir `LICENSE-NOTES.md`) |

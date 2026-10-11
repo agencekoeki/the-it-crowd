@@ -291,3 +291,11 @@ Sources ajoutées par la seconde passe (lues le 2026-10-10) :
 - [The IT Crowd, saison 1 — TheTVDB](https://thetvdb.com/series/the-it-crowd/seasons/official/1) (titres en anglais seulement)
 
 Sources tentées sans succès : programme-tv.net (Télé-Loisirs) et canalplus.com (sites bloqués pour l'outil), The Movie Database en français (refus aux robots), BetaSeries et SensCritique (pages sans liste d'épisodes), accès direct hors outil de lecture (refusé par le proxy), versions brutes (`action=raw`) de Wikipedia et de Wikiquote, Wikiquote version ordinateur, The Movie Database (refus aux robots), page Fandom « The Speech » (erreur), recherches Télé-Loisirs et Canal+ (aucun résultat exploitable).
+
+## Mise à jour du 2026-10-11 : génériques de fin de la saison 2
+
+- Les génériques de fin de S2E1, S2E2, S2E3, S2E5 et S2E6 ont été lus à l'image : « Director — GRAHAM LINEHAN », « Studio Director — BARBARA WILTSHIRE », « Producer — JAMIE GLAZEBROOK », « Series Producer — ASH ATALLA ». `[VU À L'IMAGE]` Relevé complet : `episodes/_GENERIQUES-DE-FIN-S2.md`.
+- La contradiction sur la réalisation est donc tranchée pour les quatre saisons et le spécial : Graham Linehan est seul crédité « Director » ; Ben Fuller (saison 1), Barbara Wiltshire (saison 2) et Richard Boden (saisons 3 et 4) sont crédités « Studio Director ». Là où une fiche laisse encore la saison 2 en `[À VÉRIFIER]` sur ce point, cette mise à jour prévaut.
+- S2E4 fait exception : la vidéo officielle s'arrête à 21:13 au milieu du déroulant, les lignes de réalisation n'y sont pas visibles. `[À VÉRIFIER]` pour cet épisode seul.
+- Matt Berry (Douglas) est absent du générique de fin de S2E1 et de la liste d'acteurs de S2E4, lus en entier : le crédit que British Comedy Guide lui donne pour ces deux épisodes est une erreur de cette source. `[VU À L'IMAGE]`
+- Graham Linehan est crédité « Blind Irish Sorcerer » au générique de S2E6. `[VU À L'IMAGE]`
